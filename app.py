@@ -1095,124 +1095,82 @@ for msg in st.session_state.messages:
                 st.image(msg["image"], caption="Visual Resource Attached", width=400)
             st.write(msg["content"])
         else:
-            # 1. PHẦN MARKDOWN CHÍNH (Báo cáo tổng quan)
-            st.markdown(msg["content"], unsafe_allow_html=True)  
+            # --- PHẦN HIỂN THỊ MỚI THEO PHONG CÁCH "COMMENT" ---
             
-            # 2. HIỂN THỊ LỖI CHI TIẾT (Chia làm 2 phần)
-            if msg.get("data") and msg["data"]["errors"]:
-                all_errors = msg["data"]["errors"]
-                
-                # --- LỌC LỖI ---
-                micro_errors = [e for e in all_errors if e.get('category') in ['Grammar', 'Vocabulary']]
-                macro_errors = [e for e in all_errors if e.get('category') not in ['Grammar', 'Vocabulary']]
+            # 1. TÁCH BÀI VIẾT VÀ BÌNH LUẬN TỪ KẾT QUẢ CỦA AI
+            content_parts = msg["content"].split("\n---\n", 1)
+            essay_html = content_parts[0]
+            comments_text = content_parts[1] if len(content_parts) > 1 else ""
 
-                # --- PHẦN 1: GRAMMAR & VOCABULARY ---
-                if micro_errors:
-                    with st.expander(f"🚩 Grammar & Vocabulary Corrections ({len(micro_errors)} Issues)", expanded=True):
-                        for idx, err in enumerate(micro_errors):
-                            cat = err.get('category', 'Grammar')
-                            badge_style = "background:#DCFCE7; color:#166534; border:1px solid #86EFAC" if cat == 'Grammar' else "background:#FEF9C3; color:#854D0E; border:1px solid #FCD34D"
-                            impact = err.get('impact_level', 'Low').upper()
-                            
-                            html_micro = textwrap.dedent(f"""
-                            <div class="error-card" style="margin-bottom:12px;">
-                                <div class="error-header" style="display:flex; justify-content:space-between; border-bottom:1px solid #eee; padding-bottom:4px; margin-bottom:4px;">
-                                    <div style="display:flex; align-items:center;">
-                                        <span style="background:#F3F4F6; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-size:14px; font-weight:bold; margin-right:8px;">{idx + 1}</span>
-                                        <span style="{badge_style}; padding: 2px 8px; border-radius: 6px; font-size: 12px; font-weight: 800; text-transform: uppercase;">{cat}</span>
-                                        <span style="font-weight:700; font-size:16px; margin-left:10px; color:#1F2937;">{err['type']}</span>
-                                    </div>
-                                    <span style="background:#F3F4F6; color:#666; padding:2px 8px; border-radius:6px; font-size:11px; font-weight:bold;">{impact}</span>
-                                </div>
-                                <div style="background:#F9FAFB; padding:10px; border-radius:6px; font-size:15px; line-height: 1.5;">
-                                    <div style="margin-bottom:4px;">
-                                        <span style="color:#6B7280; font-size:11px; font-weight:800; letter-spacing: 0.5px;">ORIGINAL:</span> 
-                                        <span style="text-decoration:line-through; color:#9CA3AF; margin-left: 6px;">{err['original']}</span>
-                                    </div>
-                                    <div>
-                                        <span style="color:#6B7280; font-size:11px; font-weight:800; letter-spacing: 0.5px;">FIX:</span> 
-                                        <span style="{badge_style}; padding:1px 6px; border-radius:4px; font-weight:bold; margin-left: 6px; color:#111;">{err['correction']}</span>
-                                    </div>
-                                </div>
-                                <div style="font-size:14px; color:#4B5563; margin-top:6px; font-style: italic;">
-                                    Note: {err['explanation']}
-                                </div>
-                            </div>
-                            """).strip()
-                            st.markdown(html_micro, unsafe_allow_html=True)
-                            
-                # --- PHẦN 2: COHERENCE & COHESION ---
-                if macro_errors:
-                    st.markdown("---") 
-                    st.markdown(f"#### 💡 Coherence & Cohesion Improvements ({len(macro_errors)} Issues)")
-                    with st.expander("Xem chi tiết các lỗi Tư duy & Mạch lạc", expanded=True):
-                        for idx, err in enumerate(macro_errors):
-                            badge_style = "background:#DBEAFE; color:#1E40AF; border:1px solid #BFDBFE"
-                            impact = err.get('impact_level', 'Low').upper()
-                            html_macro = textwrap.dedent(f"""...""") # Dùng textwrap.dedent
-                            st.markdown(html_macro, unsafe_allow_html=True)
-                else:
-                    structure_breakers = ['Fragment', 'Run-on Sentence', 'Comma Splice', 'Sentence Structure']
-                    has_structure_error = any(e.get('type') in structure_breakers for e in all_errors)
+            # 2. PARSE CÁC BÌNH LUẬN
+            comments_dict = {}
+            # Dùng Regex để tách từng comment ra (TG1, TG2, ...)
+            matches = re.findall(r"Commented\s*\[(TG\d+)\]:\s*([\s\S]*?)(?=\nCommented|\Z)", comments_text)
+            for match in matches:
+                tag_id = match[0].lower() # -> tg1, tg2
+                comment_content = match[1].strip()
+                comments_dict[tag_id] = comment_content
 
-                    st.markdown("---")
-                    st.markdown("#### 💡 Coherence & Cohesion Review")
-                    
-                    if has_structure_error:
-                        st.warning("⚠️ **Lưu ý:** Mặc dù không có lỗi logic lớn, nhưng các lỗi cấu trúc câu (Fragment/Run-on) ở phần Ngữ pháp phía trên đang gây ảnh hưởng xấu đến sự mạch lạc của bài viết.")
-                    else:
-                        st.success("✅ **Tuyệt vời!** Bài viết có cấu trúc mạch lạc, các ý được liên kết tốt và không phát hiện lỗi logic nghiêm trọng.")
-
-            # --- [ĐOẠN ĐÃ ĐƯỢC SỬA] - Thụt vào trong khối "else" ---
-            # 3. Phần Annotated Essay (Bài viết đã sửa)
-            if msg.get("data") and msg["data"].get("annotatedEssay"):
-                st.markdown("### 📝 Examiner's Annotated Report")
-                st.caption("The essay has been corrected (strikethrough = incorrect, highlighted = corrected)")
-                st.markdown(f'<div class="annotated-text">{msg["data"]["annotatedEssay"]}</div>', unsafe_allow_html=True)
+            # 3. TẠO HTML HOÀN CHỈNH VỚI TOOLTIP
+            # Thêm CSS cho tooltip
+            st.markdown("""
+            <style>
+                .comment-highlight {
+                    background-color: #fce7f3; /* Màu hồng nhạt */
+                    border-bottom: 2px dashed #db2777;
+                    cursor: pointer;
+                    position: relative;
+                }
+                .tooltip {
+                    visibility: hidden;
+                    width: 250px;
+                    background-color: #3B82F6;
+                    color: #fff;
+                    text-align: left;
+                    border-radius: 6px;
+                    padding: 10px;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 125%;
+                    left: 50%;
+                    margin-left: -125px;
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                }
+                .comment-highlight:hover .tooltip {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            </style>
+            """, unsafe_allow_html=True)
             
-            # 4. Bảng điểm chấm lại (Revised Score)
+            # Thay thế các class trong HTML bằng thẻ có tooltip
+            final_html = essay_html
+            for tag_id, comment in comments_dict.items():
+                replacement_html = f'''
+                <span class="comment-highlight">
+                    {tag_id.upper()}
+                    <span class="tooltip">{comment}</span>
+                </span>
+                '''
+                # Tìm và thay thế thẻ span tương ứng
+                final_html = re.sub(f'<span class="comment-{tag_id}">', f'<span class="comment-highlight">', final_html, flags=re.IGNORECASE)
+                # Thay thế thẻ đóng, đồng thời chèn tooltip vào
+                final_html = re.sub(r'</span>', f'{replacement_html}</span>', final_html, count=1)
+
+
+            # 4. HIỂN THỊ GIAO DIỆN
+            st.subheader("📝 Examiner's Review")
+            st.markdown(final_html, unsafe_allow_html=True)
+            
+            # --- CÁC PHẦN CÒN LẠI (BẢNG ĐIỂM, DOWNLOAD...) ---
+            # Bạn có thể giữ lại phần hiển thị Bảng điểm, nút Download... ở dưới đây
+            # Ví dụ:
             if msg.get("data") and msg["data"].get("revisedScore"):
-                scores = msg["data"]["revisedScore"]
-                
-                st.markdown("### 📊 Projected Band (Revised Version)")
-                
-                if float(str(scores.get('overall', 0)).replace('-', '0')) >= 8.5:
-                    st.success("✨ Bản sửa lỗi này đã đạt mức tiệm cận hoàn hảo.")
-                else:
-                    st.warning(f"⚠️ **Lưu ý của Giám khảo:** Bản sửa lỗi này vẫn chỉ đạt {scores.get('overall')} vì: {scores.get('logic_re_evaluation', 'vẫn chưa đạt độ súc tích tuyệt đối của Band 9.0')}")
-
-                cols = st.columns(5)
-                cols[0].metric("TA", scores.get("task_achievement", "-"))
-                cols[1].metric("CC", scores.get("cohesion_coherence", "-"))
-                cols[2].metric("LR", scores.get("lexical_resource", "-"))
-                cols[3].metric("GRA", scores.get("grammatical_range", "-"))
-                cols[4].metric("OVERALL", scores.get("overall", "-"))
-                
-                # --- KHU VỰC NÚT TẢI VỀ ---
-                st.markdown("---")
-                st.markdown("### 📥 Download Report")
-                
-                topic_text = msg.get("topic", "")
-                essay_text = msg.get("original_essay", "")
-                analysis_text = msg.get("content", "")
-                
-                if not topic_text:
-                    try:
-                        prev_msg_index = st.session_state.messages.index(msg) - 1
-                        if prev_msg_index >= 0:
-                            prev_msg = st.session_state.messages[prev_msg_index]
-                            topic_text = prev_msg.get("topic", "Topic not found")
-                            essay_text = prev_msg.get("content", "Essay not found")
-                    except:
-                        pass
-
-                d1, d2 = st.columns(2)
-                
-                docx_file = create_docx(msg["data"], topic_text, essay_text, analysis_text)
-                d1.download_button(...)
-                
-                pdf_file = create_pdf(msg["data"], topic_text, essay_text, analysis_text)
-                d2.download_button(...)
+                 scores = msg["data"]["revisedScore"]
+                 st.markdown("### 📊 Band Scores")
+                 cols = st.columns(5)
+                 # ... (code hiển thị điểm)
 # ==========================================
 # 5. KHU VỰC NHẬP LIỆU & XỬ LÝ AI (ẨN KHI XONG)
 # ==========================================
@@ -1291,6 +1249,7 @@ if not st.session_state.submitted:
 # Footer
 st.markdown("---")
 st.caption("Developed by Albert Nguyen - v20251228.")
+
 
 
 
