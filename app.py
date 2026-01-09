@@ -94,3 +94,4 @@ else:
 # Footer
 st.markdown("---")
 st.markdown("<center>© 2024 YouPass Clone Design by Streamlit</center>", unsafe_allow_html=True)
+
