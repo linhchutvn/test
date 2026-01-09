@@ -47,7 +47,7 @@ with st.sidebar:
     selected_category = st.selectbox("Danh mục", categories)
     
     st.markdown("---")
-    st.write("📞 Hotline: 09xxxxxx")
+    st.write("📞 Hotline: 0866777333")
     if st.button("Đăng nhập"):
         st.write("Chức năng đang phát triển")
 
@@ -93,5 +93,6 @@ else:
 
 # Footer
 st.markdown("---")
-st.markdown("<center>© 2024 YouPass Clone Design by Streamlit</center>", unsafe_allow_html=True)
+st.markdown("<center>© 2025 Âu Việt Center Clone Design by Albert Nguyen</center>", unsafe_allow_html=True)
+
 
