@@ -1131,17 +1131,68 @@ for msg in st.session_state.messages:
                     # Logic hiển thị lời khen/cảnh báo (giữ nguyên)
                     # ...
 
-            # 3. CÁC PHẦN CÒN LẠI (Annotated, Scores, Download)
-            if msg.get("data"):
-                if msg["data"].get("annotatedEssay"):
-                    st.markdown("### 📝 Examiner's Annotated Report")
-                    # ...
-                if msg["data"].get("revisedScore"):
-                    st.markdown("### 📊 Projected Band (Revised Version)")
-                    # ...
-                    st.markdown("---")
-                    st.markdown("### 📥 Download Report")
-                    # ...
+            # 3. Phần Annotated Essay (Bài viết đã sửa)
+        if msg.get("data") and msg["data"]["annotatedEssay"]:
+            st.markdown("### 📝 Examiner's Annotated Report")
+            st.caption("The essay has been corrected (strikethrough = incorrect, highlighted = corrected)")
+            st.markdown(f'<div class="annotated-text">{msg["data"]["annotatedEssay"]}</div>', unsafe_allow_html=True)
+        
+        # 4. Bảng điểm chấm lại (Revised Score)
+        if msg.get("data") and msg["data"].get("revisedScore"):
+            scores = msg["data"]["revisedScore"]
+            
+            st.markdown("### 📊 Projected Band (Revised Version)")
+            
+            if float(str(scores.get('overall', 0)).replace('-', '0')) >= 8.5:
+                st.success("✨ Bản sửa lỗi này đã đạt mức tiệm cận hoàn hảo.")
+            else:
+                st.warning(f"⚠️ **Lưu ý của Giám khảo:** Bản sửa lỗi này vẫn chỉ đạt {scores.get('overall')} vì: {scores.get('logic_re_evaluation', 'vẫn chưa đạt độ súc tích tuyệt đối của Band 9.0')}")
+
+            cols = st.columns(5)
+            cols[0].metric("TA", scores.get("task_achievement", "-"))
+            cols[1].metric("CC", scores.get("cohesion_coherence", "-"))
+            cols[2].metric("LR", scores.get("lexical_resource", "-"))
+            cols[3].metric("GRA", scores.get("grammatical_range", "-"))
+            cols[4].metric("OVERALL", scores.get("overall", "-"))
+            
+            # --- KHU VỰC NÚT TẢI VỀ ---
+            st.markdown("---")
+            st.markdown("### 📥 Download Report")
+            
+            topic_text = msg.get("topic", "")
+            essay_text = msg.get("original_essay", "")
+            analysis_text = msg.get("content", "")
+            
+            if not topic_text:
+                try:
+                    prev_msg_index = st.session_state.messages.index(msg) - 1
+                    if prev_msg_index >= 0:
+                        prev_msg = st.session_state.messages[prev_msg_index]
+                        topic_text = prev_msg.get("topic", "Topic not found")
+                        essay_text = prev_msg.get("content", "Essay not found")
+                except:
+                    pass
+
+            d1, d2 = st.columns(2)
+            
+            docx_file = create_docx(msg["data"], topic_text, essay_text, analysis_text)
+            d1.download_button(
+                label="📄 Download Analysis (.docx)",
+                data=docx_file,
+                file_name=f"IELTS_Report_{int(time.time())}.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                use_container_width=True
+            )
+            
+            pdf_file = create_pdf(msg["data"], topic_text, essay_text, analysis_text)
+            d2.download_button(
+                label="📕 Download Analysis (.pdf)",
+                data=pdf_file,
+                file_name=f"IELTS_Report_{int(time.time())}.pdf",
+                mime="application/pdf",
+                use_container_width=True
+            )
+            # -------------------------
 # ==========================================
 # 5. KHU VỰC NHẬP LIỆU & XỬ LÝ AI (ẨN KHI XONG)
 # ==========================================
@@ -1220,6 +1271,7 @@ if not st.session_state.submitted:
 # Footer
 st.markdown("---")
 st.caption("Developed by Albert Nguyen - v20251228.")
+
 
 
 
