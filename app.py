@@ -93,6 +93,7 @@ else:
 
 # Footer
 st.markdown("---")
-st.markdown("<center>© 2025 Âu Việt Center Clone Design by Albert Nguyen</center>", unsafe_allow_html=True)
+st.markdown("<center>© 2025 Âu Việt Center Developed by Albert Nguyen</center>", unsafe_allow_html=True)
+
 
 
