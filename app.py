@@ -28,13 +28,13 @@ st.markdown("""
 
 # 2. Dữ liệu giả lập (Mock Data) các khóa học
 courses = [
-    {"id": 1, "title": "Khoá học IELTS Speaking", "price": "499.000đ", "img": "https://source.unsplash.com/random/400x200?coding", "category": "Speaking"},
-    {"id": 2, "title": "Khoá học IELTS Reading", "price": "299.000đ", "img": "https://source.unsplash.com/random/400x200?english", "category": "Reading"},
-    {"id": 3, "title": "Khoá học IELTS Listening", "price": "199.000đ", "img": "https://source.unsplash.com/random/400x200?excel", "category": "Listening"},
-    {"id": 4, "title": "Khoá học IELTS Writing Task 1", "price": "599.000đ", "img": "https://source.unsplash.com/random/400x200?marketing", "category": "Writing Task 1"},
-    {"id": 5, "title": "Khoá học IELTS Writing Task 2", "price": "899.000đ", "img": "https://source.unsplash.com/random/400x200?data", "category": "Writing Task 2"},
-    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Writing Task 1"},
-    {"id": 7, "title": "Chấm điểm IELTS Writing Task 2", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Writing Task 2"},
+    {"id": 1, "title": "Khoá học IELTS Speaking", "price": "499.000đ", "img": "https://source.unsplash.com/random/400x200?coding", "category": "Speaking", "link": "https://www.google.com"},
+    {"id": 2, "title": "Khoá học IELTS Reading", "price": "299.000đ", "img": "https://source.unsplash.com/random/400x200?english", "category": "Reading", "link": "https://www.google.com"},
+    {"id": 3, "title": "Khoá học IELTS Listening", "price": "199.000đ", "img": "https://source.unsplash.com/random/400x200?excel", "category": "Listening", "link": "https://www.google.com"},
+    {"id": 4, "title": "Khoá học IELTS Writing Task 1", "price": "599.000đ", "img": "https://source.unsplash.com/random/400x200?marketing", "category": "Writing Task 1", "link": "https://www.google.com"},
+    {"id": 5, "title": "Khoá học IELTS Writing Task 2", "price": "899.000đ", "img": "https://source.unsplash.com/random/400x200?data", "category": "Writing Task 2", "link": "https://www.google.com"},
+    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Writing Task 1", "link": "https://www.google.com"},
+    {"id": 7, "title": "Chấm điểm IELTS Writing Task 2", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Writing Task 2", "link": "https://www.google.com"},
 ]
 
 # 3. Sidebar - Bộ lọc & Menu
@@ -85,9 +85,8 @@ else:
                 st.subheader(course['title'])
                 st.markdown(f"**Danh mục:** {course['category']}")
                 st.markdown(f"<p class='price'>{course['price']}</p>", unsafe_allow_html=True)
-                
-                if st.button(f"Xem chi tiết", key=f"btn_{course['id']}"):
-                    st.success(f"Bạn đã chọn xem khóa: {course['title']}")
+                # use_container_width=True giúp nút dài ra full bề ngang cho đẹp
+                st.link_button("Xem chi tiết", course['link'], use_container_width=True)
                     # Ở đây có thể chuyển trang hoặc mở modal
             
             st.markdown("---") # Đường kẻ ngang phân cách hàng (nếu màn hình nhỏ)
@@ -95,4 +94,5 @@ else:
 # Footer
 st.markdown("---")
 st.markdown("<center>© 2025 Âu Việt Center Developed by Albert Nguyen</center>", unsafe_allow_html=True)
+
 
