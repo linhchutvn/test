@@ -127,7 +127,13 @@ st.markdown("""
         padding-top: 20px;
         border-top: 1px solid #eee;
     }
-[data-testid="stHeaderAction"] {
+/* Ẩn biểu tượng liên kết (cái ghim) bên cạnh tiêu đề */
+    [data-testid="stHeaderAction"] {
+        display: none !important;
+    }
+    
+    /* Ẩn thêm các thẻ a bên trong header để chắc chắn sạch sẽ */
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
         display: none !important;
     }
 </style>
@@ -261,6 +267,7 @@ st.markdown(f"""
 </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
