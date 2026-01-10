@@ -1,7 +1,7 @@
 import streamlit as st
 
 # 1. Cấu hình trang
-st.set_page_config(page_title="YouPass Clone Demo", layout="wide", page_icon="🎓")
+st.set_page_config(page_title="AuViet Center", layout="wide", page_icon="🎓")
 
 # CSS tùy chỉnh để làm đẹp giao diện (Hack CSS trong Streamlit)
 st.markdown("""
@@ -94,6 +94,7 @@ else:
 # Footer
 st.markdown("---")
 st.markdown("<center>© 2025 Âu Việt Center Developed by Albert Nguyen</center>", unsafe_allow_html=True)
+
 
 
 
