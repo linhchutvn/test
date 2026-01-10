@@ -8,7 +8,7 @@ st.set_page_config(page_title="AuViet Center", layout="wide", page_icon="🎓")
 # ----------------------------------------------------------------
 st.markdown("""
 <style>
-    /* 1. CSS CHO THẺ SẢN PHẨM (CARD) - Giữ nguyên như cũ */
+    /* 1. CSS CHO THẺ SẢN PHẨM (CARD) */
     .product-card {
         background-color: white;
         border: 1px solid #e0e0e0;
@@ -72,11 +72,11 @@ st.markdown("""
         align-items: center;
         gap: 10px;
         text-decoration: none;
-        float: right; /* Đẩy sang phải */
+        float: right; 
     }
     .google-btn:hover { background-color: #f7fafe; border-color: #d2e3fc; }
 
-    /* 3. CSS CHO FOOTER (CHÂN TRANG) */
+    /* 3. CSS CHO FOOTER */
     .footer-container {
         background-color: white;
         border-top: 1px solid #e0e0e0;
@@ -103,7 +103,7 @@ st.markdown("""
     }
     .footer-row {
         display: flex;
-        align-items: flex-start; /* Căn lề trên */
+        align-items: flex-start;
         margin-bottom: 15px;
     }
     .footer-icon {
@@ -129,23 +129,29 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
+# ----------------------------------------------------------------
+# DỮ LIỆU KHÓA HỌC (Đã chuẩn hóa link ảnh)
+# ----------------------------------------------------------------
 courses = [
-    {"id": 1, "title": "Khoá học IELTS Speaking", "price": "FREE", "img": "https://github.com/linhchutvn/test/blob/main/SPEAKING.png?raw=true", "category": "Speaking", "link": "https://www.youtube.com/playlist?list=PLI3S3xWA78UXXz0m6QoGyc-8UvHeAYTYT"},
-    {"id": 2, "title": "Khoá học IELTS Reading", "price": "FREE", "img": "https://github.com/linhchutvn/test/blob/main/READING.png?raw=true", "category": "Reading", "link": "https://www.google.com"},
-    {"id": 3, "title": "Khoá học IELTS Listening", "price": "FREE", "img": "https://github.com/linhchutvn/test/blob/main/LISTENING.png?raw=true", "category": "Listening", "link": "https://www.google.com"},
-    {"id": 4, "title": "Khoá học IELTS Writing Task 1", "price": "FREE", "img": "https://github.com/linhchutvn/test/blob/main/TASK%201.png?raw=true", "category": "Writing Task 1", "link": "https://www.youtube.com/playlist?list=PLI3S3xWA78UWtIxIEnZia2siEgxJPwpfQ"},
-    {"id": 5, "title": "Khoá học IELTS Writing Task 2", "price": "FREE", "img": "https://github.com/linhchutvn/test/blob/main/task%202.png?raw=true", "category": "Writing Task 2", "link": "https://www.youtube.com/playlist?list=PLI3S3xWA78UWM9nT6jYY9vl3mHb52ZQ08"},
-    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "FREE", "img": "https://github.com/linhchutvn/test/blob/main/Assessment_TASK1.png?raw=true", "category": "Writing Task 1", "link": "https://ielts-albertnguyen.streamlit.app/"},
-    {"id": 7, "title": "Chấm điểm IELTS Writing Task 2", "price": "FREE", "img": "https://github.com/linhchutvn/test/blob/main/Assessment_TASK2.png?raw=true", "category": "Writing Task 2", "link": "https://www.google.com"},
+    {"id": 1, "title": "Khoá học IELTS Speaking", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/SPEAKING.png", "category": "Speaking", "link": "https://www.youtube.com/playlist?list=PLI3S3xWA78UXXz0m6QoGyc-8UvHeAYTYT"},
+    {"id": 2, "title": "Khoá học IELTS Reading", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/READING.png", "category": "Reading", "link": "https://www.google.com"},
+    {"id": 3, "title": "Khoá học IELTS Listening", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/LISTENING.png", "category": "Listening", "link": "https://www.google.com"},
+    {"id": 4, "title": "Khoá học IELTS Writing Task 1", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/TASK%201.png", "category": "Writing Task 1", "link": "https://www.youtube.com/playlist?list=PLI3S3xWA78UWtIxIEnZia2siEgxJPwpfQ"},
+    {"id": 5, "title": "Khoá học IELTS Writing Task 2", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/task%202.png", "category": "Writing Task 2", "link": "https://www.youtube.com/playlist?list=PLI3S3xWA78UWM9nT6jYY9vl3mHb52ZQ08"},
+    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/Assessment_TASK1.png", "category": "Writing Task 1", "link": "https://ielts-test.streamlit.app/"},
+    {"id": 7, "title": "Chấm điểm IELTS Writing Task 2", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/Assessment_TASK2.png", "category": "Writing Task 2", "link": "https://www.google.com"},
 ]
 
+# ----------------------------------------------------------------
+# HEADER & LOGIN
+# ----------------------------------------------------------------
 top_col1, top_col2 = st.columns([8, 2])
 
 with top_col1:
-    st.markdown("### 🎓 AuViet Center") # Tên web nhỏ ở góc trái
+    st.markdown("### 🎓 AuViet Center") 
 
 with top_col2:
-    # Nút Login giả lập (Chỉ là giao diện, chưa có chức năng thật)
     st.markdown("""
         <a href="https://accounts.google.com" target="_blank" class="google-btn">
             <img src="https://www.svgrepo.com/show/475656/google-color.svg" width="20" height="20">
@@ -153,33 +159,38 @@ with top_col2:
         </a>
     """, unsafe_allow_html=True)
 
-st.divider() # Đường kẻ ngang phân cách
+st.divider() 
 
 # ----------------------------------------------------------------
-# THANH TÌM KIẾM & BỘ LỌC NGANG (Thay thế Sidebar)
+# THANH TÌM KIẾM & BỘ LỌC NGANG
 # ----------------------------------------------------------------
-# Chia làm 2 cột: Tìm kiếm (Rộng) - Danh mục (Hẹp)
+st.markdown("##### 🔍 Tìm kiếm & Lọc") # Thêm tiêu đề nhỏ
 search_col, filter_col = st.columns([3, 1])
 
 with search_col:
-    search_term = st.text_input("🔍 Tìm kiếm khóa học", placeholder="Nhập tên khóa học bạn quan tâm...")
+    # label_visibility="collapsed" để ẩn nhãn đi cho gọn, nhìn giống thanh tìm kiếm Google
+    search_term = st.text_input("Search", placeholder="Nhập tên khóa học...", label_visibility="collapsed")
 
 with filter_col:
     categories = ["Tất cả"] + list(set([c['category'] for c in courses]))
-    selected_category = st.selectbox("📂 Danh mục", categories)
+    selected_category = st.selectbox("Category", categories, label_visibility="collapsed")
+
+st.write("") # Tạo khoảng trống nhỏ
 
 # ----------------------------------------------------------------
 # BANNER
 # ----------------------------------------------------------------
+# LƯU Ý: Nếu chưa upload file banner.JPG lên github thì phần này sẽ trống
 try:
     st.image("banner.JPG", use_column_width=True)
 except:
-    pass 
+    # Nếu lỗi banner, hiển thị banner dự phòng từ online
+    st.image("https://via.placeholder.com/1200x300?text=AU+VIET+CENTER", use_column_width=True)
 
 st.markdown("### 🔥 Các khóa học nổi bật")
 
 # ----------------------------------------------------------------
-# LOGIC & HIỂN THỊ KHÓA HỌC
+# LOGIC & HIỂN THỊ
 # ----------------------------------------------------------------
 filtered_courses = courses
 if selected_category != "Tất cả":
@@ -210,25 +221,27 @@ else:
             """, unsafe_allow_html=True)
 
 # ----------------------------------------------------------------
-# FOOTER (CHÂN TRANG) - GIỐNG YOUPASS
+# FOOTER (CHÂN TRANG)
 # ----------------------------------------------------------------
-# Bạn hãy thay link logo.png bằng link ảnh logo thật của bạn
-logo_url = "https://raw.githubusercontent.com/username/repo/main/logo.png" 
-dmca_url = "https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=YOUR_ID" # Ảnh mẫu DMCA
+# Mình giả định file logo tên là LOGO.png (hoặc logo.png) trong repo của bạn
+# Hãy kiểm tra tên file trên github và sửa dòng dưới đây nếu cần
+logo_url = "https://raw.githubusercontent.com/linhchutvn/test/main/logo.png" 
+
+dmca_url = "https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=YOUR_ID"
 
 st.markdown(f"""
 <div class="footer-container">
     <div class="footer-content">
-        <!-- CỘT TRÁI: LOGO & DMCA -->
+        <!-- CỘT TRÁI -->
         <div class="footer-left">
-            <!-- Thay src="logo.png" bằng link logo của bạn -->
-            <img src="logo.png" style="width: 150px; margin-bottom: 20px;" onerror="this.style.display='none'"> 
+            <!-- Đã sửa src="{logo_url}" để nhận link online -->
+            <img src="{logo_url}" style="width: 150px; margin-bottom: 20px;" onerror="this.style.display='none'"> 
             <h4 style="color: #d63031; margin-top: 0;">Âu Việt Center</h4>
             <p style="font-size: 14px; color: #666;">Hệ thống đào tạo IELTS chuyên nghiệp.</p>
             <img src="{dmca_url}" class="dmca-badge">
         </div>
 
-        <!-- CỘT PHẢI: THÔNG TIN LIÊN HỆ -->
+        <!-- CỘT PHẢI -->
         <div class="footer-right">
             <div class="footer-row">
                 <span class="footer-icon">📍</span>
@@ -236,7 +249,7 @@ st.markdown(f"""
             </div>
             <div class="footer-row">
                 <span class="footer-icon">💬</span>
-                <span class="footer-text">Zalo OA: <a href="https://zalo.me/yourid" target="_blank">https://zalo.me/auviet</a></span>
+                <span class="footer-text">Zalo OA: <a href="https://zalo.me/auviet" target="_blank">https://zalo.me/auviet</a></span>
             </div>
             <div class="footer-row">
                 <span class="footer-icon">📞</span>
@@ -258,13 +271,3 @@ st.markdown(f"""
     </div>
 </div>
 """, unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-
-
