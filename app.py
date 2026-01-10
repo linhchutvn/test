@@ -15,7 +15,7 @@ with nav_col1:
 
 with nav_col2:
     # Nút dẫn sang trang Luyện tập (Cần tạo file pages/luyentap.py mới chạy được)
-    st.page_link("pages/luyentap.py", label="📝 Luyện tập YouPass", icon=None, use_container_width=True)
+    st.page_link("pages/writing.py", label="📝 Luyện tập YouPass", icon=None, use_container_width=True)
 
 st.divider() # Đường kẻ phân cách menu
 
@@ -282,3 +282,4 @@ st.markdown(f"""
 </div>
 </div>
 """, unsafe_allow_html=True)
+
