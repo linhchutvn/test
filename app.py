@@ -87,7 +87,7 @@ courses = [
 
 # 3. Sidebar - Bộ lọc & Menu
 with st.sidebar:
-    st.image("logo.png", width=150)
+    st.image("https://github.com/linhchutvn/test/blob/3957fed04f4a612871c6d4885ea093474008e687/banner.JPG", width=150)
     st.header("🔍 Tìm kiếm & Lọc")
     
     search_term = st.text_input("Tìm khóa học...")
@@ -145,6 +145,7 @@ else:
             
             st.markdown("---")
 st.markdown("<center>© 2025 Âu Việt Center Developed by Albert Nguyen</center>", unsafe_allow_html=True)
+
 
 
 
