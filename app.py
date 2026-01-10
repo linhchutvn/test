@@ -108,25 +108,30 @@ else:
     cols = st.columns(3)
     
     for i, course in enumerate(filtered_courses):
-        with cols[i % 3]: # Logic chia cột thông minh
+        with cols[i % 3]:
             with st.container():
-                # Hiển thị ảnh (dùng placeholder nếu ảnh lỗi)
+                # 1. Hiển thị ảnh (Vẫn dùng Streamlit để tự co giãn đẹp)
                 try:
                     st.image(course['img'], use_column_width=True)
                 except:
                     st.image("https://via.placeholder.com/400x200", use_column_width=True)
                 
-                st.subheader(course['title'])
-                st.markdown(f"**Danh mục:** {course['category']}")
-                st.markdown(f"<p class='price'>{course['price']}</p>", unsafe_allow_html=True)
-                # use_container_width=True giúp nút dài ra full bề ngang cho đẹp
-                st.link_button("Xem chi tiết", course['link'], use_container_width=True)
-                    # Ở đây có thể chuyển trang hoặc mở modal
+                # 2. Dùng HTML để hiển thị thông tin và nút bấm (Giúp sát dòng nhau)
+                # Lưu ý: Chỗ href='{course['link']}' chính là link bạn đã thêm ở bước trước
+                st.markdown(f"""
+                <div class="course-info">
+                    <p class="course-title">{course['title']}</p>
+                    <p class="course-cat">Danh mục: {course['category']}</p>
+                    <p class="course-price">{course['price']}</p>
+                    <a href="{course.get('link', '#')}" target="_blank" class="custom-btn">
+                        Xem chi tiết
+                    </a>
+                </div>
+                """, unsafe_allow_html=True)
             
-            
-# Footer
-st.markdown("---")
+            st.markdown("---")
 st.markdown("<center>© 2025 Âu Việt Center Developed by Albert Nguyen</center>", unsafe_allow_html=True)
+
 
 
 
