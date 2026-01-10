@@ -33,7 +33,8 @@ courses = [
     {"id": 3, "title": "Khoá học IELTS Listening", "price": "199.000đ", "img": "https://source.unsplash.com/random/400x200?excel", "category": "Listening"},
     {"id": 4, "title": "Khoá học IELTS Writing Task 1", "price": "599.000đ", "img": "https://source.unsplash.com/random/400x200?marketing", "category": "Writing Task 1"},
     {"id": 5, "title": "Khoá học IELTS Writing Task 2", "price": "899.000đ", "img": "https://source.unsplash.com/random/400x200?data", "category": "Writing Task 2"},
-    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Design"},
+    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Writing Task 1"},
+    {"id": 7, "title": "Chấm điểm IELTS Writing Task 2", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Writing Task 2"},
 ]
 
 # 3. Sidebar - Bộ lọc & Menu
@@ -53,10 +54,10 @@ with st.sidebar:
 
 # 4. Main Content - Trang chủ
 
-# Banner (Giả lập Banner Slider)
+# Banner
 st.image("banner.JPG", use_column_width=True)
 
-st.title("🔥 Các khóa học nổi bật")
+st.title("🔥 Các khóa học tại Âu Việt")
 
 # Xử lý Logic lọc dữ liệu
 filtered_courses = courses
@@ -94,14 +95,3 @@ else:
 # Footer
 st.markdown("---")
 st.markdown("<center>© 2025 Âu Việt Center Developed by Albert Nguyen</center>", unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-
-
-
