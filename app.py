@@ -127,6 +127,9 @@ st.markdown("""
         padding-top: 20px;
         border-top: 1px solid #eee;
     }
+[data-testid="stHeaderAction"] {
+        display: none !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -258,6 +261,7 @@ st.markdown(f"""
 </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
