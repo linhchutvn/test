@@ -1,45 +1,44 @@
 import streamlit as st
 
-st.set_page_config(page_title="Luyện tập", layout="wide", page_icon="📝")
+st.set_page_config(page_title="Luyện tập YouPass", layout="wide", page_icon="📝")
 
-# --- CSS ĐỂ ẨN SIDEBAR MẶC ĐỊNH VÀ TRANG TRÍ MENU ---
+# ----------------------------------------------------------------
+# THANH MENU ĐIỀU HƯỚNG (NAVBAR)
+# ----------------------------------------------------------------
+nav_col1, nav_col2, nav_col3 = st.columns([1, 1, 4])
+
+with nav_col1:
+    st.page_link("app.py", label="🏠 Trang chủ", icon=None, use_container_width=True)
+
+with nav_col2:
+    st.page_link("pages/luyentap.py", label="📝 Luyện tập YouPass", icon=None, use_container_width=True, disabled=True)
+
+st.divider()
+
+# ----------------------------------------------------------------
+# CSS & NỘI DUNG TRANG YOUPASS
+# ----------------------------------------------------------------
 st.markdown("""
 <style>
-    [data-testid="stSidebar"] {display: none;} /* Ẩn sidebar trái */
+    [data-testid="stSidebar"] {display: none;} /* Ẩn sidebar */
     
-    /* Trang trí nút Menu */
-    .stButton a {
-        text-decoration: none;
+    .exam-card {
+        background-color: white; border: 1px solid #e0e0e0; border-radius: 8px;
+        padding: 15px; margin-bottom: 20px; display: flex; gap: 15px; position: relative;
     }
-    hr {margin-top: 0.5rem; margin-bottom: 1rem;}
-</style>
-""", unsafe_allow_html=True)
-
-# --- THANH MENU ĐIỀU HƯỚNG (NAVBAR) ---
-# Tạo 2 cột cho 2 nút menu
-col1, col2, col3 = st.columns([1, 1, 4]) # col3 là khoảng trống
-
-with col1:
-    # Nút dẫn về trang chủ (app.py)
-    st.page_link("app.py", label="🏠 My Homepage", icon=None, use_container_width=True)
-
-with col2:
-    # Nút dẫn đến trang hiện tại (làm mờ hoặc đổi màu nếu muốn)
-    st.page_link("pages/luyentap.py", label="📝 Luyện tập 4 kỹ năng", icon=None, use_container_width=True)
-
-st.divider() # Đường kẻ ngang phân cách menu
-
-# --- NỘI DUNG CHÍNH CỦA TRANG LUYỆN TẬP (YOUPASS) ---
-st.markdown("""
-<style>
-    .exam-card { background-color: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 20px; display: flex; gap: 15px; }
-    .exam-tag { background-color: #1e272e; color: white; padding: 3px 8px; font-size: 10px; border-radius: 4px; position: absolute; }
+    .exam-tag {
+        background-color: #1e272e; color: white; padding: 3px 8px;
+        font-size: 10px; border-radius: 4px; position: absolute; top: 10px; left: 10px; z-index: 10;
+    }
     .exam-thumb { width: 120px; height: 80px; object-fit: cover; border-radius: 6px; }
-    .exam-title { color: #0984e3; font-weight: bold; text-decoration: none; }
+    .exam-title { color: #0984e3; font-weight: bold; text-decoration: none; font-size: 16px; }
+    .exam-desc { font-size: 13px; color: #636e72; }
 </style>
 """, unsafe_allow_html=True)
 
+# Giao diện chính YouPass (2 cột)
 col_menu, col_content = st.columns([1, 4])
+
 with col_menu:
     st.markdown("### YouPass Collect")
     st.info("💡 Review đề thi thật")
@@ -47,10 +46,14 @@ with col_menu:
 
 with col_content:
     st.markdown(f"#### 🕒 Danh sách bài tập: {mode}")
+    
+    # Dữ liệu giả lập
     exercises = [
-        {"type": "Table", "title": "The table below illustrates weekly consumption...", "img": "https://via.placeholder.com/150x100?text=Table"},
-        {"type": "Map", "title": "Coal mining site redevelopment...", "img": "https://via.placeholder.com/150x100?text=Map"},
+        {"type": "Table", "title": "The table below illustrates weekly consumption...", "img": "https://via.placeholder.com/150x100?text=Table", "desc": "Table description here..."},
+        {"type": "Map", "title": "Coal mining site redevelopment...", "img": "https://via.placeholder.com/150x100?text=Map", "desc": "Map description here..."},
+        {"type": "Line", "title": "Going to the cinema statistics...", "img": "https://via.placeholder.com/150x100?text=Line", "desc": "Line graph description..."},
     ]
+    
     grid = st.columns(2)
     for i, ex in enumerate(exercises):
         with grid[i % 2]:
@@ -58,6 +61,9 @@ with col_content:
             <div class="exam-card">
                 <span class="exam-tag">{ex['type']}</span>
                 <img src="{ex['img']}" class="exam-thumb">
-                <div><a href="#" class="exam-title">{ex['title']}</a></div>
+                <div>
+                    <a href="#" class="exam-title">{ex['title']}</a>
+                    <div class="exam-desc">{ex['desc']}</div>
+                </div>
             </div>
             """, unsafe_allow_html=True)
