@@ -33,7 +33,7 @@ courses = [
     {"id": 3, "title": "Khoá học IELTS Listening", "price": "199.000đ", "img": "https://source.unsplash.com/random/400x200?excel", "category": "Listening", "link": "https://www.google.com"},
     {"id": 4, "title": "Khoá học IELTS Writing Task 1", "price": "599.000đ", "img": "https://source.unsplash.com/random/400x200?marketing", "category": "Writing Task 1", "link": "https://www.google.com"},
     {"id": 5, "title": "Khoá học IELTS Writing Task 2", "price": "899.000đ", "img": "https://source.unsplash.com/random/400x200?data", "category": "Writing Task 2", "link": "https://www.google.com"},
-    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Writing Task 1", "link": "https://www.google.com"},
+    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Writing Task 1", "link": "https://ielts-albertnguyen.streamlit.app/"},
     {"id": 7, "title": "Chấm điểm IELTS Writing Task 2", "price": "699.000đ", "img": "https://source.unsplash.com/random/400x200?design", "category": "Writing Task 2", "link": "https://www.google.com"},
 ]
 
@@ -94,5 +94,6 @@ else:
 # Footer
 st.markdown("---")
 st.markdown("<center>© 2025 Âu Việt Center Developed by Albert Nguyen</center>", unsafe_allow_html=True)
+
 
 
