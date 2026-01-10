@@ -163,7 +163,7 @@ with top_col2:
             Đăng nhập Google
         </a>
     """, unsafe_allow_html=True)
-# st.divider() 
+
 # ----------------------------------------------------------------
 # 2. BANNER (ĐÃ CHUYỂN LÊN TRÊN THANH TÌM KIẾM)
 # ----------------------------------------------------------------
@@ -265,6 +265,7 @@ st.markdown(f"""
 </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
