@@ -1,7 +1,7 @@
 import streamlit as st
 
 # 1. Cấu hình trang
-st.set_page_config(page_title="TRUNG TÂM NGOẠI NGỮ QUỐC TẾ ÂU VIỆT", layout="wide", page_icon="🎓")
+st.set_page_config(page_title="AUVIET CENTER", layout="wide", page_icon="🎓")
 
 # ----------------------------------------------------------------
 # PHẦN CSS (GIAO DIỆN)
@@ -149,7 +149,7 @@ courses = [
 top_col1, top_col2 = st.columns([8, 2])
 
 with top_col1:
-    st.markdown("### 🎓 AuViet Center") 
+    st.markdown("### 🎓 TRUNG TÂM NGOẠI NGỮ QUỐC TẾ ÂU VIỆT") 
 
 with top_col2:
     st.markdown("""
@@ -262,6 +262,7 @@ st.markdown(f"""
 </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 
