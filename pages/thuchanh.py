@@ -124,6 +124,7 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
             continue
     return None, None
 
+# --- PROMPT KHỦNG (ĐÃ KHÔI PHỤC ĐẦY ĐỦ) ---
 GRADING_PROMPT_TEMPLATE = """
 Bạn hãy đóng vai trò là một Giám khảo IELTS với 30 năm kinh nghiệm làm việc tại Hội đồng Anh (British Council). Nhiệm vụ của bạn là đánh giá bài viết dựa trên **bộ tiêu chí chuẩn xác của IELTS Writing Task 1 (Band Descriptors)**. 
 **Phân loại bài thi (Context Awareness):** Bắt buộc phải nhận diện đây là IELTS Academic: Biểu đồ/Đồ thị/Quy trình/Map. Đề bài nói về nội dung gì.
@@ -476,6 +477,7 @@ Cấu trúc JSON:
 }
 ```
 """
+
 # ==========================================
 # 3. HELPER FUNCTIONS
 # ==========================================
@@ -493,10 +495,6 @@ def parse_guide_response(text):
     except: return None
 
 def parse_grading_response(full_text):
-    """
-    Hàm xử lý JSON thông minh: Tự động gom nội dung từ detailed_analysis (nested object)
-    để khắc phục lỗi hiển thị JSON thô.
-    """
     json_str = clean_json(full_text)
     data = {"errors": [], "annotatedEssay": None, "revisedScore": None, "originalScore": {}, "analysisMarkdown": ""}
     
@@ -511,10 +509,9 @@ def parse_grading_response(full_text):
             # --- LOGIC GOM NỘI DUNG THÔNG MINH ---
             sections = []
             
-            # 1. Kiểm tra key 'detailed_analysis' (Dạng Nested Dict - Như trong hình lỗi của bạn)
+            # 1. Tìm key 'detailed_analysis' (Dạng Nested Dict) - ĐÂY LÀ PHẦN SỬA LỖI QUAN TRỌNG
             if isinstance(parsed.get("detailed_analysis"), dict):
                 details = parsed["detailed_analysis"]
-                # Định nghĩa map tên key sang tiêu đề hiển thị
                 key_map = {
                     "task_achievement": "Task Achievement",
                     "cohesion_coherence": "Coherence & Cohesion",
@@ -522,7 +519,6 @@ def parse_grading_response(full_text):
                     "grammatical_range": "Grammatical Range & Accuracy"
                 }
                 for k, title in key_map.items():
-                    # Tìm key chính xác hoặc key có hậu tố _analysis
                     val = details.get(k) or details.get(f"{k}_analysis")
                     if val:
                         sections.append(f"### 📘 {title}\n{val}")
@@ -530,10 +526,10 @@ def parse_grading_response(full_text):
             # 2. Nếu không có nested, tìm flat keys (ta_gap_analysis...)
             elif not sections:
                 flat_keys = [
-                    ("Task Achievement", ["task_achievement", "ta_gap_analysis", "task_response"]),
-                    ("Coherence & Cohesion", ["cohesion_coherence", "cc_gap_analysis", "coherence"]),
-                    ("Lexical Resource", ["lexical_resource", "lr_gap_analysis", "vocabulary"]),
-                    ("Grammatical Range", ["grammatical_range", "gra_gap_analysis", "grammar"])
+                    ("Task Achievement", ["task_achievement", "ta_gap_analysis", "task_response", "task_achievement_analysis"]),
+                    ("Coherence & Cohesion", ["cohesion_coherence", "cc_gap_analysis", "coherence", "cohesion_coherence_analysis"]),
+                    ("Lexical Resource", ["lexical_resource", "lr_gap_analysis", "vocabulary", "lexical_resource_analysis"]),
+                    ("Grammatical Range", ["grammatical_range", "gra_gap_analysis", "grammar", "grammatical_range_analysis"])
                 ]
                 for title, candidates in flat_keys:
                     for k in candidates:
