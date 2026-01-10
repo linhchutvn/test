@@ -1,7 +1,7 @@
 import streamlit as st
 
 # 1. Cấu hình trang
-st.set_page_config(page_title="AuViet Center", layout="wide", page_icon="🎓")
+st.set_page_config(page_title="TRUNG TÂM NGOẠI NGỮ QUỐC TẾ ÂU VIỆT", layout="wide", page_icon="🎓")
 
 # ----------------------------------------------------------------
 # PHẦN CSS (GIAO DIỆN)
@@ -144,7 +144,7 @@ courses = [
 ]
 
 # ----------------------------------------------------------------
-# HEADER & LOGIN
+# 1. HEADER & LOGIN (Giữ nguyên ở trên cùng)
 # ----------------------------------------------------------------
 top_col1, top_col2 = st.columns([8, 2])
 
@@ -162,35 +162,33 @@ with top_col2:
 st.divider() 
 
 # ----------------------------------------------------------------
-# THANH TÌM KIẾM & BỘ LỌC NGANG
+# 2. BANNER (ĐÃ CHUYỂN LÊN TRÊN THANH TÌM KIẾM)
 # ----------------------------------------------------------------
-st.markdown("##### 🔍 Tìm kiếm & Lọc") # Thêm tiêu đề nhỏ
-search_col, filter_col = st.columns([3, 1])
-
-with search_col:
-    # label_visibility="collapsed" để ẩn nhãn đi cho gọn, nhìn giống thanh tìm kiếm Google
-    search_term = st.text_input("Search", placeholder="Nhập tên khóa học...", label_visibility="collapsed")
-
-with filter_col:
-    categories = ["Tất cả"] + list(set([c['category'] for c in courses]))
-    selected_category = st.selectbox("Category", categories, label_visibility="collapsed")
-
-st.write("") # Tạo khoảng trống nhỏ
-
-# ----------------------------------------------------------------
-# BANNER
-# ----------------------------------------------------------------
-# LƯU Ý: Nếu chưa upload file banner.JPG lên github thì phần này sẽ trống
 try:
     st.image("banner.JPG", use_column_width=True)
 except:
-    # Nếu lỗi banner, hiển thị banner dự phòng từ online
     st.image("https://via.placeholder.com/1200x300?text=AU+VIET+CENTER", use_column_width=True)
+
+st.write("") # Tạo một khoảng trống nhỏ giữa banner và thanh tìm kiếm
+
+# ----------------------------------------------------------------
+# 3. THANH TÌM KIẾM & BỘ LỌC NGANG (ĐÃ CHUYỂN XUỐNG DƯỚI)
+# ----------------------------------------------------------------
+st.markdown("##### 🔍 Tìm kiếm & Lọc") 
+search_col, filter_col = st.columns([3, 1])
+
+with search_col:
+    search_term = st.text_input("Search", placeholder="Nhập tên khóa học...", label_visibility="collapsed")
+
+with filter_col:
+    # Lấy danh sách category từ dữ liệu courses đã khai báo ở trên
+    categories = ["Tất cả"] + list(set([c['category'] for c in courses]))
+    selected_category = st.selectbox("Category", categories, label_visibility="collapsed")
 
 st.markdown("### 🔥 Các khóa học nổi bật")
 
 # ----------------------------------------------------------------
-# LOGIC & HIỂN THỊ
+# 4. LOGIC & HIỂN THỊ (Giữ nguyên)
 # ----------------------------------------------------------------
 filtered_courses = courses
 if selected_category != "Tất cả":
@@ -264,4 +262,5 @@ st.markdown(f"""
 </div>
 </div>
 """, unsafe_allow_html=True)
+
 
