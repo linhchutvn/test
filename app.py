@@ -239,7 +239,7 @@ st.markdown(f"""
 <div class="footer-right">
 <div class="footer-row">
 <span class="footer-icon">📍</span>
-<span class="footer-text">Địa chỉ: 213/9 Nguyễn Gia Trí, Phường Thạnh Mỹ Tây, TP Hồ Chí Minh</span>
+<span class="footer-text">Địa chỉ: 10 Thiên Phát, Khu Đô thị - Dịch vụ VSIP, Phường Trương Quang Trọng</span>
 </div>
 <div class="footer-row">
 <span class="footer-icon">💬</span>
@@ -264,3 +264,4 @@ st.markdown(f"""
 </div>
 </div>
 """, unsafe_allow_html=True)
+
