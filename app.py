@@ -6,60 +6,70 @@ st.set_page_config(page_title="AuViet Center", layout="wide", page_icon="🎓")
 # CSS tùy chỉnh để làm đẹp giao diện (Hack CSS trong Streamlit)
 st.markdown("""
 <style>
-    /* CSS cho phần hiển thị thông tin */
-    .course-info {
-        margin-top: 5px;
+    /* 1. Tạo khung thẻ sản phẩm (Card) */
+    .product-card {
+        background-color: white; /* Màu nền của hộp */
+        border: 1px solid #e0e0e0; /* Viền mỏng màu xám */
+        border-radius: 10px; /* Bo tròn góc */
+        padding: 15px; /* Khoảng cách từ viền vào nội dung */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Bóng đổ nhẹ giúp hộp nổi lên */
+        margin-bottom: 20px; /* Khoảng cách với hộp dưới */
+        transition: 0.3s; /* Hiệu ứng mượt khi di chuột */
+        height: 100%; /* Giúp các hộp cao bằng nhau */
+    }
+    
+    .product-card:hover {
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Bóng đổ đậm hơn khi di chuột vào */
+        transform: translateY(-5px); /* Hộp nảy lên 1 chút */
+    }
+
+    /* 2. Style cho ảnh trong hộp */
+    .card-img {
+        width: 100%;
+        border-radius: 5px;
+        object-fit: cover;
         margin-bottom: 10px;
     }
-    
-    /* Chỉnh tiêu đề nhỏ gọn, khoảng cách thấp */
+
+    /* 3. Các dòng chữ */
     .course-title {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         color: #2c3e50;
-        margin-bottom: 2px !important; /* Thu hẹp khoảng cách dưới tiêu đề */
-        line-height: 1.2;
-    }
-    
-    /* Chỉnh dòng danh mục */
-    .course-cat {
-        font-size: 13px;
-        color: #666;
         margin-bottom: 5px !important;
-        margin-top: 0px !important;
+        line-height: 1.4;
+        min-height: 45px; /* Giữ chiều cao tiêu đề đồng đều */
     }
     
-    /* Chỉnh giá tiền */
+    .course-cat {
+        font-size: 12px;
+        color: #7f8c8d;
+        margin-bottom: 8px !important;
+    }
+    
     .course-price {
         color: #d63031;
         font-weight: bold;
         font-size: 16px;
-        margin-bottom: 10px !important;
+        margin-bottom: 15px !important;
     }
     
-    /* Nút bấm màu Xanh Ngọc Bích (Jade) */
+    /* 4. Nút bấm nhỏ gọn màu xanh ngọc */
     .custom-btn {
-        display: inline-block; /* Giúp nút co giãn theo nội dung */
+        display: inline-block;
         background-color: #00b894; 
         color: white !important;
-        padding: 8px 20px; /* Tăng khoảng cách đệm để nút nhìn đẹp hơn */
-        border-radius: 5px; /* Bo tròn góc */
-        
-        text-decoration: none !important; /* QUAN TRỌNG: Bỏ gạch chân dưới chữ */
-        
+        padding: 6px 15px;
+        border-radius: 20px; /* Bo tròn nút nhiều hơn */
+        text-decoration: none !important;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 13px;
         text-align: center;
-        transition: 0.3s;
         border: none;
-        
-        width: auto; /* QUAN TRỌNG: Dòng này giúp nút thu nhỏ lại vừa bằng chữ */
+        width: auto;
     }
-    
     .custom-btn:hover {
         background-color: #019376;
-        color: white !important;
-        text-decoration: none !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -77,7 +87,7 @@ courses = [
 
 # 3. Sidebar - Bộ lọc & Menu
 with st.sidebar:
-    st.image("logo.png", width=150) # Thay bằng link logo thật nếu có
+    st.image("logo.png", width=150)
     st.header("🔍 Tìm kiếm & Lọc")
     
     search_term = st.text_input("Tìm khóa học...")
@@ -86,7 +96,7 @@ with st.sidebar:
     selected_category = st.selectbox("Danh mục", categories)
     
     st.markdown("---")
-    st.write("📞 Hotline: 0866777333")
+    st.write("📞 Hotline: 0866.771.333")
     if st.button("Đăng nhập"):
         st.write("Chức năng đang phát triển")
 
@@ -127,14 +137,19 @@ else:
                     <p class="course-title">{course['title']}</p>
                     <p class="course-cat">Danh mục: {course['category']}</p>
                     <p class="course-price">{course['price']}</p>
-                    <a href="{course.get('link', '#')}" target="_blank" class="custom-btn">
-                        Xem chi tiết
-                    </a>
+                    
+                    <!-- Thêm div này để căn giữa nút bấm -->
+                    <div style="text-align: center;"> 
+                        <a href="{course.get('link', '#')}" target="_blank" class="custom-btn">
+                            Xem chi tiết
+                        </a>
+                    </div>
                 </div>
                 """, unsafe_allow_html=True)
             
             st.markdown("---")
 st.markdown("<center>© 2025 Âu Việt Center Developed by Albert Nguyen</center>", unsafe_allow_html=True)
+
 
 
 
