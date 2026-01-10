@@ -4,10 +4,31 @@ import streamlit as st
 st.set_page_config(page_title="AUVIET CENTER", layout="wide", page_icon="🎓")
 
 # ----------------------------------------------------------------
+# THANH MENU ĐIỀU HƯỚNG (NAVBAR) - NẰM TRÊN CÙNG
+# ----------------------------------------------------------------
+# Tạo 3 cột: Trang chủ - Luyện tập - Khoảng trống
+nav_col1, nav_col2, nav_col3 = st.columns([1, 1, 4])
+
+with nav_col1:
+    # Nút dẫn đến trang hiện tại (Trang chủ) - disable để biết đang ở đây
+    st.page_link("app.py", label="🏠 Trang chủ", icon=None, use_container_width=True, disabled=True)
+
+with nav_col2:
+    # Nút dẫn sang trang Luyện tập (Cần tạo file pages/luyentap.py mới chạy được)
+    st.page_link("pages/luyentap.py", label="📝 Luyện tập YouPass", icon=None, use_container_width=True)
+
+st.divider() # Đường kẻ phân cách menu
+
+# ----------------------------------------------------------------
 # PHẦN CSS (GIAO DIỆN)
 # ----------------------------------------------------------------
 st.markdown("""
 <style>
+    /* QUAN TRỌNG: ẨN SIDEBAR MẶC ĐỊNH BÊN TRÁI */
+    [data-testid="stSidebar"] {
+        display: none;
+    }
+    
     /* 1. CSS CHO THẺ SẢN PHẨM (CARD) */
     .product-card {
         background-color: white;
@@ -127,12 +148,10 @@ st.markdown("""
         padding-top: 20px;
         border-top: 1px solid #eee;
     }
-/* Ẩn biểu tượng liên kết (cái ghim) bên cạnh tiêu đề */
+    /* Ẩn biểu tượng liên kết (cái ghim) bên cạnh tiêu đề */
     [data-testid="stHeaderAction"] {
         display: none !important;
     }
-    
-    /* Ẩn thêm các thẻ a bên trong header để chắc chắn sạch sẽ */
     h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
         display: none !important;
     }
@@ -140,7 +159,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ----------------------------------------------------------------
-# DỮ LIỆU KHÓA HỌC (Đã chuẩn hóa link ảnh)
+# DỮ LIỆU KHÓA HỌC
 # ----------------------------------------------------------------
 courses = [
     {"id": 1, "title": "Khoá học IELTS Speaking", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/SPEAKING.png", "category": "Speaking", "link": "https://www.youtube.com/playlist?list=PLI3S3xWA78UXXz0m6QoGyc-8UvHeAYTYT"},
@@ -165,17 +184,17 @@ with top_col2:
     """, unsafe_allow_html=True)
 
 # ----------------------------------------------------------------
-# 2. BANNER (ĐÃ CHUYỂN LÊN TRÊN THANH TÌM KIẾM)
+# BANNER
 # ----------------------------------------------------------------
 try:
     st.image("banner.JPG", use_column_width=True)
 except:
     st.image("https://via.placeholder.com/1200x300?text=AU+VIET+CENTER", use_column_width=True)
 
-st.write("") # Tạo một khoảng trống nhỏ giữa banner và thanh tìm kiếm
+st.write("") 
 
 # ----------------------------------------------------------------
-# 3. THANH TÌM KIẾM & BỘ LỌC NGANG (ĐÃ CHUYỂN XUỐNG DƯỚI)
+# THANH TÌM KIẾM
 # ----------------------------------------------------------------
 st.markdown("##### 🔍 Tìm kiếm & Lọc") 
 search_col, filter_col = st.columns([3, 1])
@@ -184,14 +203,13 @@ with search_col:
     search_term = st.text_input("Search", placeholder="Nhập tên khóa học...", label_visibility="collapsed")
 
 with filter_col:
-    # Lấy danh sách category từ dữ liệu courses đã khai báo ở trên
     categories = ["Tất cả"] + list(set([c['category'] for c in courses]))
     selected_category = st.selectbox("Category", categories, label_visibility="collapsed")
 
 st.markdown("### 🔥 Các khóa học nổi bật")
 
 # ----------------------------------------------------------------
-# 4. LOGIC & HIỂN THỊ (Giữ nguyên)
+# LOGIC & HIỂN THỊ
 # ----------------------------------------------------------------
 filtered_courses = courses
 if selected_category != "Tất cả":
@@ -222,12 +240,11 @@ else:
             """, unsafe_allow_html=True)
 
 # ----------------------------------------------------------------
-# FOOTER (CHÂN TRANG) - ĐÃ SỬA LỖI HIỂN THỊ
+# FOOTER
 # ----------------------------------------------------------------
 logo_url = "https://raw.githubusercontent.com/linhchutvn/test/main/logo.png" 
 dmca_url = "https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=YOUR_ID"
 
-# LƯU Ý QUAN TRỌNG: Các dòng HTML bên dưới phải nằm sát lề trái, KHÔNG được thụt vào.
 st.markdown(f"""
 <div class="footer-container">
 <div class="footer-content">
@@ -265,12 +282,3 @@ st.markdown(f"""
 </div>
 </div>
 """, unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-
