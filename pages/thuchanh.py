@@ -762,11 +762,11 @@ if st.session_state.step == 1:
                     # Gọi AI với Prompt Vạn Năng
                     res, _ = generate_content_with_failover(prompt_guide + "\nĐề bài: " + question_input, img_data, json_mode=True)
                     if res:
-                    data = parse_guide_response(res.text)
+                        data = parse_guide_response(res.text)
                     # Dù AI trả về gì, ta cũng phải gán guide_data để App không bị kẹt ở Step 1
-                    st.session_state.guide_data = data if data else {
-                        "task_type": "Task 1", "intro_guide": "AI Error - Please try again", 
-                        "overview_guide": "", "body1_guide": "", "body2_guide": ""
+                        st.session_state.guide_data = data if data else {
+                            "task_type": "Task 1", "intro_guide": "AI Error - Please try again", 
+                            "overview_guide": "", "body1_guide": "", "body2_guide": ""
                     }
                     st.session_state.step = 2
                     st.rerun() # Buộc Streamlit vẽ lại giao diện Phase 2 ngay lập tức
