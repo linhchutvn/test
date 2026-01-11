@@ -122,7 +122,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-)
 
 # ==========================================
 # 2. LOGIC AI (FAILOVER)
