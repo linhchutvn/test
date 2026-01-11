@@ -770,32 +770,41 @@ if st.session_state.step == 1:
 # ==========================================
 if st.session_state.step == 2 and st.session_state.guide_data:
     
-    # --- CHÈN ĐOẠN CSS NÀY ĐỂ CỐ ĐỊNH CỘT TRÁI ---
+    # --- 1. THÊM CSS ĐỂ CỐ ĐỊNH THANH BÊN TRÁI (STICKY) ---
     st.markdown("""
         <style>
-            /* Nhắm vào cột đầu tiên trong layout chia đôi */
             [data-testid="column"]:nth-of-type(1) {
                 position: sticky;
-                top: 1rem; /* Khoảng cách từ mép trên màn hình */
+                top: 1rem;
                 height: fit-content;
                 z-index: 99;
             }
-            /* Đảm bảo ảnh không bị tràn và hiển thị rõ nét */
-            [data-testid="column"] img {
-                max-height: 80vh;
-                object-fit: contain;
-            }
         </style>
     """, unsafe_allow_html=True)
-    # --------------------------------------------
 
     data = st.session_state.guide_data
-    
-    # Chia giao diện thành 2 cột (Giữ nguyên code layout của bạn)
+
+    # --- 2. ĐỊNH NGHĨA HÀM NÀY TẠI ĐÂY ĐỂ HẾT LỖI NAMEERROR ---
+    def render_writing_section(title, guide_key, input_key):
+        st.markdown(f"##### {title}")
+        with st.expander(f"💡 Gợi ý viết {title}", expanded=False):
+            # Lấy nội dung hướng dẫn từ biến 'data'
+            guide_text = data.get(guide_key, "Không có hướng dẫn chi tiết.")
+            st.markdown(f"<div class='guide-box'>{guide_text}</div>", unsafe_allow_html=True)
+        return st.text_area(
+            label=title, 
+            height=150, 
+            key=input_key, 
+            placeholder=f"Nhập phần {title} của bạn...", 
+            label_visibility="collapsed"
+        )
+    # ---------------------------------------------------------
+
+    # --- 3. CHIA CỘT LAYOUT ---
     col_left, col_right = st.columns([4, 6], gap="large")
 
+    # CỘT BÊN TRÁI (Sẽ tự dính khi kéo xuống nhờ CSS ở trên)
     with col_left:
-        # Nội dung Đề bài và Hình ảnh (Bây giờ sẽ tự động dính khi cuộn)
         st.markdown("### 📄 Đề bài & Hình ảnh")
         st.markdown(f"""<div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #eee; font-style: italic;">{st.session_state.saved_topic}</div>""", unsafe_allow_html=True)
         
@@ -803,11 +812,11 @@ if st.session_state.step == 2 and st.session_state.guide_data:
             st.image(st.session_state.saved_img, use_container_width=True)
         st.info(f"📌 Dạng bài: {data.get('task_type')}")
 
-    # CỘT BÊN PHẢI: CÁC Ô NHẬP LIỆU (INTRODUCTION, OVERVIEW...)
+    # CỘT BÊN PHẢI (Khu vực viết bài)
     with col_right:
         st.markdown("### ✍️ Bài làm của bạn")
         
-        # Bây giờ các hàm này sẽ chạy bình thường vì đã được định nghĩa ở trên
+        # Bây giờ các dòng này sẽ KHÔNG còn lỗi NameError nữa
         intro = render_writing_section("Introduction", "intro_guide", "in_intro")
         overview = render_writing_section("Overview", "overview_guide", "in_overview")
         body1 = render_writing_section("Body 1", "body1_guide", "in_body1")
