@@ -537,16 +537,29 @@ Cấu trúc JSON:
 # ==========================================
 
 def clean_json(text):
-    match = re.search(r"```json\s*([\s\S]*?)\s*```", text)
-    if match: return match.group(1).strip()
-    if text.strip().startswith("{"): return text.strip()
+    # Tìm đoạn văn bản nằm giữa dấu ngoặc nhọn { ... } đầu tiên và cuối cùng
+    match = re.search(r"(\{[\s\S]*\})", text)
+    if match:
+        content = match.group(1).strip()
+        # Loại bỏ các ký tự điều khiển lỗi
+        content = re.sub(r'[\x00-\x1F\x7F-\x9F]', '', content)
+        return content
     return None
 
 def parse_guide_response(text):
+    j_str = clean_json(text)
+    if not j_str: return None
     try:
-        j_str = clean_json(text)
-        return json.loads(j_str) if j_str else None
-    except: return None
+        return json.loads(j_str)
+    except:
+        # Nếu lỗi JSON, thử quét tay các trường quan trọng (fallback)
+        return {
+            "task_type": "IELTS Task 1",
+            "intro_guide": "Hãy paraphrase đề bài bằng từ đồng nghĩa.",
+            "overview_guide": "Nêu xu hướng chung và đặc điểm nổi bật.",
+            "body1_guide": "Mô tả chi tiết nhóm số liệu 1.",
+            "body2_guide": "Mô tả chi tiết nhóm số liệu 2."
+        }
 
 def process_grading_response(full_text):
     """
@@ -698,7 +711,6 @@ if st.session_state.step == 1:
         if not question_input and not img_data:
             st.warning("⚠️ Vui lòng nhập đề bài và tải ảnh lên để bắt đầu.")
         else:
-            # --- QUAN TRỌNG: LƯU DỮ LIỆU VÀO SESSION STATE ---
             st.session_state.saved_topic = question_input
             st.session_state.saved_img = img_data # Lưu đối tượng PIL Image vào đây
             # -------------------------------------------------
@@ -749,6 +761,15 @@ if st.session_state.step == 1:
                     
                     # Gọi AI với Prompt Vạn Năng
                     res, _ = generate_content_with_failover(prompt_guide + "\nĐề bài: " + question_input, img_data, json_mode=True)
+                if res:
+                    data = parse_guide_response(res.text)
+                    # Dù AI trả về gì, ta cũng phải gán guide_data để App không bị kẹt ở Step 1
+                    st.session_state.guide_data = data if data else {
+                        "task_type": "Task 1", "intro_guide": "AI Error - Please try again", 
+                        "overview_guide": "", "body1_guide": "", "body2_guide": ""
+                    }
+                    st.session_state.step = 2
+                    st.rerun() # Buộc Streamlit vẽ lại giao diện Phase 2 ngay lập tức
 
 # ==========================================
 # 6. UI: PHASE 2 - WRITING PRACTICE (SỬA LẠI LAYOUT TẠI ĐÂY)
@@ -757,7 +778,7 @@ if st.session_state.step == 2 and st.session_state.guide_data:
     data = st.session_state.guide_data
 
     # --- BƯỚC CHÍNH: CHIA CỘT TRÁI (4) VÀ PHẢI (6) ---
-    col_left, col_right = st.columns([4, 6], gap="large")
+    col_left, col_right = st.columns([4, 6], gap="medium")
 
     # CỘT BÊN TRÁI: HIỂN THỊ ĐỀ VÀ HÌNH ẢNH
     with col_left:
