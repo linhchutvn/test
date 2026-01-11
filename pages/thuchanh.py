@@ -661,7 +661,7 @@ st.markdown('<div class="sub-header">Learning & Scoring Based on IELTS Band Desc
 if st.session_state.step == 1:
     
     # STEP 1
-    st.markdown('<div class="step-header">STEP 1 – Visual Data (bắt buộc)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="step-header">STEP 1 – Visual Data </div>', unsafe_allow_html=True)
     st.markdown('<div class="step-desc">Upload chart / graph / table / diagram</div>', unsafe_allow_html=True)
     uploaded_image = st.file_uploader("Upload Image", type=['png', 'jpg', 'jpeg'], key="img_input", label_visibility="collapsed")
     if uploaded_image:
