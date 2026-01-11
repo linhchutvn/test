@@ -886,58 +886,20 @@ if st.session_state.step == 2 and st.session_state.guide_data:
                         status.update(label="❌ Lỗi kết nối AI", state="error")
 
 # ==========================================
-# 7. UI: PHASE 3 - GRADING RESULT (DASHBOARD LAYOUT - 2 SCROLLABLE BOXES)
+# 7. UI: PHASE 3 - GRADING RESULT (HIGH CONTRAST BOXES)
 # ==========================================
 if st.session_state.step == 3 and st.session_state.grading_result:
     
-    # --- 1. CSS TẠO GIAO DIỆN 3 KHỐI (HEADER + 2 HỘP CUỘN) ---
+    # --- 1. CSS LÀM NỔI BẬT HỘP ---
     st.markdown("""
         <style>
-            /* Tinh chỉnh lề trang để tận dụng tối đa màn hình */
-            .block-container {
-                padding-top: 1rem;
-                padding-bottom: 5rem;
-            }
-
-            /* --- CẤU HÌNH CHO CẢ 2 CỘT (HỘP TRÁI & HỘP PHẢI) --- */
-            /* Selector này nhắm vào các cột trong layout chính */
-            div[data-testid="column"] {
-                height: 80vh;                 /* Chiều cao cố định = 80% màn hình */
-                overflow-y: auto;             /* Bật thanh cuộn riêng cho từng hộp */
-                background-color: #ffffff;    /* Nền trắng */
-                border: 1px solid #e2e8f0;    /* Viền xám */
-                border-radius: 12px;          /* Bo góc */
-                padding: 20px;                /* Đệm bên trong */
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Bóng đổ nhẹ */
-                display: block;
-            }
-
-            /* Tùy chỉnh thanh cuộn cho đẹp */
-            div[data-testid="column"]::-webkit-scrollbar { width: 8px; }
-            div[data-testid="column"]::-webkit-scrollbar-track { background: #f1f5f9; }
-            div[data-testid="column"]::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-
-            /* Style cho bài viết gốc (trong hộp trái) */
-            .essay-original {
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 0.9rem;
-                line-height: 1.5;
-                background-color: #f8fafc;
-                padding: 15px;
-                border-radius: 8px;
-                border: 1px solid #cbd5e1;
-                white-space: pre-wrap;
+            /* Làm tối màu nền trang web một chút để hộp trắng nổi lên */
+            .stApp {
+                background-color: #f0f2f6;
             }
             
-            /* Style cho tiêu đề Hộp */
-            .box-header {
-                font-weight: 700;
-                font-size: 1.1rem;
-                color: #1e293b;
-                margin-bottom: 15px;
-                border-bottom: 2px solid #f1f5f9;
-                padding-bottom: 10px;
-            }
+            /* Tùy chỉnh tiêu đề cho đẹp */
+            h3 { color: #1e293b; padding-bottom: 10px; }
         </style>
     """, unsafe_allow_html=True)
 
@@ -945,99 +907,94 @@ if st.session_state.step == 3 and st.session_state.grading_result:
     g_data = res["data"]
     analysis_text = res["markdown"]
 
-    # --- KHỐI 1: HEADER (Tiêu đề chung) ---
-    # Phần này nằm ngoài các cột nên sẽ nằm trên cùng
     st.markdown("### 🏆 Kết quả đánh giá chi tiết")
-    
-    # --- KHỐI 2 & 3: HAI HỘP TRÁI PHẢI (Tỷ lệ 4:6) ---
-    col_left_box, col_right_box = st.columns([4, 6], gap="medium")
-    
-    # === HỘP BÊN TRÁI: THÔNG TIN ĐỐI CHIẾU (Có thanh cuộn riêng) ===
-    with col_left_box:
-        st.markdown('<div class="box-header">📄 Thông tin đối chiếu</div>', unsafe_allow_html=True)
-        
-        # 1. Hình ảnh
-        if st.session_state.saved_img:
-            st.image(st.session_state.saved_img, use_container_width=True, caption="Visual Data")
-        
-        st.markdown("---")
-        
-        # 2. Đề bài
-        with st.expander("📌 Đề bài (Prompt)", expanded=False):
-            st.info(st.session_state.saved_topic)
+
+    # --- 2. CHIA 2 CỘT LỚN ---
+    c1, c2 = st.columns([4, 6], gap="medium")
+
+    # === HỘP TRÁI: THÔNG TIN ĐỐI CHIẾU ===
+    with c1:
+        # Dùng st.container với height cố định để tạo thanh cuộn và viền
+        with st.container(height=700, border=True):
+            st.markdown("#### 📄 Thông tin đối chiếu")
+            st.caption("Cuộn khung này để xem lại đề và bài làm")
             
-        st.markdown("---")
+            # 1. Hình ảnh
+            if st.session_state.saved_img:
+                st.image(st.session_state.saved_img, use_container_width=True, caption="Visual Data")
+            
+            st.divider()
+            
+            # 2. Đề bài
+            st.info(f"**Prompt:** {st.session_state.saved_topic}")
+            
+            st.divider()
 
-        # 3. Bài viết
-        st.markdown("**✍️ Bài viết của bạn:**")
-        st.markdown(f'<div class="essay-original">{html.escape(res["essay"])}</div>', unsafe_allow_html=True)
+            # 3. Bài viết gốc
+            st.markdown("**✍️ Bài viết của bạn:**")
+            st.code(res["essay"], language=None) # Dùng st.code để hiện bài viết rõ ràng, font dễ đọc
 
-
-    # === HỘP BÊN PHẢI: PHÂN TÍCH & ĐIỂM SỐ (Có thanh cuộn riêng) ===
-    with col_right_box:
-        st.markdown('<div class="box-header">🛡️ Examiner Analysis</div>', unsafe_allow_html=True)
-        
-        # 1. Bảng điểm (Score Card)
-        scores = g_data.get("originalScore", {})
-        st.markdown(f"""
-        <div style="background-color: #ecfdf5; border: 1px solid #6ee7b7; border-radius: 10px; padding: 15px; margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div style="text-align: center;">
-                    <div style="font-size: 12px; color: #047857; font-weight: bold;">BAND SCORE</div>
-                    <div style="font-size: 36px; color: #059669; font-weight: 900; line-height: 1;">{scores.get("overall", "-")}</div>
-                </div>
-                <div style="display: flex; gap: 15px; text-align: center;">
-                    <div><div style="font-size:11px; color:#047857;">TA</div><b style="color:#059669; font-size:1.1rem;">{scores.get("task_achievement", "-")}</b></div>
-                    <div><div style="font-size:11px; color:#047857;">CC</div><b style="color:#059669; font-size:1.1rem;">{scores.get("cohesion_coherence", "-")}</b></div>
-                    <div><div style="font-size:11px; color:#047857;">LR</div><b style="color:#059669; font-size:1.1rem;">{scores.get("lexical_resource", "-")}</b></div>
-                    <div><div style="font-size:11px; color:#047857;">GRA</div><b style="color:#059669; font-size:1.1rem;">{scores.get("grammatical_range", "-")}</b></div>
+    # === HỘP PHẢI: KẾT QUẢ CHẤM ===
+    with c2:
+        # Dùng st.container với height cố định tương tự
+        with st.container(height=700, border=True):
+            st.markdown("#### 🛡️ Examiner Analysis")
+            
+            # Bảng điểm
+            scores = g_data.get("originalScore", {})
+            
+            # Khung điểm số đẹp
+            st.markdown(f"""
+            <div style="background-color: #ecfdf5; border: 2px solid #6ee7b7; border-radius: 10px; padding: 15px; text-align: center; margin-bottom: 20px;">
+                <h2 style="margin:0; color: #047857; font-size: 3rem;">{scores.get("overall", "-")}</h2>
+                <span style="color: #047857; font-weight: bold;">OVERALL BAND SCORE</span>
+                <hr style="border-top: 1px solid #6ee7b7; margin: 10px 0;">
+                <div style="display: flex; justify-content: space-around; color: #064e3b; font-weight: bold;">
+                    <span>TA: {scores.get("task_achievement", "-")}</span>
+                    <span>CC: {scores.get("cohesion_coherence", "-")}</span>
+                    <span>LR: {scores.get("lexical_resource", "-")}</span>
+                    <span>GRA: {scores.get("grammatical_range", "-")}</span>
                 </div>
             </div>
-        </div>
-        """, unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
 
-        # 2. Tabs chi tiết
-        t1, t2, t3, t4 = st.tabs(["📝 Phân tích", "🔴 Ngữ pháp", "🔵 Mạch lạc", "✍️ Bài sửa"])
-        
-        with t1:
-            if analysis_text and len(analysis_text) > 50:
-                st.markdown(analysis_text)
-            else:
-                st.info("Chưa có dữ liệu phân tích.")
+            # Các Tab chi tiết
+            t1, t2, t3, t4 = st.tabs(["📝 Phân tích", "🔴 Lỗi Ngữ pháp", "🔵 Lỗi Mạch lạc", "✍️ Bài sửa"])
+            
+            with t1:
+                st.markdown(analysis_text if analysis_text and len(analysis_text) > 50 else "Chưa có dữ liệu.")
+            
+            with t2:
+                micro = [e for e in g_data.get('errors', []) if e.get('category') in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
+                if not micro: st.success("✅ Không có lỗi ngữ pháp lớn.")
+                for i, err in enumerate(micro):
+                    badge = "#dcfce7" if err.get('category') in ['Grammar','Ngữ pháp'] else "#fef9c3"
+                    st.markdown(f"""
+                    <div style="border:1px solid #ddd; padding:10px; border-radius:5px; margin-bottom:10px; background:white;">
+                        <b>#{i+1} {err.get('type')}</b>
+                        <div style="background:{badge}; padding:5px; margin:5px 0;">
+                            ❌ {err.get('original')}<br>✅ <b>{err.get('correction')}</b>
+                        </div>
+                        <small><i>{err.get('explanation')}</i></small>
+                    </div>""", unsafe_allow_html=True)
+            
+            with t3:
+                macro = [e for e in g_data.get('errors', []) if e.get('category') not in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
+                if not macro: st.success("✅ Cấu trúc tốt.")
+                for err in macro:
+                    st.info(f"**{err.get('type')}**: {err.get('explanation')}\n\n👉 *Gợi ý:* {err.get('correction')}")
+            
+            with t4:
+                st.markdown(g_data.get("annotatedEssay", ""))
 
-        with t2:
-            micro = [e for e in g_data.get('errors', []) if e.get('category') in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
-            if not micro: st.success("✅ Tuyệt vời! Không có lỗi ngữ pháp lớn.")
-            for i, err in enumerate(micro):
-                badge = "#DCFCE7" if err.get('category') in ['Grammar','Ngữ pháp'] else "#FEF9C3"
-                st.markdown(f'<div class="error-card"><b>#{i+1} {err.get("type")}</b><div style="background:{badge}; padding:5px; border-radius:4px; margin:5px 0;"><s>{err.get("original")}</s> ➔ <b>{err.get("correction")}</b></div><small><i>{err.get("explanation")}</i></small></div>', unsafe_allow_html=True)
-
-        with t3:
-            macro = [e for e in g_data.get('errors', []) if e.get('category') not in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
-            if not macro: st.success("✅ Cấu trúc tốt.")
-            for err in macro:
-                st.markdown(f'<div class="error-card" style="border-left:4px solid #3b82f6;"><b>{err.get("type")}</b><br>{err.get("explanation")}<br>👉 <b>{err.get("correction")}</b></div>', unsafe_allow_html=True)
-
-        with t4:
-            st.markdown(f'<div class="annotated-text">{g_data.get("annotatedEssay", "")}</div>', unsafe_allow_html=True)
-
-        st.markdown("---")
-        
-        # 3. Footer bên phải (Dự báo & Download)
-        rev = g_data.get("revisedScore", {})
-        if rev:
-            st.subheader("📈 Dự báo sau sửa")
-            cols = st.columns(2)
-            cols[0].metric("TA Mới", rev.get("task_achievement", "-"))
-            cols[1].metric("Overall Mới", rev.get("overall", "-"))
-        
-        st.markdown("<br>", unsafe_allow_html=True)
-        
-        d1, d2 = st.columns(2)
-        docx = create_docx(g_data, res['topic'], res['essay'], analysis_text)
-        d1.download_button("📥 Tải DOCX", docx, "Report.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document", use_container_width=True)
-        
-        if d2.button("🔄 Reset", use_container_width=True):
-            for k in ["step", "guide_data", "grading_result", "saved_topic", "saved_img"]: st.session_state[k] = None
-            st.session_state.step = 1
-            st.rerun()
+            st.divider()
+            
+            # Footer buttons inside the right box
+            d1, d2 = st.columns(2)
+            docx = create_docx(g_data, res['topic'], res['essay'], analysis_text)
+            d1.download_button("📥 Tải DOCX", docx, "Report.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+            
+            if d2.button("🔄 Reset"):
+                for k in ["step", "guide_data", "grading_result", "saved_topic", "saved_img"]: st.session_state[k] = None
+                st.session_state.step = 1
+                st.rerun()rerun()
