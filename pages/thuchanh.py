@@ -886,49 +886,45 @@ if st.session_state.step == 2 and st.session_state.guide_data:
                         status.update(label="❌ Lỗi kết nối AI", state="error")
 
 # ==========================================
-# 7. UI: PHASE 3 - GRADING RESULT (THE REAL BOX FIX)
+# 7. UI: PHASE 3 - GRADING RESULT (SAFE & CLEAN LAYOUT)
 # ==========================================
 if st.session_state.step == 3 and st.session_state.grading_result:
     
-    # --- 1. CSS CHO HỘP CỐ ĐỊNH (STICKY SIDEBAR) ---
+    # --- 1. CSS TẠO HIỆU ỨNG CARD CHO CỘT TRÁI ---
     st.markdown("""
         <style>
-            /* Class tạo cái hộp vật lý: Có viền, nền trắng, bóng đổ */
-            .sticky-sidebar {
-                position: fixed; /* Đứng yên trên màn hình */
-                top: 5rem;       /* Cách đỉnh 5rem */
-                width: 38%;      /* Chiều rộng cố định theo tỷ lệ cột */
-                max-height: 85vh;/* Chiều cao tối đa */
-                overflow-y: auto;/* Cuộn bên trong nếu dài */
+            /* 1. Căn chỉnh hàng ngang để cột trái có thể trượt */
+            [data-testid="stHorizontalBlock"] {
+                align-items: flex-start !important;
+            }
+
+            /* 2. Style cho Cột Trái (Cột 1) thành một cái Card nổi */
+            div[data-testid="column"]:nth-of-type(1) > div[data-testid="stVerticalBlock"] {
+                position: sticky !important;
+                top: 4rem !important;
+                z-index: 100;
                 
                 background-color: #ffffff;
-                border: 2px solid #e2e8f0; /* Viền xám đậm hơn chút để dễ thấy */
+                border: 1px solid #e5e7eb;
                 border-radius: 12px;
-                padding: 20px;
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-                z-index: 9999; /* Luôn nổi lên trên */
+                padding: 1.5rem !important;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                
+                max-height: 85vh;
+                overflow-y: auto;
             }
 
-            /* Đẩy cột phải sang bên để không bị cột trái che mất */
-            [data-testid="column"]:nth-of-type(2) {
-                margin-left: 42% !important; /* Đẩy sang phải */
-                width: 58% !important;
-            }
-            
-            /* Ẩn nội dung gốc của cột 1 đi để thay bằng HTML của mình (Tránh trùng lặp layout) */
-            [data-testid="column"]:nth-of-type(1) {
-                display: none; 
-            }
-
-            /* Style cho nội dung bên trong hộp */
-            .essay-content-review {
+            /* Style cho khung bài viết bên trái */
+            .essay-review-box {
                 background-color: #f8fafc;
                 border: 1px solid #cbd5e1;
-                padding: 10px;
                 border-radius: 6px;
-                font-family: monospace;
-                white-space: pre-wrap;
+                padding: 12px;
+                font-family: 'Inter', sans-serif;
                 font-size: 0.9rem;
+                line-height: 1.6;
+                color: #334155;
+                white-space: pre-wrap;
             }
         </style>
     """, unsafe_allow_html=True)
@@ -936,61 +932,53 @@ if st.session_state.step == 3 and st.session_state.grading_result:
     res = st.session_state.grading_result
     g_data = res["data"]
     analysis_text = res["markdown"]
-
-    # --- 2. TẠO CẤU TRÚC HTML CHO CỘT TRÁI (SIDEBAR) ---
-    # Thay vì dùng st.column(1), ta tiêm thẳng HTML vào để tạo cái hộp "bất tử"
     
-    # Chuẩn bị nội dung ảnh (nếu có)
-    img_html = ""
-    if st.session_state.saved_img:
-        # Chuyển ảnh PIL sang base64 để hiển thị trong HTML
-        buffered = BytesIO()
-        st.session_state.saved_img.save(buffered, format="PNG")
-        import base64
-        img_str = base64.b64encode(buffered.getvalue()).decode()
-        img_html = f'<img src="data:image/png;base64,{img_str}" style="width:100%; border-radius:8px; margin-bottom:15px;">'
-
-    # Nội dung Sidebar HTML
-    sidebar_html = f"""
-    <div class="sticky-sidebar">
-        <h3 style="margin-top:0; color:#0F172A;">📄 Thông tin đối chiếu</h3>
-        <p style="color:#64748B; font-size:0.9rem;">Khung này được cố định để bạn dễ xem lại.</p>
-        <hr style="margin: 10px 0;">
-        
-        {img_html}
-        
-        <div style="background:#F1F5F9; padding:10px; border-radius:6px; font-style:italic; font-size:0.9rem; color:#334155; margin-bottom:15px;">
-            <b>Prompt:</b> {st.session_state.saved_topic}
-        </div>
-
-        <h4 style="color:#0F172A;">✍️ Bài viết của bạn</h4>
-        <div class="essay-content-review">{html.escape(res["essay"])}</div>
-    </div>
-    """
+    # --- 2. CHIA CỘT CHUẨN 4:6 (Native Streamlit) ---
+    col_left, col_right = st.columns([4, 6], gap="large")
     
-    # Render Sidebar HTML
-    st.markdown(sidebar_html, unsafe_allow_html=True)
-
-    # --- 3. HIỂN THỊ CỘT PHẢI (KẾT QUẢ CHẤM) ---
-    # Ta dùng columns nhưng bỏ qua cột 1 (vì đã ẩn bằng CSS), chỉ điền vào cột 2
-    _, col_result = st.columns([0.1, 99.9]) # Hack: Cột 1 siêu nhỏ (ẩn), Cột 2 chiếm hết phần còn lại
-    
-    with col_result:
-        # (Nội dung phần này sẽ tự động bị CSS đẩy sang phải lề 42% nên không lo bị che)
+    # === CỘT TRÁI: THÔNG TIN ĐỐI CHIẾU ===
+    # (Tự động được bao bọc bởi CSS Card ở trên)
+    with col_left:
+        st.markdown("#### 📄 Thông tin đối chiếu")
+        st.caption("Khung này được cố định để bạn dễ xem lại.")
         
+        # 1. Hình ảnh (Dùng hàm chuẩn, không dùng HTML raw để tránh lỗi)
+        if st.session_state.saved_img:
+            st.image(st.session_state.saved_img, use_container_width=True)
+        
+        st.markdown("---")
+        
+        # 2. Đề bài
+        with st.expander("📌 Đề bài (Prompt)", expanded=False):
+            st.info(st.session_state.saved_topic)
+            
+        # 3. Bài viết của bạn
+        st.markdown("**✍️ Bài viết của bạn:**")
+        st.markdown(f'<div class="essay-review-box">{html.escape(res["essay"])}</div>', unsafe_allow_html=True)
+
+    # === CỘT PHẢI: KẾT QUẢ CHẤM ===
+    with col_right:
         st.markdown("## 🛡️ EXAMINER REPORT")
         
         # Bảng điểm
         scores = g_data.get("originalScore", {})
-        c1, c2, c3, c4, c5 = st.columns(5)
-        c1.metric("TA", scores.get("task_achievement", "-"))
-        c2.metric("CC", scores.get("cohesion_coherence", "-"))
-        c3.metric("LR", scores.get("lexical_resource", "-"))
-        c4.metric("GRA", scores.get("grammatical_range", "-"))
-        c5.metric("OVERALL", scores.get("overall", "-"))
         
-        st.markdown("---")
-
+        # Hộp điểm số xanh lá
+        st.markdown(f"""
+        <div style="background-color: #ecfdf5; border: 1px solid #6ee7b7; border-radius: 10px; padding: 15px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <div style="text-align: center;">
+                <span style="color: #047857; font-weight: bold; font-size: 0.9rem;">BAND SCORE</span><br>
+                <span style="color: #059669; font-weight: 900; font-size: 2.5rem; line-height: 1;">{scores.get("overall", "-")}</span>
+            </div>
+            <div style="display: flex; gap: 15px; text-align: center;">
+                <div><small style="color:#047857;">TA</small><br><b style="color:#059669; font-size:1.1rem;">{scores.get("task_achievement", "-")}</b></div>
+                <div><small style="color:#047857;">CC</small><br><b style="color:#059669; font-size:1.1rem;">{scores.get("cohesion_coherence", "-")}</b></div>
+                <div><small style="color:#047857;">LR</small><br><b style="color:#059669; font-size:1.1rem;">{scores.get("lexical_resource", "-")}</b></div>
+                <div><small style="color:#047857;">GRA</small><br><b style="color:#059669; font-size:1.1rem;">{scores.get("grammatical_range", "-")}</b></div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
         # Tabs chi tiết
         tab1, tab2, tab3, tab4 = st.tabs(["📝 Phân tích", "🔴 Lỗi Ngữ pháp", "🔵 Lỗi Mạch lạc", "✍️ Bài sửa"])
         
@@ -1002,7 +990,7 @@ if st.session_state.step == 3 and st.session_state.grading_result:
 
         with tab2:
             micro = [e for e in g_data.get('errors', []) if e.get('category') in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
-            if not micro: st.success("✅ Không có lỗi ngữ pháp lớn.")
+            if not micro: st.success("✅ Tuyệt vời! Không có lỗi ngữ pháp lớn.")
             for i, err in enumerate(micro):
                 badge = "#DCFCE7" if err.get('category') in ['Grammar','Ngữ pháp'] else "#FEF9C3"
                 st.markdown(f"""
@@ -1032,12 +1020,10 @@ if st.session_state.step == 3 and st.session_state.grading_result:
 
         st.markdown("---")
         
-        # Download Buttons
+        # Download & Reset
         d1, d2 = st.columns(2)
         docx = create_docx(g_data, res['topic'], res['essay'], analysis_text)
         d1.download_button("📥 Tải báo cáo (.docx)", docx, "IELTS_Report.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-        pdf = create_pdf(g_data, res['topic'], res['essay'], analysis_text)
-        d2.download_button("📕 Tải báo cáo (.pdf)", pdf, "IELTS_Report.pdf", mime="application/pdf")
         
         if st.button("🔄 Làm bài mới (Reset)", use_container_width=True):
             for k in ["step", "guide_data", "grading_result", "saved_topic", "saved_img"]: st.session_state[k] = None
