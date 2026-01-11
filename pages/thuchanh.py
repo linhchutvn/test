@@ -793,18 +793,21 @@ if st.session_state.step == 2 and st.session_state.guide_data:
     with col_right:
         st.markdown("### ✍️ Bài làm của bạn")
         
-        # Bạn giữ nguyên các hàm render_input hoặc render_writing_section của bạn ở đây
-        # Ví dụ:
+        # Lấy dữ liệu từ các ô nhập liệu
         intro = render_writing_section("Introduction", "intro_guide", "in_intro")
         overview = render_writing_section("Overview", "overview_guide", "in_overview")
         body1 = render_writing_section("Body 1", "body1_guide", "in_body1")
         body2 = render_writing_section("Body 2", "body2_guide", "in_body2")
 
-        # Nút nộp bài để chấm điểm (Sử dụng nguyên bản GRADING_PROMPT_TEMPLATE của bạn)
+        # --- TÍNH TOÁN TRƯỚC KHI NHẤN NÚT ---
+        full_essay = f"{intro}\n\n{overview}\n\n{body1}\n\n{body2}".strip()
+        total_words = len(full_essay.split())
+
         if st.button("✨ Submit to Examiner Pro (Chấm điểm)", type="primary", use_container_width=True):
             if total_words < 20:
                 st.warning("⚠️ Bài viết quá ngắn. Vui lòng hoàn thiện trước khi chấm.")
             else:
+                # Tiến hành gọi AI chấm điểm (Giữ nguyên logic prompt_grade của bạn)
                 status = st.status("👨‍🏫 Examiner đang chấm bài...", expanded=True)
                 status.write("🔍 Analyzing Task Achievement & Data Accuracy...")
                 
