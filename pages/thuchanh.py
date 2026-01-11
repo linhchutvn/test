@@ -890,32 +890,34 @@ if st.session_state.step == 2 and st.session_state.guide_data:
 # ==========================================
 if st.session_state.step == 3 and st.session_state.grading_result:
     
-    # --- 1. CSS STICKY CHO PHASE 3 (Tương tự Phase 2) ---
+    # --- 1. CSS STICKY & ESSAY BOX ---
     st.markdown("""
         <style>
             [data-testid="stHorizontalBlock"] { align-items: flex-start !important; }
-            [data-testid="column"]:nth-of-type(1) {
+            
+            /* Sticky Left Column */
+            [data-testid="column"]:nth-of-type(1) > div:first-child {
                 position: -webkit-sticky !important;
                 position: sticky !important;
                 top: 2rem !important;
                 z-index: 999 !important;
-            }
-            [data-testid="column"]:nth-of-type(1) > div:nth-child(1) {
                 max-height: 95vh !important;
                 overflow-y: auto !important;
                 padding-right: 10px;
             }
-            /* Style riêng cho khung bài làm bên trái Phase 3 */
+
+            /* --- SỬA MÀU BACKGROUND BÀI VIẾT TẠI ĐÂY --- */
             .user-essay-box {
-                background-color: #ffffff;
-                border: 1px solid #e5e7eb;
-                padding: 15px;
+                background-color: #ffffff; /* Nền trắng tuyệt đối */
+                border: 1px solid #d1d5db; /* Viền xám nhẹ */
+                padding: 20px;
                 border-radius: 8px;
-                font-family: monospace;
-                font-size: 0.9rem;
-                color: #374151;
-                white-space: pre-wrap; /* Giữ xuống dòng */
-                margin-top: 10px;
+                font-family: 'Inter', sans-serif; /* Font dễ đọc */
+                font-size: 1rem;
+                line-height: 1.6;
+                color: #111827; /* Chữ màu đen đậm (Dark Gray) */
+                white-space: pre-wrap; /* Giữ nguyên xuống dòng của bài viết */
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             }
         </style>
     """, unsafe_allow_html=True)
@@ -927,14 +929,13 @@ if st.session_state.step == 3 and st.session_state.grading_result:
     # --- 2. CHIA CỘT ---
     col_ref, col_result = st.columns([4, 6], gap="large")
     
-    # === CỘT TRÁI: ĐỀ BÀI + ẢNH + BÀI VIẾT CỦA BẠN ===
+    # === CỘT TRÁI: ĐỀ BÀI + ẢNH + BÀI VIẾT ===
     with col_ref:
         st.subheader("📄 Thông tin bài làm")
         
         # 1. Đề bài
-        st.caption("Task Question")
         st.markdown(f"""
-        <div style="background-color: #F8FAFC; padding: 12px; border-radius: 6px; border: 1px solid #E2E8F0; font-style: italic; font-size: 0.9rem; margin-bottom: 10px;">
+        <div style="background-color: #F8FAFC; padding: 15px; border-radius: 8px; border: 1px solid #E2E8F0; font-style: italic; color: #475569; font-size: 0.95rem; margin-bottom: 15px;">
             {st.session_state.saved_topic}
         </div>
         """, unsafe_allow_html=True)
@@ -943,17 +944,16 @@ if st.session_state.step == 3 and st.session_state.grading_result:
         if st.session_state.saved_img:
             st.image(st.session_state.saved_img, use_container_width=True)
         
-        # 3. Bài viết gốc của người dùng
+        # 3. Bài viết gốc (SỬA LẠI PHẦN HIỂN THỊ NÀY)
         st.markdown("---")
         st.subheader("✍️ Bài viết của bạn")
-        # Dùng st.text_area chế độ disabled để hiển thị bài văn giúp dễ đọc/copy
-        st.text_area(
-            label="Original Essay",
-            value=res['essay'],
-            height=400,
-            disabled=True,
-            label_visibility="collapsed"
-        )
+        
+        # Dùng HTML div thay vì st.text_area để kiểm soát màu sắc
+        st.markdown(f"""
+        <div class="user-essay-box">
+            {html.escape(res['essay'])}
+        </div>
+        """, unsafe_allow_html=True)
 
     # === CỘT PHẢI: KẾT QUẢ CHẤM ===
     with col_result:
