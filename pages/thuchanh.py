@@ -42,15 +42,15 @@ st.markdown("""
         color: #0F172A;
         font-weight: 700;
         font-size: 2.2rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0rem;
     }
     .sub-header {
         font-family: 'Inter', sans-serif;
         color: #64748B;
         font-size: 1.1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         border-bottom: 1px solid #E2E8F0;
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
     }
 
     /* Step Headers */
