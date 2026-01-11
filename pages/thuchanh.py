@@ -609,17 +609,17 @@ if "saved_img" not in st.session_state: st.session_state.saved_img = None
 # ==========================================
 # 5. UI: PHASE 1 - INPUT & GUIDE
 # ==========================================
-st.title("🎓 IELTS Writing: Learn & Grade")
+st.title("🎓 IELTS Writing Task 1 – Examiner-Guided Learning & Scoring")
 
 if st.session_state.step == 1:
     col1, col2 = st.columns([1, 1])
     with col1:
-        st.subheader("1. Đề bài")
-        question_input = st.text_area("Nhập câu hỏi:", height=150, placeholder="The chart below shows...", key="q_input")
+        st.subheader("📝 TASK 1 QUESTION / PROMPT")
+        question_input = st.text_area("Paste the official question text here...:", height=150, placeholder="The chart below shows...", key="q_input")
 
     with col2:
-        st.subheader("2. Hình ảnh")
-        uploaded_image = st.file_uploader("Tải ảnh biểu đồ", type=['png', 'jpg', 'jpeg'], key="img_input")
+        st.subheader("📊 Visual Data")
+        uploaded_image = st.file_uploader("Upload a clear image of the chart, graph, table, or diagram.", type=['png', 'jpg', 'jpeg'], key="img_input")
         img_data = Image.open(uploaded_image) if uploaded_image else None
         if img_data: st.image(img_data, caption='Đề bài', use_container_width=True)
 
