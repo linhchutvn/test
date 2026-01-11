@@ -883,7 +883,7 @@ if st.session_state.step == 2 and st.session_state.guide_data:
                         status.update(label="✅ Đã chấm xong!", state="complete", expanded=False)
                         st.rerun()
                     else:
-                    status.update(label="❌ Lỗi kết nối AI", state="error")
+                        status.update(label="❌ Lỗi kết nối AI", state="error")
 
 # ==========================================
 # 7. UI: PHASE 3 - GRADING RESULT (EXAMINER UI)
