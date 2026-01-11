@@ -741,7 +741,8 @@ if st.session_state.step == 1:
                        - **Map:** Chia theo khu vực (Bắc/Nam) hoặc Giai đoạn (Trước/Sau). Hướng dẫn dùng thì Quá khứ đơn/Hiện tại hoàn thành.
                        - **Process:** Chia giai đoạn (ví dụ: Chuẩn bị vs Sản xuất). Nhắc học sinh dùng Passive Voice.
                        - **Data:** Hướng dẫn Grouping (Nhóm các đường tăng vào Body 1, giảm vào Body 2). Gợi ý cấu trúc so sánh phức tạp.
-                       - Cung cấp từ vựng "ăn điểm" cụ thể cho bài này (Key Vocab).
+                       - Hướng dẫn viết từng câu trong 2 body
+                       - Cung cấp từ vựng "ăn điểm" cụ thể cho bài này (Key Vocab) trong 2 body.
 
                     **FORMAT JSON OUTPUT:**
                     {
