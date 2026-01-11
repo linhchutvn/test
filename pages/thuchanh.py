@@ -680,7 +680,7 @@ if st.session_state.step == 1:
 
     # STEP 2 – Visual Data (Đã đổi xuống dưới)
     st.markdown('<div class="step-header">STEP 2 – Visual Data </div>', unsafe_allow_html=True)
-    st.markdown('<div class="step-desc">Upload chart / graph / table / diagram</div>', unsafe_allow_html=True)
+    st.markdown('<div class="step-desc">Upload chart / graph / table / diagram / map </div>', unsafe_allow_html=True)
     uploaded_image = st.file_uploader("Upload Image", type=['png', 'jpg', 'jpeg'], key="img_input", label_visibility="collapsed")
     
     img_data = None
