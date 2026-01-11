@@ -691,12 +691,17 @@ if st.session_state.step == 1:
     st.markdown("<br>", unsafe_allow_html=True)
 
     # BUTTON
+    # ... (Trong khối if st.session_state.step == 1:) ...
+
+    # BUTTON
     if st.button("🚀  Analyze & Guide (Start Learning)", type="primary", use_container_width=True):
         if not question_input and not img_data:
             st.warning("⚠️ Vui lòng nhập đề bài và tải ảnh lên để bắt đầu.")
         else:
+            # --- QUAN TRỌNG: LƯU DỮ LIỆU VÀO SESSION STATE ---
             st.session_state.saved_topic = question_input
-            st.session_state.saved_img = img_data
+            st.session_state.saved_img = img_data # Lưu đối tượng PIL Image vào đây
+            # -------------------------------------------------
             
             with st.spinner("Examiner đang phân tích loại biểu đồ và lên chiến thuật..."):
                     # Prompt Tutor Vạn Năng: Tự động thích ứng theo từng dạng bài
