@@ -886,45 +886,52 @@ if st.session_state.step == 2 and st.session_state.guide_data:
                         status.update(label="❌ Lỗi kết nối AI", state="error")
 
 # ==========================================
-# 7. UI: PHASE 3 - GRADING RESULT (FIXED LEFT COLUMN)
+# 7. UI: PHASE 3 - GRADING RESULT (FINAL FIXED LAYOUT)
 # ==========================================
 if st.session_state.step == 3 and st.session_state.grading_result:
     
-    # --- 1. CSS QUAN TRỌNG: CỐ ĐỊNH CỘT TRÁI & GIAO DIỆN BÀI VIẾT ---
+    # --- 1. CSS CỐ ĐỊNH CỘT TRÁI (STICKY + SCROLL) ---
     st.markdown("""
         <style>
-            /* Bắt buộc khung chứa không kéo dãn cột */
+            /* Bắt buộc các cột không bị kéo dãn bằng nhau */
             [data-testid="stHorizontalBlock"] {
                 align-items: flex-start !important;
             }
 
-            /* Cố định cột bên trái (Cột 1) */
-            [data-testid="column"]:nth-of-type(1) {
+            /* CẤU HÌNH CỘT TRÁI (Cột 1) */
+            div[data-testid="column"]:nth-of-type(1) {
                 position: -webkit-sticky !important;
                 position: sticky !important;
-                top: 3rem !important; /* Cách mép trên 3rem */
-                z-index: 999 !important;
+                top: 60px !important;       /* Cách đỉnh màn hình */
+                z-index: 100 !important;    /* Luôn nổi lên trên */
+                height: fit-content !important; 
+                max-height: 85vh !important; /* Giới hạn chiều cao = 85% màn hình */
+                overflow-y: auto !important; /* Nếu dài quá thì hiện thanh cuộn riêng */
+                background-color: transparent; /* Nền trong suốt */
+                padding-right: 10px; /* Tránh thanh cuộn che nội dung */
             }
 
-            /* Tạo thanh cuộn riêng cho cột trái nếu nội dung quá dài */
-            [data-testid="column"]:nth-of-type(1) > div:first-child {
-                max-height: 95vh !important;
-                overflow-y: auto !important;
-                padding-right: 10px;
+            /* Tùy chỉnh thanh cuộn cho cột trái đẹp hơn */
+            div[data-testid="column"]:nth-of-type(1)::-webkit-scrollbar {
+                width: 6px;
+            }
+            div[data-testid="column"]:nth-of-type(1)::-webkit-scrollbar-thumb {
+                background-color: #cbd5e1;
+                border-radius: 10px;
             }
 
-            /* Style cho khung hiển thị bài viết (Nền trắng, chữ đen) */
+            /* Style cho khung hiển thị bài viết */
             .user-essay-box {
                 background-color: #ffffff;
                 color: #1f2937;
-                padding: 20px;
+                padding: 15px;
                 border-radius: 8px;
                 border: 1px solid #e5e7eb;
                 line-height: 1.6;
                 font-family: 'Inter', sans-serif;
-                font-size: 1rem;
-                white-space: pre-wrap; /* Giữ định dạng xuống dòng */
-                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                font-size: 0.95rem;
+                white-space: pre-wrap;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.05);
             }
         </style>
     """, unsafe_allow_html=True)
@@ -936,13 +943,14 @@ if st.session_state.step == 3 and st.session_state.grading_result:
     # --- 2. CHIA CỘT ---
     col_ref, col_result = st.columns([4, 6], gap="large")
     
-    # === CỘT TRÁI: CỐ ĐỊNH (STICKY) ===
+    # === CỘT TRÁI (Sticky) ===
     with col_ref:
         st.markdown("### 📄 Thông tin đối chiếu")
         
         # 1. Đề bài
+        st.caption("Đề bài (Prompt)")
         st.markdown(f"""
-        <div style="background-color: #F8FAFC; padding: 15px; border-radius: 8px; border: 1px solid #E2E8F0; font-style: italic; color: #475569; font-size: 0.95rem; margin-bottom: 15px;">
+        <div style="background-color: #F1F5F9; padding: 15px; border-radius: 8px; border: 1px solid #E2E8F0; font-style: italic; color: #334155; font-size: 0.9rem; margin-bottom: 15px;">
             {st.session_state.saved_topic}
         </div>
         """, unsafe_allow_html=True)
@@ -951,17 +959,22 @@ if st.session_state.step == 3 and st.session_state.grading_result:
         if st.session_state.saved_img:
             st.image(st.session_state.saved_img, use_container_width=True)
         
-        # 3. Bài viết gốc (Hiển thị đẹp)
+        # 3. Bài viết gốc của bạn
         st.markdown("---")
-        st.subheader("✍️ Bài viết của bạn")
+        st.caption("Bài làm của bạn (Original Essay)")
         st.markdown(f'<div class="user-essay-box">{html.escape(res["essay"])}</div>', unsafe_allow_html=True)
 
-    # === CỘT PHẢI: KẾT QUẢ CHẤM (CUỘN) ===
+    # === CỘT PHẢI (Scrollable) ===
     with col_result:
         st.markdown("## 🛡️ EXAMINER REPORT")
         
         # 1. Bảng điểm
         scores = g_data.get("originalScore", {})
+        
+        # Hiển thị điểm bằng các cột nhỏ
+        # Lưu ý: Vì CSS ở trên tác động vào "column:nth-of-type(1)", 
+        # nên cột "TA" ở đây cũng có thể bị ảnh hưởng nhẹ (dính), 
+        # nhưng do nó nằm trong container nhỏ nên không vỡ layout.
         c1, c2, c3, c4, c5 = st.columns(5)
         c1.metric("TA", scores.get("task_achievement", "-"))
         c2.metric("CC", scores.get("cohesion_coherence", "-"))
@@ -970,20 +983,20 @@ if st.session_state.step == 3 and st.session_state.grading_result:
         
         # Điểm Overall nổi bật
         c5.markdown(f"""
-        <div style="text-align: center; border: 2px solid #D40E14; border-radius: 8px; padding: 5px; background-color: #FFF5F5;">
-            <div style="font-size: 0.8rem; color: #D40E14; font-weight: bold;">OVERALL</div>
-            <div style="font-size: 1.5rem; color: #D40E14; font-weight: 900;">{scores.get("overall", "-")}</div>
+        <div style="text-align: center; border: 2px solid #D40E14; border-radius: 8px; padding: 5px; background-color: #FFF1F2;">
+            <div style="font-size: 0.7rem; color: #D40E14; font-weight: bold;">OVERALL</div>
+            <div style="font-size: 1.4rem; color: #D40E14; font-weight: 900;">{scores.get("overall", "-")}</div>
         </div>
         """, unsafe_allow_html=True)
         
         st.markdown("---")
 
-        # 2. Tabs chi tiết
+        # 2. Các Tab chi tiết
         tab_analysis, tab_errors, tab_macro, tab_annotated = st.tabs([
             "📝 Nhận xét chi tiết", 
-            "🔴 Lỗi Ngữ pháp (Micro)", 
-            "🔵 Lỗi Mạch lạc (Macro)", 
-            "✍️ Bản sửa lại (Annotated)"
+            "🔴 Lỗi Ngữ pháp", 
+            "🔵 Lỗi Mạch lạc", 
+            "✍️ Bài sửa (Annotated)"
         ])
         
         # Tab Phân tích
@@ -993,7 +1006,7 @@ if st.session_state.step == 3 and st.session_state.grading_result:
             else:
                 st.info("Không có dữ liệu phân tích văn bản.")
 
-        # Tab Lỗi Ngữ pháp
+        # Tab Lỗi Micro
         with tab_errors:
             micro = [e for e in g_data.get('errors', []) if e.get('category') in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
             if not micro: st.success("✅ Không tìm thấy lỗi ngữ pháp/từ vựng đáng kể.")
@@ -1012,7 +1025,7 @@ if st.session_state.step == 3 and st.session_state.grading_result:
                 </div>
                 """, unsafe_allow_html=True)
 
-        # Tab Lỗi Logic
+        # Tab Lỗi Macro
         with tab_macro:
             macro = [e for e in g_data.get('errors', []) if e.get('category') not in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
             if not macro: st.success("✅ Cấu trúc mạch lạc tốt.")
@@ -1029,7 +1042,7 @@ if st.session_state.step == 3 and st.session_state.grading_result:
         with tab_annotated:
             st.markdown(f'<div class="annotated-text">{g_data.get("annotatedEssay", "")}</div>', unsafe_allow_html=True)
 
-        # 3. Dự báo điểm
+        # 3. Dự báo điểm & Export
         st.markdown("---")
         rev = g_data.get("revisedScore", {})
         if rev:
