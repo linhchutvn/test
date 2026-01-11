@@ -886,37 +886,44 @@ if st.session_state.step == 2 and st.session_state.guide_data:
                         status.update(label="❌ Lỗi kết nối AI", state="error")
 
 # ==========================================
-# 7. UI: PHASE 3 - GRADING RESULT (SPLIT LAYOUT)
+# 7. UI: PHASE 3 - GRADING RESULT (FIXED LEFT COLUMN)
 # ==========================================
 if st.session_state.step == 3 and st.session_state.grading_result:
     
-    # --- 1. CSS STICKY & ESSAY BOX ---
+    # --- 1. CSS QUAN TRỌNG: CỐ ĐỊNH CỘT TRÁI & GIAO DIỆN BÀI VIẾT ---
     st.markdown("""
         <style>
-            [data-testid="stHorizontalBlock"] { align-items: flex-start !important; }
-            
-            /* Sticky Left Column */
-            [data-testid="column"]:nth-of-type(1) > div:first-child {
+            /* Bắt buộc khung chứa không kéo dãn cột */
+            [data-testid="stHorizontalBlock"] {
+                align-items: flex-start !important;
+            }
+
+            /* Cố định cột bên trái (Cột 1) */
+            [data-testid="column"]:nth-of-type(1) {
                 position: -webkit-sticky !important;
                 position: sticky !important;
-                top: 2rem !important;
+                top: 3rem !important; /* Cách mép trên 3rem */
                 z-index: 999 !important;
+            }
+
+            /* Tạo thanh cuộn riêng cho cột trái nếu nội dung quá dài */
+            [data-testid="column"]:nth-of-type(1) > div:first-child {
                 max-height: 95vh !important;
                 overflow-y: auto !important;
                 padding-right: 10px;
             }
 
-            /* --- SỬA MÀU BACKGROUND BÀI VIẾT TẠI ĐÂY --- */
+            /* Style cho khung hiển thị bài viết (Nền trắng, chữ đen) */
             .user-essay-box {
-                background-color: #ffffff; /* Nền trắng tuyệt đối */
-                border: 1px solid #d1d5db; /* Viền xám nhẹ */
+                background-color: #ffffff;
+                color: #1f2937;
                 padding: 20px;
                 border-radius: 8px;
-                font-family: 'Inter', sans-serif; /* Font dễ đọc */
-                font-size: 1rem;
+                border: 1px solid #e5e7eb;
                 line-height: 1.6;
-                color: #111827; /* Chữ màu đen đậm (Dark Gray) */
-                white-space: pre-wrap; /* Giữ nguyên xuống dòng của bài viết */
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                white-space: pre-wrap; /* Giữ định dạng xuống dòng */
                 box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             }
         </style>
@@ -929,9 +936,9 @@ if st.session_state.step == 3 and st.session_state.grading_result:
     # --- 2. CHIA CỘT ---
     col_ref, col_result = st.columns([4, 6], gap="large")
     
-    # === CỘT TRÁI: ĐỀ BÀI + ẢNH + BÀI VIẾT ===
+    # === CỘT TRÁI: CỐ ĐỊNH (STICKY) ===
     with col_ref:
-        st.subheader("📄 Thông tin bài làm")
+        st.markdown("### 📄 Thông tin đối chiếu")
         
         # 1. Đề bài
         st.markdown(f"""
@@ -944,18 +951,12 @@ if st.session_state.step == 3 and st.session_state.grading_result:
         if st.session_state.saved_img:
             st.image(st.session_state.saved_img, use_container_width=True)
         
-        # 3. Bài viết gốc (SỬA LẠI PHẦN HIỂN THỊ NÀY)
+        # 3. Bài viết gốc (Hiển thị đẹp)
         st.markdown("---")
         st.subheader("✍️ Bài viết của bạn")
-        
-        # Dùng HTML div thay vì st.text_area để kiểm soát màu sắc
-        st.markdown(f"""
-        <div class="user-essay-box">
-            {html.escape(res['essay'])}
-        </div>
-        """, unsafe_allow_html=True)
+        st.markdown(f'<div class="user-essay-box">{html.escape(res["essay"])}</div>', unsafe_allow_html=True)
 
-    # === CỘT PHẢI: KẾT QUẢ CHẤM ===
+    # === CỘT PHẢI: KẾT QUẢ CHẤM (CUỘN) ===
     with col_result:
         st.markdown("## 🛡️ EXAMINER REPORT")
         
@@ -967,7 +968,7 @@ if st.session_state.step == 3 and st.session_state.grading_result:
         c3.metric("LR", scores.get("lexical_resource", "-"))
         c4.metric("GRA", scores.get("grammatical_range", "-"))
         
-        # Điểm Overall làm nổi bật
+        # Điểm Overall nổi bật
         c5.markdown(f"""
         <div style="text-align: center; border: 2px solid #D40E14; border-radius: 8px; padding: 5px; background-color: #FFF5F5;">
             <div style="font-size: 0.8rem; color: #D40E14; font-weight: bold;">OVERALL</div>
@@ -1028,7 +1029,7 @@ if st.session_state.step == 3 and st.session_state.grading_result:
         with tab_annotated:
             st.markdown(f'<div class="annotated-text">{g_data.get("annotatedEssay", "")}</div>', unsafe_allow_html=True)
 
-        # 3. Dự báo điểm & Export
+        # 3. Dự báo điểm
         st.markdown("---")
         rev = g_data.get("revisedScore", {})
         if rev:
