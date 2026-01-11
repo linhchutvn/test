@@ -754,6 +754,13 @@ if st.session_state.step == 1:
 # 6. UI: PHASE 2 - WRITING PRACTICE (SPLIT LAYOUT)
 # ==========================================
 if st.session_state.step == 2 and st.session_state.guide_data:
+    
+    # Kiểm tra an toàn: Nếu mất dữ liệu (do F5), quay về Step 1
+    if not st.session_state.saved_topic or not st.session_state.saved_img:
+        st.warning("⚠️ Dữ liệu phiên làm việc đã hết hạn. Vui lòng tải lại đề bài.")
+        st.session_state.step = 1
+        st.rerun()
+    
     data = st.session_state.guide_data
     
     # Chia giao diện thành 2 cột lớn: Trái (Đề) - Phải (Bài làm)
