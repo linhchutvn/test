@@ -886,55 +886,64 @@ if st.session_state.step == 2 and st.session_state.guide_data:
                         status.update(label="❌ Lỗi kết nối AI", state="error")
 
 # ==========================================
-# 7. UI: PHASE 3 - GRADING RESULT (ULTIMATE FIXED BOX)
+# 7. UI: PHASE 3 - GRADING RESULT (SCROLLABLE STICKY BOX)
 # ==========================================
 if st.session_state.step == 3 and st.session_state.grading_result:
     
-    # --- CSS CỰC MẠNH ĐỂ CỐ ĐỊNH CỘT TRÁI ---
+    # --- 1. CSS CỰC MẠNH: TẠO HỘP CUỘN ĐỘC LẬP BÊN TRÁI ---
     st.markdown("""
         <style>
-            /* 1. BẮT BUỘC KHUNG BAO NGOÀI KHÔNG ĐƯỢC KÉO DÃN CHIỀU CAO CÁC CỘT */
+            /* 1. Ngắt tính năng kéo dãn chiều cao của Flexbox */
             [data-testid="stHorizontalBlock"] {
                 align-items: flex-start !important;
-                display: flex !important;
             }
 
-            /* 2. THIẾT LẬP CỘT ĐẦU TIÊN (TRÁI) THÀNH THANH TRƯỢT DÍNH */
+            /* 2. Biến CỘT TRÁI thành một cái HỘP CỐ ĐỊNH có thanh cuộn riêng */
             div[data-testid="column"]:nth-of-type(1) {
-                /* Kích hoạt chế độ dính */
+                /* Vị trí cố định */
                 position: -webkit-sticky !important;
                 position: sticky !important;
-                top: 4rem !important; /* Cách mép trên màn hình 4rem (tránh header) */
+                top: 4rem !important;         /* Cách mép trên màn hình */
                 z-index: 100 !important;
                 
-                /* Giới hạn chiều cao để nó không bao giờ dài hơn màn hình */
-                height: fit-content !important; 
-                max-height: 85vh !important; 
+                /* Kích thước & Cuộn */
+                height: auto !important;      /* Chiều cao tự động theo nội dung */
+                max-height: 85vh !important;  /* Tối đa bằng 85% chiều cao màn hình */
+                overflow-y: auto !important;  /* Hiện thanh cuộn nếu nội dung dài */
                 
-                /* Tạo thanh cuộn riêng nằm GỌN trong cột trái */
-                overflow-y: auto !important; 
-                
-                /* Trang trí cột trái thành một cái Hộp nổi */
-                background-color: white !important;
-                padding: 1rem !important;
-                border-radius: 10px !important;
-                border: 1px solid #e5e7eb !important;
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+                /* Giao diện Hộp (Card UI) */
+                background-color: #ffffff;
+                border: 1px solid #d1d5db;
+                border-radius: 12px;
+                padding: 1.5rem !important;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                margin-bottom: 2rem; /* Khoảng cách dưới */
             }
 
-            /* Tinh chỉnh thanh cuộn của cột trái */
-            div[data-testid="column"]:nth-of-type(1)::-webkit-scrollbar { width: 5px; }
-            div[data-testid="column"]:nth-of-type(1)::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 5px; }
+            /* Tùy chỉnh thanh cuộn cho cột trái (nhỏ, đẹp) */
+            div[data-testid="column"]:nth-of-type(1)::-webkit-scrollbar {
+                width: 6px;
+            }
+            div[data-testid="column"]:nth-of-type(1)::-webkit-scrollbar-track {
+                background: #f1f5f9;
+                border-radius: 4px;
+            }
+            div[data-testid="column"]:nth-of-type(1)::-webkit-scrollbar-thumb {
+                background-color: #94a3b8;
+                border-radius: 4px;
+            }
 
-            /* Style cho bài viết */
-            .user-essay-box {
+            /* Style hiển thị bài văn của user */
+            .user-essay-container {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #334155;
                 background-color: #f8fafc;
+                padding: 15px;
+                border-radius: 8px;
                 border: 1px solid #e2e8f0;
-                padding: 10px;
-                border-radius: 5px;
-                font-family: monospace;
-                font-size: 0.85rem;
-                white-space: pre-wrap;
+                white-space: pre-wrap; /* Giữ định dạng xuống dòng */
             }
         </style>
     """, unsafe_allow_html=True)
@@ -943,30 +952,33 @@ if st.session_state.step == 3 and st.session_state.grading_result:
     g_data = res["data"]
     analysis_text = res["markdown"]
     
-    # --- 2. CHIA CỘT ---
-    # Tỉ lệ 3.5 : 6.5 để cột trái nhỏ gọn hơn, giúp hiệu ứng hộp rõ hơn
+    # --- 2. CHIA CỘT (Cột trái nhỏ hơn chút để giống sidebar) ---
     col_ref, col_result = st.columns([3.5, 6.5], gap="large")
     
-    # === CỘT TRÁI (NỘI DUNG TRONG HỘP STICKY) ===
+    # === CỘT TRÁI: HỘP THÔNG TIN (STICKY CONTAINER) ===
+    # Nhờ CSS ở trên, toàn bộ nội dung trong `with col_ref` này sẽ nằm trong cái hộp trắng cố định
     with col_ref:
-        st.caption("📍 Bảng đối chiếu (Cố định)")
-        
+        st.markdown("#### 📄 Thông tin đối chiếu")
+        st.caption("Cột này được cố định để bạn dễ dàng so sánh.")
+
         # 1. Hình ảnh
         if st.session_state.saved_img:
-            st.image(st.session_state.saved_img, use_container_width=True)
+            st.image(st.session_state.saved_img, use_container_width=True, caption="Visual Data")
         
-        st.divider()
+        st.markdown("---")
         
         # 2. Đề bài
-        with st.expander("📄 Xem lại Đề bài", expanded=False):
+        with st.expander("📌 Xem lại Đề bài (Prompt)", expanded=False):
             st.info(st.session_state.saved_topic)
-
-        # 3. Bài viết
+        
+        # 3. Bài viết của bạn
         st.markdown("**✍️ Bài làm của bạn:**")
-        st.markdown(f'<div class="user-essay-box">{html.escape(res["essay"])}</div>', unsafe_allow_html=True)
-        st.caption("*(Bạn có thể cuộn riêng khung này nếu bài dài)*")
+        st.markdown(f'<div class="user-essay-container">{html.escape(res["essay"])}</div>', unsafe_allow_html=True)
+        
+        # Một khoảng trống nhỏ cuối hộp để không bị sát mép
+        st.markdown("<br>", unsafe_allow_html=True)
 
-    # === CỘT PHẢI (KẾT QUẢ CHẤM - CUỘN DÀI) ===
+    # === CỘT PHẢI: KẾT QUẢ CHẤM (CUỘN BÌNH THƯỜNG) ===
     with col_result:
         st.markdown("## 🛡️ EXAMINER REPORT")
         
@@ -977,12 +989,19 @@ if st.session_state.step == 3 and st.session_state.grading_result:
         c2.metric("CC", scores.get("cohesion_coherence", "-"))
         c3.metric("LR", scores.get("lexical_resource", "-"))
         c4.metric("GRA", scores.get("grammatical_range", "-"))
-        c5.metric("OVERALL", scores.get("overall", "-"))
+        
+        # Điểm Overall
+        c5.markdown(f"""
+        <div style="text-align: center; border: 2px solid #D40E14; border-radius: 8px; padding: 5px; background-color: #FFF1F2;">
+            <div style="font-size: 0.7rem; color: #D40E14; font-weight: bold;">OVERALL</div>
+            <div style="font-size: 1.4rem; color: #D40E14; font-weight: 900;">{scores.get("overall", "-")}</div>
+        </div>
+        """, unsafe_allow_html=True)
         
         st.markdown("---")
 
         # Tabs chi tiết
-        tab1, tab2, tab3, tab4 = st.tabs(["📝 Phân tích", "🔴 Lỗi Ngữ pháp", "🔵 Lỗi Logic", "✍️ Bản sửa"])
+        tab1, tab2, tab3, tab4 = st.tabs(["📝 Phân tích", "🔴 Lỗi Ngữ pháp", "🔵 Lỗi Mạch lạc", "✍️ Bài sửa"])
         
         with tab1:
             if analysis_text and len(analysis_text) > 50:
@@ -1026,8 +1045,10 @@ if st.session_state.step == 3 and st.session_state.grading_result:
         d1, d2 = st.columns(2)
         docx = create_docx(g_data, res['topic'], res['essay'], analysis_text)
         d1.download_button("📥 Tải báo cáo (.docx)", docx, "IELTS_Report.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+        pdf = create_pdf(g_data, res['topic'], res['essay'], analysis_text)
+        d2.download_button("📕 Tải báo cáo (.pdf)", pdf, "IELTS_Report.pdf", mime="application/pdf")
         
-        if d2.button("🔄 Làm bài mới"):
+        if st.button("🔄 Làm bài mới (Reset)", use_container_width=True):
             for k in ["step", "guide_data", "grading_result", "saved_topic", "saved_img"]: st.session_state[k] = None
             st.session_state.step = 1
             st.rerun()
