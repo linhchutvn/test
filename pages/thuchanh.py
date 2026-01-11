@@ -777,6 +777,16 @@ if st.session_state.step == 1:
 if st.session_state.step == 2 and st.session_state.guide_data:
     data = st.session_state.guide_data
 
+    # --- CHÈN ĐOẠN NÀY VÀO ĐỂ HẾT LỖI NAMEERROR ---
+    def render_writing_section(title, guide_key, input_key):
+        st.markdown(f"##### {title}")
+        with st.expander(f"💡 Gợi ý viết {title}", expanded=False):
+            # Lấy nội dung hướng dẫn từ biến 'data'
+            guide_text = data.get(guide_key, "Không có hướng dẫn chi tiết.")
+            st.markdown(f"<div class='guide-box'>{guide_text}</div>", unsafe_allow_html=True)
+        return st.text_area(label=title, height=150, key=input_key, placeholder=f"Nhập phần {title} của bạn...", label_visibility="collapsed")
+    # ----------------------------------------------
+
     # --- BƯỚC CHÍNH: CHIA CỘT TRÁI (4) VÀ PHẢI (6) ---
     col_left, col_right = st.columns([4, 6], gap="medium")
 
@@ -793,7 +803,7 @@ if st.session_state.step == 2 and st.session_state.guide_data:
     with col_right:
         st.markdown("### ✍️ Bài làm của bạn")
         
-        # Lấy dữ liệu từ các ô nhập liệu
+        # Bây giờ các hàm này sẽ chạy bình thường vì đã được định nghĩa ở trên
         intro = render_writing_section("Introduction", "intro_guide", "in_intro")
         overview = render_writing_section("Overview", "overview_guide", "in_overview")
         body1 = render_writing_section("Body 1", "body1_guide", "in_body1")
