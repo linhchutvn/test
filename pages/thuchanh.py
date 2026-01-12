@@ -768,23 +768,33 @@ if st.session_state.step == 1:
                     # =================================================================
                     *Yêu cầu: Liệt kê từ vựng, từ nối (kèm nghĩa Tiếng Việt) và cấu trúc câu.*
 
-                    1. **"intro_guide" (Paraphrase):**
-                       - <ul>
-                         <li><b>Mục tiêu:</b> Viết lại đề bài mà không đổi nghĩa.</li>
-                         <li><b>Từ vựng thay thế (Subject):</b>
-                            <br>- <i>The pie charts / The bar graph</i> (Biểu đồ tròn/cột).
-                            <br>- <i>The chart</i> (Biểu đồ được cung cấp).</li>
-                         <li><b>Động từ giới thiệu (Verb):</b>
-                            <br>- <i>compare</i> (so sánh).
-                            <br>- <i>give information about</i> (so sánh).
-                            <br>- <i>illustrate the breakdown of</i> (minh họa cơ cấu của...).
-                            <br>- <i>give information on</i> (đưa thông tin về...).</li>
-                         <li><b>Cấu trúc câu:</b> <code>[Subject] + [Verb] + [Object] + [in Place] + [in Year]</code>.</li>
-                         <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
-                             <b>📝 Nội dung mẫu (Sample Intro):</b><br>
-                             <i>[Hãy viết 1 câu Introduction hoàn chỉnh Paraphrase lại đề bài dựa trên hình ảnh và hướng dẫn]</i>
-                         </div></li>
-                       </ul>
+1. **"intro_guide" (Paraphrase):**
+    - <ul>
+        <li><b>Cấu trúc chuẩn (Formula):</b> <code>[Subject] + [Finite Verb] + [Object/Topic] + [Place] + [Time]</code>.</li>
+    
+        <li><b>Subject (Lưu ý quan trọng):</b>
+            <br>- <b>Đơn vị trong bài này là:</b> <i>[Điền đơn vị cụ thể của bài, VD: million dollars / tonnes / %]</i>.
+            <br>- <b>Tuyệt đối không đưa đơn vị tính vào chủ ngữ.</b> Ví dụ: Không viết <i>"The chart shows [Đơn vị của bài]..."</i> mà phải viết <i>"The chart shows the amount/number/proportion of..."</i>.
+            <br>- <b>Hòa hợp chủ ngữ - động từ:</b> Nếu 1 biểu đồ dùng <i>shows/illustrates</i>. Nếu nhiều biểu đồ dùng <i>show/illustrate</i>.</li>
+    
+        <li><b>Cách đổi Chủ ngữ & Topic (The "What") cho bài này:</b>
+            <br>- <b>Từ vựng gốc trong đề:</b> "<i>[Trích cụm từ gốc trong đề bài]</i>"
+            <br>- <b>Gợi ý Paraphrase 1:</b> <i>[Viết phương án paraphrase 1. VD: The amount of money spent on...]</i>
+            <br>- <b>Gợi ý Paraphrase 2:</b> <i>[Viết phương án paraphrase 2. VD: How much money was allocated to...]</i>
+            <br><i>(Lưu ý: Dựa vào Page 9, 10 tài liệu Youpass để chọn từ Spending/Number/Percentage phù hợp).</i></li>
+    
+        <li><b>Verb (Động từ khuyên dùng):</b>
+            <br><i>illustrates / compares the data on / presents information about / gives information about</i>.</li>
+    
+        <li><b>Time Paraphrase (Thời gian: [Năm đầu] - [Năm cuối]):</b>
+            <br>- Cách 1: <i>Between [Năm đầu] and [Năm cuối]</i>.
+            <br>- Cách 2: <i>Over a period of [Số năm] years commencing in [Năm đầu]</i>.</li>
+    
+        <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
+            <b>📝 Nội dung mẫu (Sample Intro):</b><br>                             
+            <i>"[Viết câu Introduction hoàn chỉnh, chuẩn ngữ pháp và từ vựng tại đây]"</i>
+        </div></li>
+    </ul>
 
                     2. **"overview_guide" (Tổng quan - Không số liệu):**
                        - <ul>
