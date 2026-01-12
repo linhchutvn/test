@@ -1,5 +1,11 @@
 import streamlit as st
-
+st.markdown("""
+    <style>
+        .stAppHeader {
+            display: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
 # 1. Cấu hình trang
 st.set_page_config(page_title="AUVIET CENTER", layout="wide", page_icon="🎓")
 
@@ -171,5 +177,6 @@ st.markdown(f"""
 </div>
 <center style="color:#666; font-size:12px;">© 2025 Developed by Albert Nguyen</center>
 """, unsafe_allow_html=True)
+
 
 
