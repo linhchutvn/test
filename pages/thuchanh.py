@@ -752,15 +752,17 @@ if st.session_state.step == 1:
                     prompt_guide = """
                     Bạn là một Siêu Giáo viên IELTS Writing (Band 9.0). Nhiệm vụ của bạn là phân tích hình ảnh đầu vào và viết hướng dẫn thực hành chi tiết.
                     # STRICT OUTPUT RULES (BẮT BUỘC TUÂN THỦ):
-1.  **OUTPUT FORMAT:** Chỉ trả về đúng định dạng **JSON**. Không viết thêm bất kỳ lời dẫn nào bên ngoài JSON.
-2.  **HTML CONTENT:** Các giá trị trong JSON (intro_guide, overview_guide...) phải là **chuỗi HTML thuần túy**.
-    - TUYỆT ĐỐI KHÔNG dùng Markdown (như `**bold**`, `- list`). Phải dùng `<b>bold</b>`, `<ul><li>list</li></ul>`.
-    - TUYỆT ĐỐI KHÔNG tự ý tóm tắt. Phải điền đầy đủ nội dung vào từng mục `<li>`.
-3.  **ESCAPE CHARACTERS:** Vì output là JSON, hãy chú ý escape dấu ngoặc kép (") trong nội dung HTML nếu có.
+                    1.  **NO MARKDOWN LISTS:** Tuyệt đối KHÔNG được tự ý chuyển đổi định dạng sang gạch đầu dòng (bullet points) của Markdown.
+                    2.  **HTML ONLY:** Output bắt buộc phải giữ nguyên các thẻ HTML: `<ul>`, `<li>`, `<b>`, `<br>`, `<code>`, `<div>`. Hệ thống chỉ render được HTML, nếu bạn dùng Markdown sẽ bị lỗi hiển thị.
+                    3.  **FILL-IN-THE-BLANKS (ĐIỀN VÀO CHỖ TRỐNG):** 
+                        - Nhiệm vụ của bạn là lấy nội dung phân tích và "đổ" vào đúng các vị trí trong Code Mẫu.
+                        - KHÔNG ĐƯỢC tóm tắt hay gộp các bước.
+                        - Nếu Code mẫu có "Bước 1", "Bước 2", "Bước 3", bạn phải giữ nguyên tiêu đề đó và điền nội dung tương ứng xuống dòng dưới.
+    
                     **BƯỚC 1: NHẬN DIỆN LOẠI BÀI (QUAN TRỌNG)**
                     Hãy nhìn hình ảnh và xác định nó thuộc loại nào:
-                    1. **Change Over Time** (Line, Bar, Table có năm tháng): Cần từ vựng xu hướng (increase, decrease).
-                    2. **Static Chart** (Pie, Table 1 năm): Cần từ vựng so sánh (higher, lower, accounts for).
+                    1. **Change Over Time** (Line, Bar, Table, Pie có năm tháng): Cần từ vựng xu hướng (increase, decrease).
+                    2. **Static Chart** (Pie, Table, Table 1 năm): Cần từ vựng so sánh (higher, lower, accounts for).
                     3. **Map (Bản đồ):** Cần từ vựng phương hướng (North, South) và sự thay đổi (demolished, constructed). Tuyệt đối không dùng "increase/decrease" cho nhà cửa.
                     4. **Process (Quy trình):** Cần câu Bị động (Passive voice) và từ nối trình tự (First, Then, Finally).
                     5. **Mixed (Kết hợp):** Cần hướng dẫn cách liên kết 2 biểu đồ.
@@ -845,7 +847,7 @@ if st.session_state.step == 1:
                        </ul>
 
                     # =================================================================
-                    # 🔵 TRƯỜNG HỢP 2: DẠNG "CHANGE OVER TIME" (LINE GRAPH / DYNAMIC BAR)
+                    # 🔵 TRƯỜNG HỢP 2: DẠNG "CHANGE OVER TIME" (Line, Bar, Table, Pie nhiểu năm)
                     # (Tư duy cốt lõi: Trend (Xu hướng) & Speed (Tốc độ thay đổi))
                     # =================================================================
                     *Quy tắc chung cho mọi phần: Phải liệt kê Từ vựng/Cấu trúc (kèm nghĩa Tiếng Việt) trước, sau đó mới viết đoạn Mẫu (Sample) áp dụng các hướng dẫn đó.*
