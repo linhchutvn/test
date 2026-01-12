@@ -902,24 +902,39 @@ if st.session_state.step == 1:
                          </div></li>
                        </ul>
 
-                    3. **"body1_guide" (Nhóm Tăng / Nhóm Nổi bật):**
+                    3. **"body1_guide" (Thân bài 1 - Nhóm Nổi bật / Quan trọng nhất):**
                        - <ul>
-                         <li><b>Chiến thuật Gom (Grouping):</b> Chọn các đường có xu hướng <b>TĂNG</b> hoặc số liệu <b>CAO NHẤT</b>.</li>
-                         <li><b>Từ nối thời gian (Linking):</b> <i>At the beginning of the period / In the first year / From... to...</i></li>
-                         <li><b>🏗️ Cấu trúc câu Trend (Bắt buộc dùng 2/3 loại):</b>
-                            <br>1. <b>S + V + Adv:</b> <i>The figure for X increased significantly...</i>
-                            <br>2. <b>There + be + Adj + N + in...:</b> <i>There was a sharp rise in the demand for X...</i>
-                            <br>3. <b>Time + witness/see + Adj + N:</b> <i>The year 2000 witnessed a dramatic growth in...</i></li>
-                         <li><b>Công thức mô tả (Grammar):</b>
-                            <br>- <i>Subject + Verb + Adverb</i> (VD: <i>increased significantly</i>).
-                            <br>- <i>There was + Adjective + Noun + in...</i> (VD: <i>There was a sharp rise in...</i>).</li>
-                         <li><b>Từ vựng Tăng:</b> <i>climb / surge / rocket / go up</i>.</li>
-                         <li><b>Giới từ (Prepositions - Quan trọng):</b>
-                            <br>- <i>to</i> (tăng đến mức nào).
-                            <br>- <i>by</i> (tăng thêm bao nhiêu).</li>
-                         <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
+                         <li><b>Logic chọn nhóm (Grouping Strategy):</b> Chọn 1 hoặc 2 đường (lines) có <b>số liệu cao nhất</b> hoặc <b>xu hướng thay đổi mạnh nhất/tăng trưởng rõ rệt</b> để phân tích trước.</li>
+
+                         <li><b>Cấu trúc chuẩn (Flow):</b>
+                             <br><code>[Câu mở đầu & Số liệu năm đầu] + [Mô tả xu hướng & Điểm gãy (Peak/Dip)] + [Số liệu kết thúc (Optional)]</code>.</li>
+                         
+                         <li><b>Bước 1: Sentence 1 - Điểm xuất phát (Starting Point):</b>
+                             <br>- <b>Cụm từ mở đầu:</b> <i>Regarding [Line A]... / Looking first at [Line A]... / At the beginning of the period...</i>
+                             <br>- <b>Nêu số liệu:</b> <i>...it stood at / started at [Data 1] in [Year 1].</i>
+                             <br>- <b>So sánh (Nếu có 2 đường):</b> <i>...which was significantly higher than [Line B], at [Data A] and [Data B] respectively.</i></li>
+
+                         <li><b>Bước 2: Sentence 2 & 3 - Phát triển xu hướng (Trend Development):</b>
+                             <br>Kết hợp 3 mẫu câu cơ bản với từ nối nâng cao để tạo sự mượt mà:
+                             <br>
+                             <br><b>🔸 Mẫu câu cơ bản (Basic Patterns):</b>
+                             <br>- <i>S + V + Adv:</i> <i>The figure <b>increased significantly</b>...</i>
+                             <br>- <i>There + be + a/an + Adj + N:</i> <i>There was a <b>sharp rise</b> in...</i>
+                             <br>- <i>Time + witness + Adj + N:</i> <i>The year [Year] <b>witnessed a dramatic growth</b> in...</i>
+                             <br>
+                             <br><b>🔸 Kỹ thuật Nối câu nâng cao (Advanced Linking):</b>
+                             <br>- <b>Before V-ing:</b> <i>The figure rose to [Peak], <b>before falling</b> to [End].</i>
+                             <br>- <b>After V-ing:</b> <i><b>After increasing</b> steadily to [Data], it dropped slightly.</i>
+                             <br>- <b>Followed by:</b> <i>There was a surge to [Data], <b>followed by</b> a period of stability.</i></li>
+
+                         <li><b>Từ vựng & Giới từ quan trọng (Vocabulary):</b>
+                             <br>- <b>Verbs (Tăng):</b> <i>climb, surge, rocket, go up</i>.
+                             <br>- <b>Verbs (Giảm/Dao động):</b> <i>decline, plummet, fluctuate</i>.
+                             <br>- <b>Prepositions (Giới từ):</b> Tăng <b>to</b> (đến mức), Tăng <b>by</b> (một khoảng), Đạt đỉnh <b>at</b> (tại mức).</li>
+
+                         <li><div style="background-color:#fff8e1; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #ffa502;">
                              <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
-                             <i>[Viết 3-4 câu mô tả chi tiết nhóm Tăng/Cao nhất. Sử dụng đa dạng cấu trúc câu (Active/Passive/There was). Viết hoàn chỉnh dựa trên hình ảnh và áp dụng các hướng dẫn đã nêu trên]</i>
+                             <i>[Viết đoạn Body 1 hoàn chỉnh cho nhóm đường nổi bật nhất, phải dựa vào gợi ý đã đưa ra ở trên. Bắt buộc kết hợp mẫu câu "There was..." hoặc "S+V" với cấu trúc "Before/After V-ing" để tạo độ phức tạp.]</i>
                          </div></li>
                        </ul>
 
