@@ -19,6 +19,24 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+# CSS để ẩn Footer và nút Deploy
+hide_footer_style = """
+    <style>
+    /* 1. Ẩn dòng chữ 'Made with Streamlit' ở chân trang */
+    footer {
+        visibility: hidden;
+    }
+    
+    /* 2. Ẩn nút Deploy (hình con thuyền màu đỏ) ở góc trên hoặc dưới */
+    .stDeployButton {
+        display: none;
+    }
+    
+    /* 3. (Tùy chọn) Ẩn luôn cả menu hamburger 3 dấu gạch ở góc trên bên phải nếu muốn sạch hoàn toàn */
+    #MainMenu {
+        visibility: hidden;
+    }
+    </style>
 # Thư viện Word
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches
