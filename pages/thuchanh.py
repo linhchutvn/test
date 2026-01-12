@@ -939,7 +939,7 @@ if st.session_state.step == 1:
                              <br>- <b>Verbs (Tăng):</b> <i>climb, surge, rocket, go up</i>.
                              <br>- <b>Verbs (Giảm/Dao động):</b> <i>decline, plummet, fluctuate</i>.
                              <br>- <b>Prepositions (Giới từ):</b> Tăng <b>to</b> (đến mức), Tăng <b>by</b> (một khoảng), Đạt đỉnh <b>at</b> (tại mức).</li>
-                         <li><b>Từ vựng và paraphrase: liệt kê trong Sample Body 1 (kèm nghĩa tiếng việt).</li>
+                         <li><b>Từ vựng và paraphrase: liệt kê chi tiết có trong Sample Body 1 (kèm nghĩa tiếng việt).</li>
 
                          <li><div style="background-color:#fff8e1; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #ffa502;">
                              <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
@@ -978,7 +978,7 @@ if st.session_state.step == 1:
                              <br>- <b>Verbs:</b> <i>plummet / decline</i> (giảm mạnh), <i>recover</i> (hồi phục), <i>stabilize</i> (ổn định).
                              <br>- <b>Nouns:</b> <i>a volatile pattern</i> (mẫu hình biến động), <i>a downward trend</i>.
                              <br>- <b>Comparison:</b> <i>overtake / surpass</i> (vượt qua).</li>
-                         <li><b>Từ vựng và paraphrase: liệt kê trong Sample Body 2 (kèm nghĩa tiếng việt).</li>
+                         <li><b>Từ vựng và paraphrase: liệt kê chi tiết có trong Sample Body 2 (kèm nghĩa tiếng việt).</li>
                         
                          <li><div style="background-color:#ffebee; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #ff5252;">
                              <b>📝 Nội dung mẫu (Sample Body 2):</b><br>
