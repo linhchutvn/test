@@ -1075,26 +1075,25 @@ if st.session_state.step == 3 and st.session_state.grading_result:
                     </div>
                     """, unsafe_allow_html=True)
 
-            # Tab 3: Lỗi Mạch lạc (Macro) - ĐÃ SỬA INDENTATION & THÊM TRÍCH DẪN
+            # Tab 3: Lỗi Mạch lạc (Macro) - ĐÃ SỬA LỖI HIỂN THỊ RAW CODE
             with tab3:
                 macro = [e for e in g_data.get('errors', []) if e.get('category') not in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
                 if not macro: 
                     st.success("✅ Cấu trúc tốt.")
                 for err in macro:
+                    # Lưu ý: Các thẻ HTML bên dưới được viết sát lề trái của chuỗi f-string
+                    # để tránh bị Markdown hiểu nhầm là Code Block.
                     st.markdown(f"""
-                    <div class="error-card-container" style="border-left: 4px solid #3b82f6;">
-                        <div style="font-weight:bold; color:#1e40af; margin-bottom:5px;">{err.get('type')}</div>
-                        
-                        <!-- Hiển thị Trích dẫn lỗi (Quote) -->
-                        <div style="background-color:#eff6ff; padding:8px; border-radius:4px; margin-bottom:8px; border:1px dashed #93c5fd;">
-                            <span style="font-size:0.8rem; font-weight:bold; color:#60a5fa;">TRÍCH DẪN:</span><br>
-                            <span style="font-family:monospace; color:#1e3a8a;">"{err.get('original', 'N/A')}"</span>
-                        </div>
-
-                        <div style="margin-bottom:5px;"><b>Vấn đề:</b> {err.get('explanation')}</div>
-                        <div style="color:#059669;"><b>👉 Gợi ý:</b> {err.get('correction')}</div>
-                    </div>
-                    """, unsafe_allow_html=True)
+<div class="error-card-container" style="border-left: 4px solid #3b82f6;">
+    <div style="font-weight:bold; color:#1e40af; margin-bottom:5px;">{err.get('type')}</div>
+    <div style="background-color:#eff6ff; padding:8px; border-radius:4px; margin-bottom:8px; border:1px dashed #93c5fd;">
+        <span style="font-size:0.8rem; font-weight:bold; color:#60a5fa;">TRÍCH DẪN:</span><br>
+        <span style="font-family:monospace; color:#1e3a8a;">"{err.get('original', 'N/A')}"</span>
+    </div>
+    <div style="margin-bottom:5px;"><b>Vấn đề:</b> {err.get('explanation')}</div>
+    <div style="color:#059669;"><b>👉 Gợi ý:</b> {err.get('correction')}</div>
+</div>
+""", unsafe_allow_html=True)
 
             with tab4:
                 st.markdown(f'<div class="annotated-text">{g_data.get("annotatedEssay", "")}</div>', unsafe_allow_html=True)
