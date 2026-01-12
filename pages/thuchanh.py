@@ -1141,3 +1141,20 @@ if st.session_state.step == 3 and st.session_state.grading_result:
                 for k in ["step", "guide_data", "grading_result", "saved_topic", "saved_img"]: st.session_state[k] = None
                 st.session_state.step = 1
                 st.rerun()
+# ==========================================
+# FOOTER (HIỂN THỊ Ở MỌI STEP)
+# ==========================================
+st.markdown("<br><br>", unsafe_allow_html=True) # Khoảng cách đệm
+st.markdown("""
+    <div style="
+        text-align: center; 
+        color: #94a3b8; 
+        font-size: 0.85rem; 
+        font-family: 'Inter', sans-serif; 
+        padding-top: 20px; 
+        border-top: 1px solid #e2e8f0;
+        margin-top: 20px;
+    ">
+        © 2025 Developed by <b>Albert Nguyen</b>
+    </div>
+""", unsafe_allow_html=True)
