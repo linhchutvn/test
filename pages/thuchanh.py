@@ -10,33 +10,7 @@ import os
 import requests
 from PIL import Image
 from io import BytesIO
-import streamlit as st
 
-st.markdown("""
-    <style>
-        .stAppHeader {
-            display: none;
-        }
-    </style>
-""", unsafe_allow_html=True)
-# CSS để ẩn Footer và nút Deploy
-hide_footer_style = """
-    <style>
-    /* 1. Ẩn dòng chữ 'Made with Streamlit' ở chân trang */
-    footer {
-        visibility: hidden;
-    }
-    
-    /* 2. Ẩn nút Deploy (hình con thuyền màu đỏ) ở góc trên hoặc dưới */
-    .stDeployButton {
-        display: none;
-    }
-    
-    /* 3. (Tùy chọn) Ẩn luôn cả menu hamburger 3 dấu gạch ở góc trên bên phải nếu muốn sạch hoàn toàn */
-    #MainMenu {
-        visibility: hidden;
-    }
-    </style>
 # Thư viện Word
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches
@@ -52,15 +26,42 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.fonts import addMapping
 
 # ==========================================
-# 1. CẤU HÌNH & CSS
+# 1. CẤU HÌNH TRANG (PHẢI ĐẶT ĐẦU TIÊN)
 # ==========================================
 st.set_page_config(page_title="IELTS Writing Master", page_icon="🎓", layout="wide")
 
+# ==========================================
+# 2. CSS TỔNG HỢP (ẨN HEADER/FOOTER + STYLE APP)
+# ==========================================
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
     
     html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
+
+    /* --- PHẦN ẨN GIAO DIỆN MẶC ĐỊNH --- */
+    
+    /* 1. Ẩn thanh Header trên cùng (Chứa nút 3 chấm và Running man) */
+    .stAppHeader {
+        display: none;
+    }
+    
+    /* 2. Ẩn Footer 'Made with Streamlit' */
+    footer {
+        visibility: hidden;
+    }
+    
+    /* 3. Ẩn nút Deploy (Con thuyền màu đỏ) */
+    .stDeployButton {
+        display: none;
+    }
+    
+    /* 4. Ẩn Menu Hamburger (nếu CSS trên chưa ẩn hết) */
+    #MainMenu {
+        visibility: hidden;
+    }
+
+    /* --- PHẦN STYLE GIAO DIỆN APP --- */
     
     /* Header Style */
     .main-header {
@@ -69,6 +70,7 @@ st.markdown("""
         font-weight: 700;
         font-size: 2.2rem;
         margin-bottom: 0rem;
+        margin-top: -2rem; /* Đẩy tiêu đề lên cao hơn vì đã ẩn Header */
     }
     .sub-header {
         font-family: 'Inter', sans-serif;
