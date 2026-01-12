@@ -10,7 +10,15 @@ import os
 import requests
 from PIL import Image
 from io import BytesIO
+import streamlit as st
 
+st.markdown("""
+    <style>
+        .stAppHeader {
+            display: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
 # Thư viện Word
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches
