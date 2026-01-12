@@ -1145,15 +1145,19 @@ if st.session_state.step == 3 and st.session_state.grading_result:
 # FOOTER (HIỂN THỊ Ở MỌI STEP)
 # ==========================================
 st.markdown("""
-    <div style="
-        text-align: center; 
-        color: #94a3b8; 
-        font-size: 0.85rem; 
-        font-family: 'Inter', sans-serif; 
-        padding-top: 10px; 
-        border-top: 1px solid #e2e8f0;
-        margin-top: 10px;
-    ">
+    <style>
+        .footer-text {
+            text-align: center; 
+            color: #94a3b8; 
+            font-size: 0.8rem; 
+            font-family: 'Inter', sans-serif; 
+            padding-top: 15px;      /* Giảm đệm trên */
+            padding-bottom: 0px;   /* Giảm đệm dưới */
+            border-top: 1px solid #e2e8f0;
+            margin-top: 30px;       /* Khoảng cách với nội dung bên trên */
+        }
+    </style>
+    <div class="footer-text">
         © 2025 Developed by <b>Albert Nguyen</b>
     </div>
 """, unsafe_allow_html=True)
