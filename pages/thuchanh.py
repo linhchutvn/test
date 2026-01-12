@@ -722,39 +722,97 @@ if st.session_state.step == 1:
                     4. **Process (Quy trình):** Cần câu Bị động (Passive voice) và từ nối trình tự (First, Then, Finally).
                     5. **Mixed (Kết hợp):** Cần hướng dẫn cách liên kết 2 biểu đồ.
 
-                    **BƯỚC 2: VIẾT HƯỚNG DẪN (OUTPUT JSON)**
-                    Dựa vào loại bài đã nhận diện, hãy viết nội dung hướng dẫn bằng Tiếng Việt (dùng thẻ HTML <ul>, <li>, <b> để trình bày đẹp):
+                    **BƯỚC 2: SOẠN HƯỚNG DẪN (OUTPUT JSON)**
 
-                    1. **"intro_guide"**: 
-                       - Hướng dẫn paraphrase đề bài cụ thể.
-                       - Nếu là Map: Gợi ý dùng "illustrates the transformation/development...".
-                       - Nếu là Process: Gợi ý dùng "demonstrates the procedure/stages...".
-                       - Nếu là Data: Gợi ý dùng "compares the data/figures...".
+                    # =================================================================
+                    # 🔴 TRƯỜNG HỢP 1: DẠNG "STATIC CHART" (PIE/BAR/TABLE 1 NĂM)
+                    # =================================================================
+                    *Yêu cầu: Liệt kê từ vựng, từ nối (kèm nghĩa Tiếng Việt) và cấu trúc câu.*
 
-                    2. **"overview_guide"**:
-                       - **Map:** Nhấn mạnh sự thay đổi tổng quan (Vd: "trở nên hiện đại hơn", "nhiều tiện ích hơn").
-                       - **Process:** Đếm tổng số bước, điểm đầu và điểm cuối.
-                       - **Data:** Tìm xu hướng chung (Trend) hoặc Số liệu cao nhất/thấp nhất.
-                       - Cung cấp mẫu câu mở đầu Overview "Overall, it is clear that...".
+                    1. **"intro_guide" (Paraphrase):**
+                       - <ul>
+                         <li><b>Mục tiêu:</b> Viết lại đề bài mà không đổi nghĩa.</li>
+                         <li><b>Từ vựng thay thế (Subject):</b>
+                            <br>- <i>The pie charts / The bar graph</i> (Biểu đồ tròn/cột).
+                            <br>- <i>The provided chart</i> (Biểu đồ được cung cấp).</li>
+                         <li><b>Động từ giới thiệu (Verb):</b>
+                            <br>- <i>compare</i> (so sánh).
+                            <br>- <i>illustrate the breakdown of</i> (minh họa cơ cấu của...).
+                            <br>- <i>give information on</i> (đưa thông tin về...).</li>
+                         <li><b>Cấu trúc câu:</b> <code>[Subject] + [Verb] + [Object] + [in Place] + [in Year]</code>.</li>
+                       </ul>
 
-                    3. **"body1_guide" & "body2_guide"**:
-                       - **Map:** Chia theo khu vực (Bắc/Nam) hoặc Giai đoạn (Trước/Sau). Hướng dẫn dùng thì Quá khứ đơn/Hiện tại hoàn thành.
-                       - **Process:** Chia giai đoạn (ví dụ: Chuẩn bị vs Sản xuất). Nhắc học sinh dùng Passive Voice.
-                       - **Data:** Hướng dẫn Grouping (Nhóm các đường tăng vào Body 1, giảm vào Body 2). Gợi ý cấu trúc so sánh phức tạp.
-                       - Hướng dẫn viết từng câu trong 2 body
-                       - Cung cấp từ vựng "ăn điểm" cụ thể cho bài này (Key Vocab) trong 2 body.
+                    2. **"overview_guide" (Tổng quan - Không số liệu):**
+                       - <ul>
+                         <li><b>Từ nối mở đầu (Linking):</b> <i>Overall, it is clear that...</i> (Nhìn chung, rõ ràng là...).</li>
+                         <li><b>Chiến thuật:</b> Tìm cái <b>Lớn Nhất</b> (Highest/Most popular) và cái <b>Nhỏ Nhất</b> (Lowest/Least popular).</li>
+                         <li><b>Cấu trúc so sánh (Grammar):</b>
+                            <br>- <i>While X accounted for the largest share, Y was the least significant.</i> (Trong khi X chiếm phần lớn nhất, Y là ít quan trọng nhất).
+                            <br>- <i>X was the dominant category...</i> (X là hạng mục chiếm ưu thế...).</li>
+                       </ul>
 
-                    **FORMAT JSON OUTPUT:**
+                    3. **"body1_guide" (Nhóm Lớn Nhất - The Giants):**
+                       - <ul>
+                         <li><b>Grouping:</b> Viết về 2-3 hạng mục có số liệu cao nhất.</li>
+                         <li><b>Từ nối mở đoạn (Linking):</b>
+                            <br>- <i>In terms of [Category A],...</i> (Về mặt...).
+                            <br>- <i>Looking at the detailed figures,...</i> (Nhìn vào số liệu chi tiết...).</li>
+                         <li><b>Từ vựng mô tả tỷ trọng (Vocab):</b>
+                            <br>- <i>account for / constitute / make up / comprise</i> (chiếm...).
+                            <br>- <i>represent the vast majority of...</i> (đại diện cho đại đa số...).</li>
+                         <li><b>Ngữ pháp (Xếp hạng):</b> <i>rank first / take the lead</i> (đứng đầu).</li>
+                       </ul>
+
+                    4. **"body2_guide" (Nhóm Còn Lại - The Rest):**
+                       - <ul>
+                         <li><b>Grouping:</b> Các hạng mục số liệu thấp hơn.</li>
+                         <li><b>Từ nối chuyển đoạn (Linking):</b>
+                            <br>- <i>In contrast / By contrast,...</i> (Ngược lại...).
+                            <br>- <i>Regarding the remaining categories,...</i> (Về các hạng mục còn lại...).</li>
+                         <li><b>Ngữ pháp So sánh Gấp lần (Math Language - Cực quan trọng):</b>
+                            <br>- <i>double / two times as high as</i> (gấp đôi).
+                            <br>- <i>triple / three times higher than</i> (gấp ba).
+                            <br>- <i>approximately half of</i> (xấp xỉ một nửa của).</li>
+                         <li><b>Cách liệt kê số liệu (Listing):</b>
+                            <br>- Dùng: <i>"..., with respective figures of X and Y."</i> (...với số liệu lần lượt là X và Y).
+                            <br>- Dùng: <i>"ranging from X to Y"</i> (dao động từ X đến Y).</li>
+                         <li><b>Từ vựng cho số nhỏ:</b> <i>negligible</i> (không đáng kể).</li>
+                       </ul>
+
+                    # =================================================================
+                    # 🔵 TRƯỜNG HỢP 2: DẠNG "CHANGE OVER TIME" (ĐỘNG)
+                    # =================================================================
+                    *Tập trung vào Xu hướng (Trend) và Tốc độ thay đổi.*
+                    
+                    1. **"intro_guide"**: Paraphrase dùng <i>"show changes in..."</i> hoặc <i>"compare the number of..."</i>.
+                    2. **"overview_guide"**: Nêu xu hướng chung (Tăng/Giảm/Dao động). Dùng <i>"witnessed an upward trend"</i>.
+                    3. **"body1_guide" (Nhóm Tăng):**
+                       - Vocab: <i>surge, rocket, climb, escalate</i> (Tăng mạnh).
+                       - Time: <i>Over the period / In the first year</i>.
+                    4. **"body2_guide" (Nhóm Giảm/Dao động):**
+                       - Vocab: <i>plummet, decline, plateau, fluctuate</i>.
+                       - Grammar: <i>rose **by**</i> (tăng thêm) vs <i>rose **to**</i> (tăng đến).
+
+                    # =================================================================
+                    # 🟡 TRƯỜNG HỢP 3: CÁC DẠNG KHÁC (MAP, PROCESS, MIXED)
+                    # =================================================================
+                    *(Tự động điều chỉnh hướng dẫn phù hợp với đặc thù từng dạng).*
+
+                    **YÊU CẦU TRÌNH BÀY:**
+                    - Dùng thẻ HTML `<ul>`, `<li>`, `<b>`, `<i>`, `<code style='color:#d63384'>` để highlight.
+                    - Giải thích ngắn gọn, dễ hiểu.
+
+                    **JSON OUTPUT FORMAT:**
                     {
-                        "task_type": "Tên loại bài (VD: Map / Process Diagram / Mixed Charts)",
+                        "task_type": "Tên loại bài (Ví dụ: Static Pie Charts)",
                         "intro_guide": "HTML string...",
                         "overview_guide": "HTML string...",
-                        "body1_guide": "HTML string (Gợi ý Grouping + Grammar + Vocab)",
-                        "body2_guide": "HTML string (Gợi ý Grouping + Grammar + Vocab)"
+                        "body1_guide": "HTML string...",
+                        "body2_guide": "HTML string..."
                     }
                     """
                     
-                    # Gọi AI với Prompt Vạn Năng
+                    # Gọi AI
                     res, _ = generate_content_with_failover(prompt_guide + "\nĐề bài: " + question_input, img_data, json_mode=True)
                     if res:
                         data = parse_guide_response(res.text)
