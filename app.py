@@ -1,4 +1,6 @@
 import streamlit as st
+import streamlit as st
+
 st.markdown("""
     <style>
         .stAppHeader {
@@ -177,6 +179,7 @@ st.markdown(f"""
 </div>
 <center style="color:#666; font-size:12px;">© 2025 Developed by Albert Nguyen</center>
 """, unsafe_allow_html=True)
+
 
 
 
