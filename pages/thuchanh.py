@@ -849,6 +849,7 @@ if st.session_state.step == 1:
                        - <ul>
                          <li><b>Cấu trúc chuẩn:</b> <code>[Subject] + [Finite Verb] + [Object] + [Place] + [Time]</code>.</li>
                          <li><b>Subject (Lưu ý đơn vị):</b>
+                         <li><b>Cách đổi Chủ ngữ (Subject):</b>
                             <br>- <i>The line graph...</i>
                             <br>- <i>The number of / The amount of / The percentage of...</i> (Tùy đơn vị trong ảnh).</li>
                          <li><b>Verb:</b> <i>illustrates the changes in / compares the data on / gives information about</i>.</li>
@@ -862,6 +863,9 @@ if st.session_state.step == 1:
                     2. **"overview_guide" (Trend + Ranking):**
                        - <ul>
                          <li><b>Mở đầu:</b> <i>"Overall, it is clear that..."</i></li>
+                         <li><b>🏗️ Cấu trúc câu:</b>
+                            <br>- <i>Overall, [S1] + [V1], while [S2] + [V2].</i> (Câu ghép tương phản).
+                            <br>- <i>It is clear that [General Trend]. In addition, [Outstanding Feature].</i></li>
                          <li><b>Ý 1 (Main Trend):</b> Xác định xu hướng chủ đạo.
                             <br>- <i>...witnessed an upward trend</i> (xu hướng tăng).
                             <br>- <i>...experienced a downward trend</i> (xu hướng giảm).</li>
@@ -878,6 +882,10 @@ if st.session_state.step == 1:
                        - <ul>
                          <li><b>Chiến thuật Gom (Grouping):</b> Chọn các đường có xu hướng <b>TĂNG</b> hoặc số liệu <b>CAO NHẤT</b>.</li>
                          <li><b>Từ nối thời gian (Linking):</b> <i>At the beginning of the period / In the first year / From... to...</i></li>
+                         <li><b>🏗️ Cấu trúc câu Trend (Bắt buộc dùng 2/3 loại):</b>
+                            <br>1. <b>S + V + Adv:</b> <i>The figure for X increased significantly...</i>
+                            <br>2. <b>There + be + Adj + N + in...:</b> <i>There was a sharp rise in the demand for X...</i>
+                            <br>3. <b>Time + witness/see + Adj + N:</b> <i>The year 2000 witnessed a dramatic growth in...</i></li>
                          <li><b>Công thức mô tả (Grammar):</b>
                             <br>- <i>Subject + Verb + Adverb</i> (VD: <i>increased significantly</i>).
                             <br>- <i>There was + Adjective + Noun + in...</i> (VD: <i>There was a sharp rise in...</i>).</li>
@@ -896,6 +904,10 @@ if st.session_state.step == 1:
                          <li><b>Chiến thuật Gom:</b> Các đường có xu hướng <b>GIẢM</b>, <b>DAO ĐỘNG</b> hoặc <b>THẤP HƠN</b>.</li>
                          <li><b>Từ nối chuyển đoạn:</b> <i>In contrast / Meanwhile / Regarding the figure for...</i></li>
                          <li><b>Từ vựng Giảm/Dao động:</b> <i>decline / plummet / drop / fluctuate (dao động) / stabilize (ổn định)</i>.</li>
+                         <li><b>🏗️ Cấu trúc câu So sánh & Biến động:</b>
+                            <br>- <b>Fluctuation:</b> <i>X fluctuated wildy between [A] and [B].</i>
+                            <br>- <b>Overtake:</b> <i>X started lower than Y but overtook it in [Year].</i>
+                            <br>- <b>Ranking:</b> <i>X remained the highest/lowest figure throughout the period.</i></li>
                          <li><b>Từ vựng Điểm đặc biệt:</b>
                             <br>- <i>reach a peak of</i> (đạt đỉnh tại...).
                             <br>- <i>hit a low of</i> (chạm đáy tại...).
