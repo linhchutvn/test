@@ -858,7 +858,7 @@ if st.session_state.step == 1:
             <br>- <b>Từ vựng gốc trong đề:</b> "<i>[Trích cụm từ gốc trong đề bài]</i>"
             <br>- <b>Gợi ý Paraphrase 1:</b> <i>[Viết phương án paraphrase 1. VD: The amount of money spent on...]</i>
             <br>- <b>Gợi ý Paraphrase 2:</b> <i>[Viết phương án paraphrase 2. VD: How much money was allocated to...]</i>
-            <br><i>(Lưu ý: Dựa vào Page 9, 10 tài liệu Youpass để chọn từ Spending/Number/Percentage phù hợp).</i></li>
+            <br><i>(Lưu ý: chọn từ Spending/Number/Percentage phù hợp).</i></li>
     
         <li><b>Verb (Động từ khuyên dùng):</b>
             <br><i>illustrates / compares the data on / presents information about / gives information about</i>.</li>
