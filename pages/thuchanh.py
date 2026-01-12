@@ -1074,46 +1074,24 @@ if st.session_state.step == 3 and st.session_state.grading_result:
                     </div>
                     """, unsafe_allow_html=True)
 
+            # Tab 3: Lỗi Mạch lạc (Macro) - ĐÃ SỬA INDENTATION & THÊM TRÍCH DẪN
             with tab3:
                 macro = [e for e in g_data.get('errors', []) if e.get('category') not in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
-            
                 if not macro: 
-                    st.success("✅ Cấu trúc và mạch lạc tốt, không phát hiện lỗi logic lớn.")
-            
+                    st.success("✅ Cấu trúc tốt.")
                 for err in macro:
                     st.markdown(f"""
-                    <div class="error-card" style="border-left: 5px solid #3b82f6; padding: 15px; background: white; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                    
-                        <!-- Tên lỗi -->
-                        <div style="font-weight: bold; font-size: 1.1rem; color: #1e3a8a; margin-bottom: 5px;">
-                            {err.get('type')}
-                        </div>
-                    
-                        <!-- Giải thích -->
-                        <div style="color: #4b5563; margin-bottom: 12px; font-size: 0.95rem;">
-                            {err.get('explanation')}
-                        </div>
-                    
-                        <!-- Khu vực so sánh Lỗi vs Sửa -->
-                        <div style="background-color: #f8fafc; padding: 10px; border-radius: 6px; border: 1px solid #e2e8f0;">
+                    <div class="error-card-container" style="border-left: 4px solid #3b82f6;">
+                        <div style="font-weight:bold; color:#1e40af; margin-bottom:5px;">{err.get('type')}</div>
                         
-                            <!-- 1. Trích dẫn lỗi (Phần bạn đang thiếu) -->
-                            <div style="margin-bottom: 8px;">
-                                <span style="font-size: 0.8rem; font-weight: bold; color: #dc2626; text-transform: uppercase;">🔻 Trích dẫn bài làm:</span>
-                                <div style="font-family: monospace; color: #374151; background: #fee2e2; padding: 4px 8px; border-radius: 4px; margin-top: 2px;">
-                                    "{err.get('original', 'Không tìm thấy trích dẫn')}"
-                                </div>
-                            </div>
+                        <!-- Hiển thị Trích dẫn lỗi (Quote) -->
+                        <div style="background-color:#eff6ff; padding:8px; border-radius:4px; margin-bottom:8px; border:1px dashed #93c5fd;">
+                            <span style="font-size:0.8rem; font-weight:bold; color:#60a5fa;">TRÍCH DẪN:</span><br>
+                            <span style="font-family:monospace; color:#1e3a8a;">"{err.get('original', 'N/A')}"</span>
+                        </div>
 
-                            <!-- 2. Gợi ý sửa -->
-                            <div>
-                                <span style="font-size: 0.8rem; font-weight: bold; color: #059669; text-transform: uppercase;">✨ Gợi ý nâng cấp:</span>
-                                <div style="font-weight: bold; color: #065f46; margin-top: 2px; padding-left: 5px; border-left: 3px solid #059669;">
-                                    {err.get('correction')}
-                                </div>
-                            </div>
-                        
-                        </div>
+                        <div style="margin-bottom:5px;"><b>Vấn đề:</b> {err.get('explanation')}</div>
+                        <div style="color:#059669;"><b>👉 Gợi ý:</b> {err.get('correction')}</div>
                     </div>
                     """, unsafe_allow_html=True)
 
