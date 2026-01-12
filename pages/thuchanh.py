@@ -759,7 +759,7 @@ if st.session_state.step == 1:
                     3. **Map (Bản đồ):** Cần từ vựng phương hướng (North, South) và sự thay đổi (demolished, constructed). Tuyệt đối không dùng "increase/decrease" cho nhà cửa.
                     4. **Process (Quy trình):** Cần câu Bị động (Passive voice) và từ nối trình tự (First, Then, Finally).
                     5. **Mixed (Kết hợp):** Cần hướng dẫn cách liên kết 2 biểu đồ.
-                    *Quy tắc chung cho mọi phần: Phải liệt kê Từ vựng/Cấu trúc (kèm nghĩa Tiếng Việt) trước, sau đó mới viết đoạn Mẫu (Sample) áp dụng các từ đó.*
+                    
                     
                     **BƯỚC 2: SOẠN HƯỚNG DẪN (OUTPUT JSON)**
 
@@ -843,6 +843,7 @@ if st.session_state.step == 1:
                     # 🔵 TRƯỜNG HỢP 2: DẠNG "CHANGE OVER TIME" (LINE GRAPH / DYNAMIC BAR)
                     # (Tư duy cốt lõi: Trend (Xu hướng) & Speed (Tốc độ thay đổi))
                     # =================================================================
+                    *Quy tắc chung cho mọi phần: Phải liệt kê Từ vựng/Cấu trúc (kèm nghĩa Tiếng Việt) trước, sau đó mới viết đoạn Mẫu (Sample) áp dụng các hướng dẫn đó.*
 
                     1. **"intro_guide" (Paraphrase):**
                        - <ul>
@@ -854,7 +855,7 @@ if st.session_state.step == 1:
                          <li><b>Time Paraphrase:</b> <i>over a period of X years starting from... / between... and...</i></li>
                          <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
                              <b>📝 Nội dung mẫu (Sample Intro):</b><br>
-                             <i>[Viết 1 câu Introduction hoàn chỉnh dựa trên hình ảnh]</i>
+                             <i>[Viết 1 câu Introduction hoàn chỉnh dựa trên hình ảnh và áp dụng các hướng dẫn trên]</i>
                          </div></li>
                        </ul>
 
@@ -869,7 +870,7 @@ if st.session_state.step == 1:
                             <br>- Có sự thay đổi thứ hạng không? <i>(A overtook B)</i>.</li>
                          <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
-                             <i>[Viết 2 câu Overview: Câu 1 nêu xu hướng tăng/giảm chung, Câu 2 nêu đối tượng cao nhất hoặc sự thay đổi đáng chú ý nhất]</i>
+                             <i>[Viết 2 câu Overview: Câu 1 nêu xu hướng tăng/giảm chung, Câu 2 nêu đối tượng cao nhất hoặc sự thay đổi đáng chú ý nhất, dựa trên hình ảnh và áp dụng các hướng dẫn đã nêu trên]</i>
                          </div></li>
                        </ul>
 
@@ -886,7 +887,7 @@ if st.session_state.step == 1:
                             <br>- <i>by</i> (tăng thêm bao nhiêu).</li>
                          <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
                              <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
-                             <i>[Viết 3-4 câu mô tả chi tiết nhóm Tăng/Cao nhất. Sử dụng đa dạng cấu trúc câu (Active/Passive/There was).]</i>
+                             <i>[Viết 3-4 câu mô tả chi tiết nhóm Tăng/Cao nhất. Sử dụng đa dạng cấu trúc câu (Active/Passive/There was). Viết hoàn chỉnh dựa trên hình ảnh và áp dụng các hướng dẫn đã nêu trên]</i>
                          </div></li>
                        </ul>
 
@@ -901,7 +902,7 @@ if st.session_state.step == 1:
                             <br>- <i>surpass / overtake</i> (vượt qua - dùng khi 2 đường cắt nhau).</li>
                          <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
                              <b>📝 Nội dung mẫu (Sample Body 2):</b><br>
-                             <i>[Viết 3-4 câu mô tả nhóm còn lại. Chú ý mô tả các điểm giao nhau (intersections) hoặc điểm dao động nếu có.]</i>
+                             <i>[Viết 3-4 câu mô tả nhóm còn lại. Chú ý mô tả các điểm giao nhau (intersections) hoặc điểm dao động nếu có. Viết hoàn chỉnh dựa trên hình ảnh và áp dụng các hướng dẫn đã nêu trên]</i>
                          </div></li>
                        </ul>
 
