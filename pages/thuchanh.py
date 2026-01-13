@@ -921,8 +921,8 @@ if st.session_state.step == 1:
                         - <ul>
                          <li><b>Nguyên tắc bất di bất dịch:</b> KHÔNG đưa số liệu cụ thể (năm, số tiền, phần trăm...) vào phần này. Chỉ mô tả đặc điểm chung.</li>
 
-                         <li><b>Cấu trúc chuẩn:</b>
-                             <br><code>Overall, [Sentence 1: Trends]. In addition / Also, [Sentence 2: Highlights].</code></li>
+                         <li><b>Cấu trúc chuẩn (Formula):</b>
+                             <br><code>Overall, [Sentence 1: Trends]. In addition / Morever / Also, [Sentence 2: Highlights].</code></li>
                          
                          <li><b>Bước 1: Sentence 1 - Xác định Xu hướng (Trends):</b>
                              <br>Quan sát điểm đầu và điểm cuối của các đường:
@@ -934,13 +934,13 @@ if st.session_state.step == 1:
                              <br>Tìm đường nằm ở vị trí cao nhất/thấp nhất hoặc thay đổi mạnh nhất:
                              <br>- <b>Cao nhất/Thấp nhất:</b> <i>"[Line A] consistently had the highest figures throughout the period."</i> (hoặc <i>remained the most popular...</i>).
                              <br>- <b>Thay đổi lớn nhất:</b> <i>"[Line B] witnessed the most dramatic change."</i></li>
+                             <br>- <b>Phổ biến nhất:</b> <i>"[Line A] was the most common reason..."</i>
 
-                         <li><b>Vocabulary Bank:</b>
+                         <li><b>Vocabulary:</b>
                              <br>- <i>witnessed / experienced / saw + an upward/downward trend</i>.
                              <br>- <i>volatile / fluctuated</i> (nếu dao động mạnh).
                              <br>- <i>dominant / highest / lowest</i>.</li>
-                         <li><b>Từ vựng và paraphrase: Phải liệt kê ít nhất 3 Vocab và 3 paraphrasing (nếu có)từ Sample Overview (kèm nghĩa tiếng việt).</li>
-
+                         
                          <li><div style="background-color:#fff3e0; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
                              <i>[Hãy viết 2 câu Overview hoàn chỉnh phải dựa vào các bước đã nêu trên, ghép lại bằng từ nối "Overall,... In addition,..."]</i>
