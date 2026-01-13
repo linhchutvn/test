@@ -874,7 +874,7 @@ if st.session_state.step == 1:
         <li><b>Time Paraphrase (Thời gian: [Năm đầu] - [Năm cuối]):</b>
             <br>- Cách 1: <i>Between [Năm đầu] and [Năm cuối]</i>.
             <br>- Cách 2: <i>Over a period of [Số năm] years commencing in [Năm đầu]</i>.</li>    
-        <li><b>Từ vựng và paraphrase: liệt kê Vocab và paraphrase trong Sample Intro (kèm nghĩa tiếng việt).</li>
+        <li><b>Từ vựng và paraphrase: liệt kê Vocab và paraphrase lấy từ  Sample Intro (kèm nghĩa tiếng việt).</li>
         
         <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
             <b>📝 Nội dung mẫu (Sample Intro):</b><br>                             
@@ -904,7 +904,7 @@ if st.session_state.step == 1:
                              <br>- <i>witnessed / experienced / saw + an upward/downward trend</i>.
                              <br>- <i>volatile / fluctuated</i> (nếu dao động mạnh).
                              <br>- <i>dominant / highest / lowest</i>.</li>
-                         <li><b>Từ vựng và paraphrase: liệt kê Vocab và paraphrase trong trong Sample Overview (kèm nghĩa tiếng việt).</li>
+                         <li><b>Từ vựng và paraphrase: liệt kê Vocab và paraphrase lấy từ Sample Overview (kèm nghĩa tiếng việt).</li>
 
                          <li><div style="background-color:#fff3e0; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
@@ -941,7 +941,7 @@ if st.session_state.step == 1:
                              <br>- <b>Verbs (Tăng):</b> <i>climb, surge, rocket, go up</i>.
                              <br>- <b>Verbs (Giảm/Dao động):</b> <i>decline, plummet, fluctuate</i>.
                              <br>- <b>Prepositions (Giới từ):</b> Tăng <b>to</b> (đến mức), Tăng <b>by</b> (một khoảng), Đạt đỉnh <b>at</b> (tại mức).</li>
-                         <li><b>Từ vựng và paraphrase: liệt kê chi tiết (ít nhất 5 Vocab và paraphrasing) trong có trong Sample Body 1 (kèm nghĩa tiếng việt).</li>
+                         <li><b>Từ vựng và paraphrase: liệt kê chi tiết (ít nhất 5 Vocab và paraphrasing) lấy từ Sample Body 1 (kèm nghĩa tiếng việt).</li>
 
                          <li><div style="background-color:#fff8e1; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #ffa502;">
                              <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
@@ -980,7 +980,7 @@ if st.session_state.step == 1:
                              <br>- <b>Verbs:</b> <i>plummet / decline</i> (giảm mạnh), <i>recover</i> (hồi phục), <i>stabilize</i> (ổn định).
                              <br>- <b>Nouns:</b> <i>a volatile pattern</i> (mẫu hình biến động), <i>a downward trend</i>.
                              <br>- <b>Comparison:</b> <i>overtake / surpass</i> (vượt qua).</li>
-                         <li><b>Từ vựng và paraphrase: liệt kê chi tiết (ít nhất 5 Vocab và paraphrasing) có trong Sample Body 2 (kèm nghĩa tiếng việt).</li>
+                         <li><b>Từ vựng và paraphrase: liệt kê chi tiết (ít nhất 5 Vocab và paraphrasing) lấy từ Sample Body 2 (kèm nghĩa tiếng việt).</li>
                         
                          <li><div style="background-color:#ffebee; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #ff5252;">
                              <b>📝 Nội dung mẫu (Sample Body 2):</b><br>
