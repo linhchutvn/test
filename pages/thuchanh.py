@@ -918,7 +918,7 @@ if st.session_state.step == 1:
 
                     2. **"overview_guide" (Trend + Ranking):**
                         - <ul>
-                         <!-- PHẦN 1: KHO MẪU CÂU (TÁCH RA 3 KHỐI RIÊNG ĐỂ TRÁNH BỊ AI CẮT BỚT) -->
+                         <!-- PHẦN 1: KHO MẪU CÂU (BỔ SUNG CẤU TRÚC SOÁN NGÔI) -->
                          <li>
                              <strong style="color:#d35400;">📚 KHO MẪU CÂU (CẦN HỌC THUỘC):</strong>
                              
@@ -935,18 +935,19 @@ if st.session_state.step == 1:
                                  <br>- <i>Xu hướng ngược (Mix):</i> "It is clear that while the figures for <b>&#91;Line A&#93;</b> and <b>&#91;Line B&#93;</b> increased, the opposite was true for <b>&#91;Line C&#93;</b>."
                              </div>
 
-                             <!-- KHỐI 3: HIGHLIGHTS (ĐÂY LÀ PHẦN BỊ THIẾU CẦN HIỆN RA) -->
+                             <!-- KHỐI 3: HIGHLIGHTS (BỔ SUNG ĐỂ KHỚP VỚI BÀI MẪU) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 3. Mẫu câu Điểm nổi bật (Highlights):</b>
-                                 <br>- <i>Cao nhất/Phổ biến nhất:</i> "<b>&#91;Line A&#93;</b> consistently had the highest figures..." (hoặc <i>remained the most popular...</i>).
-                                 <br>- <i>Thay đổi lớn nhất:</i> "<b>&#91;Line B&#93;</b> witnessed the most dramatic change."
+                                 <br>- <i>Cao nhất (Giữ nguyên):</i> "<b>&#91;Line A&#93;</b> consistently had the highest figures throughout the period."
+                                 <br>- <i>Biến động lớn nhất:</i> "<b>&#91;Line B&#93;</b> witnessed the most dramatic change."
+                                 <br>- <i>Soán ngôi (Ranking Shift):</i> "<b>&#91;Line A&#93;</b> overtook <b>&#91;Line B&#93;</b> to become the dominant category."
                              </div>
                          </li>
                          
                          <!-- PHẦN 2: PHÂN TÍCH -->
                          <li>
                              <b>🔍 PHÂN TÍCH DỮ LIỆU ĐỂ LẮP VÀO CÔNG THỨC:</b>
-                             <br><i>(AI hãy xác định dữ liệu thực tế cho từng mẫu câu)</i>
+                             <br><i>(AI xác định dữ liệu thực tế cho từng mẫu câu)</i>
                              <br>
                              <br><b>1. Dữ liệu cho Mẫu câu 1 (Tổng quát):</b>
                              <br>- <b>&#91;Topic&#93; là gì?</b> <i>[AI điền. VD: Tỷ lệ thất nghiệp]</i>
@@ -956,8 +957,8 @@ if st.session_state.step == 1:
                              <br>- <b>&#91;Line C&#93; (Nhóm Giảm/Thấp):</b> <i>[AI liệt kê tên]</i>
                              
                              <br><br><b>3. Dữ liệu cho Mẫu câu 3 (Điểm nổi bật):</b>
-                             <br>- <b>Chọn tiêu chí nào?</b> <i>[AI chọn: Cao nhất hay Thay đổi lớn nhất?]</i>
-                             <br>- <b>Đối tượng đó (&#91;Line A&#93; hoặc &#91;Line B&#93;) tên là gì?</b> <i>[AI điền tên đối tượng]</i>
+                             <br>- <b>Chọn Mẫu nào trong 3 mẫu trên?</b> <i>[AI chọn: Cao nhất / Biến động / hay Soán ngôi?]</i>
+                             <br>- <b>Đối tượng (&#91;Line A&#93;, &#91;Line B&#93;) tên là gì?</b> <i>[AI điền tên đối tượng]</i>
                          </li>
 
                          <!-- PHẦN 3: TỪ VỰNG -->
@@ -971,22 +972,7 @@ if st.session_state.step == 1:
                          <li><div style="background-color:#fff3e0; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
                              <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-                             [AI hãy viết đoạn Overview hoàn chỉnh, ghép nối dữ liệu ở Phần 2 vào Cấu trúc ở Phần 1.]
-                             </div>
-                         </div></li>
-                       </ul>
-                         <!-- PHẦN 3: TỪ VỰNG -->
-                         <li><b>🔑 TỪ VỰNG GỢI Ý (Vocabulary):</b>
-                             <br>- <b>Verbs:</b> <i>witnessed a downward trend / saw a significant rise</i>.
-                             <br>- <b>Adjectives:</b> <i>volatile (biến động) / stable (ổn định)</i>.
-                             <br>- <b>Paraphrase bài này:</b> <i>[AI liệt kê 3 từ vựng sát với chủ đề bài viết]</i>
-                         </li>
-
-                         <!-- PHẦN 4: BÀI MẪU -->
-                         <li><div style="background-color:#fff3e0; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ff9f43;">
-                             <b>📝 Nội dung mẫu (Sample Overview):</b><br>
-                             <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-                             [AI hãy viết đoạn Overview hoàn chỉnh, ghép nối dữ liệu ở Phần 2 vào Cấu trúc ở Phần 1.]
+                             [AI hãy viết đoạn Overview hoàn chỉnh. <b>QUAN TRỌNG:</b> Chỉ được sử dụng đúng cấu trúc câu đã chọn ở Phần 'KHO MẪU CÂU'. Nếu chọn mẫu 'Soán ngôi', bắt buộc phải dùng từ 'overtook' hoặc 'became dominant'. Không tự ý sáng tạo cấu trúc lạ.]
                              </div>
                          </div></li>
                        </ul>
