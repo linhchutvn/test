@@ -729,11 +729,96 @@ if st.session_state.step == 1:
     # STEP 3 – Examiner Focus (Giữ nguyên vị trí)
     st.markdown('<div class="step-header">STEP 3 – Examiner Focus</div>', unsafe_allow_html=True)
     st.markdown("""
-    <div style="background-color: #F1F5F9; padding: 15px; border-radius: 8px; border: 1px solid #E2E8F0;">
-        <div style="font-weight: 500; color: #334155;">✓ Task type identification</div>
-        <div style="font-weight: 500; color: #334155;">✓ Key trends & overview logic</div>
-        <div style="font-weight: 500; color: #334155;">✓ Data selection & comparison</div>
-        <div style="font-weight: 500; color: #334155;">✓ Band scoring (TA – CC – LR – GRA)</div>
+    st.markdown("---")
+    st.markdown('<div class="step-header">STEP 3 – AI Examiner Workflow</div>', unsafe_allow_html=True)
+    
+    st.markdown("""
+    <style>
+        .wf-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .wf-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+        }
+        .wf-card:hover {
+            border-color: #94A3B8;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+        .wf-icon {
+            width: 35px;
+            height: 35px;
+            background-color: #F0F9FF;
+            color: #0284C7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .wf-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .wf-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1E293B;
+        }
+        .wf-desc {
+            font-size: 0.8rem;
+            color: #64748B;
+            line-height: 1.3;
+        }
+    </style>
+
+    <div class="wf-container">
+        <!-- Card 1 -->
+        <div class="wf-card">
+            <div class="wf-icon">🔍</div>
+            <div class="wf-content">
+                <div class="wf-title">1. Task Deconstruction</div>
+                <div class="wf-desc">Analyze visual data to identify chart type & temporal context.</div>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="wf-card">
+            <div class="wf-icon">🧠</div>
+            <div class="wf-content">
+                <div class="wf-title">2. Strategic Scaffolding</div>
+                <div class="wf-desc">Provide coherent grouping logic & structural outlining.</div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="wf-card">
+            <div class="wf-icon">✍️</div>
+            <div class="wf-content">
+                <div class="wf-title">3. Guided Drafting</div>
+                <div class="wf-desc">Facilitate writing with advanced lexical & grammatical input.</div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="wf-card">
+            <div class="wf-icon">⚖️</div>
+            <div class="wf-content">
+                <div class="wf-title">4. Performance Assessment</div>
+                <div class="wf-desc">Evaluate based on official IELTS Band Descriptors (TA, CC, LR, GRA).</div>
+            </div>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
