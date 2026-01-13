@@ -918,49 +918,50 @@ if st.session_state.step == 1:
 
                     2. **"overview_guide" (Trend + Ranking):**
                         - <ul>
-                         <!-- PHẦN 1: LÝ THUYẾT CỐ ĐỊNH (BẮT BUỘC GIỮ NGUYÊN) -->
+                         <!-- PHẦN 1: LÝ THUYẾT (Sử dụng kỹ thuật HTML Entity để chặn AI điền) -->
                          <li>
-                             <b>📘 CẤU TRÚC & CÔNG THỨC (Học thuộc):</b>
-                             <br><i>(Lưu ý: Không đưa số liệu cụ thể vào phần Overview)</i>
-                             <div style="background:#f4f4f5; padding:10px; border-radius:5px; border: 1px dashed #ccc; margin-top: 5px;">
-                                 <b>1. Cấu trúc tổng quát:</b>
-                                 <br><code>Overall, [Sentence 1: Trends]. In addition / Also, [Sentence 2: Highlights].</code>
-                                 <br>
-                                 <br><b>2. Các mẫu câu Trends (Xu hướng):</b>
-                                 <br>- <i>Đồng loạt Tăng/Giảm:</i> "It is clear that the total <b>[Topic]</b> increased/decreased over the period."
-                                 <br>- <i>Xu hướng ngược (Mix):</i> "It is clear that while the figures for <b>[Line A]</b> and <b>[Line B]</b> increased, the opposite was true for <b>[Line C]</b>."
-                                 <br>- <i>Ngoại lệ:</i> "The figures for most categories increased, with the exception of <b>[Line C]</b>."
-                                 <br>
-                                 <br><b>3. Các mẫu câu Highlights (Nổi bật):</b>
-                                 <br>- <i>Cao/Thấp nhất:</i> "<b>[Line A]</b> consistently had the highest figures..." (hoặc <i>remained the most popular...</i>).
-                                 <br>- <i>Thay đổi lớn nhất:</i> "<b>[Line B]</b> witnessed the most dramatic change."
+                             <div style="background-color:#f8f9fa; border:1px solid #e9ecef; border-radius:5px; padding:15px; margin-bottom:15px;">
+                                 <strong style="color:#d35400;">📚 KHO MẪU CÂU (TEMPLATES) - CẦN HỌC THUỘC:</strong>
+                                 <p style="font-size:0.9em; color:#636e72; margin-top:5px;"><i>(Nguyên tắc: Giữ nguyên các từ trong ngoặc vuông, chỉ điền vào phần Phân tích bên dưới)</i></p>
+                                 
+                                 <br><b>► 1. Cấu trúc tổng quát:</b>
+                                 <br><code>Overall, &#91;Sentence 1: Trends&#93;. In addition / Also, &#91;Sentence 2: Highlights&#93;.</code>
+                                 
+                                 <br><br><b>► 2. Mẫu câu Xu hướng (Trends):</b>
+                                 <br>- <i>Đồng loạt Tăng/Giảm:</i> "It is clear that the total <b>&#91;Topic&#93;</b> increased/decreased over the period."
+                                 <br>- <i>Xu hướng ngược (Mix):</i> "It is clear that while the figures for <b>&#91;Line A&#93;</b> and <b>&#91;Line B&#93;</b> increased, the opposite was true for <b>&#91;Line C&#93;</b>."
+                                 
+                                 <br><br><b>► 3. Mẫu câu Điểm nổi bật (Highlights):</b>
+                                 <br>- <i>Cao nhất:</i> "<b>&#91;Line A&#93;</b> consistently had the highest figures throughout the period."
+                                 <br>- <i>Thay đổi lớn nhất:</i> "<b>&#91;Line B&#93;</b> witnessed the most dramatic change."
                              </div>
                          </li>
                          
-                         <hr style="border-top: 1px solid #eee; margin: 15px 0;">
-
-                         <!-- PHẦN 2: PHÂN TÍCH NHÁP (AI ĐƯỢC PHÉP ĐIỀN VÀO ĐÂY) -->
-                         <li><b>🔍 PHÂN TÍCH BÀI NÀY (Nháp ý tưởng):</b>
-                             <br><i>(Dựa trên hình ảnh thực tế, xác định các thành phần để lắp vào công thức)</i>
-                             <br>- <b>Xác định [Topic]:</b> <i>[AI điền Topic. VD: lượng khí thải/doanh thu...]</i>
-                             <br>- <b>Xác định [Line A/B] (Xu hướng 1):</b> <i>[AI điền tên đối tượng tăng/giảm]</i>
-                             <br>- <b>Xác định [Line C] (Xu hướng ngược/Ngoại lệ):</b> <i>[AI điền tên đối tượng ngược lại]</i>
-                             <br>- <b>Xác định Highlight (Cao nhất/Thay đổi nhất):</b> <i>[AI điền đối tượng nổi bật]</i>
+                         <!-- PHẦN 2: PHÂN TÍCH (AI ĐIỀN VÀO ĐÂY) -->
+                         <li>
+                             <b>🔍 PHÂN TÍCH DỮ LIỆU BÀI NÀY (Drafting):</b>
+                             <br><i>(AI hãy xác định các thành phần thực tế để học sinh lắp vào công thức trên)</i>
+                             <br>
+                             <br><b>1. Xác định &#91;Topic&#93; là gì?</b>
+                             <br>👉 <i>[AI trả lời ngắn gọn. VD: Tỷ lệ thất nghiệp]</i>
+                             <br>
+                             <br><b>2. Xác định các Line A/B/C:</b>
+                             <br>- <b>&#91;Line A/B&#93; (Nhóm Tăng/Cao):</b> <i>[AI liệt kê tên]</i>
+                             <br>- <b>&#91;Line C&#93; (Nhóm Giảm/Thấp/Ngược):</b> <i>[AI liệt kê tên]</i>
                          </li>
 
-                         <li><b>🔑 TỪ VỰNG (Vocabulary Bank):</b>
-                             <br><i>(Các từ vựng này sẽ được dùng trong bài mẫu bên dưới)</i>
-                             <br>- <b>Verbs:</b> <i>witnessed / experienced / saw + an upward/downward trend</i>.
-                             <br>- <b>Adjectives:</b> <i>volatile / fluctuated</i> (nếu dao động mạnh).
-                             <br>- <b>Ranking:</b> <i>dominant / highest / lowest</i>.
-                             <br>- <b>Paraphrase bài này:</b> <i>[AI liệt kê thêm 2-3 từ vựng cụ thể cho bài]</i>
+                         <!-- PHẦN 3: TỪ VỰNG -->
+                         <li><b>🔑 TỪ VỰNG GỢI Ý (Vocabulary):</b>
+                             <br>- <b>Verbs:</b> <i>witnessed a downward trend / saw a significant rise</i>.
+                             <br>- <b>Adjectives:</b> <i>volatile (biến động) / stable (ổn định)</i>.
+                             <br>- <b>Paraphrase bài này:</b> <i>[AI liệt kê 3 từ vựng sát với chủ đề bài viết]</i>
                          </li>
 
-                         <!-- PHẦN 3: BÀI MẪU (LẮP GHÉP TỪ PHẦN 2) -->
+                         <!-- PHẦN 4: BÀI MẪU -->
                          <li><div style="background-color:#fff3e0; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
                              <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-                             [AI hãy viết 2 câu Overview hoàn chỉnh, sử dụng chính xác các thành phần đã phân tích ở mục 'PHÂN TÍCH BÀI NÀY' và ghép vào 'CẤU TRÚC' ở trên.]
+                             [AI hãy viết đoạn Overview hoàn chỉnh, ghép nối dữ liệu ở Phần 2 vào Cấu trúc ở Phần 1.]
                              </div>
                          </div></li>
                        </ul>
