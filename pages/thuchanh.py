@@ -727,6 +727,7 @@ if st.session_state.step == 1:
         st.image(img_data, caption='Uploaded Visual Data', width=400)
 
     # STEP 3 – Examiner Focus (Giữ nguyên vị trí)   
+    st.markdown("---")
     st.markdown('<div class="step-header">STEP 3 – Examiner Workflow</div>', unsafe_allow_html=True)
     st.markdown("""
     <style>
