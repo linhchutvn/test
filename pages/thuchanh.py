@@ -726,11 +726,8 @@ if st.session_state.step == 1:
         img_data = Image.open(uploaded_image)
         st.image(img_data, caption='Uploaded Visual Data', width=400)
 
-    # STEP 3 – Examiner Focus (Giữ nguyên vị trí)
-    st.markdown('<div class="step-header">STEP 3 – Examiner Focus</div>', unsafe_allow_html=True)
-    st.markdown("""
-    st.markdown("---")
-    st.markdown('<div class="step-header">STEP 3 – AI Examiner Workflow</div>', unsafe_allow_html=True)
+    # STEP 3 – Examiner Focus (Giữ nguyên vị trí)   
+    st.markdown('<div class="step-header">STEP 3 – Examiner Workflow</div>', unsafe_allow_html=True)
     st.markdown("""
     <style>
         .wf-container {
