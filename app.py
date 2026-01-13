@@ -122,7 +122,7 @@ courses = [
     {"id": 3, "title": "Khoá học IELTS Listening", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/LISTENING.png", "category": "Listening", "link": "https://www.google.com"},
     {"id": 4, "title": "Khoá học IELTS Writing Task 1", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/TASK%201.png", "category": "Writing Task 1", "link": "https://www.youtube.com/playlist?list=PLI3S3xWA78UWtIxIEnZia2siEgxJPwpfQ"},
     {"id": 5, "title": "Khoá học IELTS Writing Task 2", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/task%202.png", "category": "Writing Task 2", "link": "https://www.youtube.com/playlist?list=PLI3S3xWA78UWM9nT6jYY9vl3mHb52ZQ08"},
-    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/Assessment_TASK1.png", "category": "Writing Task 1", "link": "https://ielts-test.streamlit.app/"},
+    {"id": 6, "title": "Chấm điểm IELTS Writing Task 1", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/Assessment_TASK1.png", "category": "Writing Task 1", "link": "https://auvietcenter-thuchanh.streamlit.app/"},
     {"id": 7, "title": "Chấm điểm IELTS Writing Task 2", "price": "FREE", "img": "https://raw.githubusercontent.com/linhchutvn/test/main/Assessment_TASK2.png", "category": "Writing Task 2", "link": "https://www.google.com"},
 ]
 
@@ -179,6 +179,7 @@ st.markdown(f"""
 </div>
 <center style="color:#666; font-size:12px;">© 2025 Developed by Albert Nguyen</center>
 """, unsafe_allow_html=True)
+
 
 
 
