@@ -730,8 +730,8 @@ if st.session_state.step == 1:
     st.markdown("---")
     st.markdown('<div class="step-header">STEP 3 – Examiner Workflow</div>', unsafe_allow_html=True)
     
-    # --- BIẾN HTML NÀY ĐƯỢC VIẾT SÁT LỀ ĐỂ TRÁNH LỖI HIỂN THỊ ---
-    html_workflow = """
+    # --- ĐỊNH NGHĨA HTML RIÊNG (SÁT LỀ TRÁI ĐỂ TRÁNH LỖI HIỂN THỊ CODE) ---
+    workflow_html = """
 <style>
     .wf-container {
         display: grid;
@@ -783,6 +783,7 @@ if st.session_state.step == 1:
 </style>
 
 <div class="wf-container">
+    <!-- Card 1 -->
     <div class="wf-card">
         <div class="wf-icon">🔍</div>
         <div class="wf-content">
@@ -791,6 +792,7 @@ if st.session_state.step == 1:
         </div>
     </div>
     
+    <!-- Card 2 -->
     <div class="wf-card">
         <div class="wf-icon">🧠</div>
         <div class="wf-content">
@@ -799,6 +801,7 @@ if st.session_state.step == 1:
         </div>
     </div>
 
+    <!-- Card 3 -->
     <div class="wf-card">
         <div class="wf-icon">✍️</div>
         <div class="wf-content">
@@ -807,6 +810,7 @@ if st.session_state.step == 1:
         </div>
     </div>
 
+    <!-- Card 4 -->
     <div class="wf-card">
         <div class="wf-icon">⚖️</div>
         <div class="wf-content">
@@ -816,11 +820,9 @@ if st.session_state.step == 1:
     </div>
 </div>
 """
-    # Gọi lệnh render
-    st.markdown(html_workflow, unsafe_allow_html=True)
+    # GỌI LỆNH RENDER (BẮT BUỘC unsafe_allow_html=True)
+    st.markdown(workflow_html, unsafe_allow_html=True)
     
-    st.markdown("<br>", unsafe_allow_html=True)
-
     st.markdown("<br>", unsafe_allow_html=True)
 
     # Nút bấm xử lý (vẫn sử dụng question_input và img_data đã khai báo ở trên)
