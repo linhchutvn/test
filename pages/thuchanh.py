@@ -776,7 +776,7 @@ if st.session_state.step == 1:
     st.markdown("<br>", unsafe_allow_html=True)
 
     # Nút bấm xử lý (vẫn sử dụng question_input và img_data đã khai báo ở trên)
-    if st.button("🚀  Analyze & Guide (Start Learning)", type="primary", use_container_width=True):
+    if st.button("🔍 Analyze & Guide (Start Learning)", type="primary", use_container_width=True):
         if not question_input or not img_data:
             st.warning("⚠️ Vui lòng nhập đầy đủ Đề bài và tải Ảnh lên để bắt đầu.")
         else:
