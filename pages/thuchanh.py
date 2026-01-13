@@ -726,8 +726,7 @@ if st.session_state.step == 1:
         img_data = Image.open(uploaded_image)
         st.image(img_data, caption='Uploaded Visual Data', width=400)
 
-    # STEP 3
-    st.markdown("---")
+    # STEP 3    
     st.markdown('<div class="step-header">STEP 3 – Examiner Workflow</div>', unsafe_allow_html=True)
     
     # --- PHẦN HTML NÀY PHẢI VIẾT SÁT LỀ TRÁI (KHÔNG THỤT DÒNG) ---
