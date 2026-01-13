@@ -730,7 +730,7 @@ if st.session_state.step == 1:
     st.markdown("---")
     st.markdown('<div class="step-header">STEP 3 – Examiner Workflow</div>', unsafe_allow_html=True)
     
-    # --- ĐỊNH NGHĨA HTML RIÊNG (SÁT LỀ TRÁI ĐỂ TRÁNH LỖI HIỂN THỊ CODE) ---
+    # --- ĐỊNH NGHĨA HTML SÁT LỀ TRÁI (QUAN TRỌNG: KHÔNG ĐƯỢC THỤT DÒNG) ---
     workflow_html = """
 <style>
     .wf-container {
@@ -783,7 +783,6 @@ if st.session_state.step == 1:
 </style>
 
 <div class="wf-container">
-    <!-- Card 1 -->
     <div class="wf-card">
         <div class="wf-icon">🔍</div>
         <div class="wf-content">
@@ -792,7 +791,6 @@ if st.session_state.step == 1:
         </div>
     </div>
     
-    <!-- Card 2 -->
     <div class="wf-card">
         <div class="wf-icon">🧠</div>
         <div class="wf-content">
@@ -801,7 +799,6 @@ if st.session_state.step == 1:
         </div>
     </div>
 
-    <!-- Card 3 -->
     <div class="wf-card">
         <div class="wf-icon">✍️</div>
         <div class="wf-content">
@@ -810,7 +807,6 @@ if st.session_state.step == 1:
         </div>
     </div>
 
-    <!-- Card 4 -->
     <div class="wf-card">
         <div class="wf-icon">⚖️</div>
         <div class="wf-content">
@@ -820,7 +816,7 @@ if st.session_state.step == 1:
     </div>
 </div>
 """
-    # GỌI LỆNH RENDER (BẮT BUỘC unsafe_allow_html=True)
+    # GỌI LỆNH RENDER
     st.markdown(workflow_html, unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
