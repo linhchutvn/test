@@ -747,7 +747,7 @@ if st.session_state.step == 1:
             st.session_state.saved_topic = question_input
             st.session_state.saved_img = img_data
                    
-            with st.spinner("Examiner đang phân tích loại biểu đồ và lên chiến thuật..."):
+            with st.spinner("🧠 Examiner đang phân tích loại biểu đồ và lên chiến thuật..."):
                     # Prompt Tutor Vạn Năng: Tự động thích ứng theo từng dạng bài
                     prompt_guide = """
                     Bạn là một Siêu Giáo viên IELTS Writing (Band 9.0). Nhiệm vụ của bạn là phân tích hình ảnh đầu vào và viết hướng dẫn thực hành chi tiết.
