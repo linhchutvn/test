@@ -946,10 +946,10 @@ if st.session_state.step == 1:
                                  <br>"It is clear that the total <b>&#91;Topic&#93;</b> increased/decreased over the period."
                                  <br>
                                  <br>🔹 <b>Loại 2: Xu hướng ngược (Mix / Opposite)</b>
-                                 <br>"It is clear that while the figures for <b>&#91;Line A&#93;</b> and <b>&#91;Line B&#93;</b> increased, the opposite was true for <b>&#91;Line C&#93;</b>."                            
+                                 <br>"It is clear that while the figures for <b>&#91;Category A&#93;</b> and <b>&#91;Category B&#93;</b> increased, the opposite was true for <b>&#91;Category C&#93;</b>."                            
                                  <br>
                                  <br>🔹 <b>Loại 3: Ngoại lệ (Exception)</b>
-                                 <br>"The figures for most categories increased, with the exception of <b>&#91;Line C&#93;</b>."
+                                 <br>"The figures for most categories increased, with the exception of <b>&#91;Category C&#93;</b>."
                                  <br>
                              </div>
 
@@ -958,13 +958,13 @@ if st.session_state.step == 1:
                                  <b>► 3. Các mẫu câu Điểm nổi bật (Highlights):</b>
                                  <br><i>(Người viết chọn 1 trong 3 loại dưới đây)</i>                               
                                  <br>🔸 <b>Loại 1: Cao nhất/Thấp nhất (Ranking)</b>
-                                 <br>"<b>&#91;Line A&#93;</b> consistently had the highest figures throughout the period."                              
+                                 <br>"<b>&#91;Category A&#93;</b> consistently had the highest figures throughout the period."                              
                                  <br>
                                  <br>🔸 <b>Loại 2: Biến động lớn nhất (Biggest Change)</b>
-                                 <br>"<b>&#91;Line B&#93;</b> witnessed the most dramatic change."                             
+                                 <br>"<b>&#91;Category B&#93;</b> witnessed the most dramatic change."                             
                                  <br>
                                  <br>🔸 <b>Loại 3: Soán ngôi (Ranking Shift)</b>
-                                 <br>"<b>&#91;Line A&#93;</b> overtook <b>&#91;Line B&#93;</b> to become the dominant category."
+                                 <br>"<b>&#91;Category A&#93;</b> overtook <b>&#91;Category B&#93;</b> to become the dominant category."
                                  <br>
                              </div>
                          </li>
@@ -978,7 +978,7 @@ if st.session_state.step == 1:
                              <br>
                              <br><b>1. Phân tích Xu hướng (Sentence 1):</b>
                              <br>- Bài này khớp với <b>Loại mấy?</b> (1, 2 hay 3): <i>[AI trả lời. VD: Loại 2 (Mix)]</i>
-                             <br>- Điền dữ liệu vào mẫu đó: <b>&#91;Line A/B&#93;</b> là gì? <b>&#91;Line C&#93;</b> là gì?
+                             <br>- Điền dữ liệu vào mẫu đó: <b>&#91;Category A/B&#93;</b> là gì? <b>&#91;Category C&#93;</b> là gì?
                              <br>
                              <br>👉 <b>Câu tham khảo Trends:</b> <i>[AI viết câu hoàn chỉnh dựa trên mẫu đã chọn và dữ liệu trên]</i>
                              <br>
@@ -1006,15 +1006,15 @@ if st.session_state.step == 1:
 
                     3. **"body1_guide" (Thân bài 1 - Nhóm Nổi bật / Quan trọng nhất):**
                        - <ul>
-                         <li><b>Logic chọn nhóm (Grouping Strategy):</b> Chọn 1 hoặc 2 đường (lines) có <b>số liệu cao nhất</b> hoặc <b>xu hướng thay đổi mạnh nhất/tăng trưởng rõ rệt</b> để phân tích trước.</li>
+                         <li><b>Logic chọn nhóm (Grouping Strategy):</b> Chọn 1 hoặc 2 hạng mục (Category) có <b>số liệu cao nhất</b> hoặc <b>xu hướng thay đổi mạnh nhất/tăng trưởng rõ rệt</b> để phân tích trước.</li>
 
                          <li><b>Cấu trúc chuẩn (Flow):</b>
                              <br><code>[Câu mở đầu & Số liệu năm đầu] + [Mô tả xu hướng & Điểm gãy (Peak/Dip)] + [Số liệu kết thúc (Optional)]</code>.</li>
                          
                          <li><b>Bước 1: Sentence 1 - Điểm xuất phát (Starting Point):</b>
-                             <br>- <b>Cụm từ mở đầu:</b> <i>Regarding [Line A]... / Looking first at [Line A]... / At the beginning of the period...</i>
+                             <br>- <b>Cụm từ mở đầu:</b> <i>Regarding [Category A]... / Looking first at [Category A]... / At the beginning of the period...</i>
                              <br>- <b>Nêu số liệu:</b> <i>...it stood at / started at [Data 1] in [Year 1].</i>
-                             <br>- <b>So sánh (Nếu có 2 đường):</b> <i>...which was significantly higher than [Line B], at [Data A] and [Data B] respectively.</i></li>
+                             <br>- <b>So sánh (Nếu có 2 đường):</b> <i>...which was significantly higher than [Category B], at [Data A] and [Data B] respectively.</i></li>
 
                          <li><b>Bước 2: Sentence 2 & 3 - Phát triển xu hướng (Trend Development):</b>
                              <br>Kết hợp 3 mẫu câu cơ bản với từ nối nâng cao để tạo sự mượt mà:
@@ -1037,13 +1037,13 @@ if st.session_state.step == 1:
 
                          <li><div style="background-color:#fff8e1; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #ffa502;">
                              <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
-                             <i>[Viết đoạn Body 1 hoàn chỉnh cho nhóm đường nổi bật nhất, phải dựa vào gợi ý đã đưa ra ở các bước. Bắt buộc kết hợp mẫu câu "There was..." hoặc "S+V" với cấu trúc "Before/After V-ing" để tạo độ phức tạp.]</i>
+                             <i>[Viết đoạn Body 1 hoàn chỉnh cho nhóm Category nổi bật nhất, phải dựa vào gợi ý đã đưa ra ở các bước. Bắt buộc kết hợp mẫu câu "There was..." hoặc "S+V" với cấu trúc "Before/After V-ing" để tạo độ phức tạp.]</i>
                          </div></li>
                        </ul>
 
                     4. **"body2_guide" (Thân bài 2 - Các nhóm còn lại & So sánh):**
                        - <ul>
-                         <li><b>Logic chọn nhóm (Grouping Strategy):</b> Phân tích tất cả các đường (lines) chưa được nhắc đến ở Body 1. Thường là nhóm có xu hướng <b>NGƯỢC LẠI</b> (Giảm/Dao động) hoặc số liệu <b>THẤP HƠN</b>.</li>
+                         <li><b>Logic chọn nhóm (Grouping Strategy):</b> Phân tích tất cả các hạng mục (Category) chưa được nhắc đến ở Body 1. Thường là nhóm có xu hướng <b>NGƯỢC LẠI</b> (Giảm/Dao động) hoặc số liệu <b>THẤP HƠN</b>.</li>
 
                          <li><b>Từ nối chuyển đoạn (Linking Words - BẮT BUỘC):</b>
                              <br>Đầu câu phải dùng từ nối để tạo tính liên kết (Cohesion):
@@ -1056,12 +1056,12 @@ if st.session_state.step == 1:
                          
                          <li><b>Chi tiết triển khai & Cấu trúc câu (Step-by-step):</b>
                              <br>- <b>Bước 1: Giới thiệu đối tượng (Start).</b>
-                             <br><i>(VD: Meanwhile, the figure for [Line C] started at [Data]...)</i>
+                             <br><i>(VD: Meanwhile, the figure for [Category C] started at [Data]...)</i>
                              <br>
                              <br>- <b>Bước 2: Mô tả xu hướng & Điểm đặc biệt (Trend Analysis).</b>
                              <br>Sử dụng các mẫu câu đặc thù cho Body 2:
                              <br>+ <b>Biến động (Fluctuation):</b> <i>It fluctuated wildly between [Data A] and [Data B] / It saw a volatile pattern...</i>
-                             <br>+ <b>Giao nhau/Vượt mặt (Intersection):</b> <i>[Line X] started lower than [Line Y] but <b>overtook / surpassed</b> it in [Year].</i>
+                             <br>+ <b>Giao nhau/Vượt mặt (Intersection):</b> <i>[Category X] started lower than [Category Y] but <b>overtook / surpassed</b> it in [Year].</i>
                              <br>+ <b>Ổn định/Giảm:</b> <i>The figure leveled off at... / It witnessed a plummet to...</i>
                              <br>+ <b>Cực đại/Cực tiểu:</b> <i>...hitting a low of [Data] in [Year].</i>
                              <br>
