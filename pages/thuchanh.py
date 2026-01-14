@@ -1466,7 +1466,7 @@ if st.session_state.step == 1:
                     """
                     
                     # Gọi AI
-                   res, _ = generate_content_with_failover(prompt_guide + "\nĐề bài: " + question_input, img_data, json_mode=True)
+                    res, _ = generate_content_with_failover(prompt_guide + "\nĐề bài: " + question_input, img_data, json_mode=True)
                     
                     if res and res.text:
                         # Thử parse JSON
