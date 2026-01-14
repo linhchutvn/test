@@ -1009,7 +1009,12 @@ if st.session_state.step == 1:
    - <ul>
      <!-- ================================================================================== -->
      <!-- PHẦN 1: KHO MẪU CÂU (REFERENCE LIBRARY) - DỮ LIỆU CỐ ĐỊNH TỪ TÀI LIỆU -->
-     <!-- SYSTEM_ALERT: DO NOT FILTER. SHOW ALL OPTIONS. -->
+     <!-- SYSTEM_ALERT: 
+          Dưới đây là DỮ LIỆU CỐ ĐỊNH (REFERENCE LIBRARY).
+          Nhiệm vụ của bạn: SAO CHÉP Y NGUYÊN TỪNG DÒNG HTML BÊN DƯỚI.
+          TUYỆT ĐỐI KHÔNG ĐƯỢC LỌC (DO NOT FILTER).
+          Bắt buộc phải hiển thị đủ 3 Mẫu câu mở đầu, 3 Cấu trúc miêu tả, 3 Mẫu câu chốt số liệu và 2 Cấu trúc liên kết, bất kể hình ảnh là gì.
+          Nếu hiển thị thiếu => HỆ THỐNG SẼ BÁO LỖI (CRITICAL ERROR). -->
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
