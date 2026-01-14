@@ -345,16 +345,15 @@ except Exception:
     st.stop()
 
 def generate_content_with_failover(prompt, image=None, json_mode=False):
-    """Phiên bản 'Trâu bò': Tự động né lỗi 429 và ưu tiên model ổn định"""
+    """Phiên bản ổn định: Tự động chọn Model và sửa lỗi 404/429"""
     keys_to_try = list(ALL_KEYS)
     random.shuffle(keys_to_try) 
     
-    # --- CHIẾN THUẬT MỚI: Dùng model ổn định trước ---
-    # gemini-1.5-flash có hạn mức cao gấp 10 lần gemini-2.0
+    # Danh sách model trâu bò nhất, ít lỗi nhất
     model_priority = [
-        "gemini-1.5-flash",      # Ưu tiên số 1: Nhanh, Free quota cao
-        "gemini-1.5-flash-8b",   # Ưu tiên số 2: Siêu nhẹ
-        "gemini-1.5-pro",        # Mạnh hơn nhưng quota thấp hơn
+        "gemini-2.0-flash",    # Ưu tiên 1: Nhanh, mạnh, bản mới nhất
+        "gemini-1.5-flash",    # Ưu tiên 2: Ổn định, Quota cao
+        "gemini-1.5-pro",     # Ưu tiên 3: Thông minh hơn nhưng chậm hơn
     ]
     
     last_error = ""
@@ -362,56 +361,55 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
     
     for index, current_key in enumerate(keys_to_try):
         try:
-            # 1. Khởi tạo Client (API v1alpha để tìm được nhiều model nhất)
-            client = genai.Client(
-                api_key=current_key,
-                http_options={'api_version': 'v1alpha'}
-            )
+            status_container.info(f"🔄 Đang kết nối Key #{index+1}...")
             
-            # 2. Chọn model
-            sel_model = "gemini-1.5-flash" # Mặc định an toàn
-            for target in model_priority:
-                sel_model = target
-                break 
+            # --- SỬA LỖI 404: Không dùng v1alpha nữa, để mặc định ---
+            client = genai.Client(api_key=current_key)
+            
+            # Thử từng model trong danh sách ưu tiên cho đến khi thành công
+            for sel_model in model_priority:
+                try:
+                    # Chuẩn bị nội dung
+                    contents = [prompt]
+                    if image:
+                        contents.insert(0, image) # Đưa ảnh lên trước prompt
+                    
+                    # Cấu hình
+                    config_args = {
+                        "temperature": 0.3,
+                        "max_output_tokens": 20480, # Tăng lên để đủ viết bài dài
+                    }
+                    
+                    if json_mode:
+                        config_args["response_mime_type"] = "application/json"
 
-            # 3. Chuẩn bị nội dung
-            contents = []
-            if image:
-                contents.append(image)
-            contents.append(prompt)
-            
-            # 4. Cấu hình
-            config_args = {
-                "temperature": 0.3,
-                "max_output_tokens": 8192,
-            }
-            
-            if json_mode:
-                config_args["response_mime_type"] = "application/json"
+                    # Gọi API
+                    response = client.models.generate_content(
+                        model=sel_model,
+                        contents=contents,
+                        config=types.GenerateContentConfig(**config_args)
+                    )
+                    
+                    status_container.empty()
+                    return response, sel_model
+                
+                except Exception as model_err:
+                    # Nếu model này báo 404 (không tìm thấy) hoặc 429 (hết quota), 
+                    # hãy thử model tiếp theo trong danh sách ưu tiên
+                    last_error = str(model_err)
+                    continue 
 
-            # 5. Gọi API
-            response = client.models.generate_content(
-                model=sel_model,
-                contents=contents,
-                config=types.GenerateContentConfig(**config_args)
-            )
+        except Exception as key_err:
+            last_error = str(key_err)
+            continue
             
-            # Nếu chạy thành công thì xóa thông báo đang chạy
-            status_container.empty()
-            return response, sel_model 
-            
-        except Exception as e:
-            last_error = str(e)
-            # Nếu gặp lỗi 429 (Hết hạn mức) -> Bỏ qua ngay lập tức để thử Key khác
-            if "429" in last_error or "RESOURCE_EXHAUSTED" in last_error:
-                print(f"Key #{index+1} hết hạn mức. Đang đổi key...")
-                continue 
-            else:
-                print(f"Key #{index+1} lỗi khác: {last_error}")
-                continue
-            
-    # Nếu thử hết tất cả key mà vẫn lỗi
-    st.error(f"❌ Hệ thống bận (Hết hạn mức Free). Vui lòng đợi 1-2 phút rồi thử lại.\nChi tiết: {last_error}")
+    # Xử lý khi tất cả đều thất bại
+    status_container.empty()
+    if "429" in last_error or "RESOURCE_EXHAUSTED" in last_error:
+        st.error("❌ Google đang giới hạn lượt dùng miễn phí (Error 429). Vui lòng đợi 30 giây rồi thử lại.")
+    else:
+        st.error(f"❌ Kết nối thất bại hoàn toàn. Lỗi: {last_error}")
+        
     return None, None
 
 # ==========================================
