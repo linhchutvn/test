@@ -918,7 +918,11 @@ if st.session_state.step == 1:
 
                     2. **"overview_guide" (Trend + Ranking):**
                         - <ul>
-                         <!-- PHẦN 1: KHO MẪU CÂU -->
+                         <!-- PHẦN 1: KHO MẪU CÂU (CHẾ ĐỘ COPY-PASTE TUYỆT ĐỐI) -->
+                         <!-- SYSTEM_INSTRUCTION: Phần trong thẻ <div> dưới đây là TEMPLATE TĨNH. 
+                              Nhiệm vụ của bạn là COPY Y NGUYÊN. 
+                              TUYỆT ĐỐI KHÔNG thay thế [Topic], [Line A] bằng dữ liệu thật (như Farming, Industrial). 
+                              Nếu thay thế là SAI. -->
                          <li>
                              <strong style="color:#d35400;">📚 CẤU TRÚC:</strong>
                              
@@ -944,7 +948,7 @@ if st.session_state.step == 1:
                              </div>
                          </li>
                          
-                         <!-- PHẦN 2: PHÂN TÍCH -->
+                         <!-- PHẦN 2: PHÂN TÍCH (AI ĐIỀN VÀO ĐÂY) -->
                          <li>
                              <b>🔍 PHÂN TÍCH DỮ LIỆU:</b>
                              <br><i>(AI xác định dữ liệu thực tế cho từng mẫu câu)</i>
