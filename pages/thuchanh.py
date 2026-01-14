@@ -345,71 +345,67 @@ except Exception:
     st.stop()
 
 def generate_content_with_failover(prompt, image=None, json_mode=False):
-    """Phiên bản ổn định: Tự động chọn Model và sửa lỗi 404/429"""
+    """Phiên bản MASTER: Nén ảnh, chống chặn IP và đổi Key thông minh"""
+    import time
+    
     keys_to_try = list(ALL_KEYS)
     random.shuffle(keys_to_try) 
     
-    # Danh sách model trâu bò nhất, ít lỗi nhất
-    model_priority = [
-        "gemini-2.0-flash",    # Ưu tiên 1: Nhanh, mạnh, bản mới nhất
-        "gemini-1.5-flash",    # Ưu tiên 2: Ổn định, Quota cao
-        "gemini-1.5-pro",     # Ưu tiên 3: Thông minh hơn nhưng chậm hơn
-    ]
-    
+    model_priority = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro"]
     last_error = ""
-    status_container = st.empty()
-    
+
+    # --- BƯỚC 1: NÉN ẢNH (Quan trọng để giảm Token, né bị chặn IP) ---
+    processed_image = image
+    if image:
+        try:
+            # Giảm kích thước ảnh xuống tối đa 800px để giảm Token tốn phí
+            image.thumbnail((800, 800))
+            processed_image = image
+        except:
+            pass
+
     for index, current_key in enumerate(keys_to_try):
         try:
-            status_container.info(f"🔄 Đang kết nối Key #{index+1}...")
+            # Nghỉ 1 giây trước khi thử Key tiếp theo để né cơ chế quét Spam IP
+            if index > 0:
+                time.sleep(1.5) 
             
-            # --- SỬA LỖI 404: Không dùng v1alpha nữa, để mặc định ---
             client = genai.Client(api_key=current_key)
             
-            # Thử từng model trong danh sách ưu tiên cho đến khi thành công
             for sel_model in model_priority:
                 try:
-                    # Chuẩn bị nội dung
                     contents = [prompt]
-                    if image:
-                        contents.insert(0, image) # Đưa ảnh lên trước prompt
+                    if processed_image:
+                        contents.insert(0, processed_image)
                     
-                    # Cấu hình
                     config_args = {
                         "temperature": 0.3,
-                        "max_output_tokens": 20480, # Tăng lên để đủ viết bài dài
+                        "max_output_tokens": 12000, # Giới hạn đầu ra vừa đủ dùng
                     }
                     
                     if json_mode:
                         config_args["response_mime_type"] = "application/json"
 
-                    # Gọi API
                     response = client.models.generate_content(
                         model=sel_model,
                         contents=contents,
                         config=types.GenerateContentConfig(**config_args)
                     )
-                    
-                    status_container.empty()
                     return response, sel_model
                 
-                except Exception as model_err:
-                    # Nếu model này báo 404 (không tìm thấy) hoặc 429 (hết quota), 
-                    # hãy thử model tiếp theo trong danh sách ưu tiên
-                    last_error = str(model_err)
-                    continue 
-
-        except Exception as key_err:
-            last_error = str(key_err)
+                except Exception as e:
+                    last_error = str(e)
+                    # Nếu báo lỗi 404 (Model không tồn tại) hoặc 429 thì mới đổi Model/Key
+                    if "429" in last_error or "404" in last_error or "RESOURCE_EXHAUSTED" in last_error:
+                        continue
+                    else:
+                        break # Nếu lỗi cú pháp thì dừng luôn để sửa
+                        
+        except Exception as e:
+            last_error = str(e)
             continue
             
-    # Xử lý khi tất cả đều thất bại
-    status_container.empty()
-    if "429" in last_error or "RESOURCE_EXHAUSTED" in last_error:
-        st.error("❌ Google đang giới hạn lượt dùng miễn phí (Error 429). Vui lòng đợi 30 giây rồi thử lại.")
-    else:
-        st.error(f"❌ Kết nối thất bại hoàn toàn. Lỗi: {last_error}")
-        
+    st.error(f"❌ Tất cả 10 Key từ 10 Gmail đều bị Google chặn tạm thời.\nNguyên nhân: IP server Streamlit bị giới hạn hoặc nội dung quá nặng.\nGiải pháp: Vui lòng đợi 1 phút rồi nhấn thử lại.")
     return None, None
 
 # ==========================================
