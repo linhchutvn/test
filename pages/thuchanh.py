@@ -351,7 +351,7 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
     keys_to_try = list(ALL_KEYS)
     random.shuffle(keys_to_try) 
     
-    model_priority = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro"]
+    model_priority = ["Gemini 2.5 Flash-Lite Preview", "gemini-1.5-flash", "gemini-1.5-pro"]
     last_error = ""
 
     # --- BƯỚC 1: NÉN ẢNH (Quan trọng để giảm Token, né bị chặn IP) ---
