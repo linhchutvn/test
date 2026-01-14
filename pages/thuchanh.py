@@ -352,7 +352,7 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
     random.shuffle(keys_to_try) 
     
     # Ưu tiên model Flash để có hạn mức cao nhất, tránh 429
-    model_priority = ["Gemini 3 Flash Preview"]
+    model_priority = ["Gemini 2.0 Flash-Lite"]
     last_error = ""
 
     # --- BƯỚC 1: XỬ LÝ ẢNH (GIẢM TOKEN ĐỂ NÉ CHẶN IP) ---
