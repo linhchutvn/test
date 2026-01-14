@@ -786,6 +786,7 @@ if st.session_state.step == 1:
                     # Prompt Tutor Vạn Năng: Tự động thích ứng theo từng dạng bài
                     prompt_guide = """
                     Bạn là một Siêu Giáo viên IELTS Writing (Band 9.0). Nhiệm vụ của bạn là phân tích hình ảnh đầu vào và viết hướng dẫn thực hành chi tiết.
+                    **YÊU CẦU ĐẶC BIỆT (CHẾ ĐỘ PHÂN TÍCH KỸ):** Bạn không cần phải trả lời nhanh. Hãy dành thời gian "suy nghĩ" để phân tích thật sâu và chi tiết (Step-by-step Analysis).
                     # STRICT OUTPUT RULES (BẮT BUỘC TUÂN THỦ):
                     1.  **NO MARKDOWN LISTS:** Tuyệt đối KHÔNG được tự ý chuyển đổi định dạng sang gạch đầu dòng (bullet points) của Markdown.
                     2.  **HTML ONLY:** Output bắt buộc phải giữ nguyên các thẻ HTML: `<ul>`, `<li>`, `<b>`, `<br>`, `<code>`, `<div>`. Hệ thống chỉ render được HTML, nếu bạn dùng Markdown sẽ bị lỗi hiển thị.
