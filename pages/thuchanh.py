@@ -192,7 +192,7 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
                     break
             if not sel_model: sel_model = "gemini-1.5-flash" 
 
-            temp_model = genai.GenerativeModel(model_name=sel_model)
+            temp_model = client.models.generate_content(model_name=sel_model)
             content_parts = [prompt]
             if image: content_parts.append(image)
             
