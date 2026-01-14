@@ -1070,19 +1070,23 @@ if st.session_state.step == 1:
 
      <!-- PHẦN 2: PHÂN TÍCH (AI TỰ TƯ DUY) -->
      <li>
-         <b>🔍 PHÂN TÍCH BÀI NÀY (Selection & Drafting):</b>
-         <br><i>(Dựa trên biểu đồ, hãy lựa chọn dữ liệu đắt giá nhất để điền vào)</i>
+         <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP (STEP-BY-STEP):</b>
+         <br><i>(AI phân tích dữ liệu và <b>CHỌN</b> mẫu câu phù hợp nhất từ Kho phía trên để áp dụng)</i>
          <br>
-         <br><b>1. Logic Chọn Nhóm:</b>
-         <br>- Tôi chọn <b>&#91;Category A&#93;</b> và <b>&#91;Category B&#93;</b> vào Body 1.
-         <br>- Lý do: Đây là các đường có <b>biến động lớn nhất</b> (biggest changes) hoặc <b>số liệu cao nhất</b>.
+         <br><b>🔹 BƯỚC 1: Xử lý Câu mở đầu (Starting Point)</b>
+         <br>- <b>Dữ liệu năm đầu:</b> [Line A] = ... ; [Line B] = ...
+         <br>- <b>Quyết định chọn Mẫu:</b> <i>(AI trả lời: Nên dùng Mẫu 1 (Dẫn nhập) hay Mẫu 2 (So sánh)? Tại sao?)</i>
+         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên mẫu đã chọn]</i>
          <br>
-         <br><b>2. Lắp ráp Dữ liệu (Drafting):</b>
-         <br>- <b>Năm đầu:</b> Category A = ? vs Category B = ? (Dùng mẫu So sánh).
-         <br>- <b>Điểm Đỉnh/Đáy (nếu có):</b> Category A có đạt đỉnh không? Số liệu bao nhiêu? (Dùng mẫu Reach a peak).
-         <br>- <b>Năm cuối:</b> Kết thúc tại bao nhiêu? (Dùng mẫu Finishing).
+         <br><b>🔹 BƯỚC 2: Xử lý Xu hướng chính (Main Trend)</b>
+         <br>- <b>Đặc điểm dữ liệu:</b> [Line A] tăng thẳng đứng, hay tăng rồi giảm? Có đạt đỉnh không?
+         <br>- <b>Quyết định chọn Cấu trúc:</b> <i>(AI trả lời: Nên dùng "Before V-ing", "Reach a peak" hay "Followed by"?)</i>
+         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
          <br>
-         <br>👉 <b>Output mong đợi:</b> <i>[AI hãy tự viết nháp các ý này trước khi ghép thành đoạn văn]</i>
+         <br><b>🔹 BƯỚC 3: Xử lý Line còn lại (Comparison)</b>
+         <br>- <b>Mối quan hệ:</b> [Line B] cùng chiều hay ngược chiều [Line A]?
+         <br>- <b>Quyết định chọn Từ nối:</b> <i>(Dùng "Similarly" hay "In contrast"?)</i>
+         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu hoàn chỉnh]</i>
      </li>
 
      <!-- PHẦN 3: TỪ VỰNG -->
