@@ -918,13 +918,17 @@ if st.session_state.step == 1:
 
                     2. **"overview_guide" (Trend + Ranking):**
                         - <ul>
-                         <!-- PHẦN 1: KHO MẪU CÂU (CHẾ ĐỘ COPY-PASTE CỨNG) -->
-                         <!-- SYSTEM_INSTRUCTION: 
-                              Dưới đây là DỮ LIỆU TĨNH (STATIC DATABASE).
-                              Nhiệm vụ của bạn: IN RA TOÀN BỘ NỘI DUNG HTML BÊN TRONG THẺ <li>...</li>.
-                              KHÔNG ĐƯỢC BỎ BẤT KỲ DÒNG NÀO. KHÔNG ĐƯỢC CHỈNH SỬA DỰA TRÊN HÌNH ẢNH.
-                              Nếu bạn bỏ bớt mẫu câu, hệ thống sẽ báo lỗi. -->
+                         <!-- ================================================================================== -->
+                         <!-- PHẦN 1: KHO MẪU CÂU (CHẾ ĐỘ IN ẤN - KHÔNG TƯ DUY) -->
+                         <!-- SYSTEM_ALERT: 
+                              Dưới đây là DỮ LIỆU CỐ ĐỊNH (REFERENCE LIBRARY).
+                              Nhiệm vụ của bạn: SAO CHÉP Y NGUYÊN TỪNG DÒNG HTML BÊN DƯỚI.
+                              TUYỆT ĐỐI KHÔNG ĐƯỢC LỌC (DO NOT FILTER).
+                              Bắt buộc phải hiển thị đủ 3 Loại Trend và 3 Loại Highlight, bất kể hình ảnh là gì.
+                              Nếu hiển thị thiếu => HỆ THỐNG SẼ BÁO LỖI (CRITICAL ERROR). -->
+                         <!-- ================================================================================== -->
                          <li>
+                             <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
                              <strong style="color:#d35400;">📚 KHO MẪU CÂU:</strong>
                             <br><i>(Người viết tham khảo các trường hợp có thể xảy ra)</i>
                              
