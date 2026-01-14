@@ -918,65 +918,79 @@ if st.session_state.step == 1:
 
                     2. **"overview_guide" (Trend + Ranking):**
                         - <ul>
-                         <!-- PHẦN 1: KHO MẪU CÂU (CHẾ ĐỘ COPY-PASTE TUYỆT ĐỐI) -->
-                         <!-- SYSTEM_INSTRUCTION: Phần trong thẻ <div> dưới đây là TEMPLATE TĨNH. 
-                              Nhiệm vụ của bạn là COPY Y NGUYÊN. 
-                              TUYỆT ĐỐI KHÔNG thay thế [Topic], [Line A] bằng dữ liệu thật (như Farming, Industrial). 
-                              Nếu thay thế là SAI. -->
+                         <!-- PHẦN 1: KHO MẪU CÂU (CHẾ ĐỘ HIỂN THỊ TOÀN BỘ - KHÔNG LỌC) -->
+                         <!-- SYSTEM_INSTRUCTION: 
+                              1. Nhiệm vụ của bạn là: COPY Y NGUYÊN TOÀN BỘ DANH SÁCH MẪU CÂU DƯỚI ĐÂY.
+                              2. KHÔNG ĐƯỢC LỌC (Do not filter). Dù bài này chỉ dùng 1 mẫu, bạn vẫn phải liệt kê ĐỦ tất cả các mẫu để học sinh tham khảo.
+                              3. GIỮ NGUYÊN các ký tự đặc biệt &#91;...&#93; -->
                          <li>
-                             <strong style="color:#d35400;">📚 CẤU TRÚC:</strong>
+                             <strong style="color:#d35400;">📚 KHO MẪU CÂU (BẢNG TRA CỨU ĐẦY ĐỦ):</strong>
                              
                              <!-- KHỐI 1: TỔNG QUÁT -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 1. Cấu trúc tổng quát:</b>
-                                 <br><code>Overall, &#91;Sentence 1: Trends&#93;. In addition / Also, &#91;Sentence 2: Highlights&#93;.</code>
+                                 <br><code>Overall, &#91;Sentence 1: Trends&#93;. In addition, &#91;Sentence 2: Highlights&#93;.</code>
                              </div>
 
-                             <!-- KHỐI 2: TRENDS -->
+                             <!-- KHỐI 2: TRENDS (LIỆT KÊ ĐỦ 3 LOẠI) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-                                 <b>► 2. Xu hướng (Trends):</b>
-                                 <br>- <i>Đồng loạt Tăng/Giảm:</i> "It is clear that the total <b>&#91;Topic&#93;</b> increased/decreased over the period."
-                                 <br>- <i>Xu hướng ngược (Mix):</i> "It is clear that while the figures for <b>&#91;Line A&#93;</b> and <b>&#91;Line B&#93;</b> increased, the opposite was true for <b>&#91;Line C&#93;</b>."
+                                 <b>► 2. Các mẫu câu Xu hướng (Trends):</b>
+                                 <br><i>(Học sinh chọn 1 trong 3 loại dưới đây tùy vào biểu đồ)</i>
+                                 <br>
+                                 <br>🔹 <b>Loại 1: Đồng loạt Tăng/Giảm (Same Direction)</b>
+                                 <br>"It is clear that the total <b>&#91;Topic&#93;</b> increased/decreased over the period."
+                                 <br>
+                                 <br>🔹 <b>Loại 2: Xu hướng ngược (Mix / Opposite)</b>
+                                 <br>"It is clear that while the figures for <b>&#91;Line A&#93;</b> and <b>&#91;Line B&#93;</b> increased, the opposite was true for <b>&#91;Line C&#93;</b>."
+                                 <br>
+                                 <br>🔹 <b>Loại 3: Ngoại lệ (Exception)</b>
+                                 <br>"The figures for most categories increased, with the exception of <b>&#91;Line C&#93;</b>."
                              </div>
 
-                             <!-- KHỐI 3: HIGHLIGHTS (BỔ SUNG ĐỂ KHỚP VỚI BÀI MẪU) -->
+                             <!-- KHỐI 3: HIGHLIGHTS (LIỆT KÊ ĐỦ 3 LOẠI) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-                                 <b>► 3. Điểm nổi bật (Highlights):</b>
-                                 <br>- <i>Cao nhất (Giữ nguyên):</i> "<b>&#91;Line A&#93;</b> consistently had the highest figures throughout the period."
-                                 <br>- <i>Biến động lớn nhất:</i> "<b>&#91;Line B&#93;</b> witnessed the most dramatic change."
-                                 <br>- <i>Soán ngôi (Ranking Shift):</i> "<b>&#91;Line A&#93;</b> overtook <b>&#91;Line B&#93;</b> to become the dominant category."
+                                 <b>► 3. Các mẫu câu Điểm nổi bật (Highlights):</b>
+                                 <br><i>(Học sinh chọn 1 trong 3 loại dưới đây)</i>
+                                 <br>
+                                 <br>🔸 <b>Loại 1: Cao nhất/Thấp nhất (Ranking)</b>
+                                 <br>"<b>&#91;Line A&#93;</b> consistently had the highest figures throughout the period."
+                                 <br>
+                                 <br>🔸 <b>Loại 2: Biến động lớn nhất (Biggest Change)</b>
+                                 <br>"<b>&#91;Line B&#93;</b> witnessed the most dramatic change."
+                                 <br>
+                                 <br>🔸 <b>Loại 3: Soán ngôi (Ranking Shift)</b>
+                                 <br>"<b>&#91;Line A&#93;</b> overtook <b>&#91;Line B&#93;</b> to become the dominant category."
                              </div>
                          </li>
                          
-                         <!-- PHẦN 2: PHÂN TÍCH (AI ĐIỀN VÀO ĐÂY) -->
+                         <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
+
+                         <!-- PHẦN 2: PHÂN TÍCH (AI CHỌN MẪU NÀO) -->
                          <li>
-                             <b>🔍 PHÂN TÍCH DỮ LIỆU:</b>
-                             <br><i>(AI xác định dữ liệu thực tế cho từng mẫu câu)</i>
+                             <b>🔍 PHÂN TÍCH BÀI NÀY (Drafting):</b>
+                             <br><i>(Bây giờ AI hãy chọn xem bài này phù hợp với mẫu nào trong danh sách trên)</i>
                              <br>
-                             <br><b>1. Dữ liệu cho Mẫu câu 1 (Tổng quát):</b>
-                             <br>- <b>&#91;Topic&#93; là gì?</b> <i>[AI điền. VD: Tỷ lệ thất nghiệp]</i>
-                             
-                             <br><br><b>2. Dữ liệu cho Xu hướng (Trends):</b>
-                             <br>- <b>&#91;Line A/B&#93; (Nhóm Tăng/Cao):</b> <i>[AI liệt kê tên]</i>
-                             <br>- <b>&#91;Line C&#93; (Nhóm Giảm/Thấp):</b> <i>[AI liệt kê tên]</i>
-                             
-                             <br><br><b>3. Dữ liệu cho Điểm nổi bật (Highlights):</b>
-                             <br>- <b>Chọn Mẫu nào trong 3 mẫu trên?</b> <i>[AI chọn: Cao nhất / Biến động / hay Soán ngôi?]</i>
-                             <br>- <b>Đối tượng (&#91;Line A&#93;, &#91;Line B&#93;) tên là gì?</b> <i>[AI điền tên đối tượng]</i>
+                             <br><b>1. Về Xu hướng (Trends):</b>
+                             <br>- Bài này thuộc Loại mấy? (1, 2 hay 3): <i>[AI trả lời]</i>
+                             <br>- Xác định đối tượng: <b>&#91;Line A/B&#93;</b> là gì, <b>&#91;Line C&#93;</b> là gì?
+                             <br>
+                             <br><b>2. Về Điểm nổi bật (Highlights):</b>
+                             <br>- Bài này thuộc Loại mấy? (1, 2 hay 3): <i>[AI trả lời]</i>
+                             <br>- Xác định đối tượng nổi bật đó tên là gì?
                          </li>
 
                          <!-- PHẦN 3: TỪ VỰNG -->
                          <li><b>🔑 TỪ VỰNG GỢI Ý (Vocabulary):</b>
                              <br>- <b>Verbs:</b> <i>witnessed a downward trend / saw a significant rise</i>.
                              <br>- <b>Adjectives:</b> <i>volatile (biến động) / stable (ổn định)</i>.
-                             <br>- <b>Paraphrase:</b> <i>[AI liệt kê 3 từ vựng sát với chủ đề bài viết]</i>
+                             <br>- <b>Paraphrase bài này:</b> <i>[AI liệt kê 3 từ vựng sát với chủ đề bài viết]</i>
                          </li>
 
                          <!-- PHẦN 4: BÀI MẪU -->
                          <li><div style="background-color:#fff3e0; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
                              <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-                             [AI hãy viết đoạn Overview hoàn chỉnh. <b>QUAN TRỌNG:</b> Chỉ được sử dụng đúng cấu trúc câu đã chọn ở Phần 'KHO MẪU CÂU'. Nếu chọn mẫu 'Soán ngôi', bắt buộc phải dùng từ 'overtook' hoặc 'became dominant'. Không tự ý sáng tạo cấu trúc lạ.]
+                             [AI hãy viết đoạn Overview hoàn chỉnh. <b>QUAN TRỌNG:</b> Chỉ được sử dụng đúng cấu trúc câu đã chọn ở Phần 'PHÂN TÍCH'. Lắp ghép dữ liệu vào khung mẫu.]
                              </div>
                          </div></li>
                        </ul>
