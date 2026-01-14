@@ -341,16 +341,19 @@ st.markdown("""
 ALL_KEYS = st.secrets["GEMINI_API_KEYS"]
 
 def generate_content_with_failover(prompt, image=None, json_mode=False):
-    """Hàm thông minh tự động dò tìm Model tốt nhất (Đã sửa lỗi TypeError json_mode)"""
+    """
+    SAO CHÉP 100% LOGIC TỪ APP KIA CỦA BẠN
+    Chỉ thay đổi cú pháp để tương thích với thư viện mới.
+    """
     keys_to_try = list(ALL_KEYS)
     random.shuffle(keys_to_try) 
     
-    # DANH SÁCH ƯU TIÊN CỦA BẠN
+    # DANH SÁCH ƯU TIÊN (Giữ nguyên của bạn)
     model_priority = [
-        "gemini-2.0-flash", 
         "gemini-3-flash-preview",        
         "gemini-2.5-flash",
         "gemini-2.5-flash-lite",
+        "gemini-2.0-flash",
         "gemini-1.5-pro", 
         "gemini-1.5-flash"
     ]
@@ -358,61 +361,56 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
     last_error = ""
     for index, current_key in enumerate(keys_to_try):
         try:
-            # 1. Khởi tạo Client theo SDK mới
+            # --- BƯỚC 1: Khởi tạo kết nối (Thay cho genai.configure) ---
             client = genai.Client(api_key=current_key)
             
-            # 2. Lấy danh sách model thực tế
-            available_models_raw = list(client.models.list())
-            available_model_names = [m.name.replace("models/", "") for m in available_models_raw]
+            # --- BƯỚC 2: Lấy danh sách model (Thay cho genai.list_models) ---
+            # Thư viện mới trả về tên có chữ 'models/', ta xóa đi để so khớp
+            raw_models = list(client.models.list())
+            available_models = [m.name.replace("models/", "") for m in raw_models]
             
-            # 3. Tìm model tốt nhất
+            # --- BƯỚC 3: Tìm model tốt nhất (Giữ nguyên logic của bạn) ---
             sel_model = None
             for target in model_priority:
-                if target in available_model_names:
+                if target in available_models:
                     sel_model = target
                     break
             
             if not sel_model:
                 sel_model = "gemini-1.5-flash" 
 
-            # --- HIỂN THỊ THÔNG TIN MODEL ---
+            # --- BƯỚC 4: Hiển thị thông tin Debug (Giữ nguyên của bạn) ---
             masked_key = f"****{current_key[-4:]}"
             st.toast(f"⚡ Connected: {sel_model}", icon="🤖")
             
             with st.expander("🔌 Technical Connection Details (Debug)", expanded=False):
                 st.write(f"**Active Model:** `{sel_model}`")
                 st.write(f"**Active API Key:** `{masked_key}` (Key #{index + 1})")
-                if "thinking" in sel_model.lower():
-                    st.caption("🧠 Thinking Mode: ON")
             
-            # 4. Chuẩn bị nội dung
-            contents = []
+            # --- BƯỚC 5: Chuẩn bị nội dung (Giữ nguyên của bạn) ---
+            content_parts = [prompt]
             if image:
-                contents.append(image)
-            contents.append(prompt)
-            
-            # 5. Cấu hình (Bổ sung xử lý json_mode tại đây)
+                content_parts.append(image)
+                
+            # --- BƯỚC 6: Cấu hình (Giữ nguyên thông số của bạn) ---
             config_args = {
                 "temperature": 0.3,
                 "top_p": 0.95,
                 "top_k": 64,
                 "max_output_tokens": 32000,
             }
-
-            # Nếu gọi json_mode=True thì ép AI trả về JSON
+            
+            # Hỗ trợ json_mode từ dòng 1508 của bạn
             if json_mode and "thinking" not in sel_model.lower():
                 config_args["response_mime_type"] = "application/json"
 
             if "thinking" in sel_model.lower():
-                config_args["thinking_config"] = {
-                    "include_thoughts": True,
-                    "thinking_budget": 32000
-                }
+                config_args["thinking_config"] = {"include_thoughts": True, "thinking_budget": 32000}
 
-            # 6. GỌI API THEO CÚ PHÁP MỚI
+            # --- BƯỚC 7: Thực hiện gọi API (Thay cho GenerativeModel.generate_content) ---
             response = client.models.generate_content(
                 model=sel_model,
-                contents=contents,
+                contents=content_parts,
                 config=types.GenerateContentConfig(**config_args)
             )
             
@@ -420,15 +418,16 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
             
         except Exception as e:
             last_error = str(e)
+            # Nếu lỗi hạn mức thì thử tiếp Key khác
             if "429" in last_error or "quota" in last_error.lower():
                 continue 
             else:
-                # Nếu gặp lỗi khác thì in ra để debug
-                print(f"Lỗi Key #{index+1}: {last_error}")
+                # Các lỗi khác thì in ra để bạn biết
+                st.warning(f"Key #{index+1} bị lỗi: {last_error[:100]}")
                 continue
                 
-    st.error(f"❌ Toàn bộ Keys đã hết hạn mức hoặc lỗi. Lỗi cuối: {last_error}")
-    return None, None 
+    st.error(f"❌ Tất cả {len(keys_to_try)} Keys đều thất bại. Lỗi cuối: {last_error}")
+    return None, None
 
 # ==========================================
 # 3. PROMPT KHỦNG (NGUYÊN BẢN TỪ APP CHẤM ĐIỂM)
