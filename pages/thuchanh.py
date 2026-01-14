@@ -341,14 +341,11 @@ st.markdown("""
 ALL_KEYS = st.secrets["GEMINI_API_KEYS"]
 
 def generate_content_with_failover(prompt, image=None, json_mode=False):
-    """
-    SAO CHÉP 100% LOGIC TỪ APP KIA CỦA BẠN
-    Chỉ thay đổi cú pháp để tương thích với thư viện mới.
-    """
+    import time  # Đảm bảo đã import time
+    
     keys_to_try = list(ALL_KEYS)
     random.shuffle(keys_to_try) 
     
-    # DANH SÁCH ƯU TIÊN (Giữ nguyên của bạn)
     model_priority = [
         "gemini-3-flash-preview",        
         "gemini-2.5-flash",
@@ -359,17 +356,23 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
     ]
     
     last_error = ""
+    # 💡 BỔ SUNG: Khởi tạo vùng thông báo để không bị lỗi NameError
+    status_msg = st.empty() 
+
     for index, current_key in enumerate(keys_to_try):
         try:
-            # --- BƯỚC 1: Khởi tạo kết nối (Thay cho genai.configure) ---
+            # --- BƯỚC 1: Khởi tạo kết nối & Né chặn IP ---
+            if index > 0:
+                status_msg.warning(f"⏳ Luồng #{index} bận. Đang tối ưu kết nối, vui lòng đợi 3 giây...")
+                time.sleep(3) 
+            
             client = genai.Client(api_key=current_key)
             
-            # --- BƯỚC 2: Lấy danh sách model (Thay cho genai.list_models) ---
-            # Thư viện mới trả về tên có chữ 'models/', ta xóa đi để so khớp
+            # --- BƯỚC 2: Lấy danh sách model ---
             raw_models = list(client.models.list())
             available_models = [m.name.replace("models/", "") for m in raw_models]
             
-            # --- BƯỚC 3: Tìm model tốt nhất (Giữ nguyên logic của bạn) ---
+            # --- BƯỚC 3: Tìm model tốt nhất ---
             sel_model = None
             for target in model_priority:
                 if target in available_models:
@@ -379,20 +382,18 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
             if not sel_model:
                 sel_model = "gemini-1.5-flash" 
 
-            # --- BƯỚC 4: Hiển thị thông tin Debug (Giữ nguyên của bạn) ---
+            # --- BƯỚC 4: Hiển thị thông tin Debug ---
             masked_key = f"****{current_key[-4:]}"
             st.toast(f"⚡ Connected: {sel_model}", icon="🤖")
             
-            with st.expander("🔌 Technical Connection Details (Debug)", expanded=False):
+            with st.expander(f"🔌 Connection Details (Key #{index + 1})", expanded=False):
                 st.write(f"**Active Model:** `{sel_model}`")
-                st.write(f"**Active API Key:** `{masked_key}` (Key #{index + 1})")
+                st.write(f"**Active API Key:** `{masked_key}`")
             
-            # --- BƯỚC 5: Chuẩn bị nội dung (Giữ nguyên của bạn) ---
-            content_parts = [prompt]
-            if image:
-                content_parts.append(image)
+            # --- BƯỚC 5: Chuẩn bị nội dung ---
+            content_parts = [image, prompt] if image else [prompt]
                 
-            # --- BƯỚC 6: Cấu hình (Giữ nguyên thông số của bạn) ---
+            # --- BƯỚC 6: Cấu hình ---
             config_args = {
                 "temperature": 0.3,
                 "top_p": 0.95,
@@ -400,33 +401,35 @@ def generate_content_with_failover(prompt, image=None, json_mode=False):
                 "max_output_tokens": 32000,
             }
             
-            # Hỗ trợ json_mode từ dòng 1508 của bạn
             if json_mode and "thinking" not in sel_model.lower():
                 config_args["response_mime_type"] = "application/json"
 
             if "thinking" in sel_model.lower():
                 config_args["thinking_config"] = {"include_thoughts": True, "thinking_budget": 32000}
 
-            # --- BƯỚC 7: Thực hiện gọi API (Thay cho GenerativeModel.generate_content) ---
+            # --- BƯỚC 7: Thực hiện gọi API ---
+            # Xóa thông báo chờ trước khi gọi AI
+            status_msg.info(f"🚀 Đang xử lý dữ liệu qua Luồng #{index + 1}...")
+            
             response = client.models.generate_content(
                 model=sel_model,
                 contents=content_parts,
                 config=types.GenerateContentConfig(**config_args)
             )
             
+            status_msg.empty() # Thành công thì xóa thông báo
             return response, sel_model 
             
         except Exception as e:
             last_error = str(e)
-            # Nếu lỗi hạn mức thì thử tiếp Key khác
             if "429" in last_error or "quota" in last_error.lower():
                 continue 
             else:
-                # Các lỗi khác thì in ra để bạn biết
-                st.warning(f"Key #{index+1} bị lỗi: {last_error[:100]}")
+                st.warning(f"⚠️ Luồng #{index+1} gặp sự cố kỹ thuật. Đang chuyển luồng...")
                 continue
                 
-    st.error(f"❌ Tất cả {len(keys_to_try)} Keys đều thất bại. Lỗi cuối: {last_error}")
+    status_msg.empty()
+    st.error(f"❌ Tất cả {len(keys_to_try)} luồng kết nối đều thất bại. Vui lòng thử lại sau 1 phút.")
     return None, None
 
 # ==========================================
