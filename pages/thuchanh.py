@@ -943,13 +943,13 @@ if st.session_state.step == 1:
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 2. Các mẫu câu Xu hướng (Trends):</b>
                                  <br><i>(Người viết chọn 1 trong 3 loại dưới đây tùy vào biểu đồ)</i>                                
-                                 <br>🔹 <b>Loại 1: Đồng loạt Tăng/Giảm (Same Direction)</b>
+                                 <br>✅ <b>Loại 1: Đồng loạt Tăng/Giảm (Same Direction)</b>
                                  <br>"It is clear that the total <b>&#91;Topic&#93;</b> increased/decreased over the period."
                                  <br>
-                                 <br>🔹 <b>Loại 2: Xu hướng ngược (Mix / Opposite)</b>
+                                 <br>✅ <b>Loại 2: Xu hướng ngược (Mix / Opposite)</b>
                                  <br>"It is clear that while the figures for <b>&#91;Category A&#93;</b> and <b>&#91;Category B&#93;</b> increased, the opposite was true for <b>&#91;Category C&#93;</b>."                            
                                  <br>
-                                 <br>🔹 <b>Loại 3: Ngoại lệ (Exception)</b>
+                                 <br>✅ <b>Loại 3: Ngoại lệ (Exception)</b>
                                  <br>"The figures for most categories increased, with the exception of <b>&#91;Category C&#93;</b>."
                                  <br>
                              </div>
@@ -958,13 +958,13 @@ if st.session_state.step == 1:
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 3. Các mẫu câu Điểm nổi bật (Highlights):</b>
                                  <br><i>(Người viết chọn 1 trong 3 loại dưới đây)</i>                               
-                                 <br>🔸 <b>Loại 1: Cao nhất/Thấp nhất (Ranking)</b>
+                                 <br>✅ <b>Loại 1: Cao nhất/Thấp nhất (Ranking)</b>
                                  <br>"<b>&#91;Category A&#93;</b> consistently had the highest figures throughout the period."                              
                                  <br>
-                                 <br>🔸 <b>Loại 2: Biến động lớn nhất (Biggest Change)</b>
+                                 <br>✅ <b>Loại 2: Biến động lớn nhất (Biggest Change)</b>
                                  <br>"<b>&#91;Category B&#93;</b> witnessed the most dramatic change."                             
                                  <br>
-                                 <br>🔸 <b>Loại 3: Soán ngôi (Ranking Shift)</b>
+                                 <br>✅ <b>Loại 3: Soán ngôi (Ranking Shift)</b>
                                  <br>"<b>&#91;Category A&#93;</b> overtook <b>&#91;Category B&#93;</b> to become the dominant category."
                                  <br>
                              </div>
@@ -1009,7 +1009,7 @@ if st.session_state.step == 1:
    - <ul>
      <!-- ================================================================================== -->
      <!-- PHẦN 1: KHO MẪU CÂU (REFERENCE LIBRARY) - DỮ LIỆU CỐ ĐỊNH TỪ TÀI LIỆU -->
-     <!-- SYSTEM_ALERT: SAO CHÉP Y NGUYÊN. KHÔNG ĐƯỢC BỎ SÓT CÁC CẤU TRÚC PHỨC TẠP. -->
+     <!-- SYSTEM_ALERT: DO NOT FILTER. SHOW ALL OPTIONS. -->
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
@@ -1021,13 +1021,13 @@ if st.session_state.step == 1:
              <b>► Bước 1: Câu mở đầu (Starting Point):</b>
              <br><i>(Kết hợp Từ dẫn nhập chủ đề + Thời gian + So sánh)</i>
              
-             <br>🔸 <b>Mẫu 1: Dẫn nhập chủ đề:</b>
+             <br>✅ <b>Mẫu 1: Dẫn nhập chủ đề:</b>
              <br>"<b>Regarding &#91;Category A&#93;</b> (the largest figure/group), in <b>&#91;Year 1&#93;</b>, it stood at <b>&#91;Data&#93;</b>."
              
-             <br>🔸 <b>Mẫu 2: So sánh trực tiếp:</b>
+             <br>✅ <b>Mẫu 2: So sánh trực tiếp:</b>
              <br>"At the beginning of the period, <b>&#91;Category A&#93;</b> stood at <b>&#91;Data&#93;</b>, <b>which was significantly higher than</b> the figure for <b>&#91;Category B&#93;</b> (at <b>&#91;Data&#93;</b>)."
              
-             <br>🔸 <b>Mẫu 3: Nhấn mạnh vị trí:</b>
+             <br>✅ <b>Mẫu 3: Nhấn mạnh vị trí:</b>
              <br>"<b>At the beginning of the period</b>, <b>&#91;Category A&#93;</b> was the most common/popular reason with <b>&#91;Data&#93;</b>."
          </div>
 
@@ -1035,11 +1035,11 @@ if st.session_state.step == 1:
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 2: Phát triển Trend & Đỉnh/Đáy (Advanced Linking):</b>
              <br><i>(Dùng để nối 2-3 giai đoạn biến động thành 1 câu phức)</i>
-             <br>🔹 <b>Cấu trúc "Before V-ing":</b>
+             <br>✅ <b>Cấu trúc "Before V-ing":</b>
              <br>"The figure increased to <b>&#91;Data&#93;</b>, <b>before falling back</b> to <b>&#91;Data&#93;</b>."
-             <br>🔹 <b>Cấu trúc "Reach a Peak/Low":</b>
+             <br>✅ <b>Cấu trúc "Reach a Peak/Low":</b>
              <br>"It surged to <b>reach a peak of &#91;Data&#93;</b> in <b>&#91;Year&#93;</b>." (hoặc <i>hit a low of...</i>)
-             <br>🔹 <b>Cấu trúc "Followed by / After which":</b>
+             <br>✅ <b>Cấu trúc "Followed by / After which":</b>
              <br>"There was a sharp rise to <b>&#91;Data&#93;</b>, <b>(which was) followed by</b> a period of stability."
              <br>"It rose steadily, <b>after which</b> it experienced a decline."
          </div>
@@ -1048,15 +1048,15 @@ if st.session_state.step == 1:
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 3: Chốt năm cuối (Ending Data):</b>
              <br><i>(Sử dụng mệnh đề quan hệ rút gọn để kết câu mượt mà)</i>
-             <br>🔸 <b>Mẫu Finishing:</b> "..., <b>finishing the period at</b> <b>&#91;End Data&#93;</b>."
-             <br>🔸 <b>Mẫu Ending up:</b> "..., <b>ending up at</b> <b>&#91;End Data&#93;</b> in the final year."
+             <br>✅ <b>Mẫu Finishing:</b> "..., <b>finishing the period at</b> <b>&#91;End Data&#93;</b>."
+             <br>✅ <b>Mẫu Ending up:</b> "..., <b>ending up at</b> <b>&#91;End Data&#93;</b> in the final year."
          </div>
 
          <!-- KHỐI 4: LIÊN KẾT VỚI CATEGORY KHÁC -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 4: Category còn lại (Comparison):</b>
-             <br>🔸 <b>Tương đồng:</b> "Similarly, <b>&#91;Category B&#93;</b> also witnessed a downward trend..."
-             <br>🔸 <b>Đối lập:</b> "In contrast, <b>&#91;Category B&#93;</b> <b>followed the opposite trend</b>, as S-FV..."
+             <br>✅ <b>Tương đồng:</b> "Similarly, <b>&#91;Category B&#93;</b> also witnessed a downward trend..."
+             <br>✅ <b>Đối lập:</b> "In contrast, <b>&#91;Category B&#93;</b> <b>followed the opposite trend</b>, as S-FV..."
          </div>
          </div>
      </li>
@@ -1220,7 +1220,7 @@ if st.session_state.step == 1:
 
      <!-- PHẦN 2: HƯỚNG DẪN LẮP RÁP (BLUEPRINT) -->
      <li>
-         <b>🔍 HƯỚNG DẪN LẮP RÁP (Drafting Blueprint):</b>
+         <b>🔍 PHÂN TÍCH BÀI NÀY (Selection & Drafting):</b>
          <br><i>(AI phân tích biểu đồ và gợi ý "nguyên liệu" phù hợp từ kho trên)</i>
          <br>
          <br><b>1. Phân tích Dữ liệu:</b>
