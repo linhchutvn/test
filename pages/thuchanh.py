@@ -918,13 +918,15 @@ if st.session_state.step == 1:
 
                     2. **"overview_guide" (Trend + Ranking):**
                         - <ul>
-                         <!-- PHẦN 1: KHO MẪU CÂU (CHẾ ĐỘ HIỂN THỊ TOÀN BỘ - KHÔNG LỌC) -->
+                         <!-- PHẦN 1: KHO MẪU CÂU (CHẾ ĐỘ COPY-PASTE CỨNG) -->
                          <!-- SYSTEM_INSTRUCTION: 
-                              1. Nhiệm vụ của bạn là: COPY Y NGUYÊN TOÀN BỘ DANH SÁCH MẪU CÂU DƯỚI ĐÂY.
-                              2. KHÔNG ĐƯỢC LỌC (Do not filter). Dù bài này chỉ dùng 1 mẫu, bạn vẫn phải liệt kê ĐỦ tất cả các mẫu để học sinh tham khảo.
-                              3. GIỮ NGUYÊN các ký tự đặc biệt &#91;...&#93; -->
+                              Dưới đây là DỮ LIỆU TĨNH (STATIC DATABASE).
+                              Nhiệm vụ của bạn: IN RA TOÀN BỘ NỘI DUNG HTML BÊN TRONG THẺ <li>...</li>.
+                              KHÔNG ĐƯỢC BỎ BẤT KỲ DÒNG NÀO. KHÔNG ĐƯỢC CHỈNH SỬA DỰA TRÊN HÌNH ẢNH.
+                              Nếu bạn bỏ bớt mẫu câu, hệ thống sẽ báo lỗi. -->
                          <li>
-                             <strong style="color:#d35400;">📚 KHO MẪU CÂU (BẢNG TRA CỨU ĐẦY ĐỦ):</strong>
+                             <strong style="color:#d35400;">📚 KHO MẪU CÂU:</strong>
+                            <br><i>(Người viết tham khảo các trường hợp có thể xảy ra)</i>
                              
                              <!-- KHỐI 1: TỔNG QUÁT -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
@@ -935,7 +937,7 @@ if st.session_state.step == 1:
                              <!-- KHỐI 2: TRENDS (LIỆT KÊ ĐỦ 3 LOẠI) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 2. Các mẫu câu Xu hướng (Trends):</b>
-                                 <br><i>(Học sinh chọn 1 trong 3 loại dưới đây tùy vào biểu đồ)</i>
+                                 <br><i>(Người viết chọn 1 trong 3 loại dưới đây tùy vào biểu đồ)</i>
                                  <br>
                                  <br>🔹 <b>Loại 1: Đồng loạt Tăng/Giảm (Same Direction)</b>
                                  <br>"It is clear that the total <b>&#91;Topic&#93;</b> increased/decreased over the period."
@@ -950,7 +952,7 @@ if st.session_state.step == 1:
                              <!-- KHỐI 3: HIGHLIGHTS (LIỆT KÊ ĐỦ 3 LOẠI) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 3. Các mẫu câu Điểm nổi bật (Highlights):</b>
-                                 <br><i>(Học sinh chọn 1 trong 3 loại dưới đây)</i>
+                                 <br><i>(Người viết chọn 1 trong 3 loại dưới đây)</i>
                                  <br>
                                  <br>🔸 <b>Loại 1: Cao nhất/Thấp nhất (Ranking)</b>
                                  <br>"<b>&#91;Line A&#93;</b> consistently had the highest figures throughout the period."
