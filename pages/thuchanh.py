@@ -918,9 +918,9 @@ if st.session_state.step == 1:
 
                     2. **"overview_guide" (Trend + Ranking):**
                         - <ul>
-                         <!-- PHẦN 1: KHO MẪU CÂU (BỔ SUNG CẤU TRÚC SOÁN NGÔI) -->
+                         <!-- PHẦN 1: KHO MẪU CÂU -->
                          <li>
-                             <strong style="color:#d35400;">📚 KHO MẪU CÂU (CẦN HỌC THUỘC):</strong>
+                             <strong style="color:#d35400;">📚 CẤU TRÚC:</strong>
                              
                              <!-- KHỐI 1: TỔNG QUÁT -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
@@ -930,14 +930,14 @@ if st.session_state.step == 1:
 
                              <!-- KHỐI 2: TRENDS -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-                                 <b>► 2. Mẫu câu Xu hướng (Trends):</b>
+                                 <b>► 2. Xu hướng (Trends):</b>
                                  <br>- <i>Đồng loạt Tăng/Giảm:</i> "It is clear that the total <b>&#91;Topic&#93;</b> increased/decreased over the period."
                                  <br>- <i>Xu hướng ngược (Mix):</i> "It is clear that while the figures for <b>&#91;Line A&#93;</b> and <b>&#91;Line B&#93;</b> increased, the opposite was true for <b>&#91;Line C&#93;</b>."
                              </div>
 
                              <!-- KHỐI 3: HIGHLIGHTS (BỔ SUNG ĐỂ KHỚP VỚI BÀI MẪU) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-                                 <b>► 3. Mẫu câu Điểm nổi bật (Highlights):</b>
+                                 <b>► 3. Điểm nổi bật (Highlights):</b>
                                  <br>- <i>Cao nhất (Giữ nguyên):</i> "<b>&#91;Line A&#93;</b> consistently had the highest figures throughout the period."
                                  <br>- <i>Biến động lớn nhất:</i> "<b>&#91;Line B&#93;</b> witnessed the most dramatic change."
                                  <br>- <i>Soán ngôi (Ranking Shift):</i> "<b>&#91;Line A&#93;</b> overtook <b>&#91;Line B&#93;</b> to become the dominant category."
@@ -946,17 +946,17 @@ if st.session_state.step == 1:
                          
                          <!-- PHẦN 2: PHÂN TÍCH -->
                          <li>
-                             <b>🔍 PHÂN TÍCH DỮ LIỆU ĐỂ LẮP VÀO CÔNG THỨC:</b>
+                             <b>🔍 PHÂN TÍCH DỮ LIỆU:</b>
                              <br><i>(AI xác định dữ liệu thực tế cho từng mẫu câu)</i>
                              <br>
                              <br><b>1. Dữ liệu cho Mẫu câu 1 (Tổng quát):</b>
                              <br>- <b>&#91;Topic&#93; là gì?</b> <i>[AI điền. VD: Tỷ lệ thất nghiệp]</i>
                              
-                             <br><br><b>2. Dữ liệu cho Mẫu câu 2 (Xu hướng):</b>
+                             <br><br><b>2. Dữ liệu cho Xu hướng (Trends):</b>
                              <br>- <b>&#91;Line A/B&#93; (Nhóm Tăng/Cao):</b> <i>[AI liệt kê tên]</i>
                              <br>- <b>&#91;Line C&#93; (Nhóm Giảm/Thấp):</b> <i>[AI liệt kê tên]</i>
                              
-                             <br><br><b>3. Dữ liệu cho Mẫu câu 3 (Điểm nổi bật):</b>
+                             <br><br><b>3. Dữ liệu cho Điểm nổi bật (Highlights):</b>
                              <br>- <b>Chọn Mẫu nào trong 3 mẫu trên?</b> <i>[AI chọn: Cao nhất / Biến động / hay Soán ngôi?]</i>
                              <br>- <b>Đối tượng (&#91;Line A&#93;, &#91;Line B&#93;) tên là gì?</b> <i>[AI điền tên đối tượng]</i>
                          </li>
@@ -965,7 +965,7 @@ if st.session_state.step == 1:
                          <li><b>🔑 TỪ VỰNG GỢI Ý (Vocabulary):</b>
                              <br>- <b>Verbs:</b> <i>witnessed a downward trend / saw a significant rise</i>.
                              <br>- <b>Adjectives:</b> <i>volatile (biến động) / stable (ổn định)</i>.
-                             <br>- <b>Paraphrase bài này:</b> <i>[AI liệt kê 3 từ vựng sát với chủ đề bài viết]</i>
+                             <br>- <b>Paraphrase:</b> <i>[AI liệt kê 3 từ vựng sát với chủ đề bài viết]</i>
                          </li>
 
                          <!-- PHẦN 4: BÀI MẪU -->
