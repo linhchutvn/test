@@ -1089,7 +1089,7 @@ if st.session_state.step == 1:
             <li><b>1. Động từ Xu hướng:</b>
                 <br><i>(Thay vì chỉ dùng increase/decrease)</i>
                 <br>- <b>Mạnh (Strong):</b> <i>surge / rocket</i> (Tăng vọt), <i>plunge / drop sharply</i> (Giảm mạnh).
-                <br>- <b>Trải nghiệm:</b> <i>experience / undergo / witness</i> (+ a rise/decline).
+                <br>- <b>Trải nghiệm:</b> <i>experience / undergo / witness (Chứng kiến)</i> (+ a rise/decline).
                 <br><i>VD: "The figure experienced a sharp decline."</i>
                 <br>- <b>Hồi phục/Rút lui:</b> <i>recover</i> (Hồi phục), <i>recede / fall back</i> (Rút xuống/Giảm lại).
             </li>
@@ -1156,44 +1156,106 @@ if st.session_state.step == 1:
      </div></li>
    </ul>
 
-                    4. **"body2_guide" (Thân bài 2 - Các nhóm còn lại & So sánh):**
-                       - <ul>
-                         <li><b>Logic chọn nhóm (Grouping Strategy):</b> Phân tích tất cả các hạng mục (Category) chưa được nhắc đến ở Body 1. Thường là nhóm có xu hướng <b>NGƯỢC LẠI</b> (Giảm/Dao động) hoặc số liệu <b>THẤP HƠN</b>.</li>
+                    4. **"body2_guide" (Thân bài 2 - Nhóm Còn lại / Xu hướng Đối lập):**
+   - <ul>
+     <!-- ================================================================================== -->
+     <!-- PHẦN 1: KHO MẪU CÂU (REFERENCE LIBRARY) - DỮ LIỆU TỪ PAGE 4, 5, 6, 8 -->
+     <!-- SYSTEM_ALERT: BẮT BUỘC PHẢI CÓ TỪ NỐI CHUYỂN ĐOẠN (LINKING WORDS). -->
+     <!-- ================================================================================== -->
+     <li>
+         <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
+         <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2 (ADVANCED):</strong>
+         <br><i>(Tập trung vào sự chuyển mạch mạch lạc và các xu hướng phụ)</i>
+         
+         <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN (TRANSITION SIGNALS - PAGE 8) -->
+         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
+             <b>► Bước 1: Câu chuyển đoạn (Bắt buộc dùng 1 trong 3):</b>
+             <br>🔸 <b>Tương phản (Contrast):</b>
+             <br>"<b>In contrast / By contrast</b>, the figures for <b>&#91;Line C&#93;</b> followed the opposite trend."
+             <br>"<b>On the other hand</b>, a more volatile pattern was observed in <b>&#91;Line C&#93;</b>."
+             <br>🔸 <b>Chuyển hướng (Neutral):</b>
+             <br>"<b>Turning to</b> the remaining categories (<b>&#91;Line C&#93;</b>)..."
+             <br>"<b>Regarding</b> the figure for <b>&#91;Line C&#93;</b>..."
+             <br>🔸 <b>Đồng thời (Time):</b>
+             <br>"<b>Meanwhile / At the same time</b>, <b>&#91;Line C&#93;</b> started at..."
+         </div>
 
-                         <li><b>Từ nối chuyển đoạn (Linking Words - BẮT BUỘC):</b>
-                             <br>Đầu câu phải dùng từ nối để tạo tính liên kết (Cohesion):
-                             <br>- <b>Tương phản (Contrast):</b> <i>In contrast / By contrast / On the other hand / Conversely</i>.
-                             <br>- <b>Tương đồng (Similarity):</b> <i>Similarly / Likewise</i>.
-                             <br>- <b>Diễn biến đồng thời:</b> <i>Meanwhile / At the same time</i>.</li>
+         <!-- KHỐI 2: MIÊU TẢ TREND & BIẾN ĐỘNG (PAGE 5 & 6) -->
+         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
+             <b>► Bước 2: Phát triển Trend (Fluctuation/Stability):</b>
+             <br><i>(Áp dụng cấu trúc Page 5 & 6 cho nhóm còn lại)</i>
+             <br>🔹 <b>Cấu trúc Dao động/Ổn định (Page 6):</b>
+             <br>"It <b>fluctuated (wildly/moderately)</b> around <b>&#91;Data&#93;</b>."
+             <br>"The figure <b>remained relatively stable</b> at <b>&#91;Data&#93;</b> throughout the period."
+             <br>🔹 <b>Cấu trúc "After V-ing" (Page 5):</b>
+             <br>"<b>After increasing/decreasing</b> to <b>&#91;Data&#93;</b>, it leveled off."
+             <br>🔹 <b>Cấu trúc "Overtake/Recover" (Sample Page 10):</b>
+             <br>"It recovered to a peak of <b>&#91;Data&#93;</b>, <b>reclaiming its lead</b> in the final year."
+         </div>
 
-                         <li><b>Cấu trúc chuẩn (Flow):</b>
-                             <br><code>[Linker] + [Topic Sentence] + [Detailed Trend (Fluctuation/Intersection)] + [Ending Data]</code>.</li>
-                         
-                         <li><b>Chi tiết triển khai & Cấu trúc câu (Step-by-step):</b>
-                             <br>- <b>Bước 1: Giới thiệu đối tượng (Start).</b>
-                             <br><i>(VD: Meanwhile, the figure for [Category C] started at [Data]...)</i>
-                             <br>
-                             <br>- <b>Bước 2: Mô tả xu hướng & Điểm đặc biệt (Trend Analysis).</b>
-                             <br>Sử dụng các mẫu câu đặc thù cho Body 2:
-                             <br>+ <b>Biến động (Fluctuation):</b> <i>It fluctuated wildly between [Data A] and [Data B] / It saw a volatile pattern...</i>
-                             <br>+ <b>Giao nhau/Vượt mặt (Intersection):</b> <i>[Category X] started lower than [Category Y] but <b>overtook / surpassed</b> it in [Year].</i>
-                             <br>+ <b>Ổn định/Giảm:</b> <i>The figure leveled off at... / It witnessed a plummet to...</i>
-                             <br>+ <b>Cực đại/Cực tiểu:</b> <i>...hitting a low of [Data] in [Year].</i>
-                             <br>
-                             <br>- <b>Bước 3: Kết thúc (End Point).</b>
-                             <br><i>(VD: ...before finishing the period at [Data End].)</i></li>
+         <!-- KHỐI 3: CHỐT SỐ LIỆU CUỐI (PAGE 7) -->
+         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
+             <b>► Bước 3: Chốt năm cuối (Ending):</b>
+             <br>🔸 <b>Mẫu Finishing:</b> "..., <b>finishing the period at</b> <b>&#91;End Data&#93;</b>."
+             <br>🔸 <b>Mẫu So sánh:</b> "..., which was significantly lower than <b>&#91;Line A&#93;</b>."
+         </div>
+         </div>
+     </li>
+     
+     <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
-                         <li><b>Từ vựng nâng cao (Advanced Vocabulary):</b>
-                             <br>- <b>Verbs:</b> <i>plummet / decline</i> (giảm mạnh), <i>recover</i> (hồi phục), <i>stabilize</i> (ổn định).
-                             <br>- <b>Nouns:</b> <i>a volatile pattern</i> (mẫu hình biến động), <i>a downward trend</i>.
-                             <br>- <b>Comparison:</b> <i>overtake / surpass</i> (vượt qua).</li>
-                         <li><b>Từ vựng và paraphrase: Phải liệt kê chi tiết ít nhất 3 Vocab và 3 paraphrasing (nếu có) từ Sample Body 2 (kèm nghĩa tiếng việt).</li>
-                        
-                         <li><div style="background-color:#ffebee; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #ff5252;">
-                             <b>📝 Nội dung mẫu (Sample Body 2):</b><br>
-                             <i>[Viết đoạn Body 2 hoàn chỉnh phải dựa vào các bước đã đưa ra. Bắt đầu bằng từ nối tương phản/đồng thời. Ưu tiên sử dụng cấu trúc mô tả sự biến động (fluctuation) hoặc cắt nhau (overtake) nếu có trong biểu đồ.]</i>
-                         </div></li>
-                       </ul>
+     <!-- PHẦN 2: PHÂN TÍCH (SELECTION) -->
+     <li>
+         <b>🔍 PHÂN TÍCH BÀI NÀY (Selection & Drafting):</b>
+         <br><b>1. Logic Chọn Nhóm:</b>
+         <br>- Nhóm Body 2 gồm: <b>&#91;Tên Line&#93;</b>. (Đặc điểm: Ngược xu hướng / Thấp hơn / Dao động).
+         <br><b>2. Chọn Từ nối (Page 8):</b>
+         <br>- Nếu ngược Body 1 ➔ Dùng <i>"In contrast"</i>.
+         <br>- Nếu không liên quan ➔ Dùng <i>"Turning to"</i>.
+         <br>
+         <br>👉 <b>Output mong đợi:</b> <i>[AI tự xác định từ nối và cấu trúc phù hợp]</i>
+     </li>
+
+     <!-- PHẦN 3: TỪ VỰNG TỪ SAMPLE (PAGE 10) -->
+     <li><b>🔑 TỪ VỰNG "ĂN ĐIỂM" (VOCABULARY BANK):</b>
+         <br><i>(Trích xuất trực tiếp từ Sample Visitors - Page 10)</i>
+         <ul style="margin-top:5px;">
+            <li><b>Verbs (Movement):</b>
+                <br>- <i>Witnessed a decline / Saw a recovery</i> (Page 10).
+                <br>- <i>Recede / Fall back</i> (Giảm lại/Rút lui).
+                <br>- <i>Reclaim its lead</i> (Giành lại vị trí dẫn đầu - Cấu trúc hay cho việc Overtake).
+            </li>
+            <li><b>Nouns (Patterns):</b>
+                <br>- <i>A volatile pattern</i> (Mẫu hình biến động thất thường - Page 10).
+                <br>- <i>A similar / opposite trend</i>.
+            </li>
+            <li><b>Adverbs (Stability):</b>
+                <br>- <i>Relatively stable, Consistently.</i>
+            </li>
+         </ul>
+     </li>
+
+     <!-- PHẦN 4: KỸ THUẬT (CHECKLIST - BỔ SUNG QUAN TRỌNG) -->
+     <li><b>🛠️ KỸ THUẬT NGỮ PHÁP (TECHNICAL CHECKLIST):</b>
+         <br><i>(Kiểm tra lỗi sai cơ bản từ Page 7)</i>
+         <ul style="margin-top:5px;">
+             <li><b>1. Giới từ (Page 7):</b> <i>rose <b>to</b> (đến), rose <b>by</b> (khoảng), stood <b>at</b>.</i></li>
+             <li><b>2. Cách chèn data:</b> Dùng <i>reaching a peak of...</i> thay vì cứ viết số ra ngay.</li>
+         </ul>
+     </li>
+
+     <!-- PHẦN 5: BÀI MẪU -->
+     <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
+         <b>📝 Nội dung mẫu (Sample Body 2 Output):</b><br>
+         <div style="margin-top:5px; font-style: italic; color: #5d4037;">
+         [AI hãy viết đoạn Body 2 hoàn chỉnh (3-4 câu). <br>
+         <b>Yêu cầu bắt buộc (Constraints):</b><br>
+         1. Mở đầu bằng: <b>"Turning to..."</b> hoặc <b>"In contrast..."</b>.<br>
+         2. Sử dụng ít nhất 1 từ vựng từ Sample Page 10 (ví dụ: <i>volatile pattern, recovery, reclaiming its lead</i>).<br>
+         3. Kết thúc bằng cấu trúc <b>"finishing at..."</b>.]
+         </div>
+     </div></li>
+   </ul>
 
                     # =================================================================
                     # 🟡 TRƯỜNG HỢP 3: CÁC DẠNG KHÁC (MAP, PROCESS, MIXED)
