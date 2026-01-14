@@ -1073,17 +1073,21 @@ if st.session_state.step == 1:
          <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP (STEP-BY-STEP):</b>
          <br><i>(AI phân tích dữ liệu và <b>CHỌN</b> mẫu câu phù hợp nhất từ Kho phía trên để áp dụng)</i>
          <br>
-         <br><b>🔹 BƯỚC 1: Xử lý Câu mở đầu (Starting Point)</b>
+         <br><b> Phân tích Dữ liệu:</b>
+         <br>- Nhóm này gồm: <b>&#91;Tên Line&#93;</b>.
+         <br>- Đặc điểm: <i>[AI điền: Ổn định / Biến động / hay Ngược chiều?]</i>
+         <br>
+         <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu (Starting Point)</b>
          <br>- <b>Dữ liệu năm đầu:</b> [Category A] = ... ; [Category B] = ...
          <br>- <b>Quyết định chọn Mẫu:</b> <i>(AI trả lời: Nên dùng Mẫu nào ở KHỐI 1? Tại sao?)</i>
          <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên mẫu đã chọn]</i>
          <br>
-         <br><b>🔹 BƯỚC 2: Xử lý Xu hướng chính (Main Trend)</b>
+         <br><b>✅ BƯỚC 2: Xử lý Xu hướng chính (Main Trend)</b>
          <br>- <b>Đặc điểm dữ liệu:</b> [Category A] tăng thẳng đứng, hay tăng rồi giảm? Có đạt đỉnh không?
          <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 2:</b> <i>(AI trả lời: Nên dùng "Before V-ing", "Reach a peak" hay "Followed by"?)</i>
          <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
          <br>
-         <br><b>🔹 BƯỚC 3: Xử lý Category còn lại (Comparison)</b>
+         <br><b>✅ BƯỚC 3: Xử lý Category còn lại (Comparison)</b>
          <br>- <b>Mối quan hệ:</b> [Category B] cùng chiều hay ngược chiều [Category A]?
          <br>- <b>Quyết định chọn Từ nối:</b> <i>(Dùng "Similarly" hay "In contrast"?)</i>
          <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu hoàn chỉnh]</i>
