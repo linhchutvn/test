@@ -1182,8 +1182,8 @@ if st.session_state.step == 1:
                                  <br>✅ <b>Loại 2: Biến động lớn nhất (Biggest Change)</b>
                                  <br>"<b>&#91;Category B&#93;</b> witnessed the most dramatic change."                             
                                  <br>
-                                 <br>✅ <b>Loại 3: Soán ngôi (Ranking Shift)</b>
-                                 <br>"<b>&#91;Category A&#93;</b> overtook <b>&#91;Category B&#93;</b> to become the dominant category."
+                                 <br>✅ <b>Loại 3: Soán ngôi (Ranking Shift)</b>                                 
+                                 <br>"The <b>figure for &#91;Category A&#93;</b> overtook <b>that of &#91;Category B&#93;</b> to become the dominant category."
                                  <br>
                              </div>
                          </li>
@@ -1423,10 +1423,11 @@ if st.session_state.step == 1:
              
              <br>✅ <b>Mẫu 1: Chuyển hướng trung tính:</b>
              <br>"<b>Turning to</b> the remaining categories (<b>&#91;Category C&#93;</b> and <b>&#91;Category D&#93;</b>), their figures were significantly lower."
-             
-             <br>✅ <b>Mẫu 2: Đối lập hoàn toàn:</b>
-             <br>"<b>In contrast / By contrast</b>, a completely different trend was observed in <b>&#91;Category C&#93;</b>, which followed a downward path."
-             
+                          
+             <br>✅ <b>Mẫu 2: Đối lập hoàn toàn (Contrast):</b>
+             <br>• <b>Cách A (Từ nối đầu câu):</b> "<b>In contrast / By contrast</b>, a completely different trend was observed in <b>&#91;Category C&#93;</b>."
+             <br>• <b>Cách B (Trạng từ chèn giữa):</b> "The figure for <b>&#91;Category C&#93;</b>, <b>conversely</b>, witnessed a rise/decline to <b>&#91;Data&#93;</b>."
+
              <br>✅ <b>Mẫu 3: Diễn biến đồng thời:</b>
              <br>"<b>Meanwhile / At the same time</b>, the figure for <b>&#91;Category C&#93;</b> started at <b>&#91;Data&#93;</b>."
          </div>
