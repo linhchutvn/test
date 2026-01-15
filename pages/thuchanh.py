@@ -1025,81 +1025,332 @@ if st.session_state.step == 1:
                     **BƯỚC 2: SOẠN HƯỚNG DẪN (OUTPUT JSON)**
 
                     # =================================================================
-                    # 🔴 TRƯỜNG HỢP 1: DẠNG "STATIC CHART" (PIE/BAR/TABLE 1 NĂM)
+                    # 🔴 TRƯỜNG HỢP 1: DẠNG "STATIC COMPARISON" (Pie, Bar, Table - 1 Năm/Không năm)
+                    # (Tư duy cốt lõi: Ranking (Xếp hạng) & Proportion (Tỷ trọng))
                     # =================================================================
-                    *Yêu cầu: Liệt kê từ vựng, từ nối (kèm nghĩa Tiếng Việt) và cấu trúc câu.*
 
-                    1. **"intro_guide" (Paraphrase):**
-                       - <ul>
-                         <li><b>Mục tiêu:</b> Viết lại đề bài mà không đổi nghĩa.</li>
-                         <li><b>Từ vựng thay thế (Subject):</b>
-                            <br>- <i>The pie charts / The bar graph</i> (Biểu đồ tròn/cột).
-                            <br>- <i>The chart</i> (Biểu đồ được cung cấp).</li>
-                         <li><b>Động từ giới thiệu (Verb):</b>
-                            <br>- <i>compare</i> (so sánh).
-                            <br>- <i>give information about</i> (so sánh).
-                            <br>- <i>illustrate the breakdown of</i> (minh họa cơ cấu của...).
-                            <br>- <i>give information on</i> (đưa thông tin về...).</li>
-                         <li><b>Cấu trúc câu:</b> <code>[Subject] + [Verb] + [Object] + [in Place] + [in Year]</code>.</li>
-                         <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
-                             <b>📝 Nội dung mẫu (Sample Intro):</b><br>
-                             <i>[Hãy viết 1 câu Introduction hoàn chỉnh Paraphrase lại đề bài dựa trên hình ảnh và hướng dẫn]</i>
-                         </div></li>
-                       </ul>
+                    1. **"intro_guide" (Paraphrase):**                    
+    - <ul>
+        <li><b>Cấu trúc chuẩn (Formula):</b> <code>[Subject] + [Finite Verb] + [Object/Topic] + [Place] + [Time (Specific Year)]</code>.</li>
+    
+        <li><b>Subject (Lưu ý quan trọng):</b>
+            <br>- <b>Từ vựng bắt buộc:</b> Phải dùng các từ chỉ tỷ lệ như <i>The proportion of, The percentage of, The share of</i>.
+            <br>- <b>Tuyệt đối tránh:</b> Không viết "The chart shows the immigration..." mà phải là "The chart shows the percentage of immigrants...".
+            <br>- <b>Hòa hợp chủ ngữ:</b> <i>The pie charts compare...</i> (Số nhiều) hoặc <i>The pie chart gives information on...</i> (Số ít).</li>
+    
+        <li><b>Topic (The "What"):</b>
+            <br>- <b>Cách 1 (Basic):</b> "...how people spent their money on different commodities..."
+            <br>- <b>Cách 2 (Advanced):</b> "...the breakdown of expenses for..."
+            <br>- <b>Cách 3 (Comparative):</b> "...the differences in the consumption of [Category]..."</li>
+    
+        <li><b>Verb (Động từ khuyên dùng):</b>
+            <br><i>compares / gives information about / illustrates the breakdown of / shows the distribution of</i>.</li>
+    
+        <li><b>Time Paraphrase (Thời gian Tĩnh):</b>
+            <br>- <i>in [Year]</i>.
+            <br>- <i>in the year [Year]</i>.
+            <br><i>(Lưu ý: Không dùng "Over a period of..." vì đây là bài Tĩnh).</i></li>
+            
+        <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
+            <b>📝 Nội dung mẫu (Sample Intro):</b><br>                             
+            <i>"The pie charts compare the percentage of people immigrating to a European country with the proportion of emigrants leaving that nation for various reasons in 2009."</i>
+        </div></li>
+    </ul>
 
-                    2. **"overview_guide" (Tổng quan - Không số liệu):**
-                       - <ul>
-                         <li><b>Từ nối mở đầu (Linking):</b> <i>Overall, it is clear that...</i> (Nhìn chung, rõ ràng là...).</li>
-                         <li><b>Chiến thuật:</b> Tìm cái <b>Lớn Nhất</b> (Highest/Most popular) và cái <b>Nhỏ Nhất</b> (Lowest/Least popular).</li>
-                         <li><b>Cấu trúc so sánh (Grammar):</b>
-                            <br>- <i>While X accounted for the largest share, Y was the least significant.</i> (Trong khi X chiếm phần lớn nhất, Y là ít quan trọng nhất).
-                            <br>- <i>X was the dominant category...</i> (X là hạng mục chiếm ưu thế...).</li>
-                        <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
+                    2. **"overview_guide" (Ranking + Gap):**
+                        - <ul>
+                         <!-- ================================================================================== -->
+                         <!-- PHẦN 1: KHO MẪU CÂU (CHẾ ĐỘ IN ẤN - KHÔNG TƯ DUY) -->
+                         <!-- SYSTEM_ALERT: 
+                              Dưới đây là DỮ LIỆU CỐ ĐỊNH (REFERENCE LIBRARY).
+                              Nhiệm vụ của bạn: SAO CHÉP Y NGUYÊN TỪNG DÒNG HTML BÊN DƯỚI.
+                              TUYỆT ĐỐI KHÔNG ĐƯỢC LỌC. -->
+                         <!-- ================================================================================== -->
+                         <li>
+                             <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
+                             <strong style="color:#d35400;">📚 KHO MẪU CÂU OVERVIEW (STATIC):</strong>
+                            <br><i>(Tập trung vào Cái lớn nhất & Sự chênh lệch)</i>
+                             
+                             <!-- KHỐI 1: TỔNG QUÁT -->
+                             <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
+                                 <b>► 1. Cấu trúc tổng quát:</b>
+                                 <br><code>Overall, it is clear that &#91;Most Popular Category&#93; accounts for the largest share. In contrast, &#91;Least Popular Category&#93; makes up the smallest proportion.</code>
+                             </div>
+
+                             <!-- KHỐI 2: FEATURE 1 (DOMINANT CATEGORY) -->
+                             <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
+                                 <b>► 2. Các mẫu câu tả Nhóm Lớn Nhất:</b>
+                                 <br>✅ <b>Loại 1: Áp đảo tuyệt đối</b>
+                                 <br>"<b>&#91;Category A&#93;</b> is by far the most popular option/reason."
+                                 <br>✅ <b>Loại 2: Chiếm đa số</b>
+                                 <br>"The majority of <b>&#91;Topic&#93;</b> is allocated to <b>&#91;Category A&#93;</b>."                           
+                                 <br>✅ <b>Loại 3: So sánh (nếu có 2 biểu đồ)</b>
+                                 <br>"While <b>&#91;Category A&#93;</b> is the dominant figure in <b>&#91;Group 1&#93;</b>, <b>&#91;Category B&#93;</b> takes the lead in <b>&#91;Group 2&#93;</b>."
+                             </div>
+
+                             <!-- KHỐI 3: FEATURE 2 (OTHER FEATURES) -->
+                             <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
+                                 <b>► 3. Các mẫu câu tả Đặc điểm phụ:</b>                             
+                                 <br>✅ <b>Loại 1: Nhóm thấp nhất</b>
+                                 <br>"<b>&#91;Category C&#93;</b> represents the least significant portion."                              
+                                 <br>✅ <b>Loại 2: Sự chênh lệch (Gap)</b>
+                                 <br>"There is a significant difference between the figures for <b>&#91;Category A&#93;</b> and <b>&#91;Category C&#93;</b>."                             
+                             </div>
+                         </li>
+                         
+                         <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
+
+                         <!-- PHẦN 2: PHÂN TÍCH -->
+                         <li>
+                             <b>🔍 PHÂN TÍCH BÀI NÀY (Selection & Drafting):</b>
+                             <br><b>1. Xác định "The Giant" (Sentence 1):</b>
+                             <br>- Miếng bánh nào to nhất? <i>[AI trả lời. VD: Employment]</i>
+                             <br>- Có áp đảo không hay chỉ nhỉnh hơn chút?
+                             <br>👉 <b>Câu tham khảo Feature 1:</b> <i>[AI viết câu Overview 1]</i>
+                             <br>
+                             <br><b>2. Xác định "The Minor" hoặc "Contrast" (Sentence 2):</b>
+                             <br>- Miếng bánh nào nhỏ nhất? Hoặc sự khác biệt lớn nhất giữa 2 biểu đồ là gì?
+                             <br>👉 <b>Câu tham khảo Feature 2:</b> <i>[AI viết câu Overview 2]</i>
+                         </li>
+
+                         <!-- PHẦN 3: TỪ VỰNG -->
+                         <li><b>🔑 TỪ VỰNG GỢI Ý (Vocabulary):</b>
+                             <br>- <b>Verbs (Chiếm bao nhiêu):</b> <i>account for / make up / constitute / represent / comprise</i>.
+                             <br>- <b>Adjectives (So sánh):</b> <i>dominant / significant / negligible (không đáng kể) / overwhelming</i>.
+                             <br>- <b>Nouns:</b> <i>The vast majority / a small fraction / the lion's share</i>.
+                         </li>
+
+                         <!-- PHẦN 4: BÀI MẪU -->
+                         <li><div style="background-color:#fff3e0; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
-                             <i>[Hãy viết 2 câu Overview chuẩn xác dựa trên hình ảnh và hướng dẫn]</i>
+                             <div style="margin-top:5px; font-style: italic; color: #5d4037;">
+                             Overall, it is readily apparent that employment is the primary reason for immigration, whereas family reunification is the main driver for emigration. Additionally, study-related purposes account for a significant portion in both groups.
+                             </div>
                          </div></li>
                        </ul>
 
-                    3. **"body1_guide" (Nhóm Lớn Nhất - The Giants):**
-                       - <ul>
-                         <li><b>Grouping:</b> Viết về 2-3 hạng mục có số liệu cao nhất.</li>
-                         <li><b>Từ nối mở đoạn (Linking):</b>
-                            <br>- <i>In terms of [Category A],...</i> (Về mặt...).
-                            <br>- <i>Looking at the detailed figures,...</i> (Nhìn vào số liệu chi tiết...).</li>
-                         <li><b>Từ vựng mô tả tỷ trọng (Vocab):</b>
-                            <br>- <i>account for / constitute / make up / comprise</i> (chiếm...).
-                            <br>- <i>represent the vast majority of...</i> (đại diện cho đại đa số...).</li>
-                         <li><b>Ngữ pháp (Xếp hạng):</b> <i>rank first / take the lead</i> (đứng đầu).</li>
-                         <li><b>Từ vựng: liệt kê từ vựng được viết trong 📝 Nội dung mẫu (Sample Body 1) (kèm nghĩa tiếng việt).</li>
-                         <li><b>paraphrase: liệt kê các cụm từ được paraphrase trong 📝 Nội dung mẫu (Sample Body 1).</li>
-                         <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
-                             <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
-                             <i>[Viết 3-4 câu mô tả chi tiết nhóm số liệu lớn nhất trong ảnh và theo hướng dẫn. Nhớ trích dẫn số liệu cụ thể.]</i>
-                         </div></li>                   
-                       </ul>
+                    3. **"body1_guide" (Thân bài 1 - Nhóm Lớn Nhất / Nổi Bật Nhất):**
+   - <ul>
+     <!-- ================================================================================== -->
+     <!-- PHẦN 1: KHO MẪU CÂU STATIC (REFERENCE LIBRARY) -->
+     <!-- SYSTEM_ALERT: 
+          Bắt buộc hiển thị đủ các Cấu trúc so sánh, Cấu trúc Math (Gấp đôi/Gấp ba) và Cấu trúc mệnh đề quan hệ (Which/With). -->
+     <!-- ================================================================================== -->
+     <li>
+         <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
+         <strong style="color:#d35400;">📚 KHO MẪU CÂU BODY 1 (STATIC & COMPARISON):</strong>
+         <br><i>(Áp dụng kỹ thuật: Ranking + Math Language + Complex Clauses)</i>
+         
+         <!-- KHỐI 1: CÂU MỞ ĐẦU (STARTING WITH THE HIGHEST) -->
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
+             <b>► Bước 1: Câu mở đầu (Top Ranking):</b>
+             <br><i>(Luôn bắt đầu bằng Category lớn nhất)</i>
+             
+             <br>✅ <b>Mẫu 1: Dùng động từ "Account for/Constitute":</b>
+             <br>"<b>Regarding &#91;Category A&#93;</b>, it <b>accounts for</b> the largest proportion of <b>&#91;Total&#93;</b>, at <b>&#91;Data&#93;</b>."
+             
+             <br>✅ <b>Mẫu 2: Nhấn mạnh vị trí số 1 (Page 5/6):</b>
+             <br>"<b>&#91;Category A&#93;</b> <b>ranks first</b> among all reasons, with <b>&#91;Data&#93;</b>."
+             <br>"<b>&#91;Category A&#93;</b> <b>takes the lead</b>, comprising <b>&#91;Data&#93;</b> of the total."
+             
+             <br>✅ <b>Mẫu 3: Mệnh đề quan hệ rút gọn (Advanced):</b>
+             <br>"Standing at <b>&#91;Data&#93;</b>, <b>&#91;Category A&#93;</b> is the most popular choice."
+         </div>
 
-                    4. **"body2_guide" (Nhóm Còn Lại - The Rest):**
-                       - <ul>
-                         <li><b>Grouping:</b> Các hạng mục số liệu thấp hơn.</li>
-                         <li><b>Từ nối chuyển đoạn (Linking):</b>
-                            <br>- <i>In contrast / By contrast,...</i> (Ngược lại...).
-                            <br>- <i>Regarding the remaining categories,...</i> (Về các hạng mục còn lại...).</li>
-                         <li><b>Ngữ pháp So sánh Gấp lần (Math Language - Cực quan trọng):</b>
-                            <br>- <i>double / two times as high as</i> (gấp đôi).
-                            <br>- <i>triple / three times higher than</i> (gấp ba).
-                            <br>- <i>approximately half of</i> (xấp xỉ một nửa của).</li>
-                         <li><b>Cách liệt kê số liệu (Listing):</b>
-                            <br>- Dùng: <i>"..., with respective figures of X and Y."</i> (...với số liệu lần lượt là X và Y).
-                            <br>- Dùng: <i>"ranging from X to Y"</i> (dao động từ X đến Y).</li>
-                         <li><b>Từ vựng cho số nhỏ:</b> <i>negligible</i> (không đáng kể).</li>
-                         <li><b>Từ vựng: liệt kê từ vựng được viết trong 📝 Nội dung mẫu (Sample Body 2) (kèm nghĩa tiếng việt).</li>
-                         <li><b>paraphrase: liệt kê các cụm từ được paraphrase trong 📝 Nội dung mẫu (Sample Body 2).</li>
-                         <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
-                             <b>📝 Nội dung mẫu (Sample Body 2):</b><br>
-                             <i>[Viết 3-4 câu mô tả nhóm còn lại dựa vào hình ảnh và hướng dẫn.]</i>
-                         </div></li>
-                       </ul>
+         <!-- KHỐI 2: SO SÁNH & TOÁN HỌC (PAGE 4) -->
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
+             <b>► Bước 2: So sánh gấp lần (Math Language):</b>
+             <br><i>(Dùng để so sánh Category A với Category B)</i>
+             <br>✅ <b>Cấu trúc Gấp đôi/Ba (Double/Triple - Page 4):</b>
+             <br>"The figure for <b>&#91;Category A&#93;</b> is <b>exactly/nearly double</b> that of <b>&#91;Category B&#93;</b> (Data A vs Data B)."
+             <br>"<b>&#91;Category A&#93;</b> is <b>three times as high as</b> <b>&#91;Category B&#93;</b>."
+             
+             <br>✅ <b>Cấu trúc "Which" clause (Page 4):</b>
+             <br>"<b>&#91;Category A&#93;</b> stands at <b>&#91;Data&#93;</b>, <b>which is significantly higher than</b> the figure for <b>&#91;Category B&#93;</b>."
+         </div>
 
+         <!-- KHỐI 3: CẤU TRÚC "WITH" & "MAKING IT" (PAGE 5/6) -->
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
+             <b>► Bước 3: Đưa số liệu phức hợp:</b>
+             <br>✅ <b>Cấu trúc "With respective figures":</b>
+             <br>"<b>&#91;Cat A&#93;</b> and <b>&#91;Cat B&#93;</b> are the top choices, <b>with respective figures being</b> <b>&#91;Data A&#93;</b> and <b>&#91;Data B&#93;</b>."
+             <br>✅ <b>Cấu trúc "Making it":</b>
+             <br>"<b>&#91;Data&#93;</b> of people chose <b>&#91;Cat A&#93;</b>, <b>making it the most common</b> reason cited."
+         </div>
+         </div>
+     </li>
+     
+     <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP -->
+     <!-- ================================================================================== -->
+     <li>     
+         <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP:</b>
+         <br><b>🔍 Phân tích Dữ liệu Body 1:</b>
+         <br>- Chọn nhóm: Các hạng mục LỚN NHẤT (Major Categories).
+         <br>- Mục tiêu: Mô tả số liệu và so sánh độ lớn.
+         <br>
+         <br><b>✅ BƯỚC 1: Xử lý Top 1 (The Winner)</b>
+         <br>- <b>Quyết định chọn Mẫu:</b> Dùng "Account for" hay "Rank first"?
+         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu mô tả Category lớn nhất]</i>
+         <br>
+         <br><b>✅ BƯỚC 2: So sánh với Top 2 (The Runner-up)</b>
+         <br>- <b>Logic Toán học:</b> Top 1 có gấp đôi Top 2 không? Hay chỉ hơn một chút?
+         <br>- <b>Quyết định:</b> Dùng cấu trúc "Double/Triple" (nếu số đẹp) hoặc "Higher than" (nếu số lẻ).
+         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu so sánh giữa Top 1 và Top 2]</i>
+         <br>
+         <br><b>✅ BƯỚC 3: Gom nhóm (nếu có Top 3 lớn)</b>
+         <br>- Dùng cấu trúc "With respective figures being..." để liệt kê nhanh nếu cần.
+         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu chốt nhóm lớn]</i>
+     </li>
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 3: BỘ CÔNG CỤ NÂNG BAND -->
+     <!-- ================================================================================== -->
+     <li>     
+     <strong style="color:#d35400;">🔑 TỪ VỰNG & NGỮ PHÁP "STATIC" (VOCABULARY BANK):</strong>
+         <br>
+         <ul style="margin-top:5px;">
+            <!-- NHÓM 1: ĐỘNG TỪ CHỈ TỶ TRỌNG -->
+            <li><b>1. Động từ chiếm tỷ trọng (Percentage Verbs):</b>
+                <br><i>account for / constitute / comprise / represent / make up</i> (+ %).
+            </li>
+
+            <!-- NHÓM 2: TỪ VỰNG XẾP HẠNG (RANKING - PAGE 5) -->
+            <li><b>2. Ranking Vocabulary:</b>
+                <br>- <i>Rank first / second / third.</i>
+                <br>- <i>Take the lead / Is the leading factor.</i>
+                <br>- <i>The most popular / common / dominant.</i>
+            </li>
+
+            <!-- NHÓM 3: TỪ VỰNG SO SÁNH SỐ LIỆU (MATH - PAGE 4) -->
+            <li><b>3. Mathematical Comparisons:</b>
+                <br>- <i>Two times as high as / Three times as much as.</i>
+                <br>- <i>Double / Triple (Dùng như động từ hoặc tính từ).</i>
+                <br>- <i>Half of / A quarter of.</i>
+            </li>
+
+             <!-- 4. CẤU TRÚC NGỮ PHÁP CAO CẤP (PAGE 5/6) -->
+             <li><b>4. Advanced Grammar:</b>
+                 <br>- <b>Making it:</b> <i>..., making it the largest category.</i>
+                 <br>- <b>With respective figures:</b> <i>..., with respective figures being X and Y.</i>
+                 <br>- <b>Compared to:</b> <i>X is high, compared to only 5% of Y.</i>
+             </li>
+         </ul>
+     </li>
+
+     <!-- PHẦN 4: BÀI MẪU -->
+     <li><div style="background-color:#fff8e1; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ffa502;">
+         <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
+         <div style="margin-top:5px; font-style: italic; color: #5d4037;">
+         Regarding the most significant reasons, employment takes the lead in immigration, accounting for 38%. This figure is nearly double that of family reunification, which stands at 23% and ranks second. Meanwhile, for emigrants, accompanying family is the primary motivation, constituting the vast majority at 38%.
+         </div>
+     </div></li>
+   </ul>
+
+                    4. **"body2_guide" (Thân bài 2 - Nhóm Nhỏ / Nhóm Còn lại):**
+   - <ul>
+     <!-- ================================================================================== -->
+     <!-- PHẦN 1: KHO MẪU CÂU (REFERENCE LIBRARY) -->
+     <!-- ================================================================================== -->
+     <li>
+         <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
+         <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2 (REMAINING CATEGORIES):</strong>
+         <br><i>(Tập trung vào sự tương phản và gom nhóm nhỏ)</i>
+         
+         <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN -->
+         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
+             <b>► Bước 1: Câu chuyển đoạn (Transition):</b>
+             <br>✅ <b>Mẫu 1: Chuyển sang nhóm còn lại:</b>
+             <br>"<b>Turning to</b> the remaining categories,..."
+             <br>✅ <b>Mẫu 2: Đối lập (Contrast):</b>
+             <br>"<b>In contrast / By comparison</b>, the figures for <b>&#91;Category C & D&#93;</b> are significantly lower."
+         </div>
+
+         <!-- KHỐI 2: MIÊU TẢ NHÓM SỐ LIỆU NHỎ -->
+         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
+             <b>► Bước 2: Gom nhóm (Grouping):</b>
+             <br><i>(Nếu các số liệu nhỏ xấp xỉ nhau)</i>
+             <br>✅ <b>Cấu trúc "Collectively":</b>
+             <br>"<b>&#91;Category C&#93;</b> and <b>&#91;Category D&#93;</b> <b>collectively account for</b> only <b>&#91;Total %&#93;</b>."
+             <br>✅ <b>Cấu trúc Liệt kê (Range):</b>
+             <br>"The figures for X and Y are relatively small, <b>ranging from</b> <b>&#91;Data 1&#93;</b> to <b>&#91;Data 2&#93;</b>."
+         </div>
+
+         <!-- KHỐI 3: CẤU TRÚC "NEGLIGIBLE" (KHÔNG ĐÁNG KỂ - PAGE 5) -->
+         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
+             <b>► Bước 3: Mô tả số liệu rất nhỏ:</b>
+             <br>✅ <b>Cấu trúc Negligible:</b>
+             <br>"The proportion of <b>&#91;Category E&#93;</b> is <b>negligible/insignificant</b>, at only <b>&#91;Data&#93;</b>."
+             <br>✅ <b>Cấu trúc Minority:</b>
+             <br>"Only a <b>small minority</b> of people (<b>&#91;Data&#93;</b>) chose <b>&#91;Category E&#93;</b>."
+         </div>
+         </div>
+     </li>
+     
+     <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP -->
+     <!-- ================================================================================== -->
+     <li>     
+         <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP:</b>
+         <br><b>🔍 Phân tích Dữ liệu Body 2:</b>
+         <br>- Nhóm này gồm: Các miếng bánh nhỏ còn lại.
+         <br>
+         <br><b>✅ BƯỚC 1: Xử lý Câu chuyển đoạn & Đối lập</b>
+         <br>- Dùng "Turning to..." hoặc "In stark contrast..." để báo hiệu sự thay đổi về độ lớn dữ liệu.
+         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu chuyển]</i>
+         <br>
+         <br><b>✅ BƯỚC 2: Xử lý các hạng mục tương đồng/nhỏ</b>
+         <br>- Có hạng mục nào bằng nhau không? (Similar).
+         <br>- Có hạng mục nào quá nhỏ không? (Negligible).
+         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu mô tả nhóm nhỏ]</i>
+         <br>
+         <br><b>✅ BƯỚC 3: So sánh chéo (Cross-comparison - Nếu có 2 Charts)</b>
+         <br>- So sánh Category X ở Chart 1 với Chart 2.
+         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu so sánh cuối cùng]</i>
+     </li>
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 3: GIẢI MÃ TỪ VỰNG -->
+     <!-- ================================================================================== -->
+     <li>
+         <strong style="color:#d35400;">🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</strong>
+         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; background-color:#fffcf5; padding:15px; border-radius:8px; border: 1px solid #f39c12;">
+            <!-- CỘT 1 -->
+            <div>
+                <b style="color:#e67e22;">1. Từ nối & Đối lập:</b>
+                <ul style="margin:5px 0; padding-left:20px; font-size:0.9rem;">
+                    <li><b>Conversely / In contrast:</b> Ngược lại.</li>
+                    <li><b>As for... / Regarding...:</b> Đối với...</li>
+                    <li><b>A similar pattern:</b> Một kiểu mẫu tương tự.</li>
+                </ul>
+            </div>
+
+            <!-- CỘT 2 -->
+            <div>
+                <b style="color:#e67e22;">2. Từ vựng nhóm nhỏ:</b>
+                <ul style="margin:5px 0; padding-left:20px; font-size:0.9rem;">
+                    <li><b>A negligible amount:</b> Một lượng không đáng kể.</li>
+                    <li><b>Collectively:</b> Gộp chung lại.</li>
+                    <li><b>The remainder:</b> Phần còn lại.</li>
+                </ul>
+            </div>
+         </div>
+     </li>
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 4: BÀI MẪU HOÀN CHỈNH -->
+     <!-- ================================================================================== -->
+     <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
+         <b>📝 NỘI DUNG MẪU (SAMPLE BODY 2):</b><br>
+         <div style="margin-top:5px; font-style: italic; color: #5d4037;">
+         Turning to the remaining categories, study is a significant reason for both groups, with figures ranging from 15% to 20%. Interestingly, only 15% of people migrated for a definite job, which is similar to the figure for other reasons. Conversely, "other reasons" account for the smallest percentage in the emigration chart, at a negligible 8%.
+         </div>
+     </div></li>
+   </ul>
                     # =================================================================
                     # 🔵 TRƯỜNG HỢP 2: DẠNG "CHANGE OVER TIME" (Line, Bar, Table, Pie nhiểu năm)
                     # (Tư duy cốt lõi: Trend (Xu hướng) & Speed (Tốc độ thay đổi))
