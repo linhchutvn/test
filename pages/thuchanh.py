@@ -1269,17 +1269,17 @@ if st.session_state.step == 1:
 
          <!-- KHỐI 3: CHỐT SỐ LIỆU CUỐI -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► Bước 3: Năm cuối (Ending Data):</b>
+             <b>► Bước 3: Cấu trúc Năm cuối (Ending Data):</b>
              <br><i>(Sử dụng mệnh đề quan hệ rút gọn để kết câu mượt mà)</i>
-             <br>✅ <b>Mẫu Finishing:</b> "..., <b>finishing the period at</b> <b>&#91;End Data&#93;</b>."
-             <br>✅ <b>Mẫu Ending up:</b> "..., <b>ending up at</b> <b>&#91;End Data&#93;</b> in the final year."
+             <br>✅ <b>Cấu trúc Finishing:</b> "..., <b>finishing the period at</b> <b>&#91;End Data&#93;</b>."
+             <br>✅ <b>Cấu trúc Ending up:</b> "..., <b>ending up at</b> <b>&#91;End Data&#93;</b> in the final year."
          </div>
 
-         <!-- KHỐI 4: LIÊN KẾT VỚI CATEGORY KHÁC -->
+         <!-- KHỐI 4: CẤU TRÚC LIÊN KẾT VỚI CATEGORY KHÁC -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 4: Category còn lại (Comparison):</b>
-             <br>✅ <b>Tương đồng:</b> "Similarly, <b>&#91;Category B&#93;</b> also witnessed a downward trend..."
-             <br>✅ <b>Đối lập:</b> "In contrast, <b>&#91;Category B&#93;</b> <b>followed the opposite trend</b>, as S-FV..."
+             <br>✅ <b>Cấu trúc Tương đồng:</b> "Similarly, <b>&#91;Category B&#93;</b> also witnessed a downward trend..."
+             <br>✅ <b>Cấu trúc Đối lập:</b> "In contrast, <b>&#91;Category B&#93;</b> <b>followed the opposite trend</b>, as S-FV..."
          </div>
          </div>
      </li>
