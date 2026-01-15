@@ -1293,22 +1293,27 @@ if st.session_state.step == 1:
          <br>
          <br><b> Phân tích Dữ liệu:</b>
          <br>- Nhóm này gồm: <b>&#91;Tên Category&#93;</b>.
-         <br>- Đặc điểm: <i>[AI giải thích: Nổi bật / Biến động mạnh?]</i>
+         <br>- Lý do chọn nhóm: <b>&#91;AI giải thích: Cao nhất / Nổi bật / Biến động mạnh nhất?&#93;</b>
          <br>
-         <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu (Starting Point)</b>
+         <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu (Starting Point)(Áp dụng KHỐI 1)</b>
          <br>- <b>Dữ liệu năm đầu:</b> [Category A] = ... ; [Category B] = ...
          <br>- <b>Quyết định chọn Mẫu:</b> <i>(AI trả lời: Nên dùng Mẫu nào ở KHỐI 1? Tại sao?)</i>
          <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên mẫu đã chọn]</i>
          <br>
-         <br><b>✅ BƯỚC 2: Xử lý Xu hướng chính (Main Trend)</b>
+         <br><b>✅ BƯỚC 2: Xử lý Xu hướng chính (Main Trend)(Áp dụng KHỐI 2)</b>
          <br>- <b>Đặc điểm dữ liệu:</b> [Category A] tăng thẳng đứng, hay tăng rồi giảm? Có đạt đỉnh không?
          <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 2:</b> <i>(AI trả lời: Nên dùng "Before V-ing", "Reach a peak" hay "Followed by"?)</i>
          <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
          <br>
-         <br><b>✅ BƯỚC 3: Xử lý Category còn lại (Comparison)</b>
+         <br><b>✅ BƯỚC 3: Xử lý Kết thúc & Chốt số liệu (Áp dụng KHỐI 3)</b>
+         <br>- <b>Nhiệm vụ:</b> Sử dụng cấu trúc mệnh đề rút gọn để đưa số liệu năm cuối cho mượt mà.
+         <br>- <b>Quyết định chọn Mẫu:</b> <i>(VD: Chọn Mẫu "Finishing the period at" để tạo sự tinh tế)</i>
+         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu chốt năm cuối cho Category A]</i>
+         <br>
+         <br><b>✅ BƯỚC 4: Xử lý Category còn lại (Comparison)(Áp dụng KHỐI 4)</b>
          <br>- <b>Mối quan hệ:</b> [Category B] cùng chiều hay ngược chiều [Category A]?
-         <br>- <b>Quyết định chọn Từ nối:</b> <i>(Dùng "Similarly" hay "In contrast"?)</i>
-         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu hoàn chỉnh]</i>
+         <br>- <b>Quyết định chọn Từ nối:</b> <i>(Dùng "Similarly" hay "Followed the opposite trend" hay "In contrast"?)</i>
+         <br>👉 <b>Viết nháp Câu 4:</b> <i>[AI viết câu mô tả Category B và liên kết với Category A]</i>
      </li>
 
      <!-- PHẦN 3: TỪ VỰNG -->
