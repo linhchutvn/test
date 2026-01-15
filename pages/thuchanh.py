@@ -1325,7 +1325,9 @@ if st.session_state.step == 1:
           BẮT BUỘC PHẢI CHỌN LỌC ÍT NHẤT 15 TỪ/CỤM TỪ ĐẮT GIÁ SAU. -->
      <!-- ================================================================================== -->
      <li>     
-     <li><b>🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</b>                
+     <li><b>🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</b>
+     <br><i>(AI bắt buộc phải chọn lọc ít nhất 15 từ/cụm/cấu trúc/từ nối từ phù hợp nhất từ Kho phía dưới để áp dụng)</i>
+         <br>
          <ul style="margin-top:5px;">
             <!-- NHÓM 1: ĐỘNG TỪ TẢ XU HƯỚNG (TREND VERBS) -->
             <li><b>1. Động từ Xu hướng:</b>
