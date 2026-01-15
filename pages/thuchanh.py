@@ -1036,7 +1036,7 @@ if st.session_state.step == 1:
         <li><b>Subject (Lưu ý quan trọng):</b>
             <br>- <b>Từ vựng bắt buộc:</b> Phải dùng các từ chỉ tỷ lệ như <i>The proportion of, The percentage of, The share of</i>.
             <br>- <b>Tuyệt đối tránh:</b> Không viết "The chart shows the immigration..." mà phải là "The chart shows the percentage of immigrants...".
-            <br>- <b>Hòa hợp chủ ngữ:</b> <i>The pie charts compare...</i> (Số nhiều) hoặc <i>The pie chart gives information on...</i> (Số ít).</li>
+            <br>- <b>Hòa hợp chủ ngữ:</b> <i>The pie charts compare...</i> (Số nhiều) hoặc <i>The pie chart gives information about...</i> (Số ít).</li>
     
         <li><b>Topic (The "What"):</b>
             <br>- <b>Cách 1 (Basic):</b> "...how people spent their money on different commodities..."
@@ -1044,7 +1044,7 @@ if st.session_state.step == 1:
             <br>- <b>Cách 3 (Comparative):</b> "...the differences in the consumption of [Category]..."</li>
     
         <li><b>Verb (Động từ khuyên dùng):</b>
-            <br><i>compares / gives information about / how much / shows the distribution of</i>.</li>
+            <br><i>compares / gives information about / shows how many / shows the distribution of</i>.</li>
     
         <li><b>Time Paraphrase (Thời gian Tĩnh):</b>
             <br>- <i>in [Year]</i>.
