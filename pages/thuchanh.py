@@ -1325,8 +1325,8 @@ if st.session_state.step == 1:
           BẮT BUỘC PHẢI CHỌN LỌC ÍT NHẤT 15 TỪ/CỤM TỪ ĐẮT GIÁ SAU. -->
      <!-- ================================================================================== -->
      <li>     
-     <li><b>🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</b>
-     <br><i>(AI bắt buộc phải chọn lọc ít nhất 15 từ/cụm/cấu trúc/từ nối từ phù hợp nhất từ Kho phía dưới để áp dụng)</i>
+     <strong style="color:#d35400;">🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</strong>
+     <br><i>(Học sinh học cách dùng các từ này từ chính bài nháp và bài mẫu bên dưới)</i>
          <br>
          <ul style="margin-top:5px;">
             <!-- NHÓM 1: ĐỘNG TỪ TẢ XU HƯỚNG (TREND VERBS) -->
@@ -1467,27 +1467,27 @@ if st.session_state.step == 1:
      <!-- ================================================================================== -->
      <li>     
          <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP (SYNCHRONIZED STEP-BY-STEP):</b>
-         <br><i>(AI phân tích dữ liệu còn lại và <b>CHỌN</b> mẫu câu phù hợp nhất từ Kho phía trên để thực hiện nháp)</i>
+         <br><i>(AI phân tích dữ liệu còn lại và giải thích cách <b>CHỌN</b> mẫu câu phù hợp nhất từ Kho phía trên để thực hiện nháp)</i>
          <br>
          <br><b>🔍 Phân tích Dữ liệu Body 2:</b>
          <br>- Nhóm này gồm: <b>&#91;Tên các Category còn lại&#93;</b>.
          <br>- Đặc điểm chung: <b>&#91;AI giải thích: Ngược chiều Body 1 / Ổn định / Thấp hơn?&#93;</b>
          <br>
          <br><b>✅ BƯỚC 1: Xử lý Câu chuyển đoạn (Áp dụng KHỐI 1)</b>
-         <br>- <b>Quyết định chọn Mẫu:</b> <i>(AI trả lời: Mẫu 1, 2 hay 3? Tại sao?)</i>
-         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh có từ nối chuyển đoạn + số liệu đầu]</i>
+         <br>- <b>Tư duy:</b> <i>[AI giải thích: Tại sao chọn Mẫu 1, 2 hay 3? Có đối lập với Body 1 không?]</i>
+         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu hoàn chỉnh có từ nối chuyển đoạn + số liệu đầu]</i>
          <br>
          <br><b>✅ BƯỚC 2: Xử lý Diễn biến đặc thù (Áp dụng KHỐI 2)</b>
-         <br>- <b>Quyết định chọn Cấu trúc:</b> <i>(AI trả lời: Dao động, Ổn định hay Biến đổi nhẹ?)</i>
-         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh mô tả hành trình dữ liệu]</i>
+         <br>- <b>Tư duy:</b> <i>[AI giải thích: Đường này đang đi ngang hay dao động? Dùng cấu trúc nào mô tả chuẩn nhất?]</i>
+         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu hoàn chỉnh mô tả hành trình dữ liệu]</i>
          <br>
          <br><b>✅ BƯỚC 3: Xử lý Chốt số liệu năm cuối (Áp dụng KHỐI 3)</b>
-         <br>- <b>Quyết định chọn Mẫu:</b> <i>(AI trả lời: Finishing at hay Ending up at?)</i>
-         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu chốt số liệu năm cuối mượt mà]</i>
+         <br>- <b>Tư duy:</b> <i>[AI giải thích: Cách đưa số liệu cuối sao cho mượt mà, không bị lặp từ]</i>
+         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu chốt số liệu năm cuối mượt mà]</i>
          <br>
          <br><b>✅ BƯỚC 4: Xử lý So sánh nội bộ nhóm 2 (Áp dụng KHỐI 4)</b>
-         <br>- <b>Quyết định chọn Mẫu:</b> <i>(AI trả lời: Tương đồng hay So sánh gấp lần?)</i>
-         <br>👉 <b>Viết nháp Câu 4:</b> <i>[AI viết câu mô tả Category cuối cùng và liên kết nội bộ nhóm]</i>
+         <br>- <b>Tư duy:</b> <i>[AI giải thích: Liên kết đối tượng cuối cùng với đối tượng trước đó bằng cách so sánh hay dùng từ tương đồng?]</i>
+         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu mô tả Category cuối cùng và liên kết nội bộ nhóm]</i>
      </li>
 
      <!-- ================================================================================== -->
@@ -1496,7 +1496,7 @@ if st.session_state.step == 1:
           BẮT BUỘC liệt kê tối thiểu 15 mục. -->
      <!-- ================================================================================== -->
      <li>
-         <strong style="color:#d35400;">🔑 GIẢI MÃ TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (TRÍCH TỪ BÀI HỌC):</strong>
+         <strong style="color:#d35400;">🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</strong>
          <br><i>(Học sinh học cách dùng các từ này từ chính bài nháp và bài mẫu bên dưới)</i>
          
          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; background-color:#fffcf5; padding:15px; border-radius:8px; border: 1px solid #f39c12;">
