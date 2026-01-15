@@ -960,28 +960,28 @@ if st.session_state.step == 1:
     <div class="wf-card">
         <div class="wf-icon">🔍</div>
         <div class="wf-content">
-            <div class="wf-title">1. Task Deconstruction</div>
+            <div class="wf-title">1. Task Analysis</div>
             <div class="wf-desc">Analyze visual data to identify chart type.</div>
         </div>
     </div>
     <div class="wf-card">
         <div class="wf-icon">🧠</div>
         <div class="wf-content">
-            <div class="wf-title">2. Strategic Scaffolding</div>
-            <div class="wf-desc">Provide coherent grouping logic.</div>
+            <div class="wf-title">2. Data Grouping & Planning</div>
+            <div class="wf-desc">Organise key features and trends logically..</div>
         </div>
     </div>
     <div class="wf-card">
         <div class="wf-icon">✍️</div>
         <div class="wf-content">
-            <div class="wf-title">3. Guided Drafting</div>
-            <div class="wf-desc">Facilitate writing with advanced lexical input.</div>
+            <div class="wf-title">3. Guided Writing</div>
+            <div class="wf-desc">Support writing with clear structure and useful vocabulary.</div>
         </div>
     </div>
     <div class="wf-card">
         <div class="wf-icon">⚖️</div>
         <div class="wf-content">
-            <div class="wf-title">4. Performance Assessment</div>
+            <div class="wf-title">4. Band Score Evaluation</div>
             <div class="wf-desc">Evaluate based on official Band Descriptors.</div>
         </div>
     </div>
