@@ -1319,10 +1319,13 @@ if st.session_state.step == 1:
          <br>👉 <b>Viết nháp Câu 4:</b> <i>[AI viết câu mô tả Category B và liên kết với Category A]</i>
      </li>
 
-     <!-- PHẦN 3: TỪ VỰNG -->
-     <li><b>🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</b>
-         <br><i>(Yêu cầu Người viết sử dụng tối thiểu 2 từ mỗi nhóm dưới đây)</i>
-         
+     <!-- ================================================================================== -->
+     <!-- PHẦN 3: BỘ CÔNG CỤ NÂNG BAND (EXAMINER'S TOOLKIT) -->
+     <!-- SYSTEM_ALERT: AI KHÔNG ĐƯỢC LIỆT KÊ SƠ SÀI. 
+          BẮT BUỘC PHẢI CHỌN LỌC ÍT NHẤT 15 TỪ/CỤM TỪ ĐẮT GIÁ SAU. -->
+     <!-- ================================================================================== -->
+     <li>     
+     <li><b>🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</b>                
          <ul style="margin-top:5px;">
             <!-- NHÓM 1: ĐỘNG TỪ TẢ XU HƯỚNG (TREND VERBS) -->
             <li><b>1. Động từ Xu hướng:</b>
