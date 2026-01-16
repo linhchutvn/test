@@ -1085,7 +1085,7 @@ if st.session_state.step == 1:
                          <!-- SYSTEM_ALERT: 
                               Dưới đây là DỮ LIỆU CỐ ĐỊNH (REFERENCE LIBRARY).
                               Nhiệm vụ của bạn: SAO CHÉP Y NGUYÊN TỪNG DÒNG HTML BÊN DƯỚI.
-                              TUYỆT ĐỐI KHÔNG ĐƯỢC LỌC. -->
+                              TUYỆT ĐỐI KHÔNG KHÔNG PHÂN TÍCH, KHÔNG ĐƯỢC LỌC. -->
                          <!-- ================================================================================== -->
                          <li>
                              <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
@@ -1131,13 +1131,15 @@ if st.session_state.step == 1:
                              <<br><b>1. Xác định "Hạng mục Phổ biến nhất" (The Dominant Category):</b>
                              <br>- Nhìn vào biểu đồ/bảng: <b>Hạng mục (Category)</b> nào có số liệu cao nhất/lớn nhất?
                              <br><i>(Lưu ý: Phải là hạng mục có tên cụ thể, không chọn 'Total' hay 'Other')</i>.
-                             <br>👉 <b>Câu tham khảo Feature 1:</b> <i>[AI viết câu Overview mô tả Hạng mục lớn nhất]</i>
+                             <br>- <b>Quyết định:</b> Chọn Mẫu nào?
+                             <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên Mẫu đã chọn + Chia đúng thì]</i>
                              <br>
                               <br><b>2. Xác định "Hạng mục Đối lập/Đặc biệt" (Contrast/Exception):</b>
                              <br>- <b>Tìm sự chênh lệch (Gap):</b> Khoảng cách giữa Hạng mục cao nhất và thấp nhất có lớn không?
                              <br>- <b>Tìm Hạng mục thấp nhất:</b> Cái nào thấp nhất (trừ Other)?
                              <br>- <b>Tìm điểm chung (Similarity):</b> Có hạng mục nào cao/thấp đồng đều ở tất cả các nhóm không?
-                             <br>👉 <b>Câu tham khảo Feature 2:</b> <i>[AI viết câu Overview mô tả đặc điểm còn lại]</i>
+                             <br>- <b>Quyết định:</b> Chọn Mẫu nào?
+                             <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên Mẫu đã chọn + Chia đúng thì]</i>
                          </li>
 
                          <!-- PHẦN 3: TỪ VỰNG -->
@@ -1151,7 +1153,7 @@ if st.session_state.step == 1:
                          <li><div style="background-color:#fff3e0; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
                              <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-                             [AI hãy viết đoạn Overview hoàn chỉnh. <b>QUAN TRỌNG:</b> Chỉ được sử dụng đúng cấu trúc câu đã chọn ở Phần 'PHÂN TÍCH'. Lắp ghép dữ liệu vào khung mẫu.]
+                             [AI hãy ghép 2 câu nháp ở Bước 2 và ththành đoạn Overview hoàn chỉnh.]
                              </div>
                          </div></li>
                        </ul>
