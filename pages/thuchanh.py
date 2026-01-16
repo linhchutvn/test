@@ -1042,6 +1042,14 @@ if st.session_state.step == 1:
             <br>- <b>Cách 1 (Basic):</b> "...how people spent their money on different commodities..."
             <br>- <b>Cách 2 (Advanced):</b> "...the breakdown of expenses for..."
             <br>- <b>Cách 3 (Comparative):</b> "...the differences in the consumption of [Category]..."</li>
+            
+            <div style="background-color:#e8f5e9; padding:10px; border-radius:5px; border: 1px dashed #27ae60;">
+                <strong style="color:#2ecc71;">🎓 2. EXAMINER'S EXTRA (Chủ đề Tiền tệ/Chi tiêu - Rất hay thi):</strong>
+                <br><i>(Áp dụng khi đề bài là "Spending / Budget / Expenses")</i>
+                <br>- <b>Cách 1:</b> "...how people <b>allocated their budget</b> to different commodities..."
+                <br>- <b>Cách 2:</b> "...the <b>distribution of expenses</b> for..."
+                <br>- <b>Cách 3:</b> "...consumption patterns regarding [Category]..."
+            </div>
     
         <li><b>Verb (Động từ khuyên dùng):</b>
             <br><i>compares / gives information about / shows how many / shows the distribution of</i>.</li>
@@ -1088,17 +1096,17 @@ if st.session_state.step == 1:
                                  <br>"<b>&#91;Category A&#93;</b> is by far the most popular option/reason."
                                  <br>✅ <b>Loại 2: Chiếm đa số</b>
                                  <br>"The majority of <b>&#91;Topic&#93;</b> is allocated to <b>&#91;Category A&#93;</b>."                           
-                                 <br>✅ <b>Loại 3: So sánh (nếu có 2 biểu đồ)</b>
+                                 <br>✅ <b>Loại 3: So sánh đối lập (2 biểu đồ)</b>
                                  <br>"While <b>&#91;Category A&#93;</b> is the dominant figure in <b>&#91;Group 1&#93;</b>, <b>&#91;Category B&#93;</b> takes the lead in <b>&#91;Group 2&#93;</b>."
                              </div>
 
                              <!-- KHỐI 3: FEATURE 2 (OTHER FEATURES) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 3. Các mẫu câu tả Đặc điểm phụ:</b>                             
-                                 <br>✅ <b>Loại 1: Nhóm thấp nhất</b>
-                                 <br>"<b>&#91;Category C&#93;</b> represents the least significant portion."                              
-                                 <br>✅ <b>Loại 2: Sự chênh lệch (Gap)</b>
-                                 <br>"There is a significant difference between the figures for <b>&#91;Category A&#93;</b> and <b>&#91;Category C&#93;</b>."                             
+                                 <br>✅ <b>Loại 1: Nhóm thấp nhất (Có tên cụ thể)</b>
+                                 <br>"<b>&#91;Category C&#93;</b> represents the least significant portion among the specified categories."                              
+                                 <br>✅ <b>Loại 2: Điểm tương đồng (Similarity)</b>
+                                 <br>"It is also noticeable that <b>&#91;Category B&#93;</b> accounts for a significant portion in both charts."
                              </div>
                          </li>
                          
@@ -1107,14 +1115,16 @@ if st.session_state.step == 1:
                          <!-- PHẦN 2: PHÂN TÍCH -->
                          <li>
                              <b>🔍 PHÂN TÍCH BÀI NÀY (Selection & Drafting):</b>
-                             <br><b>1. Xác định "The Giant" (Sentence 1):</b>
-                             <br>- Miếng bánh nào to nhất? <i>[AI trả lời. VD: Employment]</i>
-                             <br>- Có áp đảo không hay chỉ nhỉnh hơn chút?
-                             <br>👉 <b>Câu tham khảo Feature 1:</b> <i>[AI viết câu Overview 1]</i>
+                             <<br><b>1. Xác định "Hạng mục Phổ biến nhất" (The Dominant Category):</b>
+                             <br>- Nhìn vào biểu đồ/bảng: <b>Hạng mục (Category)</b> nào có số liệu cao nhất/lớn nhất?
+                             <br><i>(Lưu ý: Phải là hạng mục có tên cụ thể, không chọn 'Total' hay 'Other')</i>.
+                             <br>👉 <b>Câu tham khảo Feature 1:</b> <i>[AI viết câu Overview mô tả Hạng mục lớn nhất]</i>
                              <br>
-                             <br><b>2. Xác định "The Minor" hoặc "Contrast" (Sentence 2):</b>
-                             <br>- Miếng bánh nào nhỏ nhất? Hoặc sự khác biệt lớn nhất giữa 2 biểu đồ là gì?
-                             <br>👉 <b>Câu tham khảo Feature 2:</b> <i>[AI viết câu Overview 2]</i>
+                              <br><b>2. Xác định "Hạng mục Đối lập/Đặc biệt" (Contrast/Exception):</b>
+                             <br>- <b>Tìm sự chênh lệch (Gap):</b> Khoảng cách giữa Hạng mục cao nhất và thấp nhất có lớn không?
+                             <br>- <b>Tìm Hạng mục thấp nhất:</b> Cái nào thấp nhất (trừ Other)?
+                             <br>- <b>Tìm điểm chung (Similarity):</b> Có hạng mục nào cao/thấp đồng đều ở tất cả các nhóm không?
+                             <br>👉 <b>Câu tham khảo Feature 2:</b> <i>[AI viết câu Overview mô tả đặc điểm còn lại]</i>
                          </li>
 
                          <!-- PHẦN 3: TỪ VỰNG -->
@@ -1161,7 +1171,7 @@ if st.session_state.step == 1:
              <br>"Standing at <b>&#91;Data&#93;</b>, <b>&#91;Category A&#93;</b> is the most popular choice."
          </div>
 
-         <!-- KHỐI 2: SO SÁNH & TOÁN HỌC (PAGE 4) -->
+         <!-- KHỐI 2: SO SÁNH & TOÁN HỌC -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 2: So sánh gấp lần (Math Language):</b>
              <br><i>(Dùng để so sánh Category A với Category B)</i>
@@ -1169,11 +1179,11 @@ if st.session_state.step == 1:
              <br>"The figure for <b>&#91;Category A&#93;</b> is <b>exactly/nearly double</b> that of <b>&#91;Category B&#93;</b> (Data A vs Data B)."
              <br>"<b>&#91;Category A&#93;</b> is <b>three times as high as</b> <b>&#91;Category B&#93;</b>."
              
-             <br>✅ <b>Cấu trúc "Which" clause (Page 4):</b>
+             <br>✅ <b>Cấu trúc "Which" clause:</b>
              <br>"<b>&#91;Category A&#93;</b> stands at <b>&#91;Data&#93;</b>, <b>which is significantly higher than</b> the figure for <b>&#91;Category B&#93;</b>."
          </div>
 
-         <!-- KHỐI 3: CẤU TRÚC "WITH" & "MAKING IT" (PAGE 5/6) -->
+         <!-- KHỐI 3: CẤU TRÚC "WITH" & "MAKING IT" -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 3: Đưa số liệu phức hợp:</b>
              <br>✅ <b>Cấu trúc "With respective figures":</b>
@@ -1282,7 +1292,7 @@ if st.session_state.step == 1:
              <br>"The figures for X and Y are relatively small, <b>ranging from</b> <b>&#91;Data 1&#93;</b> to <b>&#91;Data 2&#93;</b>."
          </div>
 
-         <!-- KHỐI 3: CẤU TRÚC "NEGLIGIBLE" (KHÔNG ĐÁNG KỂ - PAGE 5) -->
+         <!-- KHỐI 3: CẤU TRÚC "NEGLIGIBLE" (KHÔNG ĐÁNG KỂ) -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
              <b>► Bước 3: Mô tả số liệu rất nhỏ:</b>
              <br>✅ <b>Cấu trúc Negligible:</b>
@@ -1301,7 +1311,7 @@ if st.session_state.step == 1:
      <li>     
          <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP:</b>
          <br><b>🔍 Phân tích Dữ liệu Body 2:</b>
-         <br>- Nhóm này gồm: Các miếng bánh nhỏ còn lại.
+         <br>- Nhóm này gồm: Các hạng mục còn lại.
          <br>
          <br><b>✅ BƯỚC 1: Xử lý Câu chuyển đoạn & Đối lập</b>
          <br>- Dùng "Turning to..." hoặc "In stark contrast..." để báo hiệu sự thay đổi về độ lớn dữ liệu.
