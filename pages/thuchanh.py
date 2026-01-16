@@ -1153,7 +1153,7 @@ if st.session_state.step == 1:
                          <li><div style="background-color:#fff3e0; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
                              <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-                             [AI hãy ghép 2 câu nháp ở Bước 2 và ththành đoạn Overview hoàn chỉnh.]
+                             [AI hãy ghép 2 câu nháp ở "PHẦN 2: PHÂN TÍCH" và thành đoạn Overview hoàn chỉnh.]
                              </div>
                          </div></li>
                        </ul>
@@ -1192,7 +1192,7 @@ if st.session_state.step == 1:
          </div>
 
          <!-- KHỐI 2: SO SÁNH -->
-         <!-- KEEP_FULL_BLOCK_1 -->
+         <!-- KEEP_FULL_BLOCK_2 -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 2: So sánh gấp lần (Math Language):</b>
              <br><i>(Dùng để so sánh Category A với Category B)</i>
@@ -1205,7 +1205,7 @@ if st.session_state.step == 1:
          </div>
 
          <!-- KHỐI 3: ĐƯA SỐ LIỆU PHỨC HỢP -->
-         <!-- KEEP_FULL_BLOCK_1 -->
+         <!-- KEEP_FULL_BLOCK_3 -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 3: Đưa số liệu phức hợp:</b>
              <br>✅ <b>Cấu trúc "With respective figures":</b>
@@ -1280,7 +1280,7 @@ if st.session_state.step == 1:
      <li><div style="background-color:#fff8e1; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ffa502;">
          <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
          <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI hãy ghép các câu nháp ở Bước 3 thành đoạn Body 1 hoàn chỉnh.]
+         [AI hãy ghép các câu nháp ở "PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP" thành đoạn Body 1 hoàn chỉnh.]
          </div>
      </div></li>
    </ul>
@@ -1300,31 +1300,30 @@ if st.session_state.step == 1:
          <br><i>(Tập trung vào sự tương phản và gom nhóm nhỏ)</i>
          
          <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN -->
+         <!-- KEEP_FULL_BLOCK_1 -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
              <b>► Bước 1: Câu chuyển đoạn (Transition):</b>
-             <br>✅ <b>Mẫu 1: Chuyển sang nhóm còn lại:</b>
-             <br>"<b>Turning to</b> the remaining categories,..."
-             <br>✅ <b>Mẫu 2: Đối lập (Contrast):</b>
-             <br>"<b>In contrast / By comparison</b>, the figures for <b>&#91;Category C & D&#93;</b> are significantly lower."
+             <br><i>(Chọn 1 trong 2 mẫu sau)</i>
+             <br>✅ <b>Mẫu 1 (Chuyển hướng):</b> "<b>Turning to</b> the remaining categories,..."
+             <br>✅ <b>Mẫu 2 (Đối lập):</b> "<b>In contrast / By comparison</b>, the figures for <b>&#91;Category C & D&#93;</b> <b>[V_Tense: were/are]</b> significantly lower."
          </div>
 
          <!-- KHỐI 2: MIÊU TẢ NHÓM SỐ LIỆU NHỎ -->
+         <!-- KEEP_FULL_BLOCK_2 -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
              <b>► Bước 2: Gom nhóm (Grouping):</b>
-             <br><i>(Nếu các số liệu nhỏ xấp xỉ nhau)</i>
-             <br>✅ <b>Cấu trúc "Collectively":</b>
-             <br>"<b>&#91;Category C&#93;</b> and <b>&#91;Category D&#93;</b> <b>collectively account for</b> only <b>&#91;Total %&#93;</b>."
-             <br>✅ <b>Cấu trúc Liệt kê (Range):</b>
-             <br>"The figures for X and Y are relatively small, <b>ranging from</b> <b>&#91;Data 1&#93;</b> to <b>&#91;Data 2&#93;</b>."
+             <br><i>(Chọn 1 trong 2 mẫu sau)</i>
+             <br>✅ <b>Mẫu 1 (Collectively):</b> "<b>&#91;Category C&#93;</b> and <b>&#91;Category D&#93;</b> <b>collectively [V_Tense: accounted/account] for</b> only <b>&#91;Total %&#93;</b>."
+             <br>✅ <b>Mẫu 2 (Range - Chú ý Formal):</b> "The figures for X and Y <b>[V_Tense: were/are]</b> relatively small, <b>ranging from</b> <b>&#91;Data 1&#93;</b> to <b>&#91;Data 2&#93;</b>."
          </div>
 
-         <!-- KHỐI 3: CẤU TRÚC "NEGLIGIBLE" (KHÔNG ĐÁNG KỂ) -->
+          <!-- KHỐI 3: CẤU TRÚC "NEGLIGIBLE" -->
+         <!-- KEEP_FULL_BLOCK_3 -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
              <b>► Bước 3: Mô tả số liệu rất nhỏ:</b>
-             <br>✅ <b>Cấu trúc Negligible:</b>
-             <br>"The proportion of <b>&#91;Category E&#93;</b> is <b>negligible/insignificant</b>, at only <b>&#91;Data&#93;</b>."
-             <br>✅ <b>Cấu trúc Minority:</b>
-             <br>"Only a <b>small minority</b> of people (<b>&#91;Data&#93;</b>) chose <b>&#91;Category E&#93;</b>."
+             <br><i>(Chọn 1 trong 2 mẫu sau)</i>
+             <br>✅ <b>Mẫu 1 (Negligible):</b> "The proportion of <b>&#91;Category E&#93;</b> <b>[V_Tense: was/is]</b> <b>negligible/insignificant</b>, at only <b>&#91;Data&#93;</b>."
+             <br>✅ <b>Mẫu 2 (Minority):</b> "Only a <b>small minority</b> of people (<b>&#91;Data&#93;</b>) <b>[V_Tense: chose/choose]</b> <b>&#91;Category E&#93;</b>."
          </div>
          </div>
      </li>
@@ -1332,25 +1331,25 @@ if st.session_state.step == 1:
      <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
      <!-- ================================================================================== -->
-     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP -->
+     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP (PROCESS) -->
      <!-- ================================================================================== -->
      <li>     
          <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP:</b>
          <br><b>🔍 Phân tích Dữ liệu Body 2:</b>
-         <br>- Nhóm này gồm: Các hạng mục còn lại.
+         <br>- Nhóm này gồm: Các hạng mục còn lại (nhỏ/thấp).
+         <br>- <b>⚠️ REMINDER:</b> Kiểm tra lại thì (Quá khứ/Hiện tại) và cách viết khoảng số (from...to...).
          <br>
          <br><b>✅ BƯỚC 1: Xử lý Câu chuyển đoạn & Đối lập</b>
-         <br>- Dùng "Turning to..." hoặc "In stark contrast..." để báo hiệu sự thay đổi về độ lớn dữ liệu.
-         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu chuyển]</i>
+         <br>- <b>Quyết định:</b> Chọn Mẫu nào?
+         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu chuyển + Chia đúng thì]</i>
          <br>
          <br><b>✅ BƯỚC 2: Xử lý các hạng mục tương đồng/nhỏ</b>
-         <br>- Có hạng mục nào bằng nhau không? (Similar).
-         <br>- Có hạng mục nào quá nhỏ không? (Negligible).
-         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu mô tả nhóm nhỏ]</i>
+         <br>- <b>Quyết định:</b> Chọn Mẫu nào?
+         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu mô tả nhóm nhỏ + Chia đúng thì]</i>
          <br>
-         <br><b>✅ BƯỚC 3: So sánh chéo (Cross-comparison - Nếu có 2 Charts)</b>
-         <br>- So sánh Category X ở Chart 1 với Chart 2.
-         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu so sánh cuối cùng]</i>
+         <br><b>✅ BƯỚC 3: Xử lý phần còn lại (Negligible)</b>
+         <br>- <b>Quyết định:</b> Chọn Mẫu nào?
+         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu chốt nhóm thấp nhất + Chia đúng thì]</i>
      </li>
 
      <!-- ================================================================================== -->
@@ -1387,7 +1386,7 @@ if st.session_state.step == 1:
      <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
          <b>📝 NỘI DUNG MẪU (SAMPLE BODY 2):</b><br>
          <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         Turning to the remaining categories, study is a significant reason for both groups, with figures ranging from 15% to 20%. Interestingly, only 15% of people migrated for a definite job, which is similar to the figure for other reasons. Conversely, "other reasons" account for the smallest percentage in the emigration chart, at a negligible 8%.
+         [AI hãy ghép các câu nháp ở "PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP" thành đoạn Body 2 hoàn chỉnh.
          </div>
      </div></li>
    </ul>
