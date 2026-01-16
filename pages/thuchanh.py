@@ -1029,6 +1029,7 @@ if st.session_state.step == 1:
                     # (Tư duy cốt lõi: Ranking (Xếp hạng) & Proportion (Tỷ trọng))
                     # =================================================================
 
+                    <br><i>(LƯU Ý: Nhìn Năm trong đề bài để quyết định THÌ cho toàn bài viết)</i>
                     1. **"intro_guide" (Paraphrase):**                    
     - <ul>
         <li><b>Cấu trúc chuẩn (Formula):</b> <code>[Subject] + [Finite Verb] + [Object/Topic] + [Place] + [Time (Specific Year)]</code>.</li>
@@ -1088,8 +1089,7 @@ if st.session_state.step == 1:
                              <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
                              <strong style="color:#c0392b;">⛔ LƯU Ý QUAN TRỌNG (EXAMINER'S NOTE):</strong>
                              <br><i>Trong phần Overview, tuyệt đối <b>KHÔNG</b> nhắc đến nhóm <b>"Other/Others"</b> dù nó lớn hay nhỏ. Chỉ tập trung vào các hạng mục có tên cụ thể (Specific Categories).</i>
-                             <br><i>(Nhìn năm trong đề bài để quyết định THÌ cho toàn bài viết)</i>
-                             
+                                                          
                              <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
                              <strong style="color:#d35400;">📚 KHO MẪU CÂU OVERVIEW (STATIC):</strong>
                             <br><i>(Tập trung vào Cái lớn nhất & Sự chênh lệch)</i>
