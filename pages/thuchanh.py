@@ -1172,8 +1172,10 @@ if st.session_state.step == 1:
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
          <strong style="color:#d35400;">📚 KHO MẪU CÂU BODY 1 (STATIC & COMPARISON):</strong>
          <br><i>(Áp dụng kỹ thuật: Ranking + Math Language + Complex Clauses)</i>
+         <br><i>(Lưu ý: <b>[V_Tense]</b> = Chia động từ theo Năm của đề bài (Quá khứ/Hiện tại/Tương lai))</i>
          
          <!-- KHỐI 1: CÂU MỞ ĐẦU (STARTING WITH THE HIGHEST) -->
+         <!-- KEEP_FULL_BLOCK_1 -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 1: Câu mở đầu (Top Ranking):</b>
              <br><i>(Luôn bắt đầu bằng Category lớn nhất)</i>
@@ -1189,7 +1191,8 @@ if st.session_state.step == 1:
              <br>"Standing at <b>&#91;Data&#93;</b>, <b>&#91;Category A&#93;</b> is the most popular choice."
          </div>
 
-         <!-- KHỐI 2: SO SÁNH & TOÁN HỌC -->
+         <!-- KHỐI 2: SO SÁNH -->
+         <!-- KEEP_FULL_BLOCK_1 -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 2: So sánh gấp lần (Math Language):</b>
              <br><i>(Dùng để so sánh Category A với Category B)</i>
@@ -1201,7 +1204,8 @@ if st.session_state.step == 1:
              <br>"<b>&#91;Category A&#93;</b> stands at <b>&#91;Data&#93;</b>, <b>which is significantly higher than</b> the figure for <b>&#91;Category B&#93;</b>."
          </div>
 
-         <!-- KHỐI 3: CẤU TRÚC "WITH" & "MAKING IT" -->
+         <!-- KHỐI 3: ĐƯA SỐ LIỆU PHỨC HỢP -->
+         <!-- KEEP_FULL_BLOCK_1 -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 3: Đưa số liệu phức hợp:</b>
              <br>✅ <b>Cấu trúc "With respective figures":</b>
@@ -1224,17 +1228,17 @@ if st.session_state.step == 1:
          <br>- Mục tiêu: Mô tả số liệu và so sánh độ lớn.
          <br>
          <br><b>✅ BƯỚC 1: Xử lý Top 1 (The Winner)</b>
-         <br>- <b>Quyết định chọn Mẫu:</b> Dùng "Account for" hay "Rank first"?
-         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu mô tả Category lớn nhất]</i>
+         <br>- <b>Quyết định:</b> Chọn Mẫu nào?
+         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên Mẫu đã chọn + Chia đúng thì]</i>
          <br>
          <br><b>✅ BƯỚC 2: So sánh với Top 2 (The Runner-up)</b>
          <br>- <b>Logic Toán học:</b> Top 1 có gấp đôi Top 2 không? Hay chỉ hơn một chút?
-         <br>- <b>Quyết định:</b> Dùng cấu trúc "Double/Triple" (nếu số đẹp) hoặc "Higher than" (nếu số lẻ).
-         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu so sánh giữa Top 1 và Top 2]</i>
+         <br>- <b>Quyết định:</b> Chọn Mẫu nào?
+         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên Mẫu đã chọn + Chia đúng thì]</i>
          <br>
          <br><b>✅ BƯỚC 3: Gom nhóm (nếu có Top 3 lớn)</b>
-         <br>- Dùng cấu trúc "With respective figures being..." để liệt kê nhanh nếu cần.
-         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu chốt nhóm lớn]</i>
+         <br>- <b>Quyết định:</b> Chọn Mẫu nào?
+         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu chốt số liệu]</i>
      </li>
 
      <!-- ================================================================================== -->
@@ -1276,7 +1280,7 @@ if st.session_state.step == 1:
      <li><div style="background-color:#fff8e1; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ffa502;">
          <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
          <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         Regarding the most significant reasons, employment takes the lead in immigration, accounting for 38%. This figure is nearly double that of family reunification, which stands at 23% and ranks second. Meanwhile, for emigrants, accompanying family is the primary motivation, constituting the vast majority at 38%.
+         [AI hãy ghép các câu nháp ở Bước 3 thành đoạn Body 1 hoàn chỉnh.]
          </div>
      </div></li>
    </ul>
