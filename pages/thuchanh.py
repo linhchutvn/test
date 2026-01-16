@@ -1151,7 +1151,7 @@ if st.session_state.step == 1:
                          <li><div style="background-color:#fff3e0; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
                              <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-                             Overall, it is clear that employment is the primary reason for immigration, whereas family reunification is the main driver for emigration. Additionally, study-related purposes account for a significant portion in both groups.
+                             [AI hãy viết đoạn Overview hoàn chỉnh. <b>QUAN TRỌNG:</b> Chỉ được sử dụng đúng cấu trúc câu đã chọn ở Phần 'PHÂN TÍCH'. Lắp ghép dữ liệu vào khung mẫu.]
                              </div>
                          </div></li>
                        </ul>
