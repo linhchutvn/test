@@ -1030,6 +1030,8 @@ if st.session_state.step == 1:
                     # =================================================================
 
                     <br><i>(LƯU Ý: Nhìn Năm trong đề bài để quyết định THÌ cho toàn bài viết)</i>
+                    <br>Tuyệt đối <b>KHÔNG</b> dùng dấu gạch ngang để chỉ khoảng số (VD: <i>7-14%</i>).
+                    <br>👉 <b>Phải viết chữ:</b> <i>"between 7% and 14%"</i> hoặc <i>"from 7% to 14%"</i>.
                     1. **"intro_guide" (Paraphrase):**                    
     - <ul>
         <li><b>Cấu trúc chuẩn (Formula):</b> <code>[Subject] + [Finite Verb] + [Object/Topic] + [Place] + [Time (Specific Year)]</code>.</li>
