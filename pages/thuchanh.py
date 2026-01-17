@@ -1090,7 +1090,8 @@ if st.session_state.step == 1:
                          <li>
                              <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
                              <strong style="color:#c0392b;">⛔ LƯU Ý QUAN TRỌNG (EXAMINER'S NOTE):</strong>
-                             <br><i>Trong phần Overview, tuyệt đối <b>KHÔNG</b> nhắc đến nhóm <b>"Other/Others"</b> dù nó lớn hay nhỏ. Chỉ tập trung vào các hạng mục có tên cụ thể (Specific Categories).</i>
+                             <br><i>1. Tuyệt đối <b>KHÔNG</b> nhắc đến tên nhóm <b>"Other/Others"</b>.</i>
+                             <br><i>2. <b>TRÁNH</b> khẳng định "X là thấp nhất" (The lowest) nếu trong biểu đồ còn có nhóm "Other" nhỏ hơn nó. Thay vào đó, hãy dùng từ mang nghĩa "nhóm nhỏ/thiểu số".</i>
                                                           
                              <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
                              <strong style="color:#d35400;">📚 KHO MẪU CÂU OVERVIEW (STATIC):</strong>
