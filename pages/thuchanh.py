@@ -1057,12 +1057,7 @@ if st.session_state.step == 1:
     
         <li><b>Verb (Động từ khuyên dùng):</b>
             <br><i>compares / gives information about / shows how many / shows the distribution of</i>.</li>
-    
-        <li><b>Time Paraphrase (Thời gian Tĩnh):</b>
-            <br>- <i>in [Year]</i>.
-            <br>- <i>in the year [Year]</i>.
-            <br><i>(Lưu ý: Không dùng "Over a period of..." vì đây là bài Tĩnh).</i></li>
-        
+            
         <!-- PHẦN PARAPHRASE GỢI Ý THÊM -->
         <li><div style="background-color:#fff3e0; padding:10px; border-radius:5px; border: 1px dashed #f39c12; margin-top:5px;">
             <strong style="color:#d35400;">🔄 GỢI Ý PARAPHRASING (VOCABULARY INPUT):</strong>
