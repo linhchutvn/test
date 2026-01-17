@@ -1916,7 +1916,7 @@ if st.session_state.step == 1:
 # ==========================================
 if st.session_state.step == 2 and st.session_state.guide_data:
     
-    # --- 1. CSS "ĐÓNG ĐĂNG" CỘT TRÁI ---
+    # --- 1. CSS "ĐÓNG BĂNG" CỘT TRÁI ---
     st.markdown("""
         <style>
             /* Nhắm vào container chứa cả 2 cột */
@@ -1939,7 +1939,7 @@ if st.session_state.step == 2 and st.session_state.guide_data:
                 padding-right: 10px !important;
             }
 
-            /* Tùy chỉnh thanh cuộn cho cột trái (nếu có) */
+            /* Tùy chỉnh thanh cuộn cho cột trái */
             [data-testid="stHorizontalBlock"] > div:nth-child(1) > div:nth-child(1)::-webkit-scrollbar {
                 width: 4px;
             }
@@ -1948,7 +1948,7 @@ if st.session_state.step == 2 and st.session_state.guide_data:
                 border-radius: 10px;
             }
             
-            /* Tăng khoảng cách giữa các ô nhập liệu bên phải cho dễ nhìn */
+            /* Tăng khoảng cách giữa các ô nhập liệu bên phải */
             .stTextArea {
                 margin-bottom: 1rem !important;
             }
@@ -1957,12 +1957,31 @@ if st.session_state.step == 2 and st.session_state.guide_data:
 
     data = st.session_state.guide_data
 
-    # --- 2. HÀM RENDER (Giữ nguyên để tránh lỗi NameError) ---
+    # --- 2. HÀM RENDER (ĐÃ SỬA: THÊM WORD COUNT RIÊNG) ---
     def render_writing_section(title, guide_key, input_key):
-        st.markdown(f"#### {title}")
+        # Tính số từ hiện tại của ô này
+        current_text = st.session_state.get(input_key, "")
+        word_count = len(current_text.split())
+        
+        # Hiển thị Tiêu đề và Số từ trên cùng 1 hàng
+        c_title, c_count = st.columns([8, 2])
+        with c_title:
+            st.markdown(f"#### {title}")
+        with c_count:
+            st.markdown(f"""
+            <div style="text-align: right; padding-top: 10px;">
+                <span style="background-color: #F1F5F9; color: #64748B; padding: 4px 10px; border-radius: 12px; font-size: 12px; border: 1px solid #E2E8F0;">
+                    {word_count} words
+                </span>
+            </div>
+            """, unsafe_allow_html=True)
+
+        # Phần hướng dẫn (Expander)
         with st.expander(f"💡 Hướng dẫn viết {title}", expanded=False):
             g_text = data.get(guide_key, "Không có hướng dẫn.")
             st.markdown(f"<div class='guide-box'>{g_text}</div>", unsafe_allow_html=True)
+        
+        # Ô nhập liệu
         return st.text_area(label=title, height=200, key=input_key, placeholder=f"Bắt đầu viết {title} tại đây...", label_visibility="collapsed")
 
     # --- 3. CHIA CỘT LAYOUT (4-6) ---
@@ -1986,19 +2005,9 @@ if st.session_state.step == 2 and st.session_state.guide_data:
     with col_right:
         st.subheader("✍️ Khu vực viết bài")
         
-        # Bộ đếm từ
-        def count_w(k): return len(st.session_state.get(k, "").split())
-        current_wc = count_w("in_intro") + count_w("in_overview") + count_w("in_body1") + count_w("in_body2")
-        
-        st.markdown(f"""
-            <div style="text-align: right; margin-top: -45px;">
-                <span style="background-color: #10B981; color: white; padding: 5px 15px; border-radius: 15px; font-weight: bold; font-size: 14px;">
-                    Word count: {current_wc}
-                </span>
-            </div>
-        """, unsafe_allow_html=True)
+        # --- ĐÃ XÓA WORD COUNT TỔNG Ở ĐÂY ---
 
-        # Render các ô nhập liệu
+        # Render các ô nhập liệu (Có word count riêng từng phần)
         intro_text = render_writing_section("Introduction", "intro_guide", "in_intro")
         overview_text = render_writing_section("Overview", "overview_guide", "in_overview")
         body1_text = render_writing_section("Body 1", "body1_guide", "in_body1")
@@ -2006,9 +2015,22 @@ if st.session_state.step == 2 and st.session_state.guide_data:
 
         st.markdown("---")
         
-        # Nút chấm điểm (Sử dụng Prompt gốc của bạn)
+        # --- TÍNH TỔNG SỐ TỪ VÀ HIỂN THỊ Ở DƯỚI CÙNG ---
+        def count_w(k): return len(st.session_state.get(k, "").split())
+        total_wc = count_w("in_intro") + count_w("in_overview") + count_w("in_body1") + count_w("in_body2")
+        
+        # Hiển thị Total Word Count
+        st.markdown(f"""
+            <div style="text-align: right; margin-bottom: 15px;">
+                <span style="background-color: #10B981; color: white; padding: 8px 20px; border-radius: 20px; font-weight: bold; font-size: 16px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    Total word count: {total_wc}
+                </span>
+            </div>
+        """, unsafe_allow_html=True)
+
+        # Nút chấm điểm
         if st.button("🎓 Gửi bài chấm điểm (Examiner Pro)", type="primary", width="stretch"):
-            if current_wc < 30:
+            if total_wc < 30:
                 st.warning("⚠️ Bài viết quá ngắn, AI không thể chấm điểm chính xác.")
             else:
                 with st.status("👨‍🏫 Giám khảo đang chấm bài...") as status:
