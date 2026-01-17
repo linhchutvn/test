@@ -1033,7 +1033,8 @@ if st.session_state.step == 1:
                     <br>Tuyệt đối <b>KHÔNG</b> dùng dấu gạch ngang để chỉ khoảng số (VD: <i>7-14%</i>).
                     <br>👉 <b>Phải viết chữ:</b> <i>"between 7% and 14%"</i> hoặc <i>"from 7% to 14%"</i>.
                     1. **"intro_guide" (Paraphrase):**                    
-    - <ul>
+    - <ul>        
+        <!-- CẤU TRÚC CHUẨN (CỐ ĐỊNH - KHÔNG ĐƯỢC THAY ĐỔI) -->
         <li><b>Cấu trúc chuẩn (Formula):</b> <code>[Subject] + [Finite Verb] + [Object/Topic] + [Place] + [Time (Specific Year)]</code>.</li>
     
         <li><b>Subject (Lưu ý quan trọng):</b>
@@ -1100,6 +1101,7 @@ if st.session_state.step == 1:
                              <!-- KHỐI 1: TỔNG QUÁT -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 1. Cấu trúc tổng quát:</b>
+                                 <!-- CẤU TRÚC CHUẨN (CỐ ĐỊNH - KHÔNG ĐƯỢC THAY ĐỔI) -->
                                  <br><code>Overall, it is clear that &#91;Most Popular Category&#93; accounts for the largest share. In contrast, &#91;Least Popular Category&#93; makes up the smallest proportion.</code>
                              </div>
 
