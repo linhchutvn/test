@@ -1500,14 +1500,17 @@ if st.session_state.step == 1:
                              </div>
                              <!-- ================================================================= -->
                              <!-- 👇👇👇 DÁN ĐOẠN CẢNH BÁO VÀO ĐÂY 👇👇👇 -->
-                             <!-- ================================================================= -->
+                             <!-- ================================================================= -->                          
                              
-                             <div style="background-color:#ffebee; border:1px solid #ef5350; padding:10px; margin-top:15px; margin-bottom:5px; border-radius:4px;">
-                                 <strong style="color:#c62828;">⛔ CẤM KỴ (STRICT GRAMMAR RULES):</strong>
-                                 <br>1. Tuyệt đối <b>KHÔNG</b> dùng động từ <i>"saw / witnessed / experienced"</i> cho chủ ngữ là <b>Số liệu</b> (The figure / The percentage).
-                                 <br>👉 <b>Số liệu</b> chỉ đi với: <i>increased, decreased, rose, fell</i>.
-                                 <br>2. Tuyệt đối <b>KHÔNG</b> dùng động từ <i>"increased / decreased"</i> cho chủ ngữ là <b>Tên nước / Hạng mục</b> (The UK / Farming).
-                                 <br>👉 <b>Hạng mục</b> phải đi với: <i>saw / witnessed ... IN ...</i>
+                             <div style="background-color:#ffebee; border:1px solid #ef5350; padding:10px; margin-bottom:10px; border-radius:4px;">
+                                 <strong style="color:#c62828;">⛔ LƯU Ý VỀ ĐỘNG TỪ (VERB RESTRICTIONS):</strong>
+                                 <br>1. Với chủ ngữ là <b>SỐ LIỆU</b> (The figure / The percentage):
+                                 <br>👉 <b>Nên dùng:</b> <i>increased, decreased, rose, fell</i> (Trực tiếp).
+                                 <br>👉 <b>Chấp nhận:</b> <i>experienced, underwent</i> (Trải qua).
+                                 <br>👉 <b>HẠN CHẾ:</b> <i>saw, witnessed</i> (Vì con số không có mắt để nhìn).
+                                 
+                                 <br>2. Với chủ ngữ là <b>HẠNG MỤC / NƠI CHỐN</b> (The UK / Farming):
+                                 <br>👉 <b>Phải dùng:</b> <i>saw / witnessed / experienced ... <b>IN</b> ...</i>
                              </div>
 
                              <!-- ================================================================= -->
