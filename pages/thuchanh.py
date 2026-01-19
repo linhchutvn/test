@@ -1501,10 +1501,10 @@ if st.session_state.step == 1:
                              <!-- KHỐI 2: TRENDS (LIỆT KÊ ĐỦ 4 LOẠI) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 2. Các mẫu câu Xu hướng (Trends):</b>
-                                 <br><i>(Người viết chọn 1 trong 3 loại dưới đây tùy vào biểu đồ)</i>                                
+                                 <br><i>(Người viết chọn 1 trong 4 loại dưới đây tùy vào biểu đồ)</i>                                
                                  <br>✅ <b>Loại 1: Đồng loạt Tăng/Giảm (Same Direction)</b>
                                  <br><i>(Dùng khi tất cả cùng Tăng hoặc cùng Giảm)</i>
-                                 <br>"It is clear/noticeable that the total <b>&#91;Topic&#93;</b> increased/decreased over the period."</b>                               
+                                 <br>"It is clear/noticeable that the total <b>&#91;Topic&#93;</b> increased/decreased over the given period / period shown."</b>                               
                                  <br>✅ <b>Loại 2: Xu hướng ngược (Mix / Opposite)</b>
                                  <br><i>(CHỈ DÙNG khi A Tăng còn B Giảm - Ngược chiều hoàn toàn)</i>
                                  <br>"It is clear/noticeable that while the figures for <b>&#91;Category A&#93;</b> and <b>&#91;Category B&#93;</b> increased, the opposite was true for <b>&#91;Category C&#93;</b>."                           
