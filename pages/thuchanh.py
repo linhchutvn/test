@@ -1667,23 +1667,23 @@ if st.session_state.step == 1:
          <br>
          <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu (Starting Point)(Áp dụng KHỐI 1)</b>
          <br>- <b>Dữ liệu năm đầu:</b> [Category A] = ... ; [Category B] = ...
-         <br>- <b>Quyết định chọn Mẫu:</b> <i>(AI trả lời: Nên dùng Mẫu nào ở KHỐI 1? Tại sao?)</i>
-         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên mẫu đã chọn]</i>
+         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 1:</b> <i>(AI trả lời: Nên dùng Cấu trúc nào? Tại sao?)</i>
+         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
          <br>
          <br><b>✅ BƯỚC 2: Xử lý Xu hướng chính (Main Trend)(Áp dụng KHỐI 2)</b>
          <br>- <b>Đặc điểm dữ liệu:</b> [Category A] tăng thẳng đứng, hay tăng rồi giảm? Có đạt đỉnh không?
-         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 2:</b> <i>(AI trả lời: Nên dùng "Before V-ing", "Reach a peak" hay "Followed by"?)</i>
+         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 2:</b> <i>(AI trả lời: Nên dùng Cấu trúc nào? Tại sao?)</i>
          <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
          <br>
          <br><b>✅ BƯỚC 3: Xử lý Kết thúc & Chốt số liệu (Áp dụng KHỐI 3)</b>
          <br>- <b>Nhiệm vụ:</b> Sử dụng cấu trúc mệnh đề rút gọn để đưa số liệu năm cuối cho mượt mà.
-         <br>- <b>Quyết định chọn Mẫu:</b> <i>(VD: Chọn Mẫu "Finishing the period at" để tạo sự tinh tế)</i>
-         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu chốt năm cuối cho Category A]</i>
+         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 3:</b> <i>(AI trả lời: Nên dùng Cấu trúc nào? Tại sao?)</i>
+         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
          <br>
          <br><b>✅ BƯỚC 4: Xử lý Category còn lại (Comparison)(Áp dụng KHỐI 4)</b>
          <br>- <b>Mối quan hệ:</b> [Category B] cùng chiều hay ngược chiều [Category A]?
-         <br>- <b>Quyết định chọn Từ nối:</b> <i>(Dùng "Similarly" hay "Followed the opposite trend" hay "In contrast"?)</i>
-         <br>👉 <b>Viết nháp Câu 4:</b> <i>[AI viết câu mô tả Category B và liên kết với Category A]</i>
+         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 4:</b> <i>(AI trả lời: Nên dùng Cấu trúc nào? Tại sao?)</i>
+         <br>👉 <b>Viết nháp Câu 4:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
      </li>
 
      <!-- ================================================================================== -->
@@ -1788,14 +1788,14 @@ if st.session_state.step == 1:
              <b>► Bước 1: Câu chuyển đoạn (Transitioning):</b>
              <br><i>(Báo hiệu chuyển sang nhóm dữ liệu mới so với Body 1)</i>
              
-             <br>✅ <b>Mẫu 1: Chuyển hướng trung tính:</b>
+             <br>✅ <b>Cấu trúc 1: Chuyển hướng trung tính:</b>
              <br>"<b>Turning to</b> the remaining categories (<b>&#91;Category C&#93;</b> and <b>&#91;Category D&#93;</b>), their figures were significantly lower."
                           
-             <br>✅ <b>Mẫu 2: Đối lập hoàn toàn (Contrast):</b>
-             <br>• <b>Cách A (Từ nối đầu câu):</b> "<b>In contrast / By contrast</b>, a completely different trend was observed in <b>&#91;Category C&#93;</b>."
-             <br>• <b>Cách B (Trạng từ chèn giữa):</b> "The figure for <b>&#91;Category C&#93;</b>, <b>conversely</b>, witnessed a rise/decline to <b>&#91;Data&#93;</b>."
+             <br>✅ <b>Cấu trúc 2: Đối lập hoàn toàn (Contrast):</b>
+             <br>• <b>Cách 1 (Từ nối đầu câu):</b> "<b>In contrast / By contrast</b>, a completely different trend was observed in <b>&#91;Category C&#93;</b>."
+             <br>• <b>Cách 2 (Trạng từ chèn giữa):</b> "The figure for <b>&#91;Category C&#93;</b>, <b>conversely</b>, witnessed a rise/decline to <b>&#91;Data&#93;</b>."
 
-             <br>✅ <b>Mẫu 3: Diễn biến đồng thời:</b>
+             <br>✅ <b>Cấu trúc 3: Diễn biến đồng thời:</b>
              <br>"<b>Meanwhile / At the same time</b>, the figure for <b>&#91;Category C&#93;</b> started at <b>&#91;Data&#93;</b>."
          </div>
 
@@ -1842,20 +1842,20 @@ if st.session_state.step == 1:
          <br>- Đặc điểm chung: <b>&#91;AI giải thích: Ngược chiều Body 1 / Ổn định / Thấp hơn?&#93;</b>
          <br>
          <br><b>✅ BƯỚC 1: Xử lý Câu chuyển đoạn (Áp dụng KHỐI 1)</b>
-         <br>- <b>Tư duy:</b> <i>[AI giải thích: Tại sao chọn Mẫu 1, 2 hay 3? Có đối lập với Body 1 không?]</i>
-         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu hoàn chỉnh có từ nối chuyển đoạn + số liệu đầu]</i>
+         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 1:</b> <i>[AI trả lời: Nên dùng Cấu trúc nào? Tại sao?]</i>
+         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
          <br>
          <br><b>✅ BƯỚC 2: Xử lý Diễn biến đặc thù (Áp dụng KHỐI 2)</b>
-         <br>- <b>Tư duy:</b> <i>[AI giải thích: Đường này đang đi ngang hay dao động? Dùng cấu trúc nào mô tả chuẩn nhất?]</i>
-         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu hoàn chỉnh mô tả hành trình dữ liệu]</i>
+         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 2:</b> <i>[AI trả lời: Nên dùng Cấu trúc nào? Tại sao?]</i>
+         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
          <br>
          <br><b>✅ BƯỚC 3: Xử lý Chốt số liệu năm cuối (Áp dụng KHỐI 3)</b>
-         <br>- <b>Tư duy:</b> <i>[AI giải thích: Cách đưa số liệu cuối sao cho mượt mà, không bị lặp từ]</i>
-         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu chốt số liệu năm cuối mượt mà]</i>
+         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 3:</b> <i>[AI trả lời: Nên dùng Cấu trúc nào? Tại sao?]</i>
+         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
          <br>
          <br><b>✅ BƯỚC 4: Xử lý So sánh nội bộ nhóm 2 (Áp dụng KHỐI 4)</b>
-         <br>- <b>Tư duy:</b> <i>[AI giải thích: Liên kết đối tượng cuối cùng với đối tượng trước đó bằng cách so sánh hay dùng từ tương đồng?]</i>
-         <br>👉 <b>Viết nháp:</b> <i>[AI viết câu mô tả Category cuối cùng và liên kết nội bộ nhóm]</i>
+         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 4:</b> <i>[AI trả lời: Nên dùng Cấu trúc nào? Tại sao?]</i>
+         <br>👉 <b>Viết nháp Câu 4:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
      </li>
 
      <!-- ================================================================================== -->
