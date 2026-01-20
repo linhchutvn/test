@@ -1599,8 +1599,7 @@ if st.session_state.step == 1:
          
          <!-- KHỐI 1: CÂU MỞ ĐẦU (STARTING POINT) -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► Bước 1: Câu mở đầu (Starting Point):</b>
-             <br><i>(Kết hợp Từ dẫn nhập chủ đề + Thời gian + So sánh)</i>
+             <b>► KHỐI 1: ĐIỂM XUẤT PHÁT:</b>             
                           
              <br>📍 <b>[Mẫu 1.1 - Chênh lệch rõ]</b> (A > B):
              <br><code><b>[Cat A]</b> was the dominant category, <b>significantly outstripping [Cat B]</b>, with respective figures of <b>[Data A]</b> and <b>[Data B]</b>.</code>
@@ -1620,30 +1619,32 @@ if st.session_state.step == 1:
 
          <!-- KHỐI 2: MIÊU TẢ TREND & ĐIỂM GÃY - CỰC KỲ QUAN TRỌNG -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► Bước 2: Phát triển Trend & Đỉnh/Đáy (Advanced Linking):</b>
-             <br><i>(Dùng để nối 2-3 giai đoạn biến động thành 1 câu phức)</i>
+             <b>► KHỐI 2: MIÊU TẢ TREND:</b>
+             
              <br>📍 <b>[Mẫu 2.1 - Before V-ing]</b> (Tăng rồi Giảm hoặc ngược lại):
              <br><code>The figure increased to <b>[Data]</b>, <b>before falling back</b> to <b>[Data]</b>.</code>
+             
              <br>📍 <b>[Mẫu 2.2 - Peak/Low]</b> (Đạt đỉnh/Đáy):
              <br><code>It surged to <b>reach a peak of [Data]</b> in <b>[Year]</b>.</code>
              <br><i>(Hoặc dùng cho đáy: <code>It plunged to <b>hit a low of [Data]</b>...</code>)</i>
+             
              <br>📍 <b>[Mẫu 2.3 - Soán ngôi]</b> (Vượt mặt đối thủ):
              <br><code>It rose significantly to <b>[Data]</b>, <b>surpassing [Cat B]</b> to become the leading category.</code>
+             
              <br>📍 <b>[Mẫu 2.4 - Followed by]</b> (Chuỗi hành động):
              <br><code>There was a sharp rise to <b>[Data]</b>, <b>(which was) followed by</b> a period of stability.</code>         
          </div>
 
          <!-- KHỐI 3: CHỐT SỐ LIỆU CUỐI -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► Bước 3: Cấu trúc Năm cuối (Ending Data):</b>
-             <br><i>(Sử dụng mệnh đề quan hệ rút gọn để kết câu mượt mà)</i>
+             <b>► KHỐI 3: KẾT THÚC:</b>
              <br>📍 <b>[Mẫu 3.1 - Finishing]</b>: <code>..., <b>finishing the period at</b> <b>[End Data]</b>.</code>
              <br>📍 <b>[Mẫu 3.2 - Ending up]</b>: <code>..., <b>ending up at</b> <b>[End Data]</b> in the final year.</code>
          </div>
 
          <!-- KHỐI 4: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► Bước 4: Category còn lại (Comparison):</b>             
+             <b>► KHỐI 4: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI:</b>             
              <br>📍 <b>[Mẫu 4.1 - Tương đồng]</b>: <code>Similarly, <b>[Category B]</b> also witnessed a downward trend, <b>falling/rising to [Data]</b>.</code>
              <br>📍 <b>[Mẫu 4.2 - Đối lập]</b>: <code>In contrast, <b>[Category B]</b> <b>followed the opposite trend</b>, <b>as it increased/decreased to [Data]</b>.</code>            
          </div>
@@ -1784,8 +1785,10 @@ if st.session_state.step == 1:
              <b>► KHỐI 1: CHUYỂN ĐOẠN:</b>
              <br>📍 <b>[Mẫu 1.1 - Trung tính]</b> (Dùng để liệt kê tiếp):
              <br><code>Turning to the remaining categories (<b>[Cat C]</b> and <b>[Cat D]</b>), the figure for <b>[Cat C]</b> started at <b>[Data]</b>.</code>
+             
              <br>📍 <b>[Mẫu 1.2 - Đối lập]</b> (Dùng khi xu hướng ngược Body 1):
              <br><code><b>In contrast</b>, a completely different trend was observed in <b>[Cat C]</b>, which began the period at <b>[Data]</b>.</code>
+             
              <br>📍 <b>[Mẫu 1.3 - Song song]</b> (Dùng khi diễn ra cùng lúc):
              <br><code><b>Meanwhile</b>, the figure for <b>[Cat C]</b> stood at <b>[Data]</b> in the first year.</code>
          </div>
@@ -1793,24 +1796,24 @@ if st.session_state.step == 1:
          <!-- KHỐI 2: DIỄN BIẾN & KẾT THÚC (GỘP) -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
              <b>► KHỐI 2: DIỄN BIẾN & KẾT THÚC:</b>
-             <br><i>(Lưu ý: Mẫu này đã bao gồm cả Số liệu cuối cùng)</i>
-             
+                          
              <br>📍 <b>[Mẫu 2.1 - Dao động]</b> (Zíc-zắc):             
              <br><code>It <b>fluctuated (wildly/moderately)</b> around <b>[Avg Data]</b>, before settling at <b>[End Data]</b>.</code>
              
              <br>📍 <b>[Mẫu 2.2 - Ổn định]</b> (Đi ngang):             
              <br><code>The figure <b>remained relatively stable</b> at <b>[Data]</b> throughout the entire period.</code>
 
-             <br>📍 <b>[Mẫu 2.3 - Tăng/Giảm chuẩn]</b> (Dùng cho cả Mạnh và Nhẹ):
-             <br><i>(AI tự điền tính từ: significantly, steadily, marginally...)</i>
+             <br>📍 <b>[Mẫu 2.3 - Tăng/Giảm chuẩn]</b> (Dùng cho cả Mạnh và Nhẹ):             
              <br><code>It witnessed a <b>[Adjective]</b> <b>(increase/decrease)</b>, finishing the period at <b>[End Data]</b>.</code>
          </div>
         
          <!-- KHỐI 3: SO SÁNH NỘI BỘ -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► KHỐI 3: SO SÁNH NHÓM CUỐI (Chọn 1 trong 2):</b>
+             <b>► KHỐI 3: SO SÁNH NHÓM CUỐI:</b>
+             
              <br>📍 <b>[Mẫu 3.1 - Tương đồng]</b>:
              <br><code>A <b>similar pattern</b> was seen in <b>[Cat D]</b>, which rose/fell to <b>[Data]</b>.</code>
+             
              <br>📍 <b>[Mẫu 3.2 - Gấp lần]</b> (Toán học):
              <br><code>The figure for <b>[Cat C]</b> was <b>(double / two times as high as)</b> that of <b>[Cat D]</b>.</code>
          </div>
