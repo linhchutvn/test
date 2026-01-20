@@ -1594,7 +1594,7 @@ if st.session_state.step == 1:
           Dưới đây là DỮ LIỆU CỐ ĐỊNH (REFERENCE LIBRARY).
           Nhiệm vụ của bạn: SAO CHÉP Y NGUYÊN TỪNG DÒNG HTML BÊN DƯỚI.
           TUYỆT ĐỐI KHÔNG ĐƯỢC LỌC (DO NOT FILTER).
-          Bắt buộc phải hiển thị đủ 3 Cấu trúc câu mở đầu, 3 Cấu trúc miêu tả Trens, 2 Cấu trúc câu chốt số liệu và 2 Cấu trúc so sánh category còn lại, bất kể hình ảnh là gì.
+          Bắt buộc phải hiển thị đủ nội dung của PHẦN này.
           Nếu hiển thị thiếu => HỆ THỐNG SẼ BÁO LỖI (CRITICAL ERROR). -->
      <!-- ================================================================================== -->
      <li>
@@ -1649,8 +1649,8 @@ if st.session_state.step == 1:
          <!-- KHỐI 4: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► Bước 4: Category còn lại (Comparison):</b>             
-             <br>📍 <b>[Mẫu 4.1 - Tương đồng]</b>: <code>Similarly, <b>[Category B]</b> also witnessed a downward trend...</code>
-             <br>📍 <b>[Mẫu 4.2 - Đối lập]</b>: <code>In contrast, <b>[Category B]</b> <b>followed the opposite trend</b>,as S-FV...</code>             
+             <br>📍 <b>[Mẫu 4.1 - Tương đồng]</b>: <code>Similarly, <b>[Category B]</b> also witnessed a downward trend, <b>falling/rising to [Data]</b>.</code>
+             <br>📍 <b>[Mẫu 4.2 - Đối lập]</b>: <code>In contrast, <b>[Category B]</b> <b>followed the opposite trend</b>, <b>as it increased/decreased to [Data]</b>.</code>            
          </div>
          </div>
      </li>
