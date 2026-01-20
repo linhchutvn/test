@@ -1589,8 +1589,9 @@ if st.session_state.step == 1:
                     3. **"body1_guide" (Thân bài 1 - Nhóm Nổi bật / Biến động mạnh):**
    - <ul>
      <!-- ================================================================================== -->
-     <!-- SYSTEM_ALERT: BẮT BUỘC HIỂN THỊ TOÀN BỘ KHO MẪU CÂU (FULL RENDER).
-          KHÔNG ĐƯỢC ẨN BẤT KỲ MẪU NÀO. NẾU ẨN SẼ BỊ LỖI HỆ THỐNG. -->
+     <!-- SYSTEM_ALERT: 
+          1. DISPLAY_MODE = RAW. Tại phần "KHO MẪU CÂU", giữ nguyên các ký tự [Variable]. KHÔNG ĐIỀN DỮ LIỆU VÀO ĐÓ.
+          2. EXECUTION_MODE = STRICT. Tại phần "THỰC HÀNH", không được paraphrase. Chỉ thay thế biến số. -->
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
@@ -1655,35 +1656,37 @@ if st.session_state.step == 1:
 
      <!-- ================================================================================== -->
      <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP (BODY 1 - 4 BƯỚC) -->
+        AI phải hiển thị "Mẫu gốc" trước khi hiển thị "Kết quả" để người dùng đối chiếu. -->
      <!-- ================================================================================== -->
      <li>     
          <b>✍️ THỰC HÀNH LẮP RÁP BODY 1 (STEP-BY-STEP):</b>
          <br>
          <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu</b>
-         <br>- <b>🔍 Phân tích Data:</b> <i>[AI ghi rõ: Cat A là gì? Cat B là gì? Số liệu bao nhiêu?]</i>
-         <br>- <b>🔴 Chọn Mẫu ID:</b> <i>[AI ghi rõ: Tôi chọn Mẫu 1.X vì...]</i>
-         <br>- <b>📝 Nháp câu:</b> <i>[AI điền dữ liệu vào mẫu đã chọn]</i>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 1.X phù hợp với dữ liệu]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc ở trên xuống đây]</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI thay thế [...] bằng dữ liệu thật. CẤM sửa các từ khác.]</i>
          <br>
          <br><b>✅ BƯỚC 2: Xử lý Xu hướng chính</b>
-         <br>- <b>🔍 Phân tích Data:</b> <i>[Xu hướng đi như thế nào? Có đỉnh/đáy không?]</i>
-         <br>- <b>🔴 Chọn Mẫu ID:</b> <i>[Tôi chọn Mẫu 2.X vì...]</i>
-         <br>- <b>📝 Nháp câu:</b> <i>[AI điền dữ liệu vào mẫu đã chọn]</i>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 2.X]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu. Nếu dữ liệu Giảm, không được chọn mẫu Tăng/Soán ngôi.]</i>
          <br>
          <br><b>✅ BƯỚC 3: Xử lý Kết thúc</b>
-         <br>- <b>🔴 Chọn Mẫu ID:</b> <i>[Tôi chọn Mẫu 3.X]</i>
-         <br>- <b>📝 Nháp câu:</b> <i>[AI điền dữ liệu vào mẫu đã chọn]</i>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 3.X]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu]</i>
          <br>
          <br><b>✅ BƯỚC 4: Xử lý So sánh</b>
-         <br>- <b>🔍 Phân tích Data:</b> <i>[Category còn lại tăng hay giảm? Giống hay khác?]</i>
-         <br>- <b>🔴 Chọn Mẫu ID:</b> <i>[Tôi chọn Mẫu 4.X vì...]</i>
-         <br>- <b>📝 Nháp câu:</b> <i>[AI điền dữ liệu vào mẫu đã chọn]</i>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 4.X]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu]</i>
      </li>
      
      <!-- PHẦN 4: GHÉP CÂU HOÀN CHỈNH -->
      <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
          <b>📝 KẾT QUẢ BODY 1 (FINAL OUTPUT):</b><br>
          <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI nối các câu nháp ở trên thành đoạn văn hoàn chỉnh.]
+         [AI nối các câu ở phần 'Điền từ' lại thành đoạn văn.]
          </div>
      </div></li>
    </ul>
@@ -1772,13 +1775,14 @@ if st.session_state.step == 1:
                     4. **"body2_guide" (Thân bài 2 - Quy trình Chọn & Điền):**
    - <ul>
      <!-- ================================================================================== -->
-     <!-- SYSTEM_ALERT: BẮT BUỘC HIỂN THỊ TOÀN BỘ KHO MẪU CÂU (FULL RENDER).
-          KHÔNG ĐƯỢC ẨN BẤT KỲ MẪU NÀO. NẾU ẨN SẼ BỊ LỖI HỆ THỐNG. -->
+     <!-- SYSTEM_ALERT: 
+          1. DISPLAY_MODE = RAW. Tại phần "KHO MẪU CÂU", giữ nguyên các ký tự [Variable]. KHÔNG ĐIỀN DỮ LIỆU VÀO ĐÓ.
+          2. EXECUTION_MODE = STRICT. Tại phần "THỰC HÀNH", không được paraphrase. Chỉ thay thế biến số. -->
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
          <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2 (ADVANCED):</strong>
-         <br><i>(AI phải hiển thị đầy đủ các mẫu dưới đây)</i>
+         <br><i>(Đây là công thức gốc. AI không được tự ý điền dữ liệu vào đây)</i>
          
          <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
@@ -1829,26 +1833,26 @@ if st.session_state.step == 1:
          <b>✍️ THỰC HÀNH LẮP RÁP BODY 2 (STEP-BY-STEP):</b>
          <br>
          <br><b>✅ BƯỚC 1: Xử lý Câu chuyển đoạn</b>
-         <br>- <b>🔍 Phân tích Data:</b> <i>[Nhóm còn lại gồm những ai? Có ngược chiều Body 1 không?]</i>
-         <br>- <b>🔴 Chọn Mẫu ID:</b> <i>[Tôi chọn Mẫu 1.X vì...]</i>
-         <br>- <b>📝 Nháp câu:</b> <i>[AI điền dữ liệu vào mẫu đã chọn]</i>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 1.X]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI thay thế [...] bằng dữ liệu thật]</i>
          <br>
          <br><b>✅ BƯỚC 2: Xử lý Diễn biến & Kết thúc</b>
-         <br>- <b>🔍 Phân tích Data:</b> <i>[Xu hướng là gì? Ổn định, dao động hay tăng giảm?]</i>
-         <br>- <b>🔴 Chọn Mẫu ID:</b> <i>[Tôi chọn Mẫu 2.X vì...]</i>
-         <br>- <b>📝 Nháp câu:</b> <i>[AI điền dữ liệu vào mẫu đã chọn]</i>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 2.X]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu]</i>
          <br>
          <br><b>✅ BƯỚC 3: Xử lý So sánh nội bộ</b>
-         <br>- <b>🔍 Phân tích Data:</b> <i>[Category cuối cùng so với cái trước đó thế nào?]</i>
-         <br>- <b>🔴 Chọn Mẫu ID:</b> <i>[Tôi chọn Mẫu 3.X vì...]</i>
-         <br>- <b>📝 Nháp câu:</b> <i>[AI điền dữ liệu vào mẫu đã chọn]</i>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 3.X]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu]</i>
      </li>
      
      <!-- PHẦN 4: GHÉP CÂU HOÀN CHỈNH -->
      <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
-         <b>📝 KẾT QUẢ BODY 2 (FINAL OUTPUT):</b><br>
+         <b>📝 KẾT QUẢ BODY 2:</b><br>
          <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI nối các câu nháp ở trên thành đoạn văn hoàn chỉnh.]
+         [AI nối các câu ở phần 'Điền từ' lại thành đoạn văn.]
          </div>
      </div></li>
    </ul>
