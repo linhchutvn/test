@@ -1767,62 +1767,57 @@ if st.session_state.step == 1:
      </div></li>
    </ul>
 
-                    4. **"body2_guide" (Thân bài 2 - Nhóm Còn lại / Xu hướng Đối lập):**
+                    4. **"body2_guide" (Thân bài 2 - Quy trình Chọn & Điền):**
    - <ul>
      <!-- ================================================================================== -->
-     <!-- PHẦN 1: KHO MẪU CÂU (REFERENCE LIBRARY) - DỮ LIỆU CỐ ĐỊNH TỪ TÀI LIỆU -->
+     <!-- PHẦN 1: THƯ VIỆN CẤU TRÚC (REFERENCE LIBRARY) - CÓ MÃ SỐ ID -->
      <!-- SYSTEM_ALERT: 
-          Dưới đây là DỮ LIỆU CỐ ĐỊNH (REFERENCE LIBRARY).
-          Nhiệm vụ của bạn: SAO CHÉP Y NGUYÊN TỪNG DÒNG HTML BÊN DƯỚI.
-          TUYỆT ĐỐI KHÔNG ĐƯỢC LỌC (DO NOT FILTER).
-          Bắt buộc phải hiển thị đủ 3 Mẫu câu chuyển đoạn, 3 Cấu trúc miêu tả, 2 Cấu trúc chốt số liệu và 2 Cấu trúc so sánh, bất kể hình ảnh là gì.
-          Nếu hiển thị thiếu => HỆ THỐNG SẼ BÁO LỖI (CRITICAL ERROR). -->
+          AI KHÔNG ĐƯỢC TỰ VIẾT. BẮT BUỘC PHẢI DÙNG CÁC MẪU CÂU DƯỚI ĐÂY.
+          Mỗi mẫu câu đã được gán mã ID (Ví dụ: [T1], [T2]...). 
+          Khi làm bài, hãy trích dẫn mã ID đó. -->
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
-         <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2 (ADVANCED):</strong>
-         <br><i>(Tập trung vào tính liên kết mạch lạc và các trạng thái dữ liệu đặc thù)</i>
+         <strong style="color:#2980b9;">📚 THƯ VIỆN MẪU CÂU (TEMPLATE LIBRARY):</strong>
          
-         <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN (TRANSITION SIGNALS) -->
+         <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN (TRANSITION) -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► Bước 1: Câu chuyển đoạn (Transitioning):</b>
-             <br><i>(Báo hiệu chuyển sang nhóm dữ liệu mới so với Body 1)</i>
-             
-             <br>✅ <b>Cấu trúc 1: Chuyển hướng trung tính:</b>
-             <br>"<b>Turning to</b> the remaining categories (<b>&#91;Category C&#93;</b> and <b>&#91;Category D&#93;</b>), their figures were significantly lower."
-                          
-             <br>✅ <b>Cấu trúc 2: Đối lập hoàn toàn (Contrast):</b>
-             <br>• <b>Cách 1 (Từ nối đầu câu):</b> "<b>In contrast / By contrast</b>, a completely different trend was observed in <b>&#91;Category C&#93;</b>."
-             <br>• <b>Cách 2 (Trạng từ chèn giữa):</b> "The figure for <b>&#91;Category C&#93;</b>, <b>conversely</b>, witnessed a rise/decline to <b>&#91;Data&#93;</b>."
-
-             <br>✅ <b>Cấu trúc 3: Diễn biến đồng thời:</b>
-             <br>"<b>Meanwhile / At the same time</b>, the figure for <b>&#91;Category C&#93;</b> started at <b>&#91;Data&#93;</b>."
+             <b>► KHỐI 1: CHUYỂN ĐOẠN (Chọn 1 trong 3):</b>
+             <br>📍 <b>[Mẫu 1.1 - Trung tính]</b> (Dùng để liệt kê tiếp):
+             <br>Code: <code>Turning to the remaining categories (<b>[Cat C]</b> and <b>[Cat D]</b>), the figure for <b>[Cat C]</b> started at <b>[Data]</b>.</code>
+             <br>📍 <b>[Mẫu 1.2 - Đối lập]</b> (Dùng khi xu hướng ngược Body 1):
+             <br>Code: <code><b>In contrast</b>, a completely different trend was observed in <b>[Cat C]</b>, which began the period at <b>[Data]</b>.</code>
+             <br>📍 <b>[Mẫu 1.3 - Song song]</b> (Dùng khi diễn ra cùng lúc):
+             <br>Code: <code><b>Meanwhile</b>, the figure for <b>[Cat C]</b> stood at <b>[Data]</b> in the first year.</code>
          </div>
 
-         <!-- KHỐI 2: MIÊU TẢ TREND ĐẶC THÙ (STABILITY & FLUCTUATION) -->
+         <!-- KHỐI 2: MIÊU TẢ DIỄN BIẾN (TRENDS) -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► Bước 2: Phát triển Trend (Stability & Fluctuation):</b>
-             <br><i>(Thường dùng cho nhóm dữ liệu phụ hoặc biến động nhẹ)</i>
-             <br>✅ <b>Cấu trúc Dao động:</b>
-             <br>"The figure for <b>&#91;Category C&#93;</b> <b>fluctuated (wildly/moderately)</b> around <b>&#91;Data&#93;</b> throughout the period."
-             <br>✅ <b>Cấu trúc Ổn định:</b>
-             <br>"The amount of <b>&#91;Category C&#93;</b> <b>remained relatively stable / leveled off</b> at <b>&#91;Data&#93;</b>."
-             <br>✅ <b>Cấu trúc Sau biến động:</b>
-             <br>"<b>After increasing/decreasing</b> slightly to <b>&#91;Data&#93;</b>, it finished the period at..."
+             <b>► KHỐI 2: DIỄN BIẾN (Chọn 1 trong 3):</b>
+             <br>📍 <b>[Mẫu 2.1 - Dao động]</b> (Dùng cho đường zíc-zắc):
+             <br>Code: <code>It <b>fluctuated (wildly/moderately)</b> around <b>[Data]</b> throughout the period.</code>
+             <br>📍 <b>[Mẫu 2.2 - Ổn định]</b> (Dùng cho đường đi ngang):
+             <br>Code: <code>The figure <b>remained relatively stable</b> at <b>[Data]</b> until <b>[Year]</b>.</code>
+             <br>📍 <b>[Mẫu 2.3 - Tăng/Giảm nhẹ]</b> (Dùng cho đường biến đổi ít):
+             <br>Code: <code>It witnessed a <b>marginal (rise/decline)</b> to <b>[Data]</b>.</code>
          </div>
 
-         <!-- KHỐI 3: CHỐT SỐ LIỆU CUỐI -->
+         <!-- KHỐI 3: CHỐT SỐ LIỆU CUỐI (ENDING) -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► Bước 3: Cấu trúc Năm cuối (Ending Data):</b>
-             <br>✅ <b>Cấu trúc Finishing:</b> "..., <b>finishing the period at</b> <b>&#91;End Data&#93;</b>."
-             <br>✅ <b>Cấu trúc Ending up:</b> "..., <b>ending up at</b> <b>&#91;End Data&#93;</b> in the final year."
+             <b>► KHỐI 3: KẾT THÚC (Chọn 1 trong 2):</b>
+             <br>📍 <b>[Mẫu 3.1 - Finishing]</b> (Mệnh đề rút gọn):
+             <br>Code: <code>..., <b>finishing the period at</b> <b>[End Data]</b>.</code>
+             <br>📍 <b>[Mẫu 3.2 - Ending up]</b> (Mệnh đề rút gọn):
+             <br>Code: <code>..., <b>ending up at</b> <b>[End Data]</b> in the final year.</code>
          </div>
 
-         <!-- KHỐI 4: SO SÁNH NỘI BỘ NHÓM -->
+         <!-- KHỐI 4: SO SÁNH NỘI BỘ (COMPARISON) -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► Bước 4: Category còn lại trong nhóm 2:</b>
-             <br>✅ <b>Cấu trúc Tương đồng:</b> "A <b>similar pattern</b> was seen in <b>&#91;Category D&#93;</b>, with a rise to..."
-             <br>✅ <b>Cấu trúc Gấp lần (Math):</b> "The figure for <b>&#91;Category C&#93;</b> was <b>double / two times as high as</b> that of <b>&#91;Category D&#93;</b>."
+             <b>► KHỐI 4: SO SÁNH NHÓM CÒN LẠI (Chọn 1 trong 2):</b>
+             <br>📍 <b>[Mẫu 4.1 - Tương đồng]</b> (Nếu Cat D giống Cat C):
+             <br>Code: <code>A <b>similar pattern</b> was seen in <b>[Cat D]</b>, which rose/fell to <b>[Data]</b>.</code>
+             <br>📍 <b>[Mẫu 4.2 - Gấp lần]</b> (Nếu Cat D bằng 1 nửa hoặc gấp đôi Cat C):
+             <br>Code: <code>The figure for <b>[Cat C]</b> was <b>(double / two times as high as)</b> that of <b>[Cat D]</b>.</code>
          </div>
          </div>
      </li>
@@ -1830,32 +1825,35 @@ if st.session_state.step == 1:
      <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
      <!-- ================================================================================== -->
-     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP (STEP-BY-STEP) -->
-     <!-- SYSTEM_ALERT: AI phải đối chiếu và chọn đúng Mẫu từ 4 KHỐI ở PHẦN 1. AI phải viết rõ câu nháp hoàn chỉnh sau mỗi bước 'Chọn'. -->
+     <!-- PHẦN 2: QUY TRÌNH "CHỌN & ĐIỀN" (STRICT SELECTION PROCESS) -->
+     <!-- SYSTEM_ALERT: Tại phần này, AI KHÔNG ĐƯỢC TỰ VIẾT.
+          AI phải thực hiện đúng 3 bước:
+          1. QUAN SÁT DỮ LIỆU.
+          2. CHỌN MÃ ID (Ví dụ: Tôi chọn Mẫu 1.2 vì dữ liệu đối lập).
+          3. ĐIỀN DỮ LIỆU VÀO MẪU (Không paraphrase mẫu). -->
      <!-- ================================================================================== -->
      <li>     
-         <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP (SYNCHRONIZED STEP-BY-STEP):</b>
-         <br><i>(AI phân tích dữ liệu còn lại và giải thích cách <b>CHỌN</b> mẫu câu phù hợp nhất từ Kho phía trên để thực hiện nháp)</i>
+         <b>✍️ THỰC HÀNH "CHỌN & ĐIỀN" (FILL-IN-THE-BLANKS):</b>
          <br>
-         <br><b>🔍 Phân tích Dữ liệu Body 2:</b>
-         <br>- Nhóm này gồm: <b>&#91;Tên các Category còn lại&#93;</b>.
-         <br>- Đặc điểm chung: <b>&#91;AI giải thích: Ngược chiều Body 1 / Ổn định / Thấp hơn?&#93;</b>
+         <br><b>✅ BƯỚC 1: Câu chuyển đoạn (Áp dụng KHỐI 1)</b>
+         <br>- <b>Dữ liệu:</b> [Category C] bắt đầu tại mức nào? Có ngược chiều Body 1 không?
+         <br>- <b>🔴 Lựa chọn của AI:</b> Tôi chọn <b>[Mẫu 1...]</b> vì... <i>(Giải thích lý do)</i>
+         <br>- <b>📝 Viết câu (Chỉ điền vào [...]):</b> <i>(AI điền dữ liệu vào đúng mẫu đã chọn)</i>
          <br>
-         <br><b>✅ BƯỚC 1: Xử lý Câu chuyển đoạn (Áp dụng KHỐI 1)</b>
-         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 1:</b> <i>[AI trả lời: Nên dùng Cấu trúc nào? Tại sao?]</i>
-         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
+         <br><b>✅ BƯỚC 2: Diễn biến chính (Áp dụng KHỐI 2)</b>
+         <br>- <b>Dữ liệu:</b> Đường đi của nó dao động, ổn định hay tăng giảm nhẹ?
+         <br>- <b>🔴 Lựa chọn của AI:</b> Tôi chọn <b>[Mẫu 2...]</b> vì... <i>(Giải thích lý do)</i>
+         <br>- <b>📝 Viết câu (Chỉ điền vào [...]):</b> <i>(AI điền dữ liệu vào đúng mẫu đã chọn)</i>
          <br>
-         <br><b>✅ BƯỚC 2: Xử lý Diễn biến đặc thù (Áp dụng KHỐI 2)</b>
-         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 2:</b> <i>[AI trả lời: Nên dùng Cấu trúc nào? Tại sao?]</i>
-         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
+         <br><b>✅ BƯỚC 3: Chốt số liệu (Áp dụng KHỐI 3)</b>
+         <br>- <b>Dữ liệu:</b> Số liệu năm cuối là bao nhiêu?
+         <br>- <b>🔴 Lựa chọn của AI:</b> Tôi chọn <b>[Mẫu 3...]</b> để nối vào câu trên.
+         <br>- <b>📝 Viết câu (Chỉ điền vào [...]):</b> <i>(AI điền dữ liệu vào đúng mẫu đã chọn)</i>
          <br>
-         <br><b>✅ BƯỚC 3: Xử lý Chốt số liệu năm cuối (Áp dụng KHỐI 3)</b>
-         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 3:</b> <i>[AI trả lời: Nên dùng Cấu trúc nào? Tại sao?]</i>
-         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
-         <br>
-         <br><b>✅ BƯỚC 4: Xử lý So sánh nội bộ nhóm 2 (Áp dụng KHỐI 4)</b>
-         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 4:</b> <i>[AI trả lời: Nên dùng Cấu trúc nào? Tại sao?]</i>
-         <br>👉 <b>Viết nháp Câu 4:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
+         <br><b>✅ BƯỚC 4: So sánh đối tượng cuối (Áp dụng KHỐI 4)</b>
+         <br>- <b>Dữ liệu:</b> [Category D] có quan hệ gì với [Category C]?
+         <br>- <b>🔴 Lựa chọn của AI:</b> Tôi chọn <b>[Mẫu 4...]</b> vì... <i>(Giải thích lý do)</i>
+         <br>- <b>📝 Viết câu (Chỉ điền vào [...]):</b> <i>(AI điền dữ liệu vào đúng mẫu đã chọn)</i>
      </li>
 
      <!-- ================================================================================== -->
@@ -1893,14 +1891,12 @@ if st.session_state.step == 1:
      </li>
 
      <!-- ================================================================================== -->
-     <!-- PHẦN 4: BÀI MẪU HOÀN CHỈNH -->
-     <!-- SYSTEM_ALERT: AI phải thực hiện thao tác: Copy Câu 1 + Câu 2 + Câu 3 + Câu 4 ở phần Thực hành và ghép lại thành đoạn văn.
-          BẮT BUỘC giữ nguyên các từ vựng đã liệt kê ở Phần 3. -->
+     <!-- PHẦN 4: GHÉP CÂU HOÀN CHỈNH -->
      <!-- ================================================================================== -->
      <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
-         <b>📝 NỘI DUNG MẪU (SAMPLE BODY 2 OUTPUT):</b><br>
+         <b>📝 KẾT QUẢ CUỐI CÙNG (FINAL OUTPUT):</b><br>
          <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI hãy ghép nối mạch lạc 4 câu nháp ở Phần 2 thành một đoạn văn hoàn chỉnh. Bắt đầu bằng từ nối chuyển đoạn. Đảm bảo tính nhất quán 100% với các bước đã phân tích.]
+         [AI nối các câu đã viết ở Bước 1, 2, 3, 4 lại thành đoạn văn hoàn chỉnh. Không sửa đổi từ ngữ.]
          </div>
      </div></li>
    </ul>
