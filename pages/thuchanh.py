@@ -1658,37 +1658,36 @@ if st.session_state.step == 1:
      <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
      <!-- ================================================================================== -->
-     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP (STEP-BY-STEP) -->
-     <!-- SYSTEM_ALERT: AI phải đối chiếu và chọn đúng Mẫu từ 4 KHỐI ở PHẦN 1. AI phải viết rõ câu nháp hoàn chỉnh sau mỗi bước 'Chọn' -->
+     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP (BODY 1 - 4 BƯỚC) -->
      <!-- ================================================================================== -->
      <li>     
-         <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP (STEP-BY-STEP):</b>
-         <br><i>(AI phân tích dữ liệu và <b>CHỌN</b> mẫu câu phù hợp nhất từ Kho phía trên để áp dụng)</i>
+         <b>✍️ THỰC HÀNH LẮP RÁP BODY 1 (STEP-BY-STEP):</b>
          <br>
-         <br><b>🔍 Phân tích Dữ liệu:</b>
-         <br>- Nhóm này gồm: <b>&#91;Tên Category&#93;</b>.
-         <br>- Lý do chọn nhóm: <b>&#91;AI giải thích: Cao nhất / Nổi bật / Biến động mạnh nhất?&#93;</b>
+         <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu (Áp dụng KHỐI 1)</b>
+         <br>- <b>🔴 Lựa chọn của AI:</b> Tôi chọn <b>[Mẫu 1...]</b>.
+         <br>- <b>📝 Viết câu:</b> <i>[AI điền dữ liệu vào mẫu]</i>
          <br>
-         <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu (Starting Point)(Áp dụng KHỐI 1)</b>
-         <br>- <b>Dữ liệu năm đầu:</b> [Category A] = ... ; [Category B] = ...
-         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 1:</b> <i>(AI trả lời: Nên dùng Cấu trúc nào? Tại sao?)</i>
-         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
-         <br>
-         <br><b>✅ BƯỚC 2: Xử lý Xu hướng chính (Main Trend)(Áp dụng KHỐI 2)</b>
-         <br>- <b>Đặc điểm dữ liệu:</b> [Category A] tăng thẳng đứng, hay tăng rồi giảm? Có đạt đỉnh không?
-         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 2:</b> <i>(AI trả lời: Nên dùng Cấu trúc nào? Tại sao?)</i>
-         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
+         <br><b>✅ BƯỚC 2: Xử lý Xu hướng chính (Áp dụng KHỐI 2)</b>
+         <br>- <b>🔴 Lựa chọn của AI:</b> Tôi chọn <b>[Mẫu 2...]</b>.
+         <br>- <b>📝 Viết câu:</b> <i>[AI điền dữ liệu vào mẫu]</i>
          <br>
          <br><b>✅ BƯỚC 3: Xử lý Kết thúc & Chốt số liệu (Áp dụng KHỐI 3)</b>
-         <br>- <b>Nhiệm vụ:</b> Sử dụng cấu trúc mệnh đề rút gọn để đưa số liệu năm cuối cho mượt mà.
-         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 3:</b> <i>(AI trả lời: Nên dùng Cấu trúc nào? Tại sao?)</i>
-         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
+         <br>- <b>🔴 Lựa chọn của AI:</b> Tôi chọn <b>[Mẫu 3...]</b>.
+         <br>- <b>📝 Viết câu:</b> <i>[AI điền dữ liệu vào mẫu]</i>
          <br>
-         <br><b>✅ BƯỚC 4: Xử lý Category còn lại (Comparison)(Áp dụng KHỐI 4)</b>
-         <br>- <b>Mối quan hệ:</b> [Category B] cùng chiều hay ngược chiều [Category A]?
-         <br>- <b>Quyết định chọn Cấu trúc nào trong KHỐI 4:</b> <i>(AI trả lời: Nên dùng Cấu trúc nào? Tại sao?)</i>
-         <br>👉 <b>Viết nháp Câu 4:</b> <i>[AI viết câu hoàn chỉnh dựa trên cấu trúc đã chọn]</i>
+         <br><b>✅ BƯỚC 4: Xử lý Category còn lại (Áp dụng KHỐI 4)</b>
+         <br>- <b>🔴 Lựa chọn của AI:</b> Tôi chọn <b>[Mẫu 4...]</b>.
+         <br>- <b>📝 Viết câu:</b> <i>[AI điền dữ liệu vào mẫu]</i>
      </li>
+     
+     <!-- PHẦN 4: GHÉP CÂU HOÀN CHỈNH -->
+     <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
+         <b>📝 KẾT QUẢ BODY 1 (FINAL OUTPUT):</b><br>
+         <div style="margin-top:5px; font-style: italic; color: #5d4037;">
+         [AI nối các câu đã viết ở trên thành đoạn văn hoàn chỉnh.]
+         </div>
+     </div></li>
+   </ul>
 
      <!-- ================================================================================== -->
      <!-- PHẦN 3: BỘ CÔNG CỤ NÂNG BAND (EXAMINER'S TOOLKIT) -->
