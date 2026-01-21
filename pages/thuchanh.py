@@ -1519,7 +1519,7 @@ if st.session_state.step == 1:
                              <!-- KHỐI 2: TRENDS (ĐÃ KIỂM TRA KỸ LƯỠNG - BUG FREE) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 2. Các mẫu câu Xu hướng (Trends):</b>
-                                 <br><i>(Người viết chọn 1 trong 4 loại dưới đây tùy vào biểu đồ)</i>                                
+                                 <br><i>(Người viết chọn 1 trong 4 loại dưới đây, chỉ hiển thị công thức)</i>                                
                                  
                                  <br>✅ <b>Loại 1: Đồng loạt Tăng/Giảm (Same Direction)</b>
                                  <br><i>(Dùng khi tất cả cùng Tăng hoặc cùng Giảm)</i>                                 
@@ -1544,7 +1544,7 @@ if st.session_state.step == 1:
                              <!-- KHỐI 3:  KEY FEATURES / HIGHLIGHTS (LIỆT KÊ ĐỦ 3 LOẠI) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
                                  <b>► 3. Các mẫu câu Điểm nổi bật (Key Features / Highlights):</b>
-                                 <br><i>(Người viết chọn 1 trong 3 loại dưới đây)</i>                               
+                                 <br><i>(Người viết chọn 1 trong 3 loại dưới đây, chỉ hiển thị công thức)</i>                               
                                  <br>✅ <b>Loại 1: Cao nhất/Thấp nhất (Ranking)</b>
                                  <br><i>(Dùng khi có 1 đường luôn nằm trên hoặc nằm dưới các đường khác)</i>
                                  <br>"<b>&#91;Category A&#93;</b> consistently had the highest figures throughout the period."                                 
