@@ -1613,12 +1613,12 @@ if st.session_state.step == 1:
      <!-- SYSTEM_ALERT: 
           1. DISPLAY_MODE = RAW. Tại phần "KHO MẪU CÂU", giữ nguyên các ký tự [Variable]. KHÔNG ĐIỀN DỮ LIỆU VÀO ĐÓ.
           2. EXECUTION_MODE = STRICT. Tại phần "THỰC HÀNH", không được paraphrase. Chỉ thay thế biến số.
-          3. FORCE_FULL_DISPLAY: BẮT BUỘC hiển thị ĐỦ 4 KHỐI (KHỐI 1, 2, 3, 4). KHÔNG ĐƯỢC ẨN KHỐI 4.-->
+          3. FORCE_FULL_DISPLAY: BẮT BUỘC hiển thị ĐỦ 3 KHỐI (KHỐI 1, 2, 3). -->
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
          <strong style="color:#d35400;">📚 KHO MẪU CÂU BODY 1:</strong>
-         <br><i>(AI phải hiển thị đầy đủ 4 KHỐI dưới đây)</i>
+         <br><i>(AI phải hiển thị đầy đủ 3 KHỐI dưới đây)</i>
          
          <!-- KHỐI 1: CÂU MỞ ĐẦU (STARTING POINT) -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
@@ -1644,32 +1644,28 @@ if st.session_state.step == 1:
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► KHỐI 2: MIÊU TẢ TREND:</b>
              
-             <br>📍 <b>[Mẫu 2.1 - Before V-ing]</b> (Tăng rồi Giảm hoặc ngược lại):
-             <br><code>The figure increased to <b>[Data]</b>, <b>before falling back</b> to <b>[Data]</b>.</code>
+             <br>📍 <b>[Mẫu 2.1 - Before V-ing]</b> (Tăng rồi Giảm/Ngược lại):
+             <br><code>The figure increased to <b>[Peak Data]</b>, <b>before falling back to finish at</b> <b>[End Data]</b>.</code>
              
-             <br>📍 <b>[Mẫu 2.2 - Peak/Low]</b> (Đạt đỉnh/Đáy):
-             <br><code>It surged to <b>reach a peak of [Data]</b> in <b>[Year]</b>.</code>
-             <br><i>(Hoặc dùng cho đáy: <code>It plunged to <b>hit a low of [Data]</b>...</code>)</i>
+             <br>📍 <b>[Mẫu 2.2 - Peak/Low & End]</b> (Đạt Đỉnh/Đáy rồi đổi chiều):
+             <br>• <b>Đỉnh:</b> <code>It surged to <b>reach a peak of [Peak Data]</b> in <b>[Year]</b>, and then dropped to <b>[End Data]</b>.</code>
+             <br>• <b>Đáy:</b> <code>It plunged to <b>hit a low of [Low Data]</b> in <b>[Year]</b>, before recovering to <b>[End Data]</b>.</code>
              
-             <br>📍 <b>[Mẫu 2.3 - Soán ngôi]</b> (Vượt mặt đối thủ):
-             <br><code>It rose significantly to <b>[Data]</b>, <b>surpassing [Cat B]</b> to become the leading category.</code>
+             <br>📍 <b>[Mẫu 2.3 - Soán ngôi & End]</b> (Vượt mặt):
+             <br><code>It rose significantly, <b>surpassing [Cat B]</b> to become the leader and <b>ending at [End Data]</b>.</code>
              
-             <br>📍 <b>[Mẫu 2.4 - Followed by]</b> (Chuỗi hành động):
-             <br><code>There was a sharp rise to <b>[Data]</b>, <b>(which was) followed by</b> a period of stability.</code>         
+             <br>📍 <b>[Mẫu 2.4 - Tăng/Giảm thẳng]</b> (Xu hướng đơn giản):
+             <br><code>There was a sharp rise to <b>[End Data]</b>, making it the highest category at the end of the period.</code>
+             
+             <br>📍 <b>[Mẫu 2.5 - Finishing]</b> (Mệnh đề rút gọn):
+             <br><code>It witnessed a steady trend, <b>finishing the period at [End Data]</b>.</code>         
          </div>
 
-         <!-- KHỐI 3: CHỐT SỐ LIỆU CUỐI -->
+         <!-- KHỐI 3: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► KHỐI 3: KẾT THÚC:</b>
-             <br>📍 <b>[Mẫu 3.1 - Finishing]</b>: <code>..., <b>finishing the period at</b> <b>[End Data]</b>.</code>
-             <br>📍 <b>[Mẫu 3.2 - Ending up]</b>: <code>..., <b>ending up at</b> <b>[End Data]</b> in the final year.</code>
-         </div>
-
-         <!-- KHỐI 4: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI -->
-         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► KHỐI 4: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI:</b>             
-             <br>📍 <b>[Mẫu 4.1 - Tương đồng]</b>: <code>Similarly, <b>[Category B]</b> also witnessed a downward trend, <b>falling/rising to [Data]</b>.</code>
-             <br>📍 <b>[Mẫu 4.2 - Đối lập]</b>: <code>In contrast, <b>[Category B]</b> <b>followed the opposite trend</b>, <b>as it increased/decreased to [Data]</b>.</code>            
+             <b>► KHỐI 3: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI:</b>             
+             <br>📍 <b>[Mẫu 3.1 - Tương đồng]</b>: <code>Similarly, <b>[Category B]</b> also witnessed a downward trend, <b>falling/rising to [Data]</b>.</code>
+             <br>📍 <b>[Mẫu 3.2 - Đối lập]</b>: <code>In contrast, <b>[Category B]</b> <b>followed the opposite trend</b>, <b>as it increased/decreased to [Data]</b>.</code>            
          </div>
          </div>
      </li>
@@ -1686,34 +1682,37 @@ if st.session_state.step == 1:
          <br>
          <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu</b>
          <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 1.X]</i>
-         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc ở trên xuống đây. KHÔNG ĐƯỢC SỬA.]</code>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
          <br>- <b>🧩 Khai báo biến:</b>
            <br>&nbsp;&nbsp;+ [Cat A] = ...
            <br>&nbsp;&nbsp;+ [Cat B] = ...
            <br>&nbsp;&nbsp;+ [Data] = ...
-         <br>- <b>📝 Điền từ:</b> <i>[AI thực hiện thay thế [Variable] bằng dữ liệu. Giữ nguyên mọi từ khác của mẫu.]</i>
+         <br>- <b>📝 Điền từ:</b> <i>[AI thực hiện thay thế [Variable] bằng dữ liệu. Giữ nguyên mọi từ khác.]</i>
          <br>
-         <br><b>✅ BƯỚC 2: Xử lý Chủ thể 1 (Trend + End)</b>
-         <br>- <b>🔴 Chọn ID Trend:</b> <i>[AI chọn Mẫu 2.X]</i>
+         <br><b>✅ BƯỚC 2: Xử lý Chủ thể 1 (Hành trình Trọn gói)</b>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 2.X - Mẫu gộp Trend+End]</i>
          <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
-         <br>- <b>🧩 Khai báo biến:</b> [Data] = ...
-         <br>- <b>🔴 Chọn ID End:</b> <i>[AI chọn Mẫu 3.X]</i>
-         <br>- <b>🧩 Khai báo biến:</b> [End Data] = ...
-         <br>- <b>📝 Điền từ (Ghép 2 mẫu):</b> <i>[AI điền dữ liệu vào đúng khung mẫu]</i>
+         <br>- <b>🧩 Khai báo biến:</b>
+           <br>&nbsp;&nbsp;+ [Peak Data] (nếu có) = ...
+           <br>&nbsp;&nbsp;+ [End Data] = ...
+           <br>&nbsp;&nbsp;+ [Year] (nếu có) = ...
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu vào đúng khung mẫu]</i>
          <br>
-         <br><b>✅ BƯỚC 3: Xử lý Chủ thể 2 (So sánh + Trend + End)</b>
-         <br>- <b>🔴 Chọn ID So sánh:</b> <i>[AI chọn Mẫu 4.X]</i>
+         <br><b>✅ BƯỚC 3: Xử lý Chủ thể 2 (So sánh & Kết thúc)</b>
+         <br><i>(⚠️ Bắt buộc lấy mẫu từ <b>KHỐI 3</b> màu xanh lá ở trên)</i>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 3.X]</i>
          <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
          <br>- <b>🧩 Khai báo biến:</b>
            <br>&nbsp;&nbsp;+ [Cat B] = ...
-           <br>&nbsp;&nbsp;+ [Data] = ...       
+           <br>&nbsp;&nbsp;+ [End Data] = ...
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu vào đúng khung mẫu]</i>
      </li>
      
      <!-- PHẦN 4: GHÉP CÂU HOÀN CHỈNH -->
      <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
          <b>📝 KẾT QUẢ BODY 1 (FINAL OUTPUT):</b><br>
          <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI thay biến vào mẫu]
+         [AI nối các câu ở phần 'Điền từ' lại thành đoạn văn.]
          </div>
      </div></li>
    </ul>
