@@ -1596,8 +1596,8 @@ if st.session_state.step == 1:
      <!-- SYSTEM_ALERT: Hiển thị ngay đầu tiên. -->
      <!-- ================================================================================== -->
      <li>
-         <div style="background-color:#fffde7; border:2px solid #fbc02d; border-radius:5px; padding:15px; margin-bottom:15px; text-align:center;">
-             <strong style="color:#f57f17; font-size: 1.1rem;">🎯 CÔNG THỨC TRIỂN KHAI (THE FLOW):</strong>
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">             
+             <b>► CÔNG THỨC TRIỂN KHAI (THE FLOW):</b> 
              <br><i>(Quy trình 3 bước chuẩn hóa cho Body 1)</i>
              <br>
              <br>
