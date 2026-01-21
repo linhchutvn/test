@@ -1597,7 +1597,7 @@ if st.session_state.step == 1:
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">             
-             <b>► CÔNG THỨC TRIỂN KHAI (THE FLOW):</b> 
+             <b>► Cấu trúc chuẩn (Formula):</b> 
              <br><i>(Quy trình 3 bước chuẩn hóa cho Body 1)</i>
              <br>
              <br>
