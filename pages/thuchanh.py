@@ -1541,15 +1541,18 @@ if st.session_state.step == 1:
                                  <br>"It is clear that while <b>&#91;Category A&#93;</b> changed significantly, the figure for <b>&#91;Category B&#93;</b> remained relatively stable <b>over the given period</b>."                                
                              </div>
 
-                             <!-- KHỐI 3: HIGHLIGHTS (LIỆT KÊ ĐỦ 3 LOẠI) -->
+                             <!-- KHỐI 3:  KEY FEATURES / HIGHLIGHTS (LIỆT KÊ ĐỦ 3 LOẠI) -->
                              <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-                                 <b>► 3. Các mẫu câu Điểm nổi bật (Highlights):</b>
+                                 <b>► 3. Các mẫu câu Điểm nổi bật (Key Features / Highlights):</b>
                                  <br><i>(Người viết chọn 1 trong 3 loại dưới đây)</i>                               
                                  <br>✅ <b>Loại 1: Cao nhất/Thấp nhất (Ranking)</b>
+                                 <br><i>(Dùng khi có 1 đường luôn nằm trên hoặc nằm dưới các đường khác)</i>
                                  <br>"<b>&#91;Category A&#93;</b> consistently had the highest figures throughout the period."                                 
                                  <br>✅ <b>Loại 2: Biến động lớn nhất (Biggest Change)</b>
+                                 <br><i>(Dùng khi có 1 đường tăng/giảm mạnh nhất so với bọn còn lại)</i>
                                  <br>"<b>&#91;Category B&#93;</b> witnessed the most dramatic change."                               
-                                 <br>✅ <b>Loại 3: Soán ngôi (Ranking Shift)</b>                                 
+                                 <br>✅ <b>Loại 3: Soán ngôi (Ranking Shift)</b>
+                                 <br><i>(Dùng khi các đường cắt nhau)</i>
                                  <br>"The <b>figure for &#91;Category A&#93;</b> overtook <b>that of &#91;Category B&#93;</b> to become the dominant category."                               
                              </div>
                          </li>
