@@ -1677,35 +1677,36 @@ if st.session_state.step == 1:
      <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
      <!-- ================================================================================== -->
-     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP (BODY 1 - 4 BƯỚC) -->
-        AI phải hiển thị "Mẫu gốc" trước khi hiển thị "Kết quả" để người dùng đối chiếu. -->
+     <!-- SYSTEM_ALERT: QUY TRÌNH "TEMPLATE RECALL" (GỌI LẠI MẪU).
+          AI BẮT BUỘC PHẢI IN RA MẪU GỐC TRƯỚC KHI ĐIỀN TỪ. -->
      <!-- ================================================================================== -->
-     <li> 
-         <b>✍️ THỰC HÀNH LẮP RÁP BODY 1 (STEP-BY-STEP):</b>
+     <li>     
+         <b>✍️ THỰC HÀNH LẮP RÁP BODY 1 (CHẾ ĐỘ COPY-PASTE):</b>
+         <br><i>(Quy trình: Chọn ID &rarr; In Mẫu Gốc &rarr; Khai báo &rarr; Điền vào chỗ trống)</i>
          <br>
-         <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu (So sánh Start Data)</b>
+         <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu</b>
          <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 1.X]</i>
-         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc ở trên xuống đây. KHÔNG ĐƯỢC SỬA.]</code>
          <br>- <b>🧩 Khai báo biến:</b>
-           <br>&nbsp;&nbsp;+ [Cat A] (Chủ thể 1) = ...
-           <br>&nbsp;&nbsp;+ [Cat B] (Chủ thể 2) = ...
+           <br>&nbsp;&nbsp;+ [Cat A] = ...
+           <br>&nbsp;&nbsp;+ [Cat B] = ...
            <br>&nbsp;&nbsp;+ [Data] = ...
-         <br>- <b>📝 Kết quả ghép:</b> <i>[AI thay biến vào mẫu]</i>
+         <br>- <b>📝 Điền từ:</b> <i>[AI thực hiện thay thế [Variable] bằng dữ liệu. Giữ nguyên mọi từ khác của mẫu.]</i>
          <br>
-         <br><b>✅ BƯỚC 2: Xử lý Chủ thể 1 (Trend + End Data)</b>
+         <br><b>✅ BƯỚC 2: Xử lý Chủ thể 1 (Trend + End)</b>
          <br>- <b>🔴 Chọn ID Trend:</b> <i>[AI chọn Mẫu 2.X]</i>
          <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
-         <br>- <b>🧩 Khai báo biến Trend:</b> [Data] = ...
+         <br>- <b>🧩 Khai báo biến:</b> [Data] = ...
          <br>- <b>🔴 Chọn ID End:</b> <i>[AI chọn Mẫu 3.X]</i>
-         <br>- <b>🧩 Khai báo biến End:</b> [End Data] = ...
-         <br>- <b>📝 Kết quả ghép (Nối 2 mẫu):</b> <i>[AI ghép Mẫu 2 + Mẫu 3]</i>
+         <br>- <b>🧩 Khai báo biến:</b> [End Data] = ...
+         <br>- <b>📝 Điền từ (Ghép 2 mẫu):</b> <i>[AI điền dữ liệu vào đúng khung mẫu]</i>
          <br>
-         <br><b>✅ BƯỚC 3: Xử lý Chủ thể 2 (So sánh + Trend + End Data)</b>
+         <br><b>✅ BƯỚC 3: Xử lý Chủ thể 2 (So sánh + Trend + End)</b>
          <br>- <b>🔴 Chọn ID So sánh:</b> <i>[AI chọn Mẫu 4.X]</i>
          <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
          <br>- <b>🧩 Khai báo biến:</b>
            <br>&nbsp;&nbsp;+ [Cat B] = ...
-           <br>&nbsp;&nbsp;+ [Data] = ...         
+           <br>&nbsp;&nbsp;+ [Data] = ...       
      </li>
      
      <!-- PHẦN 4: GHÉP CÂU HOÀN CHỈNH -->
@@ -1862,24 +1863,34 @@ if st.session_state.step == 1:
          <br><b>✅ BƯỚC 1: Xử lý Câu chuyển đoạn</b>
          <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 1.X]</i>
          <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
-         <br>- <b>📝 Điền từ:</b> <i>[AI thay thế [...] bằng dữ liệu thật]</i>
+         <br>- <b>🧩 Khai báo biến:</b>
+           <br>&nbsp;&nbsp;+ [Cat C] = ...
+           <br>&nbsp;&nbsp;+ [Cat D] (nếu có) = ...
+           <br>&nbsp;&nbsp;+ [Data] = ...
+         <br>- <b>📝 Điền từ:</b> <i>[AI giữ nguyên cấu trúc mẫu, chỉ thay dữ liệu]</i>
          <br>
          <br><b>✅ BƯỚC 2: Xử lý Diễn biến & Kết thúc</b>
          <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 2.X]</i>
          <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
-         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu]</i>
+         <br>- <b>🧩 Khai báo biến:</b>
+           <br>&nbsp;&nbsp;+ [Avg/End Data] = ...
+           <br>&nbsp;&nbsp;+ [Adjective] = ...
+         <br>- <b>📝 Điền từ:</b> <i>[AI giữ nguyên cấu trúc mẫu, chỉ thay dữ liệu]</i>
          <br>
          <br><b>✅ BƯỚC 3: Xử lý So sánh nội bộ</b>
          <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 3.X]</i>
          <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
-         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu]</i>
+         <br>- <b>🧩 Khai báo biến:</b>
+           <br>&nbsp;&nbsp;+ [Cat C] = ...
+           <br>&nbsp;&nbsp;+ [Cat D] = ...
+           <br>&nbsp;&nbsp;+ [Data] = ...
      </li>
      
      <!-- PHẦN 4: GHÉP CÂU HOÀN CHỈNH -->
      <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
          <b>📝 KẾT QUẢ BODY 2:</b><br>
          <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI nối các câu ở phần 'Điền từ' lại thành đoạn văn.]
+         [AI giữ nguyên cấu trúc mẫu, chỉ thay dữ liệu]
          </div>
      </div></li>
    </ul>
