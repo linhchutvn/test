@@ -1658,14 +1658,29 @@ if st.session_state.step == 1:
              <br><code>There was a sharp rise to <b>[End Data]</b>, making it the highest category at the end of the period.</code>
              
              <br>📍 <b>[Mẫu 2.5 - Finishing]</b> (Mệnh đề rút gọn):
-             <br><code>It witnessed a steady trend, <b>finishing the period at [End Data]</b>.</code>         
+             <br><code>It witnessed a steady trend, <b>finishing the period at [End Data]</b>.</code>
+             
+             <br>📍 <b>[Mẫu 2.6 - Dao động]</b> (Zíc-zắc & Kết thúc):
+             <br><code>It showed a volatile pattern, <b>fluctuating between [Data 1] and [Data 2]</b>, before settling at <b>[End Data]</b>.</code>
+
+             <br>📍 <b>[Mẫu 2.7 - Ổn định cao]</b> (Dùng cho đường luôn đứng nhất):
+             <br><code>The figure <b>remained relatively stable</b> at <b>[Data]</b> throughout the period, maintaining its leading position.</code>
+
+             <br>📍 <b>[Mẫu 2.8 - Plateau]</b> (Tăng/Giảm rồi đi ngang) <b style="color:red;">(MỚI)</b>:
+             <br><code>It climbed rapidly to reach <b>[Data]</b> in <b>[Year]</b>, <b>after which it leveled off/plateaued</b> for the remainder of the period.</code>
+
+             <br>📍 <b>[Mẫu 2.9 - Recovery]</b> (Hồi phục sau khi giảm) <b style="color:red;">(MỚI)</b>:
+             <br><code>After an initial drop to <b>[Low Data]</b>, the figure <b>staged a recovery</b>, rising back to <b>[End Data]</b>.</code>
          </div>
 
          <!-- KHỐI 3: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
              <b>► KHỐI 3: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI:</b>             
              <br>📍 <b>[Mẫu 3.1 - Tương đồng]</b>: <code>Similarly, <b>[Category B]</b> also witnessed a downward trend, <b>falling/rising to [Data]</b>.</code>
-             <br>📍 <b>[Mẫu 3.2 - Đối lập]</b>: <code>In contrast, <b>[Category B]</b> <b>followed the opposite trend</b>, <b>as it increased/decreased to [Data]</b>.</code>            
+             <br>📍 <b>[Mẫu 3.2 - Đối lập]</b>: <code>In contrast, <b>[Category B]</b> <b>followed the opposite trend</b>, <b>as it increased/decreased to [Data]</b>.</code>
+             <br>📍 <b>[Mẫu 3.3 - Toán học]</b>: <code><b>[Cat B]</b> followed a similar pattern, ending the period at <b>[End Data]</b>, which was <b>half/double</b> that of <b>[Cat A]</b>.</code>
+             <br>📍 <b>[Mẫu 3.4 - Mức độ nhẹ hơn]</b>: <code>A similar, <b>albeit less dramatic</b>, trend was seen in <b>[Cat B]</b>, which rose/fell slightly to <b>[End Data]</b> <b>[Time]</b>.</code>
+             <br>📍 <b>[Mẫu 3.5 - Cấu trúc While]</b>: <code>While <b>[Cat A]</b> [Trend A], <b>[Cat B]</b> [Trend B], finishing at <b>[End Data]</b> respectively.</code>
          </div>
          </div>
      </li>
