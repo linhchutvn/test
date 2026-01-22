@@ -1852,7 +1852,7 @@ if st.session_state.step == 1:
          <br><i>(Phân tích đề bài và hình ảnh để chọn KHỐI 1 thuộc Mẫu nào?, và chỉ hiển thị công thức)</i>
              <b>► KHỐI 1: CHUYỂN ĐOẠN:</b>
              <br>📍 <b>[Mẫu 1.1 - Trung tính]</b> (Dùng để liệt kê tiếp):
-             <br><code>Turning to the remaining categories (<b>[Cat C]</b> and <b>[Cat D]</b>), the figure for <b>[Cat C]</b> started at <b>[Data]</b> <b>[Time]</b>.</code>.</code>
+             <br><code>Turning to the remaining categories (<b>[Cat C]</b> and <b>[Cat D]</b>), the figure for <b>[Cat C]</b> started at <b>[Data]</b> <b>[Time]</b>.</code>
              
              <br>📍 <b>[Mẫu 1.2 - Đối lập]</b> (Dùng khi xu hướng ngược Body 1):
              <br><code><b>In contrast</b>, a completely different trend was observed in <b>[Cat C]</b>, which began the period at <b>[Data]</b> <b>[Time]</b>.</code>
