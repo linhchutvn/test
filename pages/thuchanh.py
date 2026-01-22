@@ -1541,22 +1541,20 @@ if st.session_state.step == 1:
                          
                          <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
-                        # ==================================================================================
+                         # ==================================================================================
                          # PHẦN 2: CHIẾN THUẬT CHỌN MẪU (TEMPLATE MATCHING)
                          # Mục tiêu: Dạy học sinh nhìn hình -> Chọn mẫu -> Giải thích tại sao.
                          # ==================================================================================
                          <li>
                              <div style="background-color:#e1f5fe; padding:15px; border-radius:8px; border-left: 5px solid #0288d1; margin-bottom: 15px;">
-                                 <strong style="color:#01579b; font-size: 1.1rem;">🎯 TẠI SAO CHỌN MẪU NÀY? (MATCHING STRATEGY):</strong>
-                                 <br><i>(Giám khảo hướng dẫn cách nhìn hình để chọn Mẫu câu phù hợp)</i>
-                                 
+                                 <strong style="color:#01579b; font-size: 1.1rem;">🔍 PHÂN TÍCH BÀI NÀY (Selection & Drafting):</strong>
+                                 <br><i>(Học sinh nhìn hình để chọn Mẫu cho phù hợp)</i>                                 
                                  <br><br><b>1. Với Xu hướng (Trend - Câu 1):</b>
                                  <ul style="margin-top:5px; list-style-type: none; padding-left: 10px;">
                                      <li>👀 <b>Quan sát (Observation):</b> <i>[AI MÔ TẢ NGẮN GỌN DẤU HIỆU HÌNH ẢNH. Ví dụ: "Đường A đi lên mạnh, trong khi đường B lại đi xuống."]</i></li>
                                      <li>🧩 <b>Khớp với Mẫu số:</b> <b>[AI ĐIỀN LOẠI. Ví dụ: Loại 2 (Xu hướng ngược/Mix)]</b>.</li>
                                      <li>💡 <b>Lý do chọn:</b> <i>[AI GIẢI THÍCH LOGIC. Ví dụ: "Vì hai đường đi ngược chiều nhau nên bắt buộc dùng cấu trúc tương phản 'While/In contrast'."]</i></li>
                                  </ul>
-
                                  <br><b>2. Với Điểm nổi bật (Highlight - Câu 2):</b>
                                   <ul style="margin-top:5px; list-style-type: none; padding-left: 10px;">
                                      <li>👀 <b>Quan sát (Observation):</b> <i>[AI MÔ TẢ. Ví dụ: "Đường A luôn nằm cao nhất, không bị ai vượt qua."]</i></li>
@@ -1564,6 +1562,19 @@ if st.session_state.step == 1:
                                      <li>💡 <b>Lý do chọn:</b> <i>[AI GIẢI THÍCH. Ví dụ: "Vì đường này luôn áp đảo (dominant) suốt giai đoạn nên dùng từ 'consistently the highest'."]</i></li>
                                  </ul>
                              </div>
+                             
+                             <!-- Phần Drafting: Tách riêng ra để học sinh thấy kết quả sau khi tư duy -->
+                             <div style="background-color:#fff; border: 2px dashed #b0bec5; padding: 15px; border-radius: 8px;">
+                                 <strong style="color:#546e7a;">✍️ RÁP DỮ LIỆU VÀO MẪU (DRAFTING):</strong>
+                                 <br><i>(AI lấy số liệu thực tế lắp vào khung mẫu đã chọn ở trên)</i>
+                                 <br>
+                                 <br>👉 <b>Câu Xu hướng (Trend):</b>
+                                 <br><code style="font-size: 1rem; color:#d35400; background-color:#fbe9e7; padding:4px;">[AI viết câu 1 hoàn chỉnh theo đúng Mẫu đã chọn, thay thế [...] bằng dữ liệu thật]</code>
+                                 <br>
+                                 <br>👉 <b>Câu Điểm nổi bật (Highlight):</b>
+                                 <br><code style="font-size: 1rem; color:#d35400; background-color:#fbe9e7; padding:4px;">[AI viết câu 2 hoàn chỉnh theo đúng Mẫu đã chọn, thay thế [...] bằng dữ liệu thật]</code>
+                             </div>
+                         </li>
 
                          <!-- PHẦN 3: TỪ VỰNG -->
                          <li><b>🔑 TỪ VỰNG GỢI Ý (Vocabulary):</b>
