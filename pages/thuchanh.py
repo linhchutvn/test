@@ -1554,7 +1554,7 @@ if st.session_state.step == 1:
                                   <ul style="margin-top:5px; list-style-type: none; padding-left: 10px;">
                                      <li>👀 <b>Quan sát (Observation):</b> <i>[AI MÔ TẢ. Ví dụ: "Đường A luôn nằm cao nhất, không bị ai vượt qua."]</i></li>
                                      <li>🧩 <b>Khớp với Mẫu số:</b> <b>[AI ĐIỀN LOẠI. Ví dụ: Loại 1 (Cao nhất/Ranking)]</b>.</li>                                     
-                                     <br>👉 <b>Viêt câu Highlights:</b> <i>[AI viết câu hoàn chỉnh. YÊU CẦU: Copy y nguyên cấu trúc mẫu, chỉ thay thế chủ ngữ và số liệu]</i>
+                                     <br>👉 <b>Viêt câu Highlights:</b> <i>[AI viết câu hoàn chỉnh. YÊU CẦU: không tự chế từ hoặc câu khác, phải sử dụng mẫu đã có sẵn]</i>
                                  </ul>
                              </div>                            
                          </li>
@@ -1570,7 +1570,7 @@ if st.session_state.step == 1:
                          <li><div style="background-color:#fff3e0; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ff9f43;">
                              <b>📝 Nội dung mẫu (Sample Overview):</b><br>
                              <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-                             [AI hãy viết đoạn Overview hoàn chỉnh. <b>QUAN TRỌNG:</b> Chỉ được sử dụng đúng cấu trúc câu đã chọn ở Phần 'PHÂN TÍCH'. Lắp ghép dữ liệu vào khung mẫu.]
+                             [AI hãy viết đoạn Overview hoàn chỉnh. <b>QUAN TRỌNG:</b> Chỉ được sử dụng đúng cấu trúc câu đã chọn ở PHẦN 2]
                              </div>
                          </div></li>
                        </ul>
