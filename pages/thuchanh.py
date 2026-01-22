@@ -1678,37 +1678,46 @@ if st.session_state.step == 1:
 
          <!-- KHỐI 2: MIÊU TẢ TREND & ĐIỂM GÃY - CỰC KỲ QUAN TRỌNG -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
-             <b>► KHỐI 2: MIÊU TẢ TREND:</b>             
+             <b>► KHỐI 2: MIÊU TẢ TREND:</b>
+             <br><i>(Lưu ý: [Time] ở đây nên dùng "Thời gian tương đối" như: Then, Subsequently, 10 years later...)</i>
              <br>📍 <b>[Mẫu 2.1 - Before V-ing]</b> (Tăng rồi Giảm/Ngược lại):
-             <br><code>The figure increased to <b>[Peak Data]</b>, <b>before falling back to finish at</b> <b>[End Data]</b>.</code>             
+             <br><code><b>[Time]</b>, the figure increased to <b>[Peak Data]</b>, <b>before falling back to finish at</b> <b>[End Data]</b>.</code>
              <br>📍 <b>[Mẫu 2.2 - Peak/Low & End]</b> (Đạt Đỉnh/Đáy rồi đổi chiều):
              <br>• <b>Đỉnh:</b> <code>It surged to <b>reach a peak of [Peak Data]</b> in <b>[Year]</b>, and then dropped to <b>[End Data]</b>.</code>
              <br>• <b>Đáy:</b> <code>It plunged to <b>hit a low of [Low Data]</b> in <b>[Year]</b>, before recovering to <b>[End Data]</b>.</code>             
              <br>📍 <b>[Mẫu 2.3 - Soán ngôi & End]</b> (Vượt mặt):
-             <br><code>It rose significantly, <b>surpassing [Cat B]</b> to become the leader and <b>ending at [End Data]</b>.</code>             
+             <br><code>It rose significantly, <b>surpassing [Cat B]</b> to become the dominant category and <b>ending at [End Data]</b>.</code>
              <br>📍 <b>[Mẫu 2.4 - Tăng/Giảm thẳng]</b> (Xu hướng đơn giản):
-             <br><code>There was a sharp rise to <b>[End Data]</b>, making it the highest category at the end of the period.</code>             
+             <br><code>There was a sharp rise to <b>[End Data]</b> <b>[Time]</b>, making it the highest figure at the end of the period.</code>
              <br>📍 <b>[Mẫu 2.5 - Finishing]</b> (Mệnh đề rút gọn):
-             <br><code>It witnessed a steady trend, <b>finishing the period at [End Data]</b>.</code>             
+             <br><code>It followed a steady <b>[upward/downward]</b> trend, <b>finishing the period at [End Data]</b>.</code>
              <br>📍 <b>[Mẫu 2.6 - Dao động]</b> (Zíc-zắc & Kết thúc):
-             <br><code>It showed a volatile pattern, <b>fluctuating between [Data 1] and [Data 2]</b>, before settling at <b>[End Data]</b>.</code>
+             <br><code>It showed a volatile pattern, <b>fluctuating between [Data 1] and [Data 2]</b>, before ending at <b>[End Data]</b>.</code>
              <br>📍 <b>[Mẫu 2.7 - Ổn định cao]</b> (Dùng cho đường luôn đứng nhất):
-             <br><code>The figure <b>remained relatively stable</b> at <b>[Data]</b> throughout the period, maintaining its leading position.</code>
+             <br><code>The figure <b>remained relatively stable</b> at <b>around [Data]</b> throughout the period, maintaining its leading position.</code>
              <br>📍 <b>[Mẫu 2.8 - Plateau]</b> (Tăng/Giảm rồi đi ngang):
              <br><code>It climbed rapidly to reach <b>[Data]</b> in <b>[Year]</b>, <b>after which it leveled off/plateaued</b> for the remainder of the period.</code>
              <br>📍 <b>[Mẫu 2.9 - Recovery]</b> (Hồi phục sau khi giảm):
-             <br><code>After an initial drop to <b>[Low Data]</b>, the figure <b>staged a recovery</b>, rising back to <b>[End Data]</b>.</code>
+             <br><code>After an initial drop to <b>[Low Data]</b>, the figure <b>recovered</b>, rising back to <b>[End Data]</b> <b>[Time]</b>.</code>
          </div>
 
          <!-- KHỐI 3: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI -->
-         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
-             <b>► KHỐI 3: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI:</b>             
-             <br>📍 <b>[Mẫu 3.1 - Tương đồng]</b>: <code>Similarly, <b>[Category B]</b> also witnessed a downward trend, <b>falling/rising to [Data]</b>.</code>
-             <br>📍 <b>[Mẫu 3.2 - Đối lập]</b>: <code>In contrast, <b>[Category B]</b> <b>followed the opposite trend</b>, <b>as it increased/decreased to [Data]</b>.</code>
-             <br>📍 <b>[Mẫu 3.3 - Toán học]</b>: <code><b>[Cat B]</b> followed a similar pattern, ending the period at <b>[End Data]</b>, which was <b>half/double</b> that of <b>[Cat A]</b>.</code>
-             <br>📍 <b>[Mẫu 3.4 - Mức độ nhẹ hơn]</b>: <code>A similar, <b>albeit less dramatic</b>, trend was seen in <b>[Cat B]</b>, which rose/fell slightly to <b>[End Data]</b> <b>[Time]</b>.</code>
-             <br>📍 <b>[Mẫu 3.5 - Cấu trúc While]</b>: <code>While <b>[Cat A]</b> [Trend A], <b>[Cat B]</b> [Trend B], finishing at <b>[End Data]</b> respectively.</code>
-         </div>
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
+         <br><i>(Dùng để kết nối với các đối tượng đã phân tích trước đó)</i>         
+             <b>► KHỐI 3: SO SÁNH & ĐỐI CHIẾU:</b>             
+             <br>📍 <b>[Mẫu 3.1 - Tương đồng]</b> (Cùng tăng/Cùng giảm):
+             <br><i>(Lưu ý: Chọn verb rising/falling phải khớp với trend)</i>
+             <br><code>Similarly, <b>[Cat B]</b> also witnessed a <b>[upward/downward]</b> trend, <b>[rising/falling] to [End Data]</b> <b>[Time]</b>.</code>             
+             <br>📍 <b>[Mẫu 3.2 - Đối lập]</b> (Trend ngược chiều):
+             <br><code>In contrast, <b>[Cat B]</b> <b>followed the opposite trend</b>, as it <b>[increased/decreased] to [End Data]</b> <b>[Time]</b>.</code>             
+             <br>📍 <b>[Mẫu 3.3 - Toán học]</b> (Gấp đôi/Gấp rưỡi...):
+             <br><i>(Cấu trúc mệnh đề quan hệ đỉnh cao)</i>
+             <br><code><b>[Cat B]</b> followed a similar pattern, ending the period at <b>[End Data]</b>, which was <b>[half / double / three times]</b> that of <b>[Cat A]</b>.</code>             
+             <br>📍 <b>[Mẫu 3.4 - Mức độ nhẹ hơn]</b> (Cùng trend nhưng ít dốc hơn):
+             <br><code>A similar, <b>albeit less dramatic</b>, trend was seen in <b>[Cat B]</b>, which <b>[rose/fell] mildly</b> to <b>[End Data]</b> <b>[Time]</b>.</code>             
+             <br>📍 <b>[Mẫu 3.5 - Cấu trúc While]</b> (So sánh song song):
+             <br><i>(Examiner Note: Phải có đủ 2 số liệu mới dùng respectively)</i>
+             <br><code>While <b>[Cat A]</b> <b>[Trend A]</b>, <b>[Cat B]</b> <b>[Trend B]</b>, finishing at <b>[Data A]</b> and <b>[Data B]</b> respectively.</code>
          </div>
      </li>
      
@@ -1841,43 +1850,58 @@ if st.session_state.step == 1:
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
-         <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2:</strong>         
-         <br><i>(Lưu ý: Chọn từ Menu Thời Gian để điền vào <b>[Time]</b>)</i>
+         <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2 (REMAINING CATEGORIES):</strong>         
+         <br><i>(Chiến thuật: Gom nhóm các đối tượng còn lại & So sánh nội bộ)</i>
          
-         <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN -->
+         <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN & KHỞI ĐẦU -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-         <br><i>(Phân tích đề bài và hình ảnh để chọn KHỐI 1 thuộc Mẫu nào?, và chỉ hiển thị công thức)</i>
-             <b>► KHỐI 1: CHUYỂN ĐOẠN:</b>
-             <br>📍 <b>[Mẫu 1.1 - Trung tính]</b> (Dùng để liệt kê tiếp):
-             <br><code>Turning to the remaining categories (<b>[Cat C]</b> and <b>[Cat D]</b>), the figure for <b>[Cat C]</b> started at <b>[Data]</b> <b>[Time]</b>.</code>             
-             <br>📍 <b>[Mẫu 1.2 - Đối lập]</b> (Dùng khi xu hướng ngược Body 1):
-             <br><code><b>In contrast</b>, a completely different trend was observed in <b>[Cat C]</b>, which began the period at <b>[Data]</b> <b>[Time]</b>.</code>                          
-             <br>📍 <b>[Mẫu 1.3 - Song song]</b> (Dùng khi diễn ra cùng lúc):
-             <br><code><b>Meanwhile</b>, the figure for <b>[Cat C]</b> stood at <b>[Data]</b> <b>[Time]</b>.</code>             
+         <br><i>(Chọn mẫu phù hợp với số lượng đối tượng còn lại)</i>
+             <b>► KHỐI 1: CHUYỂN ĐOẠN (TRANSITION):</b>
+             
+             <br>📍 <b>[Mẫu 1.1 - Liệt kê chuẩn]</b> (Dùng cho 2 hoặc 3 đối tượng):
+             <br><i>(AI Note: Nếu có 3 đối tượng, liệt kê: Cat C, Cat D and Cat E)</i>
+             <br><code>Turning to the remaining categories <b>([List of Categories])</b>, the figure for <b>[Cat C]</b> started at <b>[Data]</b> <b>[Time]</b>.</code>
+             
+             <br>📍 <b>[Mẫu 1.2 - Đối lập hoàn toàn]</b> (Nếu Body 1 tăng, Body 2 giảm):
+             <br><code><b>In contrast</b>, a completely different trend was observed in <b>[Cat C]</b>, which began the period at <b>[Data]</b> <b>[Time]</b>.</code>
+             
+             <br>📍 <b>[Mẫu 1.3 - Nhóm thấp]</b> (Nếu số liệu Body 2 thấp hơn hẳn Body 1):
+             <br><code><b>As regards [Cat C]</b> and <b>[Cat D]</b>, they started at much lower levels of <b>[Data C]</b> and <b>[Data D]</b> respectively <b>[Time]</b>.</code>
          </div>
 
-         <!-- KHỐI 2: DIỄN BIẾN & KẾT THÚC (GỘP) -->
+         <!-- KHỐI 2: DIỄN BIẾN & KẾT THÚC -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-         <br><i>(Phân tích đề bài và hình ảnh để chọn KHỐI 2 thuộc Mẫu nào?, và chỉ hiển thị công thức)</i>
-             <b>► KHỐI 2: DIỄN BIẾN & KẾT THÚC:</b>                          
-             <br>📍 <b>[Mẫu 2.1 - Dao động]</b> (Zíc-zắc):             
-             <br><code>It <b>fluctuated (wildly/moderately)</b> around <b>[Avg Data]</b>, before settling at <b>[End Data]</b> <b>[Time]</b>.</code>             
-             <br>📍 <b>[Mẫu 2.2 - Ổn định]</b> (Đi ngang):             
-             <br><code>The figure <b>remained relatively stable</b> at <b>[Data]</b> <b>[Time]</b>.</code>
-             <br>📍 <b>[Mẫu 2.3 - Tăng/Giảm chuẩn]</b> (Dùng cho cả Mạnh và Nhẹ):             
-             <br><code>It witnessed a <b>[Adjective]</b> <b>(increase/decrease)</b>, finishing the period at <b>[End Data]</b>.</code>
+             <b>► KHỐI 2: DIỄN BIẾN (TRENDS):</b>
+             
+             <br>📍 <b>[Mẫu 2.1 - Dao động]</b> (Fluctuation - Sửa lại cho an toàn):
+             <br><code>It <b>fluctuated (wildly/moderately)</b> between <b>[Low Data]</b> and <b>[High Data]</b>, before ending at <b>[End Data]</b> <b>[Time]</b>.</code>
+             
+             <br>📍 <b>[Mẫu 2.2 - Ổn định]</b> (Stability):
+             <br><code>The figure <b>remained relatively stable</b> at <b>around [Data]</b> <b>[Time]</b>.</code>
+             
+             <br>📍 <b>[Mẫu 2.3 - Tăng/Giảm thông thường]</b>:
+             <br><code>It witnessed a <b>[steady/sharp]</b> <b>[increase/decrease]</b>, finishing the period at <b>[End Data]</b>.</code>
+
+             <br>📍 <b>[Mẫu 2.4 - "Dark Horse"]</b> (Xuất phát thấp -> Tăng vọt):
+             <br><i>(Dùng cho đối tượng như "Online" - Tăng từ 5% lên 50%)</i>
+             <br><code>Starting at a mere <b>[Start Data]</b>, it <b>experienced a dramatic surge</b> to <b>[End Data]</b> <b>[Time]</b>.</code>
          </div>
         
-         <!-- KHỐI 3: SO SÁNH NỘI BỘ -->
+         <!-- KHỐI 3: SO SÁNH NỘI BỘ & ĐỐI TƯỢNG CUỐI -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-         <br><i>(Phân tích đề bài và hình ảnh để chọn KHỐI 3 thuộc Mẫu nào?, và chỉ hiển thị công thức)</i>
-             <b>► KHỐI 3: SO SÁNH NHÓM CÒN LẠI:</b>             
+         <br><i>(Kết nối các đối tượng trong Body 2 với nhau)</i>
+             <b>► KHỐI 3: SO SÁNH & CHỐT HẠ:</b>
+             
              <br>📍 <b>[Mẫu 3.1 - Tương đồng]</b>:
-             <br><code>A <b>similar pattern</b> was seen in <b>[Cat D]</b>, which rose/fell to <b>[Data]</b> <b>[Time]</b>.</code>             
-             <br>📍 <b>[Mẫu 3.2 - Gấp lần]</b> (Toán học):
-             <br><code>The figure for <b>[Cat C]</b> was <b>(double / two times as high as)</b> that of <b>[Cat D]</b> <b>[Time]</b>.</code>
-         </div>
-         </div>
+             <br><code>A <b>similar pattern</b> was seen in <b>[Cat D]</b>, which <b>[rose/fell]</b> to <b>[End Data]</b> <b>[Time]</b>.</code>
+             
+             <br>📍 <b>[Mẫu 3.2 - Toán học]</b> (So sánh Cat C với Cat D):
+             <br><code>The figure for <b>[Cat C]</b> was <b>(double / half)</b> that of <b>[Cat D]</b> <b>[Time]</b>.</code>
+
+             <br>📍 <b>[Mẫu 3.3 - Đối tượng cuối cùng]</b> (Dành cho Cat E - Ví dụ: Online):
+             <br><i>(Dùng mẫu này nếu bài có 3 đối tượng ở Body 2)</i>
+             <br><code>Finally, <b>[Cat E]</b> followed a <b>[Type of Trend]</b> trend, ending the period at <b>[End Data]</b>.</code>
+         </div>         
      </li>
      
      <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
