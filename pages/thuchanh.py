@@ -1057,7 +1057,7 @@ if st.session_state.step == 1:
                     <br>Tuyệt đối <b>KHÔNG</b> dùng dấu gạch ngang để chỉ khoảng số (VD: <i>7-14%</i>).
                     <br>👉 <b>Phải viết chữ:</b> <i>"between 7% and 14%"</i> hoặc <i>"from 7% to 14%"</i>.
                     1. **"intro_guide" (Paraphrase):**                    
-    - <ul>        
+    <ul>        
         <!-- CẤU TRÚC CHUẨN (CỐ ĐỊNH - KHÔNG ĐƯỢC THAY ĐỔI) -->
         <li><b>Cấu trúc chuẩn (Formula):</b> <code>[Subject] + [Finite Verb] + [Object/Topic] + [Place] + [Time (Specific Year)]</code>.</li>
     
@@ -1150,7 +1150,7 @@ if st.session_state.step == 1:
                          <!-- PHẦN 2: PHÂN TÍCH -->
                          <li>
                              <b>🔍 PHÂN TÍCH BÀI NÀY (Selection & Drafting):</b>
-                             <<br><b>1. Xác định "Hạng mục Phổ biến nhất" (The Dominant Category):</b>
+                             <br><b>1. Xác định "Hạng mục Phổ biến nhất" (The Dominant Category):</b>
                              <br>- Nhìn vào biểu đồ/bảng: <b>Hạng mục (Category)</b> nào có số liệu cao nhất/lớn nhất?
                              <br><i>(Lưu ý: Phải là hạng mục có tên cụ thể, không chọn 'Total' hay 'Other')</i>.
                              <br>- <b>Quyết định:</b> Chọn Mẫu nào?
@@ -1181,7 +1181,7 @@ if st.session_state.step == 1:
                        </ul>
 
                     3. **"body1_guide" (Thân bài 1 - Nhóm Lớn Nhất / Nổi Bật Nhất):**
-   - <ul>
+    <ul>
      <!-- ================================================================================== -->
      <!-- MA TRẬN ĐA DẠNG HÓA CẤU TRÚC (GRA BOOSTER) -->
      <!-- ================================================================================== -->
@@ -1338,7 +1338,7 @@ if st.session_state.step == 1:
    </ul>
 
                     4. **"body2_guide" (Thân bài 2 - Nhóm Nhỏ / Nhóm Còn lại):**
-   - <ul>
+    <ul>
      <!-- ================================================================================== -->
      <!-- PHẦN 1: KHO MẪU CÂU (REFERENCE LIBRARY) 
      <!-- SYSTEM_ALERT:           
@@ -1448,7 +1448,7 @@ if st.session_state.step == 1:
                     # =================================================================
 
                     1. **"intro_guide" (Paraphrase):**                    
-    - <ul>
+    <ul>
         <li><b>Cấu trúc chuẩn (Formula):</b> <code>[Subject] + [Finite Verb] + [Object/Topic] + [Place] + [Time]</code>.</li>
     
         <li><b>Subject (Lưu ý quan trọng):</b>
