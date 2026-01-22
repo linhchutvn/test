@@ -1590,44 +1590,47 @@ if st.session_state.step == 1:
                              </div>
                          </div></li>
                        </ul>
-    ### 🕒 PHẦN BỔ TRỢ: KHO THỜI GIAN (ĐẶT TRƯỚC BODY 1)
+
+### 🕒 PHẦN BỔ TRỢ: KHO THỜI GIAN (ĐẶT TRƯỚC BODY 1)
 
    - <ul>
      <!-- ================================================================================== -->
      <!-- GLOBAL MODULE: KHO THỜI GIAN VẠN NĂNG -->
-     <!-- SYSTEM_ALERT: AI tham chiếu bảng này để chọn từ chỉ thời gian phù hợp cho từng phần. -->
+     <!-- SYSTEM_ALERT: AI tham chiếu bảng này. QUY TẮC: Không dùng "In [Year]" 2 lần liên tiếp. -->
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#e3f2fd; border:1px solid #2196f3; border-radius:5px; padding:15px; margin-bottom:15px;">
              <strong style="color:#0d47a1;">⏰ KHO THỜI GIAN VẠN NĂNG (UNIVERSAL TIME MENU):</strong>
-             <br><i>(Hướng dẫn: Chọn 1 cụm từ dưới đây để điền vào biến số <b>[Time]</b> trong các Body)</i>
+             <br><i>(Hướng dẫn: Chọn 1 cụm từ dưới đây để điền vào biến số <b>[Time]</b>. Hãy xoay tua giữa Cột 1 và Cột 2)</i>
              
              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.9rem;">
-                 <!-- CỘT 1: ĐIỂM THỜI GIAN -->
+                 <!-- CỘT 1: THỜI GIAN TUYỆT ĐỐI (Dùng cho câu đầu đoạn) -->
                  <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #2196f3;">
-                     <b style="color:#1565c0;">1. Điểm thời gian (Point):</b>
+                     <b style="color:#1565c0;">1. Mốc Tuyệt đối (Absolute):</b>
                      <ul style="margin:5px 0; padding-left:15px;">
-                         <li>In <b>[Year]</b> / In the year <b>[Year]</b></li>
-                         <li>At the start/beginning of the period</li>
+                         <li>In <b>[Year]</b> (VD: In 1999)</li>
+                         <li>At the start of the period</li>
                          <li>In the final year / By <b>[Year]</b></li>
-                         <li>In <b>[Year]</b> and <b>[Year]</b> respectively</li>
+                         <li>Between <b>[Year]</b> and <b>[Year]</b></li>
                      </ul>
                  </div>
 
-                 <!-- CỘT 2: KHOẢNG THỜI GIAN -->
+                 <!-- CỘT 2: THỜI GIAN TƯƠNG ĐỐI (Dùng để nối câu - QUAN TRỌNG) -->
                  <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #2196f3;">
-                     <b style="color:#1565c0;">2. Khoảng thời gian (Duration):</b>
+                     <b style="color:#1565c0;">2. Tương đối & Trình tự (Relative):</b>
+                     <br><i style="font-size: 0.8rem; color:#d84315;">(Dùng cái này để tránh lặp lại năm)</i>
                      <ul style="margin:5px 0; padding-left:15px;">
-                         <li>Over the <b>[Number]</b>-year period</li>
-                         <li>Throughout the period</li>
-                         <li>During the given period</li>
-                         <li>In the subsequent years / Following this,</li>
+                         <li><b>[X] years later</b> (VD: 10 years later)</li>
+                         <li><b>Over the next [X] years</b></li>
+                         <li><b>Following this / Thereafter</b> (Sau đó)</li>
+                         <li>In the subsequent years</li>
                      </ul>
                  </div>
              </div>
          </div>
      </li>
    </ul>
+
                     3. **"body1_guide" (Thân bài 1 - Nhóm Nổi bật / Biến động mạnh):**
    - <ul>
      <li><b>Logic chọn nhóm (Grouping Strategy):</b> AI thực hiện: Chọn 1 hoặc 2 hạng mục (Category) có <b>số liệu cao nhất</b> hoặc <b>xu hướng thay đổi mạnh nhất/tăng trưởng rõ rệt</b> để phân tích trước.</li>
