@@ -1548,13 +1548,13 @@ if st.session_state.step == 1:
                                  <ul style="margin-top:5px; list-style-type: none; padding-left: 10px;">
                                      <li>👀 <b>Quan sát (Observation):</b> <i>[AI MÔ TẢ NGẮN GỌN DẤU HIỆU HÌNH ẢNH (bằng tiếng Việt). Ví dụ: "Đường A đi lên mạnh, trong khi đường B lại đi xuống."]</i></li>
                                      <li>🧩 <b>Khớp với Mẫu số:</b> <b>[AI ĐIỀN LOẠI. Ví dụ: Loại 2 (Xu hướng ngược/Mix)]</b>.</li>                                     
-                                     <br>👉 <b>Câu tham khảo Trends:</b> <i>[AI BẮT BUỘC dùng đúng cấu trúc câu của Mẫu đã chọn ở trên. KHÔNG ĐƯỢC paraphrase hay đổi cấu trúc. CHỈ ĐƯỢC thay thế các phần trong ngoặc vuông [...] bằng dữ liệu thực tế.]</i>
+                                     <br>👉 <b>Viết câu Trends:</b> <i>[AI viết câu hoàn chỉnh. YÊU CẦU: Copy y nguyên cấu trúc mẫu, chỉ thay thế chủ ngữ và số liệu]</i>
                                  </ul>
                                  <br><b>2. Với Điểm nổi bật (Highlight - Câu 2):</b>
                                   <ul style="margin-top:5px; list-style-type: none; padding-left: 10px;">
                                      <li>👀 <b>Quan sát (Observation):</b> <i>[AI MÔ TẢ. Ví dụ: "Đường A luôn nằm cao nhất, không bị ai vượt qua."]</i></li>
                                      <li>🧩 <b>Khớp với Mẫu số:</b> <b>[AI ĐIỀN LOẠI. Ví dụ: Loại 1 (Cao nhất/Ranking)]</b>.</li>                                     
-                                     <br>👉 <b>Câu tham khảo Highlights:</b> <i>[AI BẮT BUỘC dùng đúng cấu trúc câu của Mẫu đã chọn ở trên. KHÔNG ĐƯỢC paraphrase hay đổi cấu trúc. CHỈ ĐƯỢC thay thế các phần trong ngoặc vuông [...] bằng dữ liệu thực tế.]</i>
+                                     <br>👉 <b>Viêt câu Highlights:</b> <i>[AI viết câu hoàn chỉnh. YÊU CẦU: Copy y nguyên cấu trúc mẫu, chỉ thay thế chủ ngữ và số liệu]</i>
                                  </ul>
                              </div>                            
                          </li>
@@ -1810,11 +1810,7 @@ if st.session_state.step == 1:
      <li><div style="background-color:#fff8e1; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ffa502;">
          <b>📝 KẾT QUẢ BODY 1 (FINAL OUTPUT):</b><br>
          <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI nối các câu ở phần 'Điền từ' lại thành đoạn văn.]
-         <b>Checklist kiểm tra:</b><br>
-         1. Có câu so sánh năm đầu không?<br>
-         2. Có dùng cấu trúc "Before V-ing" hoặc "Reach a peak" không?<br>
-         3. Có từ vựng trong danh sách trên không?]
+         [AI nối các câu ở phần 'Điền từ' lại thành đoạn văn.]         
          </div>
      </div></li>
    </ul>
