@@ -1595,19 +1595,50 @@ if st.session_state.step == 1:
                          </div></li>
                        </ul>
 
-### 🏛️ PHẦN 3: BODY 1 (THÂN BÀI 1 - NHÓM NỔI BẬT)
+### 🏛️ PHẦN 3: BODY 1 (THÂN BÀI 1 - NHÓM NỔI BẬT / BIẾN ĐỘNG MẠNH)
 
-                    3. **"body1_guide" (Thân bài 1 - Quy trình Chuyên gia):**
+                     3. **"body1_guide" (Thân bài 1 - Nhóm nổi bật / biến động mạnh):**
     <ul>
         <!-- ================================================================================== -->
-        <!-- MỤC 1: HƯỚNG DẪN LẮP GHÉP 4 LỚP (THEORY) -->
+        <!-- MỤC 1: CHIẾN THUẬT CHỌN NHÓM (SELECTION STRATEGY) -->
+        <!-- ================================================================================== -->
+        <li>
+            <div style="background-color:#f0f4f8; border:2px solid #2980b9; border-radius:8px; padding:15px; margin-bottom:15px;">
+                <strong style="color:#1a5276; font-size: 1.1rem;">🎯 BƯỚC 1: XÁC ĐỊNH NHÓM BODY 1</strong>
+                <div style="margin-top:10px; font-size: 0.9rem;">
+                    <b>• Tiêu chí chọn:</b> AI hãy chọn ra <b>02 hoặc 03 đối tượng</b> nổi bật nhất (cao nhất hoặc biến động mạnh nhất).
+                    <br><b>• Lý do:</b> Nếu có 3 đối tượng cùng dẫn đầu hoặc cùng xu hướng, việc đưa cả 3 vào Body 1 giúp tạo ra sự đối trọng hoàn hảo với các nhóm thấp hơn ở Body 2.
+                </div>
+            </div>
+        </li>
+
+        <!-- ================================================================================== -->
+        <!-- MỤC 2: CẤU TRÚC BLUEPRINT VẠN NĂNG (THE UNIVERSAL FORMULA) -->
+        <!-- ================================================================================== -->
+        <li>
+            <div style="background-color:#fff3e0; border:2px solid #ff9800; border-radius:8px; padding:15px; margin-bottom:15px;">
+                <strong style="color:#e65100; font-size: 1.1rem;">🏛️ BƯỚC 2: CÔNG THỨC CHUẨN (BLUEPRINT)</strong>
+                <br><i>(Quy trình xử lý linh hoạt cho cả nhóm 2 hoặc 3 đối tượng)</i>
+                
+                <div style="margin-top:10px; font-size: 0.9rem;">
+                    <b style="color:#bf360c;">1. Xác lập trạng thái đầu (The Anchor):</b>
+                    <br>➔ Chỉ ra số liệu năm đầu tiên của <b>tất cả các đối tượng trong nhóm</b>. So sánh thứ hạng Nhất, Nhì, Ba ngay tại mốc này.
+                    
+                    <br><br><b style="color:#bf360c;">2. Mô tả diễn biến của đối tượng Dẫn đầu (The Leader's Story):</b>
+                    <br>➔ Tập trung viết sâu về đối tượng cao nhất (Cat A). Mô tả xu hướng, các điểm cực trị (Đỉnh/Đáy) và số liệu năm cuối.
+                    
+                    <br><br><b style="color:#bf360c;">3. Đối chiếu diễn biến của các đối tượng còn lại (The Followers):</b>
+                    <br>➔ So sánh xu hướng của Cat B (và Cat C nếu có) với Cat A. Nhấn mạnh sự tương đồng hoặc các điểm giao thoa (Vượt mặt) và chốt số liệu năm cuối.
+                </div>
+            </div>
+        </li>
+        <!-- ================================================================================== -->
+        <!-- MỤC 3: KHO LINH KIỆN 4 LỚP (T - S - V - D) -->
         <!-- ================================================================================== -->
         <li>
             <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
-                <strong style="color:#d35400; font-size: 1.1rem;">📘 MỤC 1: HƯỚNG DẪN LẮP GHÉP 4 LỚP (T - S - V - D)</strong>
-                <br><i>(Quy tắc: Chọn 1 mã từ mỗi Layer để xây dựng khung xương câu văn chuẩn xác)</i>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.82rem;">
+                <strong style="color:#d35400;">📘 MỤC 3: KHO LINH KIỆN LẮP GHÉP ĐA NĂNG</strong>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.8rem;">
                     <!-- LAYER 1: T (Time/Linker) -->
                     <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #d35400;">
                         <b style="color:#e65100;">Layer 1: T (Time/Linker)</b>
@@ -1667,7 +1698,7 @@ if st.session_state.step == 1:
         </li>
 
         <!-- ================================================================================== -->
-        <!-- MỤC 2: BỘ CÔNG CỤ TỪ VỰNG ĂN ĐIỂM (VOCABULARY TOOLKIT) -->
+        <!-- MỤC 4: BỘ CÔNG CỤ TỪ VỰNG ĂN ĐIỂM (VOCABULARY TOOLKIT) -->
         <!-- ================================================================================== -->
         <li>
             <div style="background-color:#fff8e1; border:1px solid #ffa000; border-radius:5px; padding:15px; margin-bottom:15px;">
@@ -1706,7 +1737,7 @@ if st.session_state.step == 1:
         </li>
 
         <!-- ================================================================================== -->
-        <!-- MỤC 3: THỰC HÀNH LẮP RÁP CÂU (PRACTICE) -->
+        <!-- MỤC 5: THỰC HÀNH LẮP RÁP CÂU (PRACTICE) -->
         <!-- ================================================================================== -->
         <li>     
             <div style="background-color:#e1f5fe; padding:15px; border-radius:8px; border-left: 5px solid #0288d1;">
@@ -1714,30 +1745,26 @@ if st.session_state.step == 1:
                 
                 <div style="display:none;">
                     SYSTEM_COMMAND_STRICT:
-                    1. SCAN DATA: Identify Cat A (Highest) and Cat B (Second) in the first year.
-                    2. CALCULATION: Check for approximation (e.g., is 68% "nearly 70%"?).
-                    3. ASSEMBLY LINE:
-                       - Sentence 1 (Start): Use T1 + S1/S2/S5/S6 + V1 + D2/D3/D6 (Declare start & compare).
-                       - Sentence 2 (Trend Cat A): Use T2/T3 + S3/S4 + V2/V3/V4/V5 + D4/D5/D8.
-                       - Sentence 3 (Trend Cat B): Use T4/T5 + S2/S7 + V2/V6/V7 + D1/D3/D7.
-                    4. MATH RULE: Use math comparisons (double, threefold) if numbers allow.
-                    5. COPY template EXACTLY word-for-word.               
+                    1. SELECTION: Identify the top 2 or 3 categories. Explain WHY they belong in Body 1.
+                    2. BLUEPRINT EXECUTION:
+                       - Sentence 1: Start points of ALL categories in the group (Use S4 if needed).
+                       - Sentence 2: Trend of the Leader (Cat A).
+                       - Sentence 3: Trend of the others (Cat B/C) compared to Cat A.
+                    3. MATH RULE: Use "double/triple" or "respectively" for multiple data points.
+                    4. COPY template EXACTLY.              
                 </div>
 
-                <br><b>✅ BƯỚC 1: GIẢI MÃ DỮ LIỆU (DECODING LOGIC)</b>
-                <br>- <b>Đối tượng chính (Winner):</b> [Tên Cat A]
-                <br>- <b>Đối tượng đối chiếu (Runner-up):</b> [Tên Cat B]
-                <br>- <b>Logic Toán học:</b> [Ví dụ: Cat A cao gấp 3 lần Cat B ở năm đầu tiên]
+                <br><b>✅ 1. PHÂN TÍCH CHỌN NHÓM:</b>
+                <br>- Nhóm Body 1 gồm: [Danh sách các đối tượng].
+                <br>- Lý do: [Ví dụ: Đây là 3 hạng mục có số liệu cao nhất và cùng xu hướng tăng].
 
-                <br><b>✅ BƯỚC 2: QUY TRÌNH "BỐC" LINH KIỆN (PICK & MATCH)</b>
-                <br><i>(AI thực hiện chọn mã từ Kho lý thuyết phía trên)</i>
-                <br>- 🧩 <b>Câu 1 (Mở đầu):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
-                <br>- 🧩 <b>Câu 2 (Diễn biến A):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
-                <br>- 🧩 <b>Câu 3 (Diễn biến B):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
+                <br><b>✅ 2. QUY TRÌNH "BỐC" MÃ LINH KIỆN:</b>
+                <br>- 🧩 <b>Câu 1 (Start/Compare):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
+                <br>- 🧩 <b>Câu 2 (Trend Leader):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
+                <br>- 🧩 <b>Câu 3 (Trend Followers):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
 
-                <br><b>✅ BƯỚC 3: KẾT QUẢ HOÀN CHỈNH</b>
-                <br><i>(Bản thảo Body 1 hoàn chỉnh, sử dụng từ vựng chuyên sâu từ Booster)</i>
-                <br><code style="font-size: 1rem; color:#d35400; background-color:#fff; padding:10px; display:block; border: 1px solid #0288d1; line-height: 1.6;">[AI viết đoạn văn Body 1 (tối thiểu 3-4 câu). YÊU CẦU: Văn phong chuyên nghiệp, chính xác giới từ, số liệu khớp 100% với hình ảnh]</code>
+                <br><b>✅ 3. KẾT QUẢ HOÀN CHỈNH:</b>
+                <br><code style="font-size: 1rem; color:#d35400; background-color:#fff; padding:10px; display:block; border: 1px solid #0288d1; line-height: 1.6;">[AI viết đoạn văn Body 1 tuân thủ đúng trình tự: Khai báo đầu cho cả nhóm -> Diễn biến của thằng Nhất -> Diễn biến của các thằng còn lại so với thằng Nhất.]</code>
             </div>
         </li>
     </ul>
