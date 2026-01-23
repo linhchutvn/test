@@ -1740,18 +1740,14 @@ if st.session_state.step == 1:
             <div style="background-color:#e1f5fe; padding:15px; border-radius:8px; border-left: 5px solid #0288d1;">
                 <strong style="color:#01579b; font-size: 1.1rem;">🧠 MỤC 3: THỰC HÀNH LẮP RÁP CÂU</strong>                
                 <div style="display:none;">
-                   SYSTEM_COMMAND_STRICT_V6:
+                   SYSTEM_COMMAND_STRICT:
                     1. SELECTION: Identify Cat A (Highest) and Cat B (Second). Explain WHY in Vietnamese.
-                    2. SENTENCE-BY-SENTENCE LOGIC:
-                       - For each sentence, you MUST provide:
-                         a) A brief instruction in Vietnamese (Hướng dẫn).
-                         b) The code combination (Mã linh kiện T-S-V-D).
-                         c) The final English sentence (Kết quả câu).
-                    3. BLUEPRINT:
-                       - Sentence 1: Start A & Compare with B.
-                       - Sentence 2: Trend of A (Middle to End).
-                       - Sentence 3: Trend of B vs A (Interaction/Overtaking).
-                    4. MATH RULE: Use "double/triple" if numbers allow.
+                    2. LABEL INTEGRITY RULE: 
+                       - D2 MUST contain comparison data. (e.g., "double [Cat B]").
+                       - D3 MUST contain interaction data (e.g., "surpassing [Cat B]").
+                    3. SENTENCE-BY-SENTENCE LOGIC:
+                       - Provide: Hướng dẫn (VN) -> Kết nối mã (T-S-V-D) -> Kết quả (EN).
+                    4. MATH CHECK: Calculate ratio (A/B) for Sentence 1.
                     5. COPY template EXACTLY word-for-word.
                 </div>
 
