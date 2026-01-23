@@ -1595,199 +1595,255 @@ if st.session_state.step == 1:
                          </div></li>
                        </ul>
 
-### 🏛️ PHẦN 3: BODY 1 (THÂN BÀI 1 - NHÓM NỔI BẬT / BIẾN ĐỘNG MẠNH)
+### 🕒 PHẦN BỔ TRỢ: KHO THỜI GIAN (ĐẶT TRƯỚC BODY 1)
 
-                     3. **"body1_guide" (Thân bài 1 - Quy trình Chuyên gia):**
-    <ul>
-        <!-- ================================================================================== -->
-        <!-- MỤC 1: CHIẾN THUẬT CHỌN NHÓM (SELECTION STRATEGY) -->
-        <!-- ================================================================================== -->
-        <li>
-            <div style="background-color:#f0f4f8; border:2px solid #2980b9; border-radius:8px; padding:15px; margin-bottom:15px;">
-                <strong style="color:#1a5276; font-size: 1.1rem;">🎯 BƯỚC 1: XÁC ĐỊNH NHÓM BODY 1</strong>
-                <br><i>(Giám khảo hướng dẫn: Tại sao ta chọn 2 đối tượng này để viết trước?)</i>
-                <div style="margin-top:10px; font-size: 0.9rem;">
-                    <b>• Tiêu chí chọn:</b> Bạn hãy xem biểu đồ và chọn ra <b>02 đối tượng (Cat A & Cat B)</b> có số liệu cao nhất hoặc có biến động đáng kể nhất.
-                    <br><b>• Lý do:</b> Việc đưa những "hạng mục này" ở body 1 giúp bài viết có trọng tâm rõ ràng và gây ấn tượng mạnh với Giám khảo về khả năng chọn lọc dữ liệu (Task Achievement).
-                </div>
-            </div>
-        </li>
-        <!-- ================================================================================== -->
-        <!-- MỤC 2: CẤU TRÚC CHUẨN 3 BƯỚC (THE FORMULA) -->
-        <!-- ================================================================================== -->
-        <li>
-            <div style="background-color:#fff3e0; border:2px solid #ff9800; border-radius:8px; padding:15px; margin-bottom:15px;">
-                <strong style="color:#e65100; font-size: 1.1rem;">🏛️ BƯỚC 2: CÔNG THỨC CHUẨN (FORMULA)</strong>
-                <br><i>(Bắt buộc đi theo trình tự logic)</i>                
-                <div style="margin-top:10px; font-size: 0.9rem;">
-                    <b style="color:#bf360c;">1. So sánh số liệu ban đầu:</b>
-                    <br>➔ Chỉ ra số liệu và so sánh năm đầu tiên của Cat A và Cat B (Gấp đôi/Gấp ba/Sát nút).                    
-                    <br><br><b style="color:#bf360c;">2. Mô tả xu hướng của Cat A:</b>
-                    <br>➔ Mô tả xu hướng của A - thay đổi đáng kể nhất, nhấn mạnh các điểm quan trọng (Đỉnh/Đáy) và đưa số liệu năm cuối.                    
-                    <br><br><b style="color:#bf360c;">3. Đối chiếu diễn biến của Cat B (The Story of B vs A):</b>
-                    <br>➔ So sánh xu hướng với Cat B, chỉ ra sự tương tác và số liệu năm cuối.
-                </div>
-            </div>
-        </li>
-        <!-- ================================================================================== -->
-        <!-- MỤC 3: KHO LINH KIỆN 4 LỚP (T - S - V - D) -->
-        <!-- ================================================================================== -->
-        <li>
-            <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
-                <strong style="color:#d35400;">📘 MỤC 3: KHO LINH KIỆN LẮP GHÉP ĐA NĂNG</strong>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.8rem;">
-                    <!-- LAYER 1: T (Time/Linker) -->
-                    <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #d35400;">
-                        <b style="color:#e65100;">Layer 1: T (Time/Linker)</b>
-                        <ul style="margin:5px 0; padding-left:15px;">
-                            <li><b>T1:</b> At the start of the period, / In [First Year],</li>
-                            <li><b>T2:</b> Subsequently, / Thereafter, / Over the following [X] years,</li>
-                            <li><b>T3:</b> Midway through the period, / Halfway through the timeframe,</li>
-                            <li><b>T4:</b> In the subsequent years, / Looking at the second half of the decade,</li>
-                            <li><b>T5:</b> Finally, / By the year [Final Year], / For the remainder of the period,</li>
-                        </ul>
-                    </div>
+   - <ul>
+     <!-- ================================================================================== -->
+     <!-- GLOBAL MODULE: KHO THỜI GIAN VẠN NĂNG -->
+     <!-- SYSTEM_ALERT: AI tham chiếu bảng này. QUY TẮC: Không dùng "In [Year]" 2 lần liên tiếp. -->
+     <!-- ================================================================================== -->
+     <li>
+         <div style="background-color:#e3f2fd; border:1px solid #2196f3; border-radius:5px; padding:15px; margin-bottom:15px;">
+             <strong style="color:#0d47a1;">⏰ KHO THỜI GIAN VẠN NĂNG (UNIVERSAL TIME MENU):</strong>
+             <br><i>(Hướng dẫn: Chọn 1 cụm từ dưới đây để điền vào biến số <b>[Time]</b>. Hãy xoay tua giữa Cột 1 và Cột 2)</i>
+             
+             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.9rem;">
+                 <!-- CỘT 1: THỜI GIAN TUYỆT ĐỐI (Dùng cho câu đầu đoạn) -->
+                 <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #2196f3;">
+                     <b style="color:#1565c0;">1. Mốc Tuyệt đối (Absolute):</b>
+                     <ul style="margin:5px 0; padding-left:15px;">
+                         <li>In <b>[Year]</b> (VD: In 1999)</li>
+                         <li>At the start of the period</li>
+                         <li>In the final year / By <b>[Year]</b></li>
+                         <li>Between <b>[Year]</b> and <b>[Year]</b></li>
+                     </ul>
+                 </div>
 
-                    <!-- LAYER 2: S (Subject) -->
-                    <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #d35400;">
-                        <b style="color:#e65100;">Layer 2: S (Subject Variation)</b>
-                        <ul style="margin:5px 0; padding-left:15px;">
-                            <li><b>S1:</b> the figure for [Cat A]</li>
-                            <li><b>S2:</b> [Cat A] participation / [Cat A] usage</li>
-                            <li><b>S3:</b> this proportion / this amount / this figure</li>
-                            <li><b>S4:</b> both categories / all [Number] sectors</li>
-                            <li><b>S5:</b> [Cat A] expenditure / spending on [Cat A]</li>
-                            <li><b>S6:</b> the proportion of people who [Verb]</li>
-                            <li><b>S7:</b> a growth / a decline in [Cat A]</li>
-                        </ul>
-                    </div>
+                 <!-- CỘT 2: THỜI GIAN TƯƠNG ĐỐI (Dùng để nối câu - QUAN TRỌNG) -->
+                 <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #2196f3;">
+                     <b style="color:#1565c0;">2. Tương đối & Trình tự (Relative):</b>
+                     <br><i style="font-size: 0.8rem; color:#d84315;">(Dùng cái này để tránh lặp lại năm)</i>
+                     <ul style="margin:5px 0; padding-left:15px;">
+                         <li><b>[X] years later</b> (VD: 10 years later)</li>
+                         <li><b>Over the next [X] years</b></li>
+                         <li><b>Following this / Thereafter</b> (Sau đó)</li>
+                         <li>In the subsequent years</li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </li>
+   </ul>
 
-                    <!-- LAYER 3: V (Verb) -->
-                    <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #d35400;">
-                        <b style="color:#e65100;">Layer 3: V (Verb Engine)</b>
-                        <ul style="margin:5px 0; padding-left:15px;">
-                            <li><b>V1:</b> stood at / was recorded at / accounted for</li>
-                            <li><b>V2:</b> surged / rocketed / increased dramatically</li>
-                            <li><b>V3:</b> rose modestly / climbed steadily / edged up</li>
-                            <li><b>V4:</b> plummeted / dropped sharply / declined slightly</li>
-                            <li><b>V5:</b> fluctuated / saw a volatile pattern / hit a low of</li>
-                            <li><b>V6:</b> staged a recovery / bounced back</li>
-                            <li><b>V7:</b> plateaued / leveled off / remained constant</li>
-                        </ul>
-                    </div>
+                    3. **"body1_guide" (Thân bài 1 - Nhóm Nổi bật / Biến động mạnh):**
+   - <ul>
+     <li><b>Logic chọn nhóm (Grouping Strategy):</b> AI thực hiện: Chọn 1 hoặc 2 hạng mục (Category) có <b>số liệu cao nhất</b> hoặc <b>xu hướng thay đổi mạnh nhất/tăng trưởng rõ rệt</b> để phân tích trước.</li>
+     <!-- ================================================================================== -->
+     <!-- PHẦN 1: CÔNG THỨC TỔNG QUÁT (VISUAL FLOW) -->
+     <!-- SYSTEM_ALERT: Hiển thị ngay đầu tiên. -->
+     <!-- ================================================================================== -->
+     <li>
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">             
+             <b>► Cấu trúc chuẩn (Formula):</b> 
+             <br><i>(Quy trình 3 bước chuẩn hóa cho Body 1)</i>
+             <br>             
+             <code style="font-size: 0.9rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[1. So sánh Start]</code>
+             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+             <code style="font-size: 0.9rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[2. Trend & End (Cat A)]</code>
+             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+             <code style="font-size: 0.9rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[3. So sánh & End (Cat B)]</code>
+         </div>
+     </li>
 
-                    <!-- LAYER 4: D (Data) -->
-                    <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #d35400;">
-                        <b style="color:#e65100;">Layer 4: D (Data & Interaction)</b>
-                        <ul style="margin:5px 0; padding-left:15px;">
-                            <li><b>D1:</b> [Data].</li>
-                            <li><b>D2:</b> [Data], which was double the figure for [Cat B].</li>
-                            <li><b>D3:</b> [Data], surpassing [Cat B] to become the leader.</li>
-                            <li><b>D4:</b> a peak of [Data] in [Year].</li>
-                            <li><b>D5:</b> before falling back to [End Data] at the end.</li>
-                            <li><b>D6:</b> , which was the lowest figure in the chart.</li>
-                            <li><b>D7:</b> , representing a [threefold/fourfold] increase.</li>
-                            <li><b>D8:</b> , after which it remained constant until [Year].</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </li>
+     <!-- ================================================================================== -->
+     <!-- SYSTEM_ALERT: 
+          1. DISPLAY_MODE = RAW. Tại phần "KHO MẪU CÂU", giữ nguyên các ký tự [Variable]. KHÔNG ĐIỀN DỮ LIỆU VÀO ĐÓ.
+          2. EXECUTION_MODE = STRICT. Tại phần "THỰC HÀNH", không được paraphrase. Chỉ thay thế biến số.
+     <!-- ================================================================================== -->
+     <li>
+         <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
+         <strong style="color:#d35400;">📚 KHO MẪU CÂU BODY 1:</strong>
+         <br><i>(Lưu ý: Chọn từ Menu Thời Gian để điền vào <b>[Time]</b>)</i>         
+         
+         <!-- KHỐI 1: CÂU MỞ ĐẦU (STARTING POINT) -->
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
+             <b>► KHỐI 1: ĐIỂM XUẤT PHÁT:</b>                          
+             <br>📍 <b>[Mẫu 1.1 - Chênh lệch rõ]</b> (A > B):             
+             <br><code><b>[Time]</b>, <b>[Cat A]</b> was the dominant category, <b>significantly outstripping [Cat B]</b> with <b>figures of [Data A]</b> and <b>[Data B]</b> respectively.</code>
+             <br>📍 <b>[Mẫu 1.2 - Sát nút / Tương đồng (Similarity/Close)]</b> (A ≈ B):             
+             <br><code><b>[Time]</b>, <b>[Cat A]</b> and <b>[Cat B]</b> started the period at <b>comparable levels</b> of <b>[Data A]</b> and <b>[Data B]</b> respectively.</code>
+             <br>📍 <b>[Mẫu 1.3 - Đồng mức]</b> (A = B):             
+             <br><code><b>[Time]</b>, both <b>[Cat A]</b> and <b>[Cat B]</b> <b>stood at the exact same figure</b> of <b>[Data]</b>.</code>   
+             <br>📍 <b>[Mẫu 1.4 - Trung tính]</b> (While):             
+             <br><code><b>At the start of the period</b>, <b>[Cat A]</b> stood at <b>[Data A]</b>, while the figure for <b>[Cat B]</b> was <b>[Data B]</b>.</code>
+             <br>📍 <b>[Mẫu 1.5 - Đối chiếu]</b> (Regarding):             
+             <br><code><b>Regarding [Cat A]</b>, <b>[Time]</b>, it stood at <b>[Data A]</b>, compared to <b>[Data B]</b> for <b>[Cat B]</b>.</code>             
+         </div>
 
-        <!-- ================================================================================== -->
-        <!-- MỤC 4: BỘ CÔNG CỤ TỪ VỰNG ĂN ĐIỂM (VOCABULARY TOOLKIT) -->
-        <!-- ================================================================================== -->
-        <li>
-            <div style="background-color:#fff8e1; border:1px solid #ffa000; border-radius:5px; padding:15px; margin-bottom:15px;">
-                <strong style="color:#e65100; font-size: 0.8rem;">💎 MỤC 2: TỪ VỰNG & CẤU TRÚC "ĂN ĐIỂM" (VOCABULARY BOOST)</strong>
-                <br><i>(Dùng để tinh chỉnh câu văn sau khi lắp khung xương T-S-V-D)</i>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; font-size: 0.85rem;">
-                    <div>
-                        <b style="color:#bf360c;">1. Trạng từ chỉ Mức độ & Tốc độ:</b>
-                        <ul style="padding-left:15px; margin:5px 0;">
-                            <li><b>Mạnh/Nhanh:</b> significantly, dramatically, rapidly.</li>
-                            <li><b>Nhẹ/Dần dần:</b> modestly, gradually, marginally.</li>
-                            <li><b>Ổn định:</b> steadily, consistently.</li>
-                        </ul>
-                        <b style="color:#bf360c;">2. Độ chính xác (Approximation):</b>
-                        <ul style="padding-left:15px; margin:5px 0;">
-                            <li><b>Xấp xỉ:</b> approximately, roughly, nearly.</li>
-                            <li><b>Ngưỡng:</b> around the [Data] mark, just under/over.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <b style="color:#bf360c;">3. Giới từ chính xác (Bắt buộc):</b>
-                        <ul style="padding-left:15px; margin:5px 0;">
-                            <li><b>To:</b> Chạm mức cuối | <b>By:</b> Khoảng chênh lệch.</li>
-                            <li><b>At:</b> Đứng tại mốc | <b>With:</b> Kèm theo số liệu.</li>
-                        </ul>
-                        <b style="color:#bf360c;">4. Cấu trúc đặc biệt (GRA):</b>
-                        <ul style="padding-left:15px; margin:5px 0;">
-                            <li><b>Chủ ngữ giả:</b> [Cat A] saw/witnessed an increase.</li>
-                            <li><b>Mệnh đề rút gọn:</b> ..., reaching a peak of...</li>
-                            <li><b>Phép so sánh:</b> ..., which was double/triple that of...</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </li>
+         <!-- KHỐI 2: MIÊU TẢ TREND & ĐIỂM GÃY - CỰC KỲ QUAN TRỌNG -->
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
+             <b>► KHỐI 2: MIÊU TẢ TREND:</b>
+             <br><i>(Lưu ý: [Time] ở đây nên dùng "Thời gian tương đối" như: Then, Subsequently, 10 years later...)</i>
+             <br>📍 <b>[Mẫu 2.1 - Before V-ing]</b> (Tăng rồi Giảm/Ngược lại):
+             <br><code><b>[Time]</b>, the figure increased to <b>[Peak Data]</b>, <b>before falling back to finish at</b> <b>[End Data]</b>.</code>
+             <br>📍 <b>[Mẫu 2.2 - Peak/Low & End]</b> (Đạt Đỉnh/Đáy rồi đổi chiều):
+             <br>• <b>Đỉnh:</b> <code>It surged to <b>reach a peak of [Peak Data]</b> in <b>[Year]</b>, and then dropped to <b>[End Data]</b>.</code>
+             <br>• <b>Đáy:</b> <code>It plunged to <b>hit a low of [Low Data]</b> in <b>[Year]</b>, before recovering to <b>[End Data]</b>.</code>             
+             <br>📍 <b>[Mẫu 2.3 - Soán ngôi & End]</b> (Vượt mặt):
+             <br><code>It rose significantly, <b>surpassing [Cat B]</b> to become the dominant category and <b>ending at [End Data]</b>.</code>
+             <br>📍 <b>[Mẫu 2.4 - Tăng/Giảm thẳng]</b> (Xu hướng đơn giản):
+             <br><code>There was a sharp rise to <b>[End Data]</b> <b>[Time]</b>, making it the highest figure at the end of the period.</code>
+             <br>📍 <b>[Mẫu 2.5 - Finishing]</b> (Mệnh đề rút gọn):
+             <br><code>It followed a steady <b>[upward/downward]</b> trend, <b>finishing the period at [End Data]</b>.</code>
+             <br>📍 <b>[Mẫu 2.6 - Dao động]</b> (Zíc-zắc & Kết thúc):
+             <br><code>It showed a volatile pattern, <b>fluctuating between [Data 1] and [Data 2]</b>, before ending at <b>[End Data]</b>.</code>
+             <br>📍 <b>[Mẫu 2.7 - Ổn định cao]</b> (Dùng cho đường luôn đứng nhất):
+             <br><code>The figure <b>remained relatively stable</b> at <b>around [Data]</b> throughout the period, maintaining its leading position.</code>
+             <br>📍 <b>[Mẫu 2.8 - Plateau]</b> (Tăng/Giảm rồi đi ngang):
+             <br><code>It climbed rapidly to reach <b>[Data]</b> in <b>[Year]</b>, <b>after which it leveled off/plateaued</b> for the remainder of the period.</code>
+             <br>📍 <b>[Mẫu 2.9 - Recovery]</b> (Hồi phục sau khi giảm):
+             <br><code>After an initial drop to <b>[Low Data]</b>, the figure <b>recovered</b>, rising back to <b>[End Data]</b> <b>[Time]</b>.</code>
+             <br>📍 <b>[Mẫu 2.10 - Advanced Synthesis]</b> (Tả biến động kép + So sánh):
+<br><code><b>[Time]</b>, <b>[Cat A]</b> saw a <b>[Sharp/Steady]</b> <b>[Rise/Fall]</b>, <b>[Surpassing/Overtaking] [Cat B]</b> to finish the period as the leader at <b>[End Data]</b>.</code>
+         </div>
 
-        <!-- ================================================================================== -->
-        <!-- MỤC 5: THỰC HÀNH LẮP RÁP CÂU (PRACTICE) -->
-        <!-- ================================================================================== -->
-        <li>     
-            <div style="background-color:#e1f5fe; padding:15px; border-radius:8px; border-left: 5px solid #0288d1;">
-                <strong style="color:#01579b; font-size: 1.1rem;">🧠 MỤC 3: THỰC HÀNH LẮP RÁP CÂU</strong>                
-                <div style="display:none;">
-                   SYSTEM_COMMAND_STRICT:
-                    1. SELECTION: Identify Cat A (Highest) and Cat B (Second). Explain WHY in Vietnamese.
-                    2. LABEL INTEGRITY RULE: 
-                       - D2 MUST contain comparison data. (e.g., "double [Cat B]").
-                       - D3 MUST contain interaction data (e.g., "surpassing [Cat B]").
-                    3. SENTENCE-BY-SENTENCE LOGIC:
-                       - Provide: Hướng dẫn (VN) -> Kết nối mã (T-S-V-D) -> Kết quả (EN).
-                    4. MATH CHECK: Calculate ratio (A/B) for Sentence 1.
-                    5. COPY template EXACTLY word-for-word.
-                </div>
+         <!-- KHỐI 3: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI -->
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
+         <br><i>(Dùng để kết nối với các đối tượng đã phân tích trước đó)</i>         
+             <b>► KHỐI 3: SO SÁNH & ĐỐI CHIẾU:</b>             
+             <br>📍 <b>[Mẫu 3.1 - Tương đồng]</b> (Cùng tăng/Cùng giảm):
+             <br><i>(Lưu ý: Chọn verb rising/falling phải khớp với trend)</i>
+             <br><code>Similarly, <b>[Cat B]</b> also witnessed a <b>[upward/downward]</b> trend, <b>[rising/falling] to [End Data]</b> <b>[Time]</b>.</code>             
+             <br>📍 <b>[Mẫu 3.2 - Đối lập]</b> (Trend ngược chiều):
+             <br><code>In contrast, <b>[Cat B]</b> <b>followed the opposite trend</b>, as it <b>[increased/decreased] to [End Data]</b> <b>[Time]</b>.</code>             
+             <br>📍 <b>[Mẫu 3.3 - Toán học]</b> (Gấp đôi/Gấp rưỡi...):
+             <br><i>(Cấu trúc mệnh đề quan hệ đỉnh cao)</i>
+             <br><code><b>[Cat B]</b> followed a similar pattern, ending the period at <b>[End Data]</b>, which was <b>[half / double / three times]</b> that of <b>[Cat A]</b>.</code>             
+             <br>📍 <b>[Mẫu 3.4 - Mức độ nhẹ hơn]</b> (Cùng trend nhưng ít dốc hơn):
+             <br><code>A similar, <b>albeit less dramatic</b>, trend was seen in <b>[Cat B]</b>, which <b>[rose/fell] mildly</b> to <b>[End Data]</b> <b>[Time]</b>.</code>             
+             <br>📍 <b>[Mẫu 3.5 - Cấu trúc While]</b> (So sánh song song):
+             <br><i>(Examiner Note: Phải có đủ 2 số liệu mới dùng respectively)</i>
+             <br><code>While <b>[Cat A]</b> <b>[Trend A]</b>, <b>[Cat B]</b> <b>[Trend B]</b>, finishing at <b>[Data A]</b> and <b>[Data B]</b> respectively.</code>
+         </div>
+     </li>
+     
+     <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
-                <br><b>✅ 1. PHÂN TÍCH CHỌN NHÓM:</b>
-                <br>- <b>Nhóm Body 1 gồm:</b> [Tên Cat A] và [Tên Cat B].
-                <br>- <b>Lý do chọn:</b> [AI giải thích bằng tiếng Việt: Ví dụ: Đây là hai hạng mục có số liệu cao nhất và có sự biến động kịch tính nhất biểu đồ].
+     <!-- ================================================================================== -->
+     <!-- PHẦN 2: GHÉP CÂU HOÀN CHỈNH -->
+     <!-- SYSTEM_ALERT: QUY TRÌNH "TEMPLATE RECALL" (GỌI LẠI MẪU).
+          AI BẮT BUỘC PHẢI IN RA MẪU GỐC TRƯỚC KHI ĐIỀN TỪ. -->
+     <!-- ================================================================================== -->
+     <li>     
+         <b>✍️ THỰC HÀNH LẮP RÁP BODY 1 (CHẾ ĐỘ COPY-PASTE):</b>
+         <br><i>(Quy trình: Chọn ID &rarr; In Mẫu Gốc &rarr; Khai báo &rarr; Điền vào chỗ trống)</i>
+         <br>
+         <br><b>✅ BƯỚC 1: Xử lý Câu mở đầu</b>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 1.X]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>🧩 Khai báo biến:</b>
+           <br>&nbsp;&nbsp;+ [Time] = <i>(Chọn từ Menu Thời Gian)</i>
+           <br>&nbsp;&nbsp;+ [Cat A] = ...
+           <br>&nbsp;&nbsp;+ [Cat B] = ...
+           <br>&nbsp;&nbsp;+ [Data] = ...           
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu vào mẫu]</i>
+         <br>
+         <br><b>✅ BƯỚC 2: Xử lý Chủ thể 1 (Trend + End)</b>
+         <br>- <b>🔴 Chọn ID Trend:</b> <i>[AI chọn Mẫu 2.X]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>🧩 Khai báo biến:</b> [Data] = ... ; [Time] = ...
+         <br>- <b>🔴 Chọn ID End:</b> <i>[AI chọn Mẫu 3.X]</i>
+         <br>- <b>🧩 Khai báo biến:</b> [End Data] = ...
+         <br>- <b>📝 Điền từ:</b> <i>[AI ghép 2 mẫu và điền dữ liệu]</i>
+         <br>
+         <br><b>✅ BƯỚC 3: Xử lý Chủ thể 2 (So sánh + Trend + End)</b>
+         <br>- <b>🔴 Chọn ID So sánh:</b> <i>[AI chọn Mẫu 4.X]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>🧩 Khai báo biến:</b>
+           <br>&nbsp;&nbsp;+ [Cat B] = ...
+           <br>&nbsp;&nbsp;+ [Data] = ...
+           <br>&nbsp;&nbsp;+ [Time] = <i>(Chọn từ Menu Thời Gian)</i>
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu vào mẫu]</i>
+     </li>
+     
+     <!-- ================================================================================== -->
+     <!-- PHẦN 3: BỘ CÔNG CỤ NÂNG BAND (EXAMINER'S TOOLKIT) -->
+     <!-- SYSTEM_ALERT: AI KHÔNG ĐƯỢC LIỆT KÊ SƠ SÀI. 
+          BẮT BUỘC PHẢI CHỌN LỌC ÍT NHẤT 02 TỪ/CỤM TỪ ĐẮT GIÁ CỦA MỖI NHÓM, PHÙ HỢP VỚI BÀI VIẾT. -->
+     <!-- ================================================================================== -->
+     <li>     
+     <strong style="color:#d35400;">🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</strong>
+     <br><i>(Học sinh học cách dùng các từ này từ chính bài nháp và bài mẫu bên dưới)</i>
+         <br>
+         <ul style="margin-top:5px;">
+            <!-- NHÓM 1: ĐỘNG TỪ TẢ XU HƯỚNG (TREND VERBS) -->
+            <li><b>1. Động từ Xu hướng:</b>
+                <br><i>(Thay vì chỉ dùng increase/decrease)</i>
+                <br>- <b>Mạnh (Strong):</b> <i>surge / rocket</i> (Tăng vọt), <i>plunge / drop sharply</i> (Giảm mạnh).
+                <br>- <b>Trải nghiệm:</b> <i>experience / undergo / witness (Chứng kiến)</i> (+ a rise/decline).
+                <br><i>VD: "The figure experienced a sharp decline."</i>
+                <br>- <b>Hồi phục/Rút lui:</b> <i>recover</i> (Hồi phục), <i>recede / fall back</i> (Rút xuống/Giảm lại).
+            </li>
 
-                <br><b>✅ 2. QUY TRÌNH VIẾT CHI TIẾT TỪNG CÂU:</b>
-                
-                <!-- CÂU 1 -->
-                <div style="margin-top:10px; padding:10px; background-color:white; border-radius:5px; border: 1px solid #b3e5fc;">
-                    <b style="color:#0288d1;">📍 CÂU 1: XÁC LẬP TRẠNG THÁI ĐẦU</b>
-                    <br>• <b>Phân tích:</b> [[AI dựa vào hình ảnh, viết số liệu và so sánh bằng tiếng Việt, đây chính là câu Tiếng Anh sẽ viết lại.].
-                    <br>• <b>Kết nối dữ liệu:</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
-                    <br>• <b>Kết quả câu:</b> <i>[AI viết câu tiếng Anh hoàn chỉnh]</i>
-                </div>
+            <!-- NHÓM 2: CẤU TRÚC ĐẶC BIỆT (SPECIAL STRUCTURES) -->
+            <li><b>2. Cấu trúc đặc biệt:</b>
+                <br>- <b>Chủ ngữ giả:</b> <i>"Hạng mục A + <b>saw / witnessed / recorded</b> + an increase."</i>
+                <br>- <b>Gấp đôi/ba:</b> <i>increased <b>twofold / threefold</b></i> (hoặc <i>doubled / tripled</i>).
+                <br>- <b>Đạt đỉnh/đáy:</b> <i>reached a peak of... / reached a low of...</i>
+            </li>
 
-                <!-- CÂU 2 -->
-                <div style="margin-top:10px; padding:10px; background-color:white; border-radius:5px; border: 1px solid #b3e5fc;">
-                    <b style="color:#0288d1;">📍 CÂU 2: DIỄN BIẾN CỦA ĐỐI TƯỢNG CHÍNH (CAT A)</b>
-                    <br>• <b>Phân tích:</b> [AI dựa vào hình ảnh, viết phân tích diễn biến bằng tiếng Việt, đây chính là câu Tiếng Anh sẽ viết lại.].
-                    <br>• <b>Kết nối dữ liệu:</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
-                    <br>• <b>Kết quả câu:</b> <i><i>[AI viết câu tiếng Anh hoàn chỉnh]</i></i>
-                </div>
+            <!-- NHÓM 3: TỪ VỰNG CHỦ ĐỀ CHI TIÊU -->
+            <li><b>3. Topic Vocabulary (Spending):</b>
+                <br><i>(Dùng khi biểu đồ nói về Tiền/Budget - Rất hay gặp)</i>
+                <br>- <b>Thay cho "Spend":</b> <i>allocate (to), devote (to), apportion (to), dedicate (to).</i>
+                <br>- <b>Thay cho "Budget":</b> <i>funding, investment, financial resources.</i>
+                <br><i>VD: "Portugal apportioned the most to this sector."</i>
+            </li>
 
-                <!-- CÂU 3 -->
-                <div style="margin-top:10px; padding:10px; background-color:white; border-radius:5px; border: 1px solid #b3e5fc;">
-                    <b style="color:#0288d1;">📍 CÂU 3: DIỄN BIẾN ĐỐI TƯỢNG 2 & SỰ TƯƠNG TÁC</b>
-                    <br>• <b>Hướng dẫn:</b> [AI dựa vào hình ảnh, viết phân tích diễn biến bằng tiếng Việt, đây chính là câu Tiếng Anh sẽ viết lại.].
-                    <br>• <b>Kết nối dữ liệu:</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
-                    <br>• <b>Kết quả câu:</b> <i><i>[AI viết câu tiếng Anh hoàn chỉnh]</i></i>
-                </div>
+            <!-- NHÓM 4: TRẠNG TỪ MỨC ĐỘ (ADVERBS) -->
+            <li><b>4. Trạng từ mức độ (Adverbs):</b>
+                <br><i>(Bắt buộc dùng trong Body 1 để tả biến động lớn)</i>
+                <br>- <b>Mạnh/Nhanh:</b> <i>significantly, dramatically, sharply, rapidly.</i>
+                <br>- <b>Dao động:</b> <i>fluctuated wildly</i> (dao động dữ dội) vs <i>fluctuated modestly</i> (dao động nhẹ).
+            </li>
+            
+            <!-- NHÓM 5. GIỚI TỪ ĐƯA SỐ LIỆU -->
+             <li><b>1. Giới từ đưa số liệu (Prepositions for Data):</b>
+                 <br>⚠️ <i>Phân biệt chính xác:</i>
+                 <br>- <b>To:</b> Tăng/giảm <b>đến</b> mức nào. <i>(rose <b>to</b> 100)</i>.
+                 <br>- <b>By:</b> Tăng/giảm <b>một khoảng</b> bao nhiêu. <i>(rose <b>by</b> 10% - từ 10 lên 20)</i>.
+                 <br>- <b>At:</b> Đứng <b>tại</b> mức nào. <i>(stood <b>at</b> / peak <b>at</b>)</i>.
+                 <br>- <b>With:</b> Dùng trong câu mô tả kèm theo. <i>(starting <b>with</b> 10 million...)</i>.
+             </li>
 
-                <br><b>✅ 3. KẾT QUẢ BODY 1 HOÀN CHỈNH (FINAL OUTPUT):</b>
-                <div style="background-color:#fff; padding:15px; border-radius:8px; margin-top:10px; border: 2px solid #03a9f4; line-height: 1.6; font-style: italic;">
-                    [AI nối 3 câu trên lại thành một đoạn văn hoàn chỉnh mượt mà]
-                </div>
-            </div>
-        </li>
-    </ul>
+             <!-- 2. CẤU TRÚC CHÈN SỐ LIỆU PHỨC TẠP -->
+             <li><b>2. Cấu trúc chèn số liệu (Complex Data Insertion):</b>
+                 <br><i>(Không viết số liệu ngay sau động từ mãi, hãy dùng biến thể)</i>
+                 <br>- <b>Reaching:</b> <i>...rose significantly, <b>reaching</b> a peak of [Data].</i>
+                 <br>- <b>Of:</b> <i>...saw an increase <b>of</b> [Data] (tăng một lượng...).</i>
+                 <br>- <b>Adjective + Data:</b> <i>...to a low <b>of</b> [Data] / a peak <b>of</b> [Data].</i>
+             </li>
+
+             <!-- 3. TỪ NỐI GIỮA CÁC CÂU (LINKING DEVICES) -->
+             <li><b>3. Từ nối chuyển mạch (Linking Devices):</b>
+                 <br><i>(Dùng để đầu câu, giúp đoạn văn liền mạch)</i>
+                 <br>- <b>Thời gian (Time markers):</b> <i>At the start of the period, ... / Thereafter, ... / In the subsequent years, ... / In the final year, ...</i>
+                 <br>- <b>So sánh (Comparison):</b> <i>In contrast, ... / By contrast, ... / Similarly, ... / Likewise, ...</i>
+                 <br>- <b>Chuyển ý:</b> <i>Regarding [Category A], ... / Turning to [Category B], ...</i>
+             </li>
+         </ul>
+     </li>
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 4: GHÉP CÂU HOÀN CHỈNH -->
+     <!-- ================================================================================== -->
+     <li><div style="background-color:#fff8e1; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ffa502;">
+         <b>📝 KẾT QUẢ BODY 1 (FINAL OUTPUT):</b><br>
+         <div style="margin-top:5px; font-style: italic; color: #5d4037;">
+         [AI nối các câu ở phần 'Điền từ' lại thành đoạn văn.]         
+         </div>
+     </div></li>
+   </ul>
 
                     4. **"body2_guide" (Thân bài 2 - Các nhóm còn lại):**
    - <ul>
