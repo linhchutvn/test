@@ -1597,40 +1597,39 @@ if st.session_state.step == 1:
 
 ### 🏛️ PHẦN 3: BODY 1 (THÂN BÀI 1 - NHÓM NỔI BẬT / BIẾN ĐỘNG MẠNH)
 
-                     3. **"body1_guide" (Thân bài 1 - Nhóm Nổi bật):**
+                     3. **"body1_guide" (Thân bài 1 - Quy trình Chuyên gia):**
     <ul>
         <!-- ================================================================================== -->
-        <!-- MỤC 1: CHIẾN THUẬT CHIA ĐOẠN (GROUPING STRATEGY) -->
+        <!-- MỤC 1: CHIẾN THUẬT CHỌN NHÓM (SELECTION STRATEGY) -->
         <!-- ================================================================================== -->
         <li>
             <div style="background-color:#f0f4f8; border:2px solid #2980b9; border-radius:8px; padding:15px; margin-bottom:15px;">
-                <strong style="color:#1a5276; font-size: 1.1rem;">🎯 BƯỚC 1: CHIẾN THUẬT CHIA NHÓM</strong>
+                <strong style="color:#1a5276; font-size: 1.1rem;">🎯 BƯỚC 1: XÁC ĐỊNH NHÓM BODY 1</strong>
+                <br><i>(Giám khảo hướng dẫn: Tại sao ta chọn 2 đối tượng này để viết trước?)</i>
                 <div style="margin-top:10px; font-size: 0.9rem;">
-                    <b>• Quy tắc chia (The Balance Rule):</b> 
-                    <br>- Tổng 5 hạng mục: Chia <b>2-3</b> (Ưu tiên 2 thằng cao nhất) hoặc <b>3-2</b> (Nếu 3 thằng có cùng xu hướng).
-                    <br>- Tổng 6 hạng mục trở lên: Chia <b>3-3</b> hoặc <b>3-4</b>.
-                    <br><b>• Tiêu chí chọn Body 1:</b> Luôn chọn nhóm có <b>Số liệu cao nhất</b> hoặc <b>Biến động kịch tính nhất</b> để tạo ấn tượng đầu tiên.
+                    <b>• Tiêu chí chọn:</b> AI hãy quét biểu đồ và chọn ra <b>02 đối tượng (Cat A & Cat B)</b> có số liệu cao nhất hoặc có biến động kịch tính nhất (ví dụ: tăng vọt vượt mặt đối thủ).
+                    <br><b>• Lý do:</b> Việc đưa những "nhân vật chính" lên đầu giúp bài viết có trọng tâm rõ ràng và gây ấn tượng mạnh với Giám khảo về khả năng chọn lọc dữ liệu (Task Achievement).
                 </div>
             </div>
         </li>
 
         <!-- ================================================================================== -->
-        <!-- MỤC 2: CÔNG THỨC BLUEPRINT 3 BƯỚC (THE FORMULA) -->
+        <!-- MỤC 2: CẤU TRÚC BLUEPRINT 3 BƯỚC (THE FORMULA) -->
         <!-- ================================================================================== -->
         <li>
             <div style="background-color:#fff3e0; border:2px solid #ff9800; border-radius:8px; padding:15px; margin-bottom:15px;">
                 <strong style="color:#e65100; font-size: 1.1rem;">🏛️ BƯỚC 2: CÔNG THỨC CHUẨN (BLUEPRINT)</strong>
-                <br><i>(Áp dụng cho nhóm từ 2-3 đối tượng)</i>
+                <br><i>(Bắt buộc đi theo trình tự logic để đạt Band 8.0+ Coherence)</i>
                 
                 <div style="margin-top:10px; font-size: 0.9rem;">
                     <b style="color:#bf360c;">1. Xác lập trạng thái đầu (The Anchor):</b>
-                    <br>➔ Nêu số liệu năm đầu của tất cả các đối tượng trong nhóm. So sánh tương quan (thằng nào nhất, thằng nào nhì, gấp mấy lần).
+                    <br>➔ Chỉ ra số liệu năm đầu tiên của Cat A và so sánh tương quan với Cat B (Gấp đôi/Gấp ba/Sát nút).
                     
-                    <br><br><b style="color:#bf360c;">2. Mô tả diễn biến của đối tượng Dẫn đầu (The Leader's Story):</b>
-                    <br>➔ Viết riêng về đối tượng cao nhất. Chỉ rõ xu hướng (tăng/giảm), điểm cực trị (đỉnh/đáy) và số liệu năm cuối.
+                    <br><br><b style="color:#bf360c;">2. Mô tả diễn biến của Cat A (The Story of A):</b>
+                    <br>➔ Mô tả xu hướng của A từ đầu đến cuối, nhấn mạnh các điểm quan trọng (Đỉnh/Đáy) và số liệu năm cuối.
                     
-                    <br><br><b style="color:#bf360c;">3. Đối chiếu diễn biến của các đối tượng còn lại trong nhóm (The Followers):</b>
-                    <br>➔ So sánh xu hướng của các đối tượng còn lại với thằng dẫn đầu. Nhấn mạnh sự tương đồng hoặc các điểm giao thoa (vượt mặt) và chốt số liệu năm cuối.
+                    <br><br><b style="color:#bf360c;">3. Đối chiếu diễn biến của Cat B (The Story of B vs A):</b>
+                    <br>➔ So sánh xu hướng của B với A (Cùng chiều hay Ngược chiều), chỉ ra sự tương tác (Vượt mặt) và số liệu năm cuối.
                 </div>
             </div>
         </li>
@@ -1747,28 +1746,26 @@ if st.session_state.step == 1:
                 
                 <div style="display:none;">
                     SYSTEM_COMMAND_STRICT:
-                    1. GROUPING: Count total categories. If 5, split 2-3 or 3-2. If 6+, split 3-3 or 3-4.
-                    2. SELECTION: Identify the categories for Body 1. Explain the logic (e.g., "Highest values").
-                    3. BLUEPRINT EXECUTION:
-                       - Sentence 1: Start points of ALL categories in the group.
-                       - Sentence 2: Trend of the Leader (Cat A).
-                       - Sentence 3: Trend of the others (Cat B/C) compared to Cat A.
-                    4. MATH RULE: Use "double/triple" or "respectively" for multiple data points.
-                    5. COPY template EXACTLY.              
+                    1. SELECTION: Identify Cat A (Highest) and Cat B (Second). Explain WHY.
+                    2. BLUEPRINT EXECUTION:
+                       - Sentence 1: Start A & Compare with B (T1 + S1/S2 + V1 + D2/D6).
+                       - Sentence 2: Trend of A (T2/T3 + S3 + V2-V7 + D4/D5/D8).
+                       - Sentence 3: Trend of B vs A (T4/T5 + S2/S7 + V2-V7 + D3/D7).
+                    3. MATH RULE: Use "double/triple" if numbers allow.
+                    4. COPY template EXACTLY.              
                 </div>
 
                 <br><b>✅ 1. PHÂN TÍCH CHỌN NHÓM:</b>
-                <br>- Tổng số hạng mục: [Số lượng] | Chia nhóm: [Ví dụ: 2-3].
-                <br>- Nhóm Body 1 gồm: [Danh sách các đối tượng].
-                <br>- Lý do chọn: [Ví dụ: Đây là các hạng mục có số liệu cao nhất].
+                <br>- Nhóm Body 1 gồm: [Cat A] và [Cat B].
+                <br>- Lý do: [Ví dụ: Đây là hai hoạt động phổ biến nhất và có sự hoán đổi vị trí dẫn đầu].
 
                 <br><b>✅ 2. QUY TRÌNH "BỐC" MÃ LINH KIỆN:</b>
                 <br>- 🧩 <b>Câu 1 (Start/Compare):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
-                <br>- 🧩 <b>Câu 2 (Trend Leader):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
-                <br>- 🧩 <b>Câu 3 (Trend Followers):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
+                <br>- 🧩 <b>Câu 2 (Trend A):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
+                <br>- 🧩 <b>Câu 3 (Trend B/Interact):</b> [Mã T] + [Mã S] + [Mã V] + [Mã D]
 
                 <br><b>✅ 3. KẾT QUẢ HOÀN CHỈNH:</b>
-                <br><code style="font-size: 1rem; color:#d35400; background-color:#fff; padding:10px; display:block; border: 1px solid #0288d1; line-height: 1.6;">[AI viết đoạn văn Body 1 tuân thủ đúng trình tự: Khai báo đầu cho cả nhóm -> Diễn biến của thằng Nhất -> Diễn biến của các thằng còn lại so với thằng Nhất.]</code>
+                <br><code style="font-size: 1rem; color:#d35400; background-color:#fff; padding:10px; display:block; border: 1px solid #0288d1; line-height: 1.6;">[AI viết đoạn văn Body 1 tuân thủ đúng trình tự 3 bước: Khai báo đầu -> Diễn biến A -> Diễn biến B so với A. Đảm bảo số liệu khớp 100%.]</code>
             </div>
         </li>
     </ul>
