@@ -1622,10 +1622,10 @@ if st.session_state.step == 1:
                 <br><i>(Bắt buộc đi theo trình tự logic)</i>
                 
                 <div style="margin-top:10px; font-size: 0.9rem;">
-                    <b style="color:#bf360c;">1. Xác lập trạng thái đầu (The Anchor):</b>
+                    <b style="color:#bf360c;">1. Xác lập trạng thái đầu:</b>
                     <br>➔ Chỉ ra số liệu năm đầu tiên của Cat A và so sánh tương quan với Cat B (Gấp đôi/Gấp ba/Sát nút).
                     
-                    <br><br><b style="color:#bf360c;">2. Mô tả diễn biến của Cat A (The Story of A):</b>
+                    <br><br><b style="color:#bf360c;">2. Mô tả diễn biến của Cat A:</b>
                     <br>➔ Mô tả xu hướng của A từ đầu đến cuối, nhấn mạnh các điểm quan trọng (Đỉnh/Đáy) và số liệu năm cuối.
                     
                     <br><br><b style="color:#bf360c;">3. Đối chiếu diễn biến của Cat B (The Story of B vs A):</b>
