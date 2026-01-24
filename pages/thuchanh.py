@@ -2026,105 +2026,134 @@ if st.session_state.step == 1:
 
                     4. **"body2_guide" (Thân bài 2 - Các nhóm còn lại):**
    - <ul>
-     <li><b>Logic chọn nhóm (Grouping Strategy):</b>
-         <br>- AI hãy nhìn các đường còn lại.
-         <br>- <b>Nếu còn 2 đường:</b> Gom lại viết chung (Dùng mẫu Số Nhiều).
-         <br>- <b>Nếu còn 3 đường:</b> Gom 2 đường tương đồng viết trước -> Đường lẻ loi viết cuối cùng (Dùng mẫu Final).
+     <li><b>Logic chọn nhóm (Grouping Strategy):</b> 
+         <br>AI thực hiện: Gom toàn bộ các hạng mục (Categories) còn lại. 
+         <br>- Nếu còn 2 đường: Viết chung một câu hoặc so sánh song song.
+         <br>- Nếu còn 3 đường: Tìm 2 đường có điểm tương đồng để viết trước, đường lẻ loi viết sau cùng.
      </li>
-     
-     <!-- ================================================================================== -->     
-     <!-- PHẦN 1: KHO MẪU CÂU (THEORY) - PHÂN TÁCH RÕ RÀNG -->
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 1: CÔNG THỨC TỔNG QUÁT (VISUAL FLOW) -->
+     <!-- ================================================================================== -->
+     <li>
+         <div style="margin-bottom: 10px;">
+             <b>► Logic cốt lõi (Visual Flow):</b> 
+             <code style="font-size: 0.8rem; background-color: white; padding: 2px 5px; border: 1px dashed #2980b9; border-radius: 3px;">[TRANSITION / LINKER]</code>
+             <span style="color:#2980b9; font-weight:bold;"> ➔ </span>
+             <code style="font-size: 0.8rem; background-color: white; padding: 2px 5px; border: 1px dashed #2980b9; border-radius: 3px;">[CAT C (& D) DATA]</code>
+             <span style="color:#2980b9; font-weight:bold;"> ➔ </span>
+             <code style="font-size: 0.8rem; background-color: white; padding: 2px 5px; border: 1px dashed #2980b9; border-radius: 3px;">[TREND & END DATA]</code>
+         </div>
+     </li>
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 2: KHO MẪU CÂU BODY 2 (REMAINING CATEGORIES) -->
      <!-- ================================================================================== -->
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
-         <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2 (REMAINING CATEGORIES):</strong>         
-         <br><i>(Quy tắc sống còn: Block 1 chọn Số Ít thì Block 2 phải dùng Số Ít. Cấm trộn lẫn.)</i>
+         <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2:</strong>
+         <br><i>(Lưu ý: Luôn bắt đầu bằng một cụm từ chuyển đoạn để tạo sự kết nối)</i>
          
-         <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN & KHỞI ĐẦU -->
+         <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN & KHỞI ĐẦU (START) -->
          <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► KHỐI 1: CHUYỂN ĐOẠN (START):</b>
+             <b>► KHỐI 1: CHUYỂN ĐOẠN & ĐIỂM XUẤT PHÁT:</b>
              
-             <br>📍 <b>[Mẫu 1.1 - SỐ ÍT]</b> (Dùng cho 1 đối tượng):
-             <br><code>Turning to the figure for <b>[Cat C]</b>, it started at <b>[Start Data]</b> <b>[Time]</b>.</code>
+             <br>📍 <b>[Mẫu 4.1 - SỐ ÍT]</b> (Nếu chỉ còn 1 đối tượng):
+             <br><code><b>Turning to the figure for [Cat C]</b>, it started the period at <b>[Start Data]</b> <b>[Time]</b>.</code>
              
-             <br>📍 <b>[Mẫu 1.2 - SỐ NHIỀU]</b> (Dùng cho 2 đối tượng):
-             <br><code>Regarding <b>[Cat C]</b> and <b>[Cat D]</b>, they began the period at <b>[Data C]</b> and <b>[Data D]</b> respectively.</code>
+             <br><br>📍 <b>[Mẫu 4.2 - SỐ NHIỀU]</b> (Gom 2 đối tượng tương đồng):
+             <br><code><b>Regarding [Cat C] and [Cat D]</b>, they began at <b>[Data C]</b> and <b>[Data D]</b> respectively, <b>both of which were significantly lower than the aforementioned categories</b>.</code>
              
-             <br>📍 <b>[Mẫu 1.3 - ĐỐI LẬP]</b> (Dùng nếu Body 2 ngược chiều Body 1):
-             <br><code>In contrast, <b>[Cat C]</b> followed a different trend, starting at <b>[Start Data]</b> <b>[Time]</b>.</code>
+             <br><br>📍 <b>[Mẫu 4.3 - ĐỐI LẬP HOÀN TOÀN]</b> (Nếu Body 2 đi ngược hẳn Body 1):
+             <br><code><b>In stark contrast to the categories mentioned above</b>, <b>[Cat C]</b> registered a much lower figure of <b>[Start Data]</b> at the beginning.</code>
          </div>
 
-         <!-- KHỐI 2: DIỄN BIẾN (TRENDS) -->
-         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► KHỐI 2: DIỄN BIẾN & ĐIỂM GIỮA (MIDDLE POINTS):</b>             
-             <br>📍 <b>[Mẫu 2.1 - SỐ ÍT - Dao động/Đỉnh/Đáy]</b> (Chuẩn cho bài nhiều biến động):
-             <br><code>It fluctuated over the period, reaching a <b>[peak/low]</b> of <b>[Middle Data]</b> in <b>[Year]</b> before ending at <b>[End Data]</b>.</code>             
-             <br>📍 <b>[Mẫu 2.2 - SỐ ÍT - Tăng/Giảm thẳng]</b>:
-             <br><code>It witnessed a <b>[steady/sharp]</b> <b>[increase/decrease]</b> to finish the period at <b>[End Data]</b>.</code>
-             <br>📍 <b>[Mẫu 2.3 - SỐ NHIỀU - Song hành]</b> (Dành riêng cho Mẫu 1.2):
-             <br><code>Both figures witnessed <b>[similar/fluctuating]</b> trends, eventually ending at <b>[End Data C]</b> and <b>[End Data D]</b> respectively.</code>             
-             <br>📍 <b>[Mẫu 2.4 - SỐ NHIỀU - Tách đôi]</b> (Dành riêng cho Mẫu 1.2 nhưng xu hướng khác nhau):
-             <br><code>While <b>[Cat C]</b> <b>[increased/decreased]</b> to <b>[End Data]</b>, <b>[Cat D]</b> <b>[Trend D]</b>, finishing at <b>[End Data]</b>.</code>
-             <br>📍 <b>[Mẫu 2.5 - Trend phức tạp]</b> (Dùng khi trend quá phức tạp):
-<br><code><b>[Subject]</b> + <b>[Verb of Change 1]</b> + <b>[Linker: before/after which/while]</b> + <b>[Verb of Change 2/Result]</b>, finishing at <b>[End Data]</b>.</code>
+         <!-- KHỐI 2: DIỄN BIẾN & KẾT THÚC (TRENDS & END) -->
+         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:15px;">
+             <b>► KHỐI 2: DIỄN BIẾN & KẾT THÚC:</b>             
+             
+             <br>📍 <b>[Mẫu 5.1 - SỐ ÍT - Dao động & Kết thúc]</b>:
+             <br><code>Subsequently, it <b>experienced a period of volatility</b>, <b>fluctuating around [Data]</b> before settling at <b>[End Data]</b> <b>[End Time]</b>.</code>             
+             
+             <br><br>📍 <b>[Mẫu 5.2 - SỐ ÍT - Tăng/Giảm ổn định]</b>:
+             <br><code>Thereafter, the figure <b>witnessed a [steady/marginal] [rise/fall]</b> to finish the period at <b>[End Data]</b>.</code>
+
+             <br><br>📍 <b>[Mẫu 5.3 - SỐ NHIỀU - Cùng xu hướng]</b>:
+             <br><code>Both figures <b>followed a comparable [upward/downward] trajectory</b>, eventually ending at <b>[End Data C]</b> and <b>[End Data D]</b> respectively.</code>             
+             
+             <br><br>📍 <b>[Mẫu 5.4 - SỐ NHIỀU - Tách đôi]</b> (Mẫu While phức hợp):
+             <br><code>Over the following years, <b>[Cat C] [Trend C] to [End Data]</b>, <b>while the figure for [Cat D] [Trend D]</b>, finishing at <b>[End Data]</b>.</code>
+             
+             <br><br>📍 <b>[Mẫu 5.5 - Mẫu "Về Đích" (Low Levels)]</b> (Dùng cho các hạng mục luôn thấp):
+             <br><code>Throughout the remainder of the period, these figures <b>remained at negligible levels</b>, never surpassing <b>[Data]</b>.</code>
          </div>
         
-         <!-- KHỐI 3: CHỐT HẠ (NẾU CÒN DƯ) -->
-         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► KHỐI 3: ĐỐI TƯỢNG CUỐI CÙNG (THE FINAL ONE):</b>
-             <br><i>(Chỉ dùng nếu bài có số lượng đường lẻ, ví dụ 3 đường ở Body 2)</i>
+         <!-- KHỐI 3: ĐỐI TƯỢNG CUỐI CÙNG (THE FINAL ONE) -->
+         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:15px;">
+             <b>► KHỐI 3: ĐỐI TƯỢNG CUỐI CÙNG (Nếu còn dư 1 đường lẻ):</b>
              
-             <br>📍 <b>[Mẫu 3.1 - Bình thường]</b>:
-             <br><code>Finally, <b>[Cat E]</b> followed a <b>[Trend Type]</b> trend, ending the period at <b>[End Data]</b>.</code>
+             <br>📍 <b>[Mẫu 6.1 - Cuối cùng]</b>:
+             <br><code><b>Finally</b>, the figure for <b>[Cat E]</b> saw a <b>gradual [increase/decrease]</b>, reaching <b>[End Data]</b> by <b>[End Time]</b>.</code>
              
-             <br>📍 <b>[Mẫu 3.2 - Tăng vọt/Đặc biệt]</b>:
-             <br><code>Finally, although <b>[Cat E]</b> began at only <b>[Start Data]</b>, it <b>surged/dropped</b> dramatically to <b>[End Data]</b> <b>[Time]</b>.</code>
+             <br><br>📍 <b>[Mẫu 6.2 - Đặc biệt/Bất ngờ]</b>:
+             <br><code><b>Finally</b>, it is notable that <b>[Cat E]</b> <b>regained its position</b> in the final years, <b>climbing back to [End Data]</b>.</code>
          </div>
          </div>
      </li>
-     
+
      <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
      <!-- ================================================================================== -->
-     <!-- PHẦN 2: THỰC HÀNH LẮP RÁP (STRICT LOGIC) -->
+     <!-- PHẦN 3: THỰC HÀNH LẮP RÁP BODY 2 -->
      <!-- ================================================================================== -->
      <li>     
-         <div style="background-color:#e1f5fe; padding:15px; border-radius:8px; border-left: 5px solid #0288d1; margin-bottom: 15px;">
-             <strong style="color:#01579b; font-size: 1.1rem;">🔍 PHÂN TÍCH & VIẾT BODY 2:</strong>
+         <b>✍️ THỰC HÀNH LẮP RÁP BODY 2 (QUY TRÌNH 5 BƯỚC CHUẨN):</b>
+         <br>
+         <br><b>✅ BƯỚC 1: Xử lý Nhóm Start & Transition</b>
+         <br>- <b>🔴 Phân tích & Chọn ID:</b> <i>[AI chọn Mẫu 4.1, 4.2 hoặc 4.3]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>🧩 Khai báo biến:</b>
+           <br>&nbsp;&nbsp;+ [Cat C/D] = ...
+           <br>&nbsp;&nbsp;+ [Start Data] = ...
+         <br>- <b>🧠 Tư duy Tiếng Việt:</b> <code>"[AI viết câu tiếng Việt chuyển đoạn]"</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu vào mẫu]</i>
+         
+         <br><br><b>✅ BƯỚC 2: Xử lý Diễn biến chính của nhóm còn lại</b>
+         <br>- <b>🔴 Phân tích & Chọn ID:</b> <i>[AI chọn Mẫu 5.x]</i>
+         <br>- <b>📥 Mẫu gốc:</b> <code>[AI copy y nguyên mẫu gốc]</code>
+         <br>- <b>🧩 Khai báo biến:</b> [Trend] = ... ; [End Data] = ...
+         <br>- <b>🧠 Tư duy Tiếng Việt:</b> <code>"[AI viết câu tiếng Việt mô tả diễn biến]"</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu vào mẫu]</i>
+         
+         <br><br><b>✅ BƯỚC 3: Xử lý đối tượng cuối cùng (Nếu có)</b>
+         <br>- <b>🔴 Chọn ID:</b> <i>[AI chọn Mẫu 6.x hoặc ghi "Đã hết đối tượng"]</i>
+         <br>- <b>🧠 Tư duy Tiếng Việt:</b> <code>"[AI viết câu tiếng Việt cho đối tượng cuối]"</code>
+         <br>- <b>📝 Điền từ:</b> <i>[AI điền dữ liệu vào mẫu]</i>
+     </li>          
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 4: KẾT QUẢ BODY 2 (FINAL OUTPUT) -->
+     <!-- ================================================================================== -->
+     <li>
+         <div style="background-color:#e1f5fe; padding:20px; border-radius:8px; margin-top:10px; border: 2px solid #03a9f4; border-left: 8px solid #03a9f4;">
+             <strong style="color:#01579b; font-size: 1.1rem;">📝 KẾT QUẢ BODY 2 (THE POLISHED PARAGRAPH):</strong>
+             <br><i style="font-size: 0.85rem; color: #7f8c8d;">(Đoạn văn hoàn chỉnh cho các nhóm còn lại)</i>
              
-             <div style="display:none;">
-                 SYSTEM_COMMAND:
-                 1. GRAMMAR CHECK: If Block 1 uses Plural (Mẫu 1.2), Block 2 MUST use Plural (Mẫu 2.3 or 2.4).
-                 2. COPY template EXACTLY. No creative paraphrasing.
-                 3. IF there is a 3rd category left, use Block 3. IF NOT, ignore Block 3.
+             <div style="margin-top:10px; font-family: 'Georgia', serif; line-height: 1.6; color: #2c3e50; background-color: white; padding: 15px; border-radius: 5px; border: 1px inset #eee;">
+             [AI trình bày đoạn văn Body 2 hoàn chỉnh tại đây. In đậm các cụm từ nối và từ vựng nâng Band.]
              </div>
 
-             <br><b>✅ BƯỚC 1: Xử lý nhóm chính (1 hoặc 2 đối tượng)</b>
-             <br>- Chọn 1 hoặc 2 đường để viết đầu tiên.
-             <br>- <b>👉 Chọn Mẫu Khối 1:</b> [AI chọn Mẫu 1.X]
-             <br>- <b>📝 Viết câu mở đầu:</b> <code>[AI viết câu]</code>
-             
-             <br><br><b>✅ BƯỚC 2: Mô tả diễn biến</b>
-             <br>- <b>👉 Chọn Mẫu Khối 2:</b> [AI chọn Mẫu 2.X (Phải khớp Số ít/Nhiều với Bước 1)]
-             <br>- <b>📝 Viết câu diễn biến:</b> <code>[AI viết câu]</code>
-             
-             <br><br><b>✅ BƯỚC 3: Đối tượng còn lại (Nếu có)</b>
-             <br>- Có còn đối tượng nào chưa viết không?
-             <br>- <b>👉 Chọn Mẫu Khối 3:</b> [AI chọn Mẫu 3.X hoặc ghi "Không còn"]
-             <br>- <b>📝 Viết câu cuối:</b> <code>[AI viết câu]</code>
+             <div style="margin-top:10px; font-size: 0.8rem; color: #0288d1;">
+                 <b>✅ Examiner's Quality Audit:</b>
+                 <ul style="margin: 0; padding-left: 20px;">
+                     <li>Sử dụng từ nối chuyển đoạn (Turning to/Regarding): <b>Có</b></li>
+                     <li>Gom nhóm số liệu hiệu quả (Respectively): <b>Có</b></li>
+                     <li>Sử dụng mẫu số nhiều chính xác (Both/They): <b>Có</b></li>
+                     <li>Hoàn thành đầy đủ các đối tượng: <b>Xác nhận</b></li>
+                 </ul>
+             </div>
          </div>
-     </li>       
-
-
-     <!-- ================================================================================== -->
-     <!-- PHẦN 4: GHÉP CÂU HOÀN CHỈNH -->
-     <!-- ================================================================================== -->
-     <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
-         <b>📝 KẾT QUẢ BODY 2 (FINAL OUTPUT):</b><br>
-         <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI nối các câu ở phần 'Kết quả ghép' lại thành đoạn văn.]
-         </div>
-     </div></li>
+     </li>
    </ul>
 
                     # =================================================================
