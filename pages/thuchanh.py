@@ -1090,7 +1090,7 @@ if st.session_state.step == 1:
         </div></li>      
         <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
             <b>📝 Nội dung mẫu (Sample Intro):</b><br>                             
-            <i>"The pie charts compare the percentage of people immigrating to a European country with the proportion of emigrants leaving that nation for various reasons in 2009."</i>
+            <i>The pie charts compare the percentage of people immigrating to a European country with the proportion of emigrants leaving that nation for various reasons in 2009.</i>
         </div></li>
     </ul>
 
@@ -2024,10 +2024,10 @@ if st.session_state.step == 1:
 
                     4. **"body2_guide" (Thân bài 2 - Các nhóm còn lại):**
    - <ul>
-     <li><b>Logic chọn nhóm (Grouping Strategy - VERSION 2.0):</b> 
+     <li><b>Logic chọn nhóm (Grouping Strategy):</b> 
          <br>AI thực hiện: Gom các hạng mục còn lại nhưng **PHẢI THIẾT LẬP TƯƠNG QUAN**:
          <br>1. <b>So sánh thứ bậc:</b> Nhóm này cao hay thấp hơn nhóm ở Body 1?
-         <br>2. <b>So sánh tốc độ:</b> Thằng nào tăng nhanh hơn thằng nào? (Dùng *surpassing* hoặc *lagging behind*).
+         <br>2. <b>So sánh tốc độ:</b> Hạng mục nào tăng nhanh hơn hạng mục nào? (Dùng *surpassing* hoặc *lagging behind*).
          <br>3. <b>Lệnh đặc biệt:</b> Cấm mô tả đơn lẻ từng đường. Phải dùng ít nhất 01 câu ghép có từ nối đối chiếu (*whereas/while*) hoặc so sánh hơn (*higher than/lower than*).
      </li>
 
