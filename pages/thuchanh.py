@@ -1673,36 +1673,57 @@ if st.session_state.step == 1:
 *Lỗi lặp từ "The figure for..." ở mọi câu là nguyên nhân khiến Band Lexical Resource không thể lên 7.0.*
      <li>
          <div style="background-color:#f1f8e9; border:1px solid #4caf50; border-radius:5px; padding:15px; margin-bottom:15px;">
-             <strong style="color:#1b5e20;">🔄 KHO CHỦ NGỮ XOAY VÒNG (SUBJECT ROTATION - VERSION 2.0):</strong>
-             <br><i>(QUY TẮC VÀNG: Chọn nhóm chủ ngữ khớp với bổ ngữ phía sau)</i>
+             <strong style="color:#1b5e20;">🔄 KHO CHỦ NGỮ XOAY VÒNG (SUBJECT ROTATION - VERSION 3.0):</strong>
+             <br><i>(CHIẾN THUẬT: Đa dạng hóa thực thể để phá bỏ lời nguyền lặp từ "The figure for")</i>
              
-             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.9rem;">
-                 <!-- NHÓM A: DÙNG CHO CON SỐ -->
+             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.85rem;">
+                 
+                 <!-- NHÓM 1: CON SỐ CHUNG (GENERIC NUMERICAL) -->
                  <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #4caf50;">
-                     <b style="color:#2e7d32;">Nhóm 1: Chủ ngữ "Số liệu" (Numerical)</b>
-                     <br><i style="font-size: 0.8rem;">Dùng với: increased, decreased, stood at...</i>
+                     <b style="color:#2e7d32;">1. Con số chung:</b>
+                     <br><i style="font-size: 0.75rem;">(Dùng tối đa 2 lần/bài)</i>
                      <ul style="margin:5px 0; padding-left:15px;">
                          <li>The figure for <b>[Cat A]</b></li>
-                         <li>The proportion/percentage of <b>[Cat A]</b></li>
                          <li>The data for <b>[Cat A]</b></li>
+                         <li>The percentage/proportion of...</li>
+                         <li>The share of... (Rất hay)</li>
                      </ul>
                  </div>
 
-                 <!-- NHÓM B: DÙNG CHO DANH TÍNH (SỬA LỖI OBJECT VS FIGURE) -->
-                 <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #4caf50;">
-                     <b style="color:#d35400;">Nhóm 2: Chủ ngữ "Đối tượng" (Identity)</b>
-                     <br><i style="font-size: 0.8rem;">Dùng với: was the dominant sector, was overtaken by...</i>
+                 <!-- NHÓM 2: CHỦ ĐỀ CHUYÊN BIỆT (TOPIC-SPECIFIC) - CỰC QUAN TRỌNG -->
+                 <div style="background-color:#fffde7; padding:8px; border-radius:4px; border:1px dashed #fbc02d;">
+                     <b style="color:#f57f17;">2. Theo chủ đề (High Band):</b>
+                     <br><i style="font-size: 0.75rem;">(Biến danh từ thành chủ ngữ)</i>
                      <ul style="margin:5px 0; padding-left:15px;">
-                         <li><b>[Cat A]</b> employment / <b>[Cat A]</b> sector</li>
-                         <li>Working in the <b>[Cat A]</b> industry</li>
-                         <li><b>[Cat A]</b> was the most popular choice...</li>
+                         <li><b>[Activity]</b> participation rates</li>
+                         <li><b>[Activity]</b> popularity / levels</li>
+                         <li><b>[Product]</b> consumption</li>
+                         <li><b>[Sector]</b> expenditure / spending</li>
+                     </ul>
+                 </div>
+
+                 <!-- NHÓM 3: ĐỊNH DANH (IDENTITY - OBJECT) -->
+                 <div style="background-color:#e1f5fe; padding:8px; border-radius:4px; border:1px dashed #03a9f4;">
+                     <b style="color:#0288d1;">3. Định danh (Object):</b>
+                     <br><i style="font-size: 0.75rem;">(Cấm đi kèm số liệu trực tiếp)</i>
+                     <ul style="margin:5px 0; padding-left:15px;">
+                         <li><b>[Cat A]</b> was the dominant...</li>
+                         <li><b>[Cat A]</b> was the most popular...</li>
+                         <li><b>[Cat A]</b> surpassed <b>[Cat B]</b>...</li>
+                         <li>Working in the <b>[Cat A]</b> sector...</li>
                      </ul>
                  </div>
              </div>
-             <p style="font-size: 0.8rem; color: #c0392b; margin-top: 5px;">
-                ⚠️ <b>SYSTEM_COMMAND:</b> TUYỆT ĐỐI không viết "The figure for A was the dominant sector". 
-                Hãy viết "A was the dominant sector" HOẶC "The figure for A was the highest".
-             </p>
+
+             <!-- LỆNH CƯỠNG BÁCH CHO AI -->
+             <div style="background-color:#ffebee; padding:10px; border-radius:4px; margin-top:10px; border-left: 4px solid #c62828;">
+                <p style="font-size: 0.85rem; color: #c62828; margin: 0;">
+                    ⚠️ <b>ANTI-REPETITION COMMAND:</b> 
+                    <br>1. <b>CẤM</b> dùng "The figure for" hai lần liên tiếp.
+                    <br>2. <b>PHẢI</b> luân phiên sử dụng ít nhất 01 chủ ngữ từ <b>Nhóm 2 (Topic-Specific)</b> trong mỗi đoạn thân bài để đạt Band 7.5+ Lexical Resource.
+                    <br>3. <b>LỖI LOGIC:</b> "The figure for A was the dominant sector" (SAI). Hãy viết "A was the dominant sector" (ĐÚNG).
+                </p>
+             </div>
          </div>
      </li>
                     3. **"body1_guide" (Thân bài 1 - Nhóm Nổi bật / Biến động mạnh):**
