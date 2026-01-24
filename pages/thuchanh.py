@@ -1636,8 +1636,6 @@ if st.session_state.step == 1:
    </ul>
 ### 📏 PHẦN BỔ TRỢ 2: KHO GIỚI TỪ & ƯỚC LƯỢNG (PRECISION & PREPOSITIONS)
 *Học sinh thường mất điểm GRA (Ngữ pháp) cực kỳ nặng vì sai giới từ.*
-
-```html
      <li>
          <div style="background-color:#fff3e0; border:1px solid #ff9800; border-radius:5px; padding:15px; margin-bottom:15px;">
              <strong style="color:#e65100;">🎯 KHO GIỚI TỪ & ƯỚC LƯỢNG (THE PRECISION KIT):</strong>
@@ -1673,36 +1671,38 @@ if st.session_state.step == 1:
 
 ### 🔄 PHẦN BỔ TRỢ 3: KHO CHỦ NGỮ XOAY VÒNG (SUBJECT ROTATION MENU)
 *Lỗi lặp từ "The figure for..." ở mọi câu là nguyên nhân khiến Band Lexical Resource không thể lên 7.0.*
-
-```html
      <li>
          <div style="background-color:#f1f8e9; border:1px solid #4caf50; border-radius:5px; padding:15px; margin-bottom:15px;">
-             <strong style="color:#1b5e20;">🔄 KHO CHỦ NGỮ XOAY VÒNG (SUBJECT ROTATION):</strong>
-             <br><i>(Quy tắc: Không bắt đầu 2 câu liên tiếp bằng cùng một kiểu chủ ngữ)</i>
+             <strong style="color:#1b5e20;">🔄 KHO CHỦ NGỮ XOAY VÒNG (SUBJECT ROTATION - VERSION 2.0):</strong>
+             <br><i>(QUY TẮC VÀNG: Chọn nhóm chủ ngữ khớp với bổ ngữ phía sau)</i>
              
              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.9rem;">
-                 <!-- CỘT 1: CHỦ NGỮ TRỰC TIẾP -->
+                 <!-- NHÓM A: DÙNG CHO CON SỐ -->
                  <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #4caf50;">
-                     <b style="color:#2e7d32;">Kiểu 1: Cấu trúc "The figure..."</b>
+                     <b style="color:#2e7d32;">Nhóm 1: Chủ ngữ "Số liệu" (Numerical)</b>
+                     <br><i style="font-size: 0.8rem;">Dùng với: increased, decreased, stood at...</i>
                      <ul style="margin:5px 0; padding-left:15px;">
                          <li>The figure for <b>[Cat A]</b></li>
-                         <li>The [number/amount/percentage] of <b>[Cat A]</b></li>
+                         <li>The proportion/percentage of <b>[Cat A]</b></li>
                          <li>The data for <b>[Cat A]</b></li>
-                         <li>The proportion of... (Dùng cho %)</li>
                      </ul>
                  </div>
 
-                 <!-- CỘT 2: CHỦ NGỮ GIÁN TIẾP -->
+                 <!-- NHÓM B: DÙNG CHO DANH TÍNH (SỬA LỖI OBJECT VS FIGURE) -->
                  <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #4caf50;">
-                     <b style="color:#2e7d32;">Kiểu 2: Đẩy Category làm chủ ngữ</b>
+                     <b style="color:#d35400;">Nhóm 2: Chủ ngữ "Đối tượng" (Identity)</b>
+                     <br><i style="font-size: 0.8rem;">Dùng với: was the dominant sector, was overtaken by...</i>
                      <ul style="margin:5px 0; padding-left:15px;">
-                         <li><b>[Cat A]</b> consumption / spending</li>
-                         <li><b>[Cat A]</b> figures / levels</li>
-                         <li><b>[Country/Place]</b> witnessed a rise in...</li>
-                         <li><b>It</b> (Dùng đại từ thay thế cho câu trước)</li>
+                         <li><b>[Cat A]</b> employment / <b>[Cat A]</b> sector</li>
+                         <li>Working in the <b>[Cat A]</b> industry</li>
+                         <li><b>[Cat A]</b> was the most popular choice...</li>
                      </ul>
                  </div>
              </div>
+             <p style="font-size: 0.8rem; color: #c0392b; margin-top: 5px;">
+                ⚠️ <b>SYSTEM_COMMAND:</b> TUYỆT ĐỐI không viết "The figure for A was the dominant sector". 
+                Hãy viết "A was the dominant sector" HOẶC "The figure for A was the highest".
+             </p>
          </div>
      </li>
                     3. **"body1_guide" (Thân bài 1 - Nhóm Nổi bật / Biến động mạnh):**
@@ -1741,10 +1741,10 @@ if st.session_state.step == 1:
              
              <!-- 1. CÂU MỞ ĐẦU VÀ SO SÁNH SỐ LIỆU BAN ĐẦU -->
              <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 1.1 - Cấu trúc While] (Dùng khi A và B khác biệt rõ):</b>
-                 <br><code><b>At the start of the period</b>, <b>[Cat A]</b> stood at <b>[Data A]</b>, <b>while the figure for [Cat B] was [Data B]</b>.</code>                 
-                 <br><br><b>📍 [Mẫu 1.2 - Mệnh đề quan hệ] (Dùng để nhấn mạnh chênh lệch):</b>
-                 <br><code><b>In [Year]</b>, <b>[Cat A]</b> began at <b>[Data A]</b>, <b>which was significantly [Comparison Word] than the figure for [Cat B], at [Data B]</b>.</code>                 
+                 <br><br><b>📍 [Mẫu 1.1 - Cấu trúc While] (Dùng khi A và B khác biệt rõ):</b>                 
+                 <br><code><b>At the start of the period</b>, <b>[Cat A]</b> was the dominant sector at <b>[Data A]</b>, <b>while the figure for [Cat B] was significantly lower at [Data B]</b>.</code> 
+                 <br><br><b>📍 [Mẫu 1.2 - Mệnh đề quan hệ] (Dùng để nhấn mạnh chênh lệch):</b>                 
+                 <br><code><b>In [Year]</b>, <b>[Cat A]</b> was the most popular category, but it was <b>subsequently overtaken by [Cat B]</b>, which surged to <b>[Data B]</b>.</code>
                  <br><br><b>📍 [Mẫu 1.3 - Rút gọn] (Dùng khi A lớn hơn B một chút):</b>
                  <br><code><b>[Time]</b>, <b>[Cat A]</b> was the dominant category at <b>[Data A]</b>, <b>closely followed by [Cat B] with [Data B]</b>.</code>                 
                  <br><br><b>📍 [Mẫu 1.4 - Giới từ Compared to] (Dùng để đối chiếu):</b>
@@ -1951,8 +1951,6 @@ if st.session_state.step == 1:
      
 ### 💎 PHẦN 3: BỘ CÔNG CỤ NÂNG BAND (THE EXAMINER'S ELITE TOOLKIT)
 *Chỉ sử dụng khi đã nắm chắc các cấu trúc cơ bản. Nhắm thẳng vào tiêu chí Lexical Resource & Grammatical Range.*
-
-```html
      <li>     
      <strong style="color:#d35400;">🚀 VŨ KHÍ NÂNG BAND (TOP-TIER ENHANCEMENTS):</strong>
      <br><i>(Quy tắc: AI phải chọn ít nhất 1 cấu trúc nâng cao này cho mỗi đoạn thân bài)</i>
@@ -2026,10 +2024,11 @@ if st.session_state.step == 1:
 
                     4. **"body2_guide" (Thân bài 2 - Các nhóm còn lại):**
    - <ul>
-     <li><b>Logic chọn nhóm (Grouping Strategy):</b> 
-         <br>AI thực hiện: Gom toàn bộ các hạng mục (Categories) còn lại. 
-         <br>- Nếu còn 2 đường: Viết chung một câu hoặc so sánh song song.
-         <br>- Nếu còn 3 đường: Tìm 2 đường có điểm tương đồng để viết trước, đường lẻ loi viết sau cùng.
+     <li><b>Logic chọn nhóm (Grouping Strategy - VERSION 2.0):</b> 
+         <br>AI thực hiện: Gom các hạng mục còn lại nhưng **PHẢI THIẾT LẬP TƯƠNG QUAN**:
+         <br>1. <b>So sánh thứ bậc:</b> Nhóm này cao hay thấp hơn nhóm ở Body 1?
+         <br>2. <b>So sánh tốc độ:</b> Thằng nào tăng nhanh hơn thằng nào? (Dùng *surpassing* hoặc *lagging behind*).
+         <br>3. <b>Lệnh đặc biệt:</b> Cấm mô tả đơn lẻ từng đường. Phải dùng ít nhất 01 câu ghép có từ nối đối chiếu (*whereas/while*) hoặc so sánh hơn (*higher than/lower than*).
      </li>
 
      <!-- ================================================================================== -->
