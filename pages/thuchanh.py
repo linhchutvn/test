@@ -1770,8 +1770,7 @@ if st.session_state.step == 1:
          <!-- KHỐI 1: ĐIỂM XUẤT PHÁT & SO SÁNH BAN ĐẦU -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
              <b>► KHỐI 1: ĐIỂM XUẤT PHÁT & SO SÁNH BAN ĐẦU:</b>
-             <br><i>(Lưu ý: Luôn bắt đầu bằng mốc thời gian tuyệt đối để thiết lập bối cảnh cho toàn bài)</i>             
-             
+             <br><i>(Lưu ý: Luôn bắt đầu bằng mốc thời gian tuyệt đối để thiết lập bối cảnh cho toàn bài)</i>
              <div style="margin-top:10px;">
                  <br><br><b>📍 [Mẫu 1.1 - Cấu trúc While] (Dùng khi A và B khác biệt rõ):</b>                 
                  <br><code><b>At the start of the period</b>, <b>[Cat A]</b> was the dominant sector at <b>[Data A]</b>, <b>while the figure for [Cat B] was significantly lower at [Data B]</b>.</code> 
