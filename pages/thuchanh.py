@@ -1536,7 +1536,7 @@ if st.session_state.step == 1:
                          
                          <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
-                          # ==================================================================================
+                         # ==================================================================================
                          # PHẦN 2: CHIẾN THUẬT CHỌN MẪU (STRICT MATCHING & DRAFTING)
                          # ==================================================================================
                          <li>
@@ -1767,9 +1767,9 @@ if st.session_state.step == 1:
              <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[COMPARE B]</code>
          </div>
 
-         <!-- KHỐI 1: ĐIỂM XUẤT PHÁT & SO SÁNH BAN ĐẦU -->
+         <!-- KHỐI 1: DỮ LIỆU & SO SÁNH BAN ĐẦU -->
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
-             <b>► KHỐI 1: ĐIỂM XUẤT PHÁT & SO SÁNH BAN ĐẦU:</b>
+             <b>► KHỐI 1: DỮ LIỆU & SO SÁNH BAN ĐẦU:</b>
              <br><i>(Lưu ý: Luôn bắt đầu bằng mốc thời gian tuyệt đối để thiết lập bối cảnh cho toàn bài)</i>
              <div style="margin-top:10px;">
                  <br><br><b>📍 [Mẫu 1.1 - Cấu trúc While] (Dùng khi A và B khác biệt rõ):</b>                 
