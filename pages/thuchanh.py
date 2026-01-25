@@ -1729,10 +1729,7 @@ if st.session_state.step == 1:
                     3. **"body1_guide" (Thân bài 1 - Nhóm Nổi bật / Biến động mạnh):**
    - <ul>
      <li><b>Logic chọn nhóm (Grouping Strategy):</b> AI thực hiện: Chọn 1 hoặc 2 hạng mục (Category) có <b>số liệu cao nhất</b> hoặc <b>xu hướng thay đổi mạnh nhất/tăng trưởng rõ rệt</b> để phân tích trước.</li>
-     <!-- ================================================================================== -->
-     <!-- PHẦN 1: CÔNG THỨC TỔNG QUÁT (VISUAL FLOW) -->
-     <!-- SYSTEM_ALERT: Hiển thị ngay đầu tiên. -->
-     <!-- ================================================================================== -->
+     
      <li>
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">             
              <b>► Cấu trúc chuẩn (Formula):</b> 
@@ -1746,179 +1743,169 @@ if st.session_state.step == 1:
          </div>
      </li>
 
-     <!-- ================================================================================== -->
-     <!-- SYSTEM_ALERT: 
-          1. DISPLAY_MODE = RAW. Tại phần "KHO MẪU CÂU", giữ nguyên các ký tự [Variable]. KHÔNG ĐIỀN DỮ LIỆU VÀO ĐÓ.
-          2. EXECUTION_MODE = STRICT. Tại phần "THỰC HÀNH", không được paraphrase. Chỉ thay thế biến số.
-     <!-- ================================================================================== -->
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
-         <strong style="color:#d35400;">📚 KHO MẪU CÂU BODY 1:</strong>
-         <br><i>(Lưu ý: Chọn từ Menu Thời Gian để điền vào <b>[Time]</b>)</i>         
-         
-         ### KHỐI 1 - ĐIỂM XUẤT PHÁT & SO SÁNH BAN ĐẦU
-         <!-- LOGIC FLOW VISUALIZATION -->
-         <div style="margin-bottom: 10px;">
-             <b>► Logic cốt lõi (Visual Flow):</b> 
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[TIME]</code>
-             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[DATA A]</code>
-             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[COMPARE B]</code>
-         </div>
-
-         <!-- KHỐI 1: DỮ LIỆU & SO SÁNH BAN ĐẦU -->
-         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
-             <b>► KHỐI 1: DỮ LIỆU & SO SÁNH BAN ĐẦU:</b>
-             <br><i>(Lưu ý: Luôn bắt đầu bằng mốc thời gian tuyệt đối để thiết lập bối cảnh cho toàn bài)</i>
-             <div style="margin-top:10px;">
-                 <br><br><b>📍 [Mẫu 1.1 - Cấu trúc While] (Dùng khi A và B khác biệt rõ):</b>                 
-                 <br><code><b>At the start of the period</b>, <b>[Cat A]</b> was the dominant sector at <b>[Data A]</b>, <b>while the figure for [Cat B] was significantly lower at [Data B]</b>.</code> 
-                 <br><br><b>📍 [Mẫu 1.2 - Mệnh đề quan hệ] (Dùng để nhấn mạnh chênh lệch):</b>                 
-                 <br><code><b>In [Year]</b>, <b>[Cat A]</b> was the most popular category, but it was <b>subsequently overtaken by [Cat B]</b>, which surged to <b>[Data B]</b>.</code>
-                 <br><br><b>📍 [Mẫu 1.3 - Rút gọn] (Dùng khi A lớn hơn B một chút):</b>
-                 <br><code><b>[Time]</b>, <b>[Cat A]</b> was the dominant category at <b>[Data A]</b>, <b>closely followed by [Cat B] with [Data B]</b>.</code>                 
-                 <br><br><b>📍 [Mẫu 1.4 - Giới từ Compared to] (Dùng để đối chiếu):</b>
-                 <br><code><b>At the beginning of the period</b>, <b>[Cat A]</b> registered a figure of <b>[Data A]</b>, <b>compared to [Data B] for [Cat B]</b>.</code>                 
-                 <br><br><b>📍 [Mẫu 1.5 - Tương đồng] (Dùng khi A = B hoặc xấp xỉ):</b>
-                 <br><code><b>In the first year</b>, the figure for <b>[Cat A]</b> stood at <b>[Data A]</b>, <b>which was [identical/similar] to that of [Cat B]</b>.</code>                 
-                 <br><br><b>📍 [Mẫu 1.6 - 3 CAT] (Dùng cho 3+ nhóm sát nhau):</b>
-                 <br><code><b>At the beginning of the period</b>, <b>[Cat A], [Cat B] and [Cat C]</b> were clustered at significant levels, <b>ranging from [Lowest Data] to [Highest Data]</b>.</code>
-                 <br><br><b>📍 [Mẫu 1.7 - Xuất phát 0] (Dùng cho dữ liệu bằng 0):</b>
-                 <br><code><b>In [Year]</b>, <b>[Cat A]</b> was non-existent (stood at 0), <b>whereas [Cat B] was already established at [Data B]</b>.</code>
-                 <br><br><b>📍 [Mẫu 1.8 - Xấp xỉ] (Dùng khi số liệu khó đọc):</b>
-                 <br><code><b>At the start of the period</b>, <b>[Cat A]</b> stood at approximately <b>[Data A]</b>, <b>marginally [higher/lower] than the figure for [Cat B]</b>.</code>
-             </div>
-
-         ### KHỐI 2 - MIÊU TẢ TREND & ĐIỂM GÃY 
-         <!-- LOGIC FLOW VISUALIZATION -->
-         <div style="margin-bottom: 10px;">
-             <b>► Logic cốt lõi (Visual Flow):</b> 
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[LINKER]</code>
-             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[TREND & MID-POINT]</code>
-             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[END DATA & TIME]</code>
-         </div>
-
-         <!-- KHỐI 2: MIÊU TẢ TREND & ĐIỂM GÃY -->
-         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
-             <b>► KHỐI 2: MIÊU TẢ TREND (DIỄN BIẾN):</b>
-             <br><i>(Lưu ý: <b>[Linker]</b> là các từ nối thời gian: Then, Subsequently, Following this, Over the next X years...)</i>             
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.1 - Before V-ing] (Tăng rồi Giảm/Ngược lại):</b>
-                 <br><code><b>[Linker]</b>, the figure increased to <b>[Peak Data]</b> in <b>[Year]</b>, <b>before falling to finish at</b> <b>[End Data]</b> <b>[End Time]</b>.</code>
-             </div>
-             <!-- Mẫu 2.2: Peak/Low -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.2 - Peak/Low & End] (Đạt Đỉnh/Đáy rồi đổi chiều):</b>
-                 <br>• <b>Đỉnh:</b> <code><b>[Linker]</b>, it surged to <b>reach a peak of [Peak Data]</b> in <b>[Year]</b>, <b>and then dropped to [End Data]</b> <b>[End Time]</b>.</code>
-                 <br>• <b>Đáy:</b> <code><b>[Linker]</b>, it plunged to <b>hit a low of [Low Data]</b> in <b>[Year]</b>, <b>before recovering to [End Data]</b> <b>[End Time]</b>.</code>
-             </div>
-             <!-- Mẫu 2.3: Surpassing (Vượt lên) -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.3 - Soán ngôi & End] (Tăng và Vượt mặt):</b>
-                 <br><code><b>[Linker]</b>, it rose significantly <b>to [Mid Data]</b>, <b>surpassing [Cat B]</b> to become the dominant category and <b>ending at [End Data]</b> <b>[End Time]</b>.</code>
-             </div>
-             <!-- Mẫu 2.4: Simple Rise/Fall -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.4 - Tăng/Giảm thẳng] (Xu hướng đơn giản):</b>
-                 <br><code><b>[Linker]</b>, there was a sharp rise to <b>[End Data]</b> <b>[End Time]</b>, making it the highest figure at the end of the period.</code>
-             </div>
-             <!-- Mẫu 2.5: Finishing (Reduced) -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.5 - Finishing] (Mệnh đề rút gọn):</b>
-                 <br><code><b>[Linker]</b>, it followed a steady <b>[upward/downward]</b> trend, <b>finishing the period at [End Data]</b> <b>[End Time]</b>.</code>
-             </div>
-             <!-- Mẫu 2.6: Fluctuation -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.6 - Dao động] (Zíc-zắc & Kết thúc):</b>
-                 <br><code><b>[Linker]</b>, it showed a volatile pattern, <b>fluctuating between [Data 1] and [Data 2]</b>, before ending at <b>[End Data]</b> <b>[End Time]</b>.</code>
-             </div>
-             <!-- Mẫu 2.7: Stable -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.7 - Ổn định cao] (Luôn đứng nhất):</b>
-                 <br><code><b>[Linker]</b>, the figure <b>remained relatively stable</b> at <b>around [Data]</b> throughout the period, maintaining its leading position until <b>[End Time]</b>.</code>
-             </div>
-             <!-- Mẫu 2.8: Plateau -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.8 - Plateau] (Tăng/Giảm rồi đi ngang):</b>
-                 <br><code><b>[Linker]</b>, it climbed rapidly to reach <b>[Data]</b> in <b>[Year]</b>, <b>after which it leveled off/plateaued</b> for the remainder of the period.</code>
-             </div>
-             <!-- Mẫu 2.9: Recovery -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.9 - Recovery] (Hồi phục sau khi giảm):</b>
-                 <br><code><b>[Linker]</b>, after an initial drop to <b>[Low Data]</b>, the figure <b>recovered</b>, rising back to <b>[End Data]</b> <b>[End Time]</b>.</code>
-             </div>
-             <!-- Mẫu 2.10: Advanced Synthesis -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.10 - Advanced Synthesis] (Biến động kép):</b>
-                 <br><code><b>[Linker]</b>, <b>[Cat A]</b> saw a <b>[Sharp/Steady]</b> <b>[Rise/Fall]</b>, <b>[Surpassing/Overtaking] [Cat B]</b> to finish the period as the leader at <b>[End Data]</b> <b>[End Time]</b>.</code>
-             </div>
-             <!-- Mẫu 2.11: Stability then Change -->
-             <div style="margin-top:10px; border-top: 1px dashed #ccc; padding-top: 10px;">
-                 <b>📍 [Mẫu 2.11 - Sleeping Giant] (Đi ngang rồi mới Tăng/Giảm):</b>
-                 <br><i>(Dùng khi giai đoạn đầu không đổi, giai đoạn sau mới biến động)</i>
-                 <br><code><b>[Linker]</b>, the figure <b>remained stable at [Start Data]</b> until <b>[Year]</b>, <b>before [rising/falling] sharply to end at [End Data]</b> <b>[End Time]</b>.</code>
-             </div>
-             <!-- Mẫu 2.12: Falling & Intersecting -->
-             <div style="margin-top:10px;">
-                 <b>📍 [Mẫu 2.12 - Losing Position] (Giảm và bị vượt mặt):</b>
-                 <br><i>(Dùng khi đường đang cao bị tụt xuống dưới đường khác)</i>
-                 <br><code><b>[Linker]</b>, it experienced a downward trend, <b>falling below [Cat B]</b> in <b>[Year]</b> and <b>continuing to drop to [End Data]</b> <b>[End Time]</b>.</code>
-             </div>
-         </div>
-
-         ### KHỐI 3 - SO SÁNH VỚI CÁC CATEGORY CÒN LẠI
-         <!-- LOGIC FLOW VISUALIZATION -->
-         <div style="margin-bottom: 10px;">
-             <b>► Logic cốt lõi (Visual Flow):</b> 
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[LINKER]</code>
-             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[COMPARE & TREND B]</code>
-             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[CONTINUE/MID-POINT]</code>
-             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-             <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[END DATA & TIME]</code>
-         </div>
-
-         <!-- KHỐI 3: SO SÁNH VỚI CÁC CATEGORY CÒN LẠI -->
-         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► KHỐI 3: SO SÁNH & KẾT THÚC (COMPARISON & END):</b>
-             <br><i>(Dùng để đối chiếu Cat B với Cat A đã tả ở trên - Đảm bảo tính liên kết chặt chẽ)</i>
+             <strong style="color:#d35400;">📚 KHO MẪU CÂU BODY 1:</strong>
+             <br><i>(Lưu ý: Chọn từ Menu Thời Gian để điền vào <b>[Time]</b>)</i>         
              
-             <!-- 1. NHÓM ĐỒNG THUẬN (CONCORDANCE) -->
-             <div style="margin-top:10px; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                 <b style="color: #27ae60;">● Nhóm 1: Đồng thuận & Bám đuổi (Following A)</b>
-                 <br>📍 <b>[Mẫu 3.1 - Mirroring] (Phản chiếu y hệt):</b>
-                 <br><code><b>Similarly</b>, <b>[Cat B]</b> mirrored this trajectory, <b>[rising/falling] to [Mid Data]</b> before <b>continuing its trend to finish at [End Data]</b> <b>[End Time]</b>.</code>                 
-                 <br>📍 <b>[Mẫu 3.2 - Lagging behind] (Bám đuổi nhưng chậm hơn):</b>
-                 <br><code><b>A similar, albeit more gradual, [rise/fall]</b> was observed in <b>[Cat B]</b>, with the figure <b>creeping [up/down] to [End Data]</b> by <b>[End Time]</b>.</code>
-             </div>
-             <!-- 2. NHÓM ĐỐI LẬP (CONTRAST) -->
-             <div style="margin-top:10px; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                 <b style="color: #c0392b;">● Nhóm 2: Đối lập & Nghịch thế (Opposing A)</b>
-                 <br>📍 <b>[Mẫu 3.3 - In stark contrast] (Trái ngược hoàn toàn):</b>
-                 <br><code><b>In stark contrast to [Cat A]</b>, the figure for <b>[Cat B]</b> followed a <b>downward/upward</b> path, <b>dropping/surging to [Mid Data]</b> and <b>ending the period at [End Data]</b>.</code>
-                 <br>📍 <b>[Mẫu 3.4 - Standing still] (A biến động, B đứng im):</b>
-                 <br><code><b>While [Cat A] saw significant changes</b>, <b>[Cat B]</b> remained <b>relatively stagnant/flat</b>, <b>hovering around [Data]</b> throughout the period until <b>[End Time]</b>.</code>
-             </div>
-             <!-- 3. NHÓM THU HẸP KHOẢNG CÁCH (CONVERGENCE/DIVERGENCE) -->
-             <div style="margin-top:10px; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                 <b style="color: #2980b9;">● Nhóm 3: Thu hẹp hoặc Nới rộng khoảng cách</b>
-                 <br>📍 <b>[Mẫu 3.5 - Closing the gap] (B đuổi kịp A):</b>
-                 <br><code><b>Subsequently</b>, <b>[Cat B]</b> experienced a much sharper <b>[increase/decrease]</b>, <b>effectively closing the gap with [Cat A]</b> and finishing at <b>[End Data]</b>, just <b>[Number] units</b> apart.</code>
-                 <br>📍 <b>[Mẫu 3.6 - Divergence] (B ngày càng xa A):</b>
-                 <br><code><b>Following this</b>, the trend for <b>[Cat B]</b> diverged from <b>[Cat A]</b>, <b>[plummeting/soaring] to [End Data]</b>, which was <b>significantly [lower/higher]</b> than its counterpart.</code>
-             </div>
-             <!-- 4. NHÓM TOÁN HỌC & TỶ LỆ (RATIO) -->
-             <div style="margin-top:10px;">
-                 <b style="color: #8e44ad;">● Nhóm 4: Toán học & Tỷ lệ (Quantitative Relationship)</b>
-                 <br>📍 <b>[Mẫu 3.7 - Double/Triple] (Gấp đôi/Gấp ba):</b>
-                 <br><code><b>Regarding [Cat B]</b>, it followed a comparable <b>[up/down]</b> trend to end at <b>[End Data]</b> <b>[End Time]</b>, a figure <b>[approximately/nearly/exactly] [double / triple] that of [Cat A]</b>.</code>
-                 <br>📍 <b>[Mẫu 3.8 - Fraction] (Một phần nhỏ):</b>
-                 <br><code><b>Meanwhile</b>, the figure for <b>[Cat B]</b> <b>[increased/decreased]</b> marginally, <b>finishing at only [End Data]</b>, representing <b>merely a fraction of [Cat A]'s total</b>.</code>
-             </div>
+             <!-- KHỐI 1: SỔ XUỐNG -->
+             <details style="margin-top: 15px;">
+                 <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
+                     📍 KHỐI 1 - ĐIỂM XUẤT PHÁT & SO SÁNH BAN ĐẦU
+                 </summary>
+                 <div style="padding: 10px; border: 1px solid #fdf2e9; border-top: none; background-color: white;">
+                     <div style="margin-bottom: 10px;">
+                         <b>► Logic cốt lõi (Visual Flow):</b> 
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[TIME]</code>
+                         <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[DATA A]</code>
+                         <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[COMPARE B]</code>
+                     </div>
+                     <div style="margin-top:10px; font-size: 0.9rem;">
+                         <b>📍 [Mẫu 1.1 - Cấu trúc While] (Dùng khi A và B khác biệt rõ):</b>                 
+                         <br><code><b>At the start of the period</b>, <b>[Cat A]</b> was the dominant sector at <b>[Data A]</b>, <b>while the figure for [Cat B] was significantly lower at [Data B]</b>.</code> 
+                         <br><br><b>📍 [Mẫu 1.2 - Mệnh đề quan hệ] (Dùng để nhấn mạnh chênh lệch):</b>                 
+                         <br><code><b>In [Year]</b>, <b>[Cat A]</b> was the most popular category, but it was <b>subsequently overtaken by [Cat B]</b>, which surged to <b>[Data B]</b>.</code>
+                         <br><br><b>📍 [Mẫu 1.3 - Rút gọn] (Dùng khi A lớn hơn B một chút):</b>
+                         <br><code><b>[Time]</b>, <b>[Cat A]</b> was the dominant category at <b>[Data A]</b>, <b>closely followed by [Cat B] with [Data B]</b>.</code>                 
+                         <br><br><b>📍 [Mẫu 1.4 - Giới từ Compared to] (Dùng để đối chiếu):</b>
+                         <br><code><b>At the beginning of the period</b>, <b>[Cat A]</b> registered a figure of <b>[Data A]</b>, <b>compared to [Data B] for [Cat B]</b>.</code>                 
+                         <br><br><b>📍 [Mẫu 1.5 - Tương đồng] (Dùng khi A = B hoặc xấp xỉ):</b>
+                         <br><code><b>In the first year</b>, the figure for <b>[Cat A]</b> stood at <b>[Data A]</b>, <b>which was [identical/similar] to that of [Cat B]</b>.</code>                 
+                         <br><br><b>📍 [Mẫu 1.6 - 3 CAT] (Dùng cho 3+ nhóm sát nhau):</b>
+                         <br><code><b>At the beginning of the period</b>, <b>[Cat A], [Cat B] and [Cat C]</b> were clustered at significant levels, <b>ranging from [Lowest Data] to [Highest Data]</b>.</code>
+                         <br><br><b>📍 [Mẫu 1.7 - Xuất phát 0] (Dùng cho dữ liệu bằng 0):</b>
+                         <br><code><b>In [Year]</b>, <b>[Cat A]</b> was non-existent (stood at 0), <b>whereas [Cat B] was already established at [Data B]</b>.</code>
+                         <br><br><b>📍 [Mẫu 1.8 - Xấp xỉ] (Dùng khi số liệu khó đọc):</b>
+                         <br><code><b>At the start of the period</b>, <b>[Cat A]</b> stood at approximately <b>[Data A]</b>, <b>marginally [higher/lower] than the figure for [Cat B]</b>.</code>
+                     </div>
+                 </div>
+             </details>
+
+             <!-- KHỐI 2: SỔ XUỐNG -->
+             <details style="margin-top: 10px;">
+                 <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
+                     📍 KHỐI 2 - MIÊU TẢ TREND & ĐIỂM GÃY
+                 </summary>
+                 <div style="padding: 10px; border: 1px solid #fdf2e9; border-top: none; background-color: white;">
+                     <div style="margin-bottom: 10px;">
+                         <b>► Logic cốt lõi (Visual Flow):</b> 
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[LINKER]</code>
+                         <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[TREND & MID-POINT]</code>
+                         <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[END DATA & TIME]</code>
+                     </div>
+                     <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
+                         <b>► KHỐI 2: MIÊU TẢ TREND (DIỄN BIẾN):</b>
+                         <br><i>(Lưu ý: <b>[Linker]</b> là các từ nối thời gian: Then, Subsequently, Following this, Over the next X years...)</i>             
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.1 - Before V-ing] (Tăng rồi Giảm/Ngược lại):</b>
+                             <br><code><b>[Linker]</b>, the figure increased to <b>[Peak Data]</b> in <b>[Year]</b>, <b>before falling to finish at</b> <b>[End Data]</b> <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.2 - Peak/Low & End] (Đạt Đỉnh/Đáy rồi đổi chiều):</b>
+                             <br>• <b>Đỉnh:</b> <code><b>[Linker]</b>, it surged to <b>reach a peak of [Peak Data]</b> in <b>[Year]</b>, <b>and then dropped to [End Data]</b> <b>[End Time]</b>.</code>
+                             <br>• <b>Đáy:</b> <code><b>[Linker]</b>, it plunged to <b>hit a low of [Low Data]</b> in <b>[Year]</b>, <b>before recovering to [End Data]</b> <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.3 - Soán ngôi & End] (Tăng và Vượt mặt):</b>
+                             <br><code><b>[Linker]</b>, it rose significantly <b>to [Mid Data]</b>, <b>surpassing [Cat B]</b> to become the dominant category and <b>ending at [End Data]</b> <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.4 - Tăng/Giảm thẳng] (Xu hướng đơn giản):</b>
+                             <br><code><b>[Linker]</b>, there was a sharp rise to <b>[End Data]</b> <b>[End Time]</b>, making it the highest figure at the end of the period.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.5 - Finishing] (Mệnh đề rút gọn):</b>
+                             <br><code><b>[Linker]</b>, it followed a steady <b>[upward/downward]</b> trend, <b>finishing the period at [End Data]</b> <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.6 - Dao động] (Zíc-zắc & Kết thúc):</b>
+                             <br><code><b>[Linker]</b>, it showed a volatile pattern, <b>fluctuating between [Data 1] and [Data 2]</b>, before ending at <b>[End Data]</b> <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.7 - Ổn định cao] (Luôn đứng nhất):</b>
+                             <br><code><b>[Linker]</b>, the figure <b>remained relatively stable</b> at <b>around [Data]</b> throughout the period, maintaining its leading position until <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.8 - Plateau] (Tăng/Giảm rồi đi ngang):</b>
+                             <br><code><b>[Linker]</b>, it climbed rapidly to reach <b>[Data]</b> in <b>[Year]</b>, <b>after which it leveled off/plateaued</b> for the remainder of the period.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.9 - Recovery] (Hồi phục sau khi giảm):</b>
+                             <br><code><b>[Linker]</b>, after an initial drop to <b>[Low Data]</b>, the figure <b>recovered</b>, rising back to <b>[End Data]</b> <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.10 - Advanced Synthesis] (Biến động kép):</b>
+                             <br><code><b>[Linker]</b>, <b>[Cat A]</b> saw a <b>[Sharp/Steady]</b> <b>[Rise/Fall]</b>, <b>[Surpassing/Overtaking] [Cat B]</b> to finish the period as the leader at <b>[End Data]</b> <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px; border-top: 1px dashed #ccc; padding-top: 10px;">
+                             <b>📍 [Mẫu 2.11 - Sleeping Giant] (Đi ngang rồi mới Tăng/Giảm):</b>
+                             <br><i>(Dùng khi giai đoạn đầu không đổi, giai đoạn sau mới biến động)</i>
+                             <br><code><b>[Linker]</b>, the figure <b>remained stable at [Start Data]</b> until <b>[Year]</b>, <b>before [rising/falling] sharply to end at [End Data]</b> <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b>📍 [Mẫu 2.12 - Losing Position] (Giảm và bị vượt mặt):</b>
+                             <br><i>(Dùng khi đường đang cao bị tụt xuống dưới đường khác)</i>
+                             <br><code><b>[Linker]</b>, it experienced a downward trend, <b>falling below [Cat B]</b> in <b>[Year]</b> and <b>continuing to drop to [End Data]</b> <b>[End Time]</b>.</code>
+                         </div>
+                     </div>
+                 </div>
+             </details>
+
+             <!-- KHỐI 3: SỔ XUỐNG -->
+             <details style="margin-top: 10px;">
+                 <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
+                     📍 KHỐI 3 - SO SÁNH VỚI CÁC CATEGORY CÒN LẠI
+                 </summary>
+                 <div style="padding: 10px; border: 1px solid #fdf2e9; border-top: none; background-color: white;">
+                     <div style="margin-bottom: 10px;">
+                         <b>► Logic cốt lõi (Visual Flow):</b> 
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[LINKER]</code>
+                         <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[COMPARE & TREND B]</code>
+                         <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[CONTINUE/MID-POINT]</code>
+                         <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+                         <code style="font-size: 0.9rem; background-color: white; padding: 2px 5px; border: 1px dashed #7f8c8d; border-radius: 3px;">[END DATA & TIME]</code>
+                     </div>
+                     <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
+                         <b>► KHỐI 3: SO SÁNH & KẾT THÚC (COMPARISON & END):</b>
+                         <br><i>(Dùng để đối chiếu Cat B với Cat A đã tả ở trên - Đảm bảo tính liên kết chặt chẽ)</i>
+                         
+                         <div style="margin-top:10px; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
+                             <b style="color: #27ae60;">● Nhóm 1: Đồng thuận & Bám đuổi (Following A)</b>
+                             <br>📍 <b>[Mẫu 3.1 - Mirroring] (Phản chiếu y hệt):</b>
+                             <br><code><b>Similarly</b>, <b>[Cat B]</b> mirrored this trajectory, <b>[rising/falling] to [Mid Data]</b> before <b>continuing its trend to finish at [End Data]</b> <b>[End Time]</b>.</code>                 
+                             <br>📍 <b>[Mẫu 3.2 - Lagging behind] (Bám đuổi nhưng chậm hơn):</b>
+                             <br><code><b>A similar, albeit more gradual, [rise/fall]</b> was observed in <b>[Cat B]</b>, with the figure <b>creeping [up/down] to [End Data]</b> by <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
+                             <b style="color: #c0392b;">● Nhóm 2: Đối lập & Nghịch thế (Opposing A)</b>
+                             <br>📍 <b>[Mẫu 3.3 - In stark contrast] (Trái ngược hoàn toàn):</b>
+                             <br><code><b>In stark contrast to [Cat A]</b>, the figure for <b>[Cat B]</b> followed a <b>downward/upward</b> path, <b>dropping/surging to [Mid Data]</b> and <b>ending the period at [End Data]</b>.</code>
+                             <br>📍 <b>[Mẫu 3.4 - Standing still] (A biến động, B đứng im):</b>
+                             <br><code><b>While [Cat A] saw significant changes</b>, <b>[Cat B]</b> remained <b>relatively stagnant/flat</b>, <b>hovering around [Data]</b> throughout the period until <b>[End Time]</b>.</code>
+                         </div>
+                         <div style="margin-top:10px; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
+                             <b style="color: #2980b9;">● Nhóm 3: Thu hẹp hoặc Nới rộng khoảng cách</b>
+                             <br>📍 <b>[Mẫu 3.5 - Closing the gap] (B đuổi kịp A):</b>
+                             <br><code><b>Subsequently</b>, <b>[Cat B]</b> experienced a much sharper <b>[increase/decrease]</b>, <b>effectively closing the gap with [Cat A]</b> and finishing at <b>[End Data]</b>, just <b>[Number] units</b> apart.</code>
+                             <br>📍 <b>[Mẫu 3.6 - Divergence] (B ngày càng xa A):</b>
+                             <br><code><b>Following this</b>, the trend for <b>[Cat B]</b> diverged from <b>[Cat A]</b>, <b>[plummeting/soaring] to [End Data]</b>, which was <b>significantly [lower/higher]</b> than its counterpart.</code>
+                         </div>
+                         <div style="margin-top:10px;">
+                             <b style="color: #8e44ad;">● Nhóm 4: Toán học & Tỷ lệ (Quantitative Relationship)</b>
+                             <br>📍 <b>[Mẫu 3.7 - Double/Triple] (Gấp đôi/Gấp ba):</b>
+                             <br><code><b>Regarding [Cat B]</b>, it followed a comparable <b>[up/down]</b> trend to end at <b>[End Data]</b> <b>[End Time]</b>, a figure <b>[approximately/nearly/exactly] [double / triple] that of [Cat A]</b>.</code>
+                             <br>📍 <b>[Mẫu 3.8 - Fraction] (Một phần nhỏ):</b>
+                             <br><code><b>Meanwhile</b>, the figure for <b>[Cat B]</b> <b>[increased/decreased]</b> marginally, <b>finishing at only [End Data]</b>, representing <b>merely a fraction of [Cat A]'s total</b>.</code>
+                         </div>
+                     </div>
+                 </div>
+             </details>
          </div>
      </li>
      
