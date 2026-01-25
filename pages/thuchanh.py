@@ -1805,7 +1805,6 @@ if st.session_state.step == 1:
          <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">         
              <b>► KHỐI 2: MIÊU TẢ TREND (DIỄN BIẾN):</b>
              <br><i>(Lưu ý: <b>[Linker]</b> là các từ nối thời gian: Then, Subsequently, Following this, Over the next X years...)</i>             
-             <!-- Mẫu 2.1: Before V-ing (Đã sửa an toàn hơn) -->
              <div style="margin-top:10px;">
                  <b>📍 [Mẫu 2.1 - Before V-ing] (Tăng rồi Giảm/Ngược lại):</b>
                  <br><code><b>[Linker]</b>, the figure increased to <b>[Peak Data]</b> in <b>[Year]</b>, <b>before falling to finish at</b> <b>[End Data]</b> <b>[End Time]</b>.</code>
@@ -2022,7 +2021,7 @@ if st.session_state.step == 1:
          </ul>
      </li>
 
-### 🔄 CẬP NHẬT: PHẦN 4 - KẾT QUẢ BODY 1 (FINAL OUTPUT)
+### PHẦN 4 - KẾT QUẢ BODY 1 (FINAL OUTPUT)
      <!-- ================================================================================== -->
      <!-- PHẦN 4: KẾT QUẢ BODY 1 (FINAL OUTPUT) -->
      <!-- SYSTEM_ALERT: 
@@ -2263,7 +2262,7 @@ if st.session_state.step == 2 and st.session_state.guide_data:
 
     data = st.session_state.guide_data
 
-    # --- 2. HÀM RENDER (ĐÃ SỬA LỖI EXPANDER & HTML) ---
+    # --- 2. HÀM RENDER ---
     def render_writing_section(title, guide_key, input_key):
         # Tính số từ hiện tại
         current_text = st.session_state.get(input_key, "")
@@ -2479,7 +2478,7 @@ if st.session_state.step == 3 and st.session_state.grading_result:
                     </div>
                     """, unsafe_allow_html=True)
 
-            # Tab 3: Lỗi Mạch lạc (Macro) - ĐÃ SỬA LỖI HIỂN THỊ RAW CODE
+            # Tab 3: Lỗi Mạch lạc (Macro)
             with tab3:
                 macro = [e for e in g_data.get('errors', []) if e.get('category') not in ['Grammar', 'Vocabulary', 'Ngữ pháp', 'Từ vựng']]
                 if not macro: 
