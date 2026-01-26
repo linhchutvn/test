@@ -1052,47 +1052,105 @@ if st.session_state.step == 1:
                     <br><i>(LƯU Ý: Nhìn Năm trong đề bài để quyết định THÌ cho toàn bài viết)</i>
                     <br>Tuyệt đối <b>KHÔNG</b> dùng dấu gạch ngang để chỉ khoảng số (VD: <i>7-14%</i>).
                     <br>👉 <b>Phải viết chữ:</b> <i>"between 7% and 14%"</i> hoặc <i>"from 7% to 14%"</i>.
-                    1. **"intro_guide" (Paraphrase):**                    
-    <ul>        
-        <!-- CẤU TRÚC CHUẨN (CỐ ĐỊNH - KHÔNG ĐƯỢC THAY ĐỔI) -->
-        <li><b>Cấu trúc chuẩn (Formula):</b> <code>[Subject] + [Finite Verb] + [Object/Topic] + [Place] + [Time (Specific Year)]</code>.</li>
-    
-        <li><b>Subject (Lưu ý quan trọng):</b>
-            <br>- <b>Từ vựng bắt buộc:</b> Phải dùng các từ chỉ tỷ lệ như <i>The proportion of, The percentage of, The share of</i>.
-            <br>- <b>Tuyệt đối tránh:</b> Không viết "The chart shows the immigration..." mà phải là "The chart shows the percentage of immigrants...".
-            <br>- <b>Hòa hợp chủ ngữ:</b> <i>The pie charts compare...</i> (Số nhiều) hoặc <i>The pie chart gives information about...</i> (Số ít).</li>
-    
-        <li><b>Topic (The "What"):</b>
-            <br>- <b>Cách 1 (Basic):</b> "...how people spent their money on different commodities..."
-            <br>- <b>Cách 2 (Advanced):</b> "...the breakdown of expenses for..."
-            <br>- <b>Cách 3 (Comparative):</b> "...the differences in the consumption of [Category]..."</li>
+                    ### 1. **"intro_guide" (Quy trình 5 bước sản xuất Mở bài):**
+
+<ul>
+    <!-- ================================================================================== -->
+    <!-- PHẦN 1: CÔNG THỨC & LƯU Ý (THIẾT LẬP NỀN TẢNG) -->
+    <!-- ================================================================================== -->
+    <li>
+        <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">             
+            <b>► Logic cốt lõi (Visual Flow):</b> 
+            <br>             
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[1. Chart Type]</code>
+            <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[2. Finite Verb]</code>
+            <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[3. Subject (Proportion/Share)]</code>
+            <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[4. Paraphrased Topic]</code>
+            <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[5. Context (Place & Time)]</code>
+        </div>
+    </li>
+
+    <li>
+        <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
+            <strong style="color:#d35400;">📚 KHO CÔNG CỤ XÂY DỰNG INTRO:</strong>
             
-            <div style="background-color:#e8f5e9; padding:10px; border-radius:5px; border: 1px dashed #27ae60;">
-                <strong style="color:#2ecc71;">🎓 2. EXAMINER'S EXTRA (Chủ đề Tiền tệ/Chi tiêu - Rất hay thi):</strong>
-                <br><i>(Áp dụng khi đề bài là "Spending / Budget / Expenses")</i>
-                <br>- <b>Cách 1:</b> "...how people <b>allocated their budget</b> to different commodities..."
-                <br>- <b>Cách 2:</b> "...the <b>distribution of expenses</b> for..."
-                <br>- <b>Cách 3:</b> "...consumption patterns regarding [Category]..."
+            <!-- KHỐI 1: CHỦ NGỮ & ĐỘNG TỪ -->
+            <details style="margin-top: 15px;">
+                <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
+                    📍 BƯỚC 1 & 2: CHỦ THỂ & ĐỘNG TỪ
+                </summary>
+                <div style="padding: 10px; background-color: white; border: 1px solid #fdf2e9;">
+                    <b>● Subject (Bắt buộc dùng từ chỉ tỷ lệ):</b> <i>The proportion of / The percentage of / The share of / The breakdown of...</i>
+                    <br>⚠️ <b>Lỗi cần tránh:</b> Không đưa đơn vị ($, tonnes, %) vào chủ ngữ.
+                    <br><b>● Động từ (Verb):</b> <i>illustrates / compares / gives information about / presents data on...</i>
+                    <br><b>● Hòa hợp:</b> 1 biểu đồ dùng <b>-s</b>, nhiều biểu đồ <b>không -s</b>.
+                </div>
+            </details>
+
+            <!-- KHỐI 2: TOPIC PARAPHRASE -->
+            <details style="margin-top: 10px;">
+                <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
+                    📍 BƯỚC 3: PARAPHRASE TOPIC (NỘI DUNG CHÍNH)
+                </summary>
+                <div style="padding: 10px; background-color: white; border: 1px solid #fdf2e9;">
+                    <b>● Cách 1 (Spending focus):</b> ...how much money was allocated to...
+                    <br><b>● Cách 2 (Distribution focus):</b> ...the distribution of expenditure across...
+                    <br><b>● Cách 3 (Comparative focus):</b> ...the differences in the consumption of...
+                </div>
+            </details>
+
+            <!-- KHỐI 3: CATEGORY DETAILED (BƯỚC BỔ SUNG ĐỂ ĂN ĐIỂM) -->
+            <details style="margin-top: 10px;">
+                <summary style="background-color:#e8f5e9; border-left:4px solid #27ae60; padding:10px; cursor: pointer; font-weight: bold; color: #1b5e20;">
+                    📍 BƯỚC 4: CHI TIẾT HÓA ĐỐI TƯỢNG (CATEGORY EXPANSION)
+                </summary>
+                <div style="padding: 10px; background-color: white; border: 1px solid #e8f5e9;">
+                    <b>Mẹo của Examiner:</b> Đừng chỉ viết "three categories", hãy liệt kê chúng ra bằng cụm <b>"namely..."</b> hoặc <b>"in terms of..."</b>.
+                    <br><i>Ví dụ: ...expenditure on three distinct areas, namely food and drink, restaurant and hotel, and entertainment.</i>
+                </div>
+            </details>
+        </div>
+    </li>
+
+    <!-- ================================================================================== -->
+    <!-- PHẦN 2: THỰC HÀNH LẮP RÁP 5 BƯỚC -->
+    <!-- ================================================================================== -->
+    <li>     
+        <strong style="color: #e67e22;">✍️ THỰC HÀNH LẮP RÁP INTRO (DÂY CHUYỀN 5 BƯỚC):</strong>
+        <div style="display:none;">
+            SYSTEM_COMMAND: 
+            1. Bắt buộc dùng 100% cấu trúc Formula ở trên.
+            2. PHẢI thực hiện bước liệt kê cụ thể (namely/including) nếu danh sách dưới 4 hạng mục.
+            3. English Output phải là 01 câu duy nhất, trang trọng.
+        </div>
+        <br>
+        1. 🔴 <b>Phân tích đề:</b> [Xác định Chart Type, Topic gốc, Place, Time]
+        <br>2. 🔄 <b>Paraphrase Vocabulary:</b> 
+           <ul style="margin: 5px 0; font-size: 0.9rem;">
+               <li>Topic: expenditure &rarr; [AI điền từ thay thế]</li>
+               <li>Groups: age groups &rarr; [AI điền từ thay thế]</li>
+           </ul>
+        <br>3. 🧩 <b>Khai báo biến Formula:</b> [Subject] + [Verb] + [Topic] + [Categories] + [Context]
+        <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[AI viết câu tư duy tiếng Việt trước khi dịch]"</code>
+        <br>5. 📝 <b>English Output (Final Intro):</b> <i>[AI xuất 01 câu mở bài hoàn chỉnh]</i>
+    </li>
+
+    <!-- ================================================================================== -->
+    <!-- PHẦN 3: NỘI DUNG MẪU (DÀNH CHO ĐỀ BÀI TRÊN) -->
+    <!-- ================================================================================== -->
+    <li>
+        <div style="background-color:#e6fffa; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #00b894;">
+            <b>📝 Nội dung mẫu (Sample Intro cho biểu đồ UK 2004):</b><br>
+            <div style="margin-top:5px; font-style: italic; color: #004d40;">
+            "The bar chart compares the percentage of total spending allocated to three different sectors, namely food and drink, restaurant and hotel, and entertainment, among five age brackets in the UK in 2004."
             </div>
-    
-        <li><b>Verb (Động từ khuyên dùng):</b>
-            <br><i>compares / gives information about / shows how many / shows the distribution of</i>.</li>
-            
-        <!-- PHẦN PARAPHRASE GỢI Ý THÊM -->
-        <li><div style="background-color:#fff3e0; padding:10px; border-radius:5px; border: 1px dashed #f39c12; margin-top:5px;">
-            <strong style="color:#d35400;">🔄 GỢI Ý PARAPHRASING (VOCABULARY INPUT):</strong>
-            <br><i>(AI tự động liệt kê 3 từ hoặc cụm từ thay thế cho từ gốc trong đề bài)</i>
-            <ul style="list-style-type: none; padding-left: 10px; margin-top: 5px; font-size: 0.9rem;">
-               <li>🔹 <b>Topic (Chủ đề):</b> [Trích từ gốc] &rarr; <i>[AI điền từ thay thế]</i></li>
-               <li>🔹 <b>Category (Đối tượng):</b> [Trích từ gốc] &rarr; <i>[AI điền từ thay thế]</i></li>
-               <li>🔹 <b>Context (Phạm vi):</b> [Trích từ gốc] &rarr; <i>[AI điền từ thay thế]</i></li>
-            </ul>
-        </div></li>      
-        <li><div style="background-color:#e6fffa; padding:10px; border-radius:5px; margin-top:5px; border-left: 4px solid #00b894;">
-            <b>📝 Nội dung mẫu (Sample Intro):</b><br>                             
-            <i>The pie charts compare the percentage of people immigrating to a European country with the proportion of emigrants leaving that nation for various reasons in 2009.</i>
-        </div></li>
-    </ul>
+        </div>
+    </li>
+</ul>
 
                     2. **"overview_guide" (Ranking + Gap):**
                         - <ul>
