@@ -1176,267 +1176,191 @@ if st.session_state.step == 1:
                          </div></li>
                        </ul>
 
-                    3. **"body1_guide" (Thân bài 1 - Nhóm Lớn Nhất / Nổi Bật Nhất):**
-    <ul>
+                    ### 3. **"body1_guide" (Thân bài 1 - Nhóm Lớn Nhất / Nổi Bật Nhất):**
+<ul>
      <!-- ================================================================================== -->
-     <!-- MA TRẬN ĐA DẠNG HÓA CẤU TRÚC (GRA BOOSTER) -->
+     <!-- MA TRẬN ĐA DẠNG HÓA CẤU TRÚC -->
      <!-- ================================================================================== -->
      <li><div style="background-color:#e8f5e9; padding:15px; border:1px solid #4caf50; border-radius:5px; margin-bottom:15px;">
          <strong style="color:#2e7d32;">🎨 KỸ THUẬT ĐA DẠNG HÓA CHỦ NGỮ (SUBJECT VARIATION):</strong>
          <br><i>(Examiner yêu cầu: Không được viết 2 câu liên tiếp có cùng kiểu chủ ngữ. Hãy xoay tua 4 loại sau:)</i>
          
          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; font-size: 0.9rem;">
-             <!-- LOẠI 1 -->
              <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #a5d6a7;">
-                 <b>1. Category làm chủ ngữ:</b>
-                 <br><i>"<b>Gas</b> accounted for 30%..."</i>
+                 <b>1. Category làm chủ ngữ:</b><br><i>"<b>Gas</b> accounted for 30%..."</i>
              </div>
-             <!-- LOẠI 2 -->
              <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #a5d6a7;">
-                 <b>2. Từ chỉ Lượng làm chủ ngữ:</b>
-                 <br><i>"<b>The proportion of Gas</b> was 30%..."</i>
+                 <b>2. Từ chỉ Lượng làm chủ ngữ:</b><br><i>"<b>The proportion of Gas</b> was 30%..."</i>
              </div>
-             <!-- LOẠI 3 -->
              <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #a5d6a7;">
-                 <b>3. Xếp hạng làm chủ ngữ:</b>
-                 <br><i>"<b>The leading source</b> was Gas..."</i>
+                 <b>3. Xếp hạng làm chủ ngữ:</b><br><i>"<b>The leading source</b> was Gas..."</i>
              </div>
-             <!-- LOẠI 4 -->
              <div style="background-color:white; padding:8px; border-radius:4px; border:1px dashed #a5d6a7;">
-                 <b>4. Nơi chốn/Người làm chủ ngữ:</b>
-                 <br><i>"<b>France</b> produced 30%..."</i>
+                 <b>4. Nơi chốn/Người làm chủ ngữ:</b><br><i>"<b>France</b> produced 30%..."</i>
              </div>
          </div>
      </div></li>
-     <!-- ================================================================================== -->
-     <!-- PHẦN 1: KHO MẪU CÂU STATIC (REFERENCE LIBRARY) -->
-     <!-- SYSTEM_ALERT: 
-          Bắt buộc hiển thị đủ các Cấu trúc so sánh, Cấu trúc Math (Gấp đôi/Gấp ba) và Cấu trúc mệnh đề quan hệ (Which/With).
-          Dưới đây là DỮ LIỆU CỐ ĐỊNH (REFERENCE LIBRARY).
-          Nhiệm vụ của bạn: SAO CHÉP Y NGUYÊN TỪNG DÒNG HTML BÊN DƯỚI.
-          TUYỆT ĐỐI KHÔNG ĐƯỢC LỌC. -->
-     <!-- ================================================================================== -->
-     <li>     
-         <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
-         <strong style="color:#d35400;">📚 KHO MẪU CÂU BODY 1 (STATIC & COMPARISON):</strong>
-         <br><i>(Áp dụng kỹ thuật: Ranking + Math Language + Complex Clauses)</i>
-         <br><i>(Lưu ý: <b>[V_Tense]</b> = Chia động từ theo Năm của đề bài (Quá khứ/Hiện tại/Tương lai))</i>
-         
-         <!-- KHỐI 1: CÂU MỞ ĐẦU (STARTING WITH THE HIGHEST) -->
-         <!-- KEEP_FULL_BLOCK_1 -->
-         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► Bước 1: Câu mở đầu (Top Ranking):</b>
-             <br><i>(Luôn bắt đầu bằng Category lớn nhất)</i>
-             
-             <br>✅ <b>Mẫu 1: Dùng động từ "Account for/Constitute":</b>
-             <br>"<b>Regarding &#91;Category A&#93;</b>, it <b>accounts for</b> the largest proportion of <b>&#91;Total&#93;</b>, at <b>&#91;Data&#93;</b>."
-             
-             <br>✅ <b>Mẫu 2: Nhấn mạnh vị trí số 1 (Page 5/6):</b>
-             <br>"<b>&#91;Category A&#93;</b> <b>ranks first</b> among all reasons, with <b>&#91;Data&#93;</b>."
-             <br>"<b>&#91;Category A&#93;</b> <b>takes the lead</b>, comprising <b>&#91;Data&#93;</b> of the total."
-             
-             <br>✅ <b>Mẫu 3: Mệnh đề quan hệ rút gọn (Advanced):</b>
-             <br>"Standing at <b>&#91;Data&#93;</b>, <b>&#91;Category A&#93;</b> is the most popular choice."
-         </div>
 
-         <!-- KHỐI 2: SO SÁNH -->
-         <!-- KEEP_FULL_BLOCK_2 -->
-         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► Bước 2: So sánh gấp lần (Math Language):</b>
-             <br><i>(Dùng để so sánh Category A với Category B)</i>
-             <br>✅ <b>Cấu trúc Gấp đôi/Ba (Double/Triple - Page 4):</b>
-             <br>"The figure for <b>&#91;Category A&#93;</b> is <b>exactly/nearly double</b> that of <b>&#91;Category B&#93;</b> (Data A vs Data B)."
-             <br>"<b>&#91;Category A&#93;</b> is <b>three times as high as</b> <b>&#91;Category B&#93;</b>."
-             
-             <br>✅ <b>Cấu trúc "Which" clause:</b>
-             <br>"<b>&#91;Category A&#93;</b> stands at <b>&#91;Data&#93;</b>, <b>which is significantly higher than</b> the figure for <b>&#91;Category B&#93;</b>."
-         </div>
-
-         <!-- KHỐI 3: ĐƯA SỐ LIỆU PHỨC HỢP -->
-         <!-- KEEP_FULL_BLOCK_3 -->
-         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">
-             <b>► Bước 3: Đưa số liệu phức hợp:</b>
-             <br>✅ <b>Cấu trúc "With respective figures":</b>
-             <br>"<b>&#91;Cat A&#93;</b> and <b>&#91;Cat B&#93;</b> are the top choices, <b>with respective figures being</b> <b>&#91;Data A&#93;</b> and <b>&#91;Data B&#93;</b>."
-             <br>✅ <b>Cấu trúc "Making it":</b>
-             <br>"<b>&#91;Data&#93;</b> of people chose <b>&#91;Cat A&#93;</b>, <b>making it the most common</b> reason cited."
-         </div>
+     <li>
+         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">             
+             <b>► Cấu trúc chuẩn (Formula):</b> 
+             <br><i>(Quy trình 3 giai đoạn chuẩn hóa cho Body 1 Static)</i>
+             <br>             
+             <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[1. Top Ranking]</code>
+             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+             <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[2. Math Comparison]</code>
+             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
+             <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[3. Complex Integration]</code>
          </div>
      </li>
-     
+
+     <li>
+         <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
+             <strong style="color:#d35400;">📚 KHO MẪU CÂU BODY 1 (STATIC):</strong>
+             <br><i>(Lưu ý: <b>[V_Tense]</b> = Chia động từ theo Năm của đề bài)</i>         
+             
+             <!-- KHỐI 1: SỔ XUỐNG -->
+             <details style="margin-top: 15px;">
+                 <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
+                     📍 KHỐI 1 - CÂU MỞ ĐẦU (TOP RANKING)
+                 </summary>
+                 <div style="padding: 10px; border: 1px solid #fdf2e9; border-top: none; background-color: white;">
+                    <div style="margin-bottom: 10px;">
+                        <b>► Logic cốt lõi:</b> <code>[RANKING SUBJECT] ➔ [FINITE VERB] ➔ [DATA]</code>
+                    </div>
+                    <b>📍 Mẫu 1 (Account for):</b> "Regarding <b>[Category A]</b>, it <b>accounts for</b> the largest proportion of <b>[Total]</b>, at <b>[Data]</b>."
+                    <br><br><b>📍 Mẫu 2 (Xếp hạng):</b> "<b>[Category A]</b> <b>ranks first</b> among all reasons, with <b>[Data]</b>." / "<b>[Category A]</b> <b>takes the lead</b>, comprising <b>[Data]</b> of the total."
+                    <br><br><b>📍 Mẫu 3 (Rút gọn):</b> "Standing at <b>[Data]</b>, <b>[Category A]</b> is the most popular choice."
+                 </div>
+             </details>
+
+             <!-- KHỐI 2: SỔ XUỐNG -->
+             <details style="margin-top: 10px;">
+                 <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
+                     📍 KHỐI 2 - SO SÁNH GẤP LẦN (MATH LANGUAGE)
+                 </summary>
+                 <div style="padding: 10px; border: 1px solid #fdf2e9; border-top: none; background-color: white;">
+                    <div style="margin-bottom: 10px;">
+                        <b>► Logic cốt lõi:</b> <code>[CAT A DATA] ➔ [MATH COMPARISON] ➔ [CAT B DATA]</code>
+                    </div>
+                    <b>📍 Mẫu 1 (Gấp đôi/Ba):</b> "The figure for <b>[Category A]</b> is <b>exactly/nearly double</b> that of <b>[Category B]</b> (Data A vs Data B)." / "<b>[Category A]</b> is <b>three times as high as</b> <b>[Category B]</b>."
+                    <br><br><b>📍 Mẫu 2 (Which clause):</b> "<b>[Category A]</b> stands at <b>[Data]</b>, <b>which is significantly higher than</b> the figure for <b>[Category B]</b>."
+                 </div>
+             </details>
+
+             <!-- KHỐI 3: SỔ XUỐNG -->
+             <details style="margin-top: 10px;">
+                 <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
+                     📍 KHỐI 3 - ĐƯA SỐ LIỆU PHỨC HỢP
+                 </summary>
+                 <div style="padding: 10px; border: 1px solid #fdf2e9; border-top: none; background-color: white;">
+                    <b>📍 Mẫu 1 (Respective):</b> "<b>[Cat A]</b> and <b>[Cat B]</b> are the top choices, <b>with respective figures being</b> <b>[Data A]</b> and <b>[Data B]</b>."
+                    <br><br><b>📍 Mẫu 2 (Making it):</b> "<b>[Data]</b> of people chose <b>[Cat A]</b>, <b>making it the most common</b> reason cited."
+                 </div>
+             </details>
+         </div>
+     </li>
+
      <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
      <!-- ================================================================================== -->
-     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP -->
+     <!-- THỰC HÀNH LẮP RÁP BODY 1 -->
      <!-- ================================================================================== -->
      <li>     
-         <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP:</b>
-         <br><b>🔍 Phân tích Dữ liệu Body 1:</b>
-         <br>- Chọn nhóm: Các hạng mục LỚN NHẤT (Major Categories).
-         <br>- Mục tiêu: Mô tả số liệu và so sánh độ lớn.
-         <br>         
-         <br><b>✅ BƯỚC 1: Xử lý Top 1 (The Winner)</b>
-         <br>- <b>Quyết định:</b> Chọn Mẫu nào? Dùng Chủ ngữ loại mấy (1, 2, 3 hay 4)?
-         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu hoàn chỉnh dựa trên Mẫu đã chọn + Chia đúng thì]</i>
-         <br>
-         <br><b>✅ BƯỚC 2: So sánh với Top 2 (The Runner-up)</b>
-         <br>- <b>Logic Toán học:</b> Top 1 có gấp đôi Top 2 không? Hay chỉ hơn một chút?
-         <br>- <b>Quyết định:</b> Chọn Mẫu nào? Dùng Chủ ngữ loại mấy (1, 2, 3 hay 4)?
-         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu hoàn chỉnh dựa trên Mẫu đã chọn + Chia đúng thì]</i>
-         <br>
-         <br><b>✅ BƯỚC 3: Gom nhóm (nếu có Top 3 lớn)</b>
-         <br>- <b>Quyết định:</b> Chọn Mẫu nào? Dùng Chủ ngữ loại mấy (1, 2, 3 hay 4)?
-         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu chốt số liệu]</i>
-     </li>
-
-     <!-- ================================================================================== -->
-     <!-- PHẦN 3: BỘ CÔNG CỤ NÂNG BAND -->
-     <!-- ================================================================================== -->
-     <li>     
-     <strong style="color:#d35400;">🔑 TỪ VỰNG & NGỮ PHÁP "STATIC" (VOCABULARY BANK):</strong>
-         <br>
-         <ul style="margin-top:5px;">
-            <!-- NHÓM 1: ĐỘNG TỪ CHỈ TỶ TRỌNG -->
-            <li><b>1. Động từ chiếm tỷ trọng (Percentage Verbs):</b>
-                <br><i>account for / constitute / comprise / represent / make up</i> (+ %).
-            </li>
-
-            <!-- NHÓM 2: TỪ VỰNG XẾP HẠNG (RANKING - PAGE 5) -->
-            <li><b>2. Ranking Vocabulary:</b>
-                <br>- <i>Rank first / second / third.</i>
-                <br>- <i>Take the lead / Is the leading factor.</i>
-                <br>- <i>The most popular / common / dominant.</i>
-            </li>
-
-            <!-- NHÓM 3: TỪ VỰNG SO SÁNH SỐ LIỆU (MATH - PAGE 4) -->
-            <li><b>3. Mathematical Comparisons:</b>
-                <br>- <i>Two times as high as / Three times as much as.</i>
-                <br>- <i>Double / Triple (Dùng như động từ hoặc tính từ).</i>
-                <br>- <i>Half of / A quarter of.</i>
-            </li>
-
-             <!-- 4. CẤU TRÚC NGỮ PHÁP CAO CẤP (PAGE 5/6) -->
-             <li><b>4. Advanced Grammar:</b>
-                 <br>- <b>Making it:</b> <i>..., making it the largest category.</i>
-                 <br>- <b>With respective figures:</b> <i>..., with respective figures being X and Y.</i>
-                 <br>- <b>Compared to:</b> <i>X is high, compared to only 5% of Y.</i>
-             </li>
-         </ul>
-     </li>
-
-     <!-- PHẦN 4: BÀI MẪU -->
-     <li><div style="background-color:#fff8e1; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #ffa502;">
-         <b>📝 Nội dung mẫu (Sample Body 1):</b><br>
-         <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI hãy ghép các câu nháp ở "PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP" thành đoạn Body 1 hoàn chỉnh.]
+         <strong style="color: #e67e22;">✍️ THỰC HÀNH LẮP RÁP BODY 1 (QUY TRÌNH 5 BƯỚC CHUẨN):</strong>
+         <div style="display:none;">
+             SYSTEM_COMMAND: 
+             1. Bắt buộc sử dụng 100% cấu trúc của [Mẫu gốc]. 
+             2. Chỉ được phép thay thế các cụm trong ngoặc vuông [ ] bằng dữ liệu đã khai báo. 
+             3. Tuyệt đối không thêm thắt mốc thời gian hay giải thích ngoài mẫu.
+             4. English Output phải là DUY NHẤT một câu văn hoàn chỉnh theo đúng mẫu gốc.
          </div>
-     </div></li>
+         <br><b>✅ GIAI ĐOẠN 1: Xử lý Top 1 (The Winner)</b>
+         <br>1. 🔴 <b>Phân tích & Chọn ID:</b> <i>[AI chọn mẫu 1.X]</i>
+         <br>2. 📥 <b>Mẫu gốc:</b> <code>[AI in mẫu gốc]</code>
+         <br>3. 🧩 <b>Khai báo biến:</b> [Cat A] = ... ; [Data] = ...
+         <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[AI viết câu tiếng Việt tương ứng]"</code>
+         <br>5. 📝 <b>English Output:</b> <i>[AI xuất 01 câu tiếng Anh hoàn chỉnh]</i>
+         
+         <br><br><b>✅ GIAI ĐOẠN 2: So sánh với Top 2 (The Runner-up)</b>
+         <br>1. 🔴 Phân tích -> 2. 📥 Mẫu -> 3. 🧩 Biến -> 4. 🧠 Tiếng Việt -> 5. 📝 English.
+
+         <br><br><b>✅ GIAI ĐOẠN 3: Gom nhóm (Nếu có Top 3)</b>
+         <br>1. 🔴 Phân tích -> 2. 📥 Mẫu -> 3. 🧩 Biến -> 4. 🧠 Tiếng Việt -> 5. 📝 English.
+     </li>
    </ul>
 
+<!-- ================================================================================== -->
+<!-- BODY 2 GUIDE -->
+<!-- ================================================================================== -->
                     4. **"body2_guide" (Thân bài 2 - Nhóm Nhỏ / Nhóm Còn lại):**
     <ul>
-     <!-- ================================================================================== -->
-     <!-- PHẦN 1: KHO MẪU CÂU (REFERENCE LIBRARY) 
-     <!-- SYSTEM_ALERT:           
-          Dưới đây là DỮ LIỆU CỐ ĐỊNH (REFERENCE LIBRARY).
-          Nhiệm vụ của bạn: SAO CHÉP Y NGUYÊN TỪNG DÒNG HTML BÊN DƯỚI.
-          TUYỆT ĐỐI KHÔNG ĐƯỢC LỌC. -->
-     <!-- ================================================================================== -->
+     <li><b>Logic chọn nhóm:</b> AI thực hiện: Gom toàn bộ các hạng mục còn lại (nhỏ/thấp). Tập trung vào sự tương phản so với nhóm Body 1 hoặc gom chung chúng lại.</li>
+     
+     <li>
+         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">             
+             <b>► Cấu trúc chuẩn (Formula):</b> 
+             <br>             
+             <code style="font-size: 0.8rem; background-color: white; padding: 2px 5px; border: 1px dashed #2980b9; border-radius: 3px;">[1. Transition]</code>
+             <span style="color:#2980b9; font-weight:bold;"> ➔ </span>
+             <code style="font-size: 0.8rem; background-color: white; padding: 2px 5px; border: 1px dashed #2980b9; border-radius: 3px;">[2. Grouping]</code>
+             <span style="color:#2980b9; font-weight:bold;"> ➔ </span>
+             <code style="font-size: 0.8rem; background-color: white; padding: 2px 5px; border: 1px dashed #2980b9; border-radius: 3px;">[3. Negligible Stats]</code>
+         </div>
+     </li>
+
      <li>
          <div style="background-color:#f8f9fa; border:1px solid #bdc3c7; border-radius:5px; padding:15px; margin-bottom:15px;">
-         <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2 (REMAINING CATEGORIES):</strong>
-         <br><i>(Tập trung vào sự tương phản và gom nhóm nhỏ)</i>
-         
-         <!-- KHỐI 1: CÂU CHUYỂN ĐOẠN -->
-         <!-- KEEP_FULL_BLOCK_1 -->
-         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► Bước 1: Câu chuyển đoạn (Transition):</b>
-             <br><i>(Chọn 1 trong 2 mẫu sau)</i>
-             <br>✅ <b>Mẫu 1 (Chuyển hướng):</b> "<b>Turning to</b> the remaining categories,..."
-             <br>✅ <b>Mẫu 2 (Đối lập):</b> "<b>In contrast / By comparison</b>, the figures for <b>&#91;Category C & D&#93;</b> <b>[V_Tense: were/are]</b> significantly lower."
-         </div>
+             <strong style="color:#2980b9;">📚 KHO MẪU CÂU BODY 2 (STATIC):</strong>
+             <br><i>(Tập trung vào sự tương phản và gom nhóm nhỏ)</i>
+             
+             <!-- KHỐI 1: SỔ XUỐNG -->
+             <details style="margin-top: 15px;">
+                 <summary style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; cursor: pointer; font-weight: bold; color: #2980b9;">
+                     📍 KHỐI 1 - CÂU CHUYỂN ĐOẠN & ĐỐI LẬP
+                 </summary>
+                 <div style="padding: 10px; border: 1px solid #eaf2f8; border-top: none; background-color: white;">
+                    <b>📍 Mẫu 1 (Chuyển hướng):</b> "<b>Turning to</b> the remaining categories,..."
+                    <br><br><b>📍 Mẫu 2 (Đối lập):</b> "<b>In contrast / By comparison</b>, the figures for <b>[Category C & D]</b> <b>[V_Tense]</b> significantly lower."
+                 </div>
+             </details>
 
-         <!-- KHỐI 2: MIÊU TẢ NHÓM SỐ LIỆU NHỎ -->
-         <!-- KEEP_FULL_BLOCK_2 -->
-         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► Bước 2: Gom nhóm (Grouping):</b>
-             <br><i>(Chọn 1 trong 2 mẫu sau)</i>
-             <br>✅ <b>Mẫu 1 (Collectively):</b> "<b>&#91;Category C&#93;</b> and <b>&#91;Category D&#93;</b> <b>collectively [V_Tense: accounted/account] for</b> only <b>&#91;Total %&#93;</b>."
-             <br>✅ <b>Mẫu 2 (Range - Chú ý Formal):</b> "The figures for X and Y <b>[V_Tense: were/are]</b> relatively small, <b>ranging from</b> <b>&#91;Data 1&#93;</b> to <b>&#91;Data 2&#93;</b>."
-         </div>
+             <!-- KHỐI 2: SỔ XUỐNG -->
+             <details style="margin-top: 10px;">
+                 <summary style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; cursor: pointer; font-weight: bold; color: #2980b9;">
+                     📍 KHỐI 2 - MIÊU TẢ NHÓM SỐ LIỆU NHỎ (GROUPING)
+                 </summary>
+                 <div style="padding: 10px; border: 1px solid #eaf2f8; border-top: none; background-color: white;">
+                    <b>📍 Mẫu 1 (Collectively):</b> "<b>[Category C]</b> and <b>[Category D]</b> <b>collectively [V_Tense] for</b> only <b>[Total %]</b>."
+                    <br><br><b>📍 Mẫu 2 (Range):</b> "The figures for X and Y <b>[V_Tense]</b> relatively small, <b>ranging from</b> <b>[Data 1]</b> to <b>[Data 2]</b>."
+                 </div>
+             </details>
 
-          <!-- KHỐI 3: CẤU TRÚC "NEGLIGIBLE" -->
-         <!-- KEEP_FULL_BLOCK_3 -->
-         <div style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; margin-top:5px;">
-             <b>► Bước 3: Mô tả số liệu rất nhỏ:</b>
-             <br><i>(Chọn 1 trong 2 mẫu sau)</i>
-             <br>✅ <b>Mẫu 1 (Negligible):</b> "The proportion of <b>&#91;Category E&#93;</b> <b>[V_Tense: was/is]</b> <b>negligible/insignificant</b>, at only <b>&#91;Data&#93;</b>."
-             <br>✅ <b>Mẫu 2 (Minority):</b> "Only a <b>small minority</b> of people (<b>&#91;Data&#93;</b>) <b>[V_Tense: chose/choose]</b> <b>&#91;Category E&#93;</b>."
-         </div>
+             <!-- KHỐI 3: SỔ XUỐNG -->
+             <details style="margin-top: 10px;">
+                 <summary style="background-color:#eaf2f8; border-left:4px solid #2980b9; padding:10px; cursor: pointer; font-weight: bold; color: #2980b9;">
+                     📍 KHỐI 3 - CẤU TRÚC "NEGLIGIBLE" (SỐ LIỆU RẤT NHỎ)
+                 </summary>
+                 <div style="padding: 10px; border: 1px solid #eaf2f8; border-top: none; background-color: white;">
+                    <b>📍 Mẫu 1 (Negligible):</b> "The proportion of <b>[Category E]</b> <b>[V_Tense]</b> <b>negligible/insignificant</b>, at only <b>[Data]</b>."
+                    <br><br><b>📍 Mẫu 2 (Minority):</b> "Only a <b>small minority</b> of people (<b>[Data]</b>) <b>[V_Tense]</b> <b>[Category E]</b>."
+                 </div>
+             </details>
          </div>
      </li>
-     
+
      <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
 
-     <!-- ================================================================================== -->
-     <!-- PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP (PROCESS) -->
-     <!-- ================================================================================== -->
      <li>     
-         <b>✍️ THỰC HÀNH TƯ DUY & LẮP RÁP:</b>
-         <br><b>🔍 Phân tích Dữ liệu Body 2:</b>
-         <br>- Nhóm này gồm: Các hạng mục còn lại (nhỏ/thấp).
-         <br>- <b>⚠️ REMINDER:</b> Kiểm tra lại thì (Quá khứ/Hiện tại) và cách viết khoảng số (from...to...).
-         <br>
-         <br><b>✅ BƯỚC 1: Xử lý Câu chuyển đoạn & Đối lập</b>
-         <br>- <b>Quyết định:</b> Chọn Mẫu nào?
-         <br>👉 <b>Viết nháp Câu 1:</b> <i>[AI viết câu chuyển + Chia đúng thì]</i>
-         <br>
-         <br><b>✅ BƯỚC 2: Xử lý các hạng mục tương đồng/nhỏ</b>
-         <br>- <b>Quyết định:</b> Chọn Mẫu nào?
-         <br>👉 <b>Viết nháp Câu 2:</b> <i>[AI viết câu mô tả nhóm nhỏ + Chia đúng thì]</i>
-         <br>
-         <br><b>✅ BƯỚC 3: Xử lý phần còn lại (Negligible)</b>
-         <br>- <b>Quyết định:</b> Chọn Mẫu nào?
-         <br>👉 <b>Viết nháp Câu 3:</b> <i>[AI viết câu chốt nhóm thấp nhất + Chia đúng thì]</i>
-     </li>
-
-     <!-- ================================================================================== -->
-     <!-- PHẦN 3: GIẢI MÃ TỪ VỰNG -->
-     <!-- ================================================================================== -->
-     <li>
-         <strong style="color:#d35400;">🔑 TỪ VỰNG & NGỮ PHÁP "ĂN ĐIỂM" (VOCABULARY BANK):</strong>
-         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; background-color:#fffcf5; padding:15px; border-radius:8px; border: 1px solid #f39c12;">
-            <!-- CỘT 1 -->
-            <div>
-                <b style="color:#e67e22;">1. Từ nối & Đối lập:</b>
-                <ul style="margin:5px 0; padding-left:20px; font-size:0.9rem;">
-                    <li><b>Conversely / In contrast:</b> Ngược lại.</li>
-                    <li><b>As for... / Regarding...:</b> Đối với...</li>
-                    <li><b>A similar pattern:</b> Một kiểu mẫu tương tự.</li>
-                </ul>
-            </div>
-
-            <!-- CỘT 2 -->
-            <div>
-                <b style="color:#e67e22;">2. Từ vựng nhóm nhỏ:</b>
-                <ul style="margin:5px 0; padding-left:20px; font-size:0.9rem;">
-                    <li><b>A negligible amount:</b> Một lượng không đáng kể.</li>
-                    <li><b>Collectively:</b> Gộp chung lại.</li>
-                    <li><b>The remainder:</b> Phần còn lại.</li>
-                </ul>
-            </div>
+         <strong style="color: #2980b9;">✍️ THỰC HÀNH LẮP RÁP BODY 2 (QUY TRÌNH 5 BƯỚC CHUẨN):</strong>
+         <div style="display:none;">
+             SYSTEM_COMMAND: 1. Bắt buộc sử dụng 100% mẫu gốc. 2. Không thêm thắt. 3. Output 01 câu duy nhất.
          </div>
+         <br><b>✅ GIAI ĐOẠN 1: Câu chuyển đoạn & Đối lập</b>
+         <br>1. 🔴 Phân tích -> 2. 📥 Mẫu -> 3. 🧩 Biến -> 4. 🧠 Tiếng Việt -> 5. 📝 English.
+         <br><br><b>✅ GIAI ĐOẠN 2: Miêu tả nhóm tương đồng</b>
+         <br><br><b>✅ GIAI ĐOẠN 3: Xử lý phần còn lại (Negligible)</b>
      </li>
-
-     <!-- ================================================================================== -->
-     <!-- PHẦN 4: BÀI MẪU HOÀN CHỈNH -->
-     <!-- ================================================================================== -->
-     <li><div style="background-color:#e1f5fe; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #03a9f4;">
-         <b>📝 NỘI DUNG MẪU (SAMPLE BODY 2):</b><br>
-         <div style="margin-top:5px; font-style: italic; color: #5d4037;">
-         [AI hãy ghép các câu nháp ở "PHẦN 2: THỰC HÀNH TƯ DUY & LẮP RÁP" thành đoạn Body 2 hoàn chỉnh.
-         </div>
-     </div></li>
    </ul>
                     # =================================================================
                     # 🔵 TRƯỜNG HỢP 2: DẠNG "CHANGE OVER TIME" (Line, Bar, Table, Pie nhiểu năm)
