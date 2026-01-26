@@ -1228,9 +1228,10 @@ if st.session_state.step == 1:
                     <div style="margin-bottom: 10px;">
                         <b>► Logic cốt lõi:</b> <code>[RANKING SUBJECT] ➔ [FINITE VERB] ➔ [DATA]</code>
                     </div>
-                    <b>📍 Mẫu 1 (Account for):</b> "Regarding <b>[Category A]</b>, it <b>accounts for</b> the largest proportion of <b>[Total]</b>, at <b>[Data]</b>."
-                    <br><br><b>📍 Mẫu 2 (Xếp hạng):</b> "<b>[Category A]</b> <b>ranks first</b> among all reasons, with <b>[Data]</b>." / "<b>[Category A]</b> <b>takes the lead</b>, comprising <b>[Data]</b> of the total."
-                    <br><br><b>📍 Mẫu 3 (Rút gọn):</b> "Standing at <b>[Data]</b>, <b>[Category A]</b> is the most popular choice."
+                    <b>📍 Mẫu 1.1 (Account for):</b> "Regarding <b>[Category A]</b>, it <b>accounts for</b> the largest proportion of <b>[Total]</b>, at <b>[Data]</b>."
+                    <br><br><b>📍 Mẫu 1.2 (Xếp hạng):</b> "<b>[Category A]</b> <b>ranks first</b> among all reasons, with <b>[Data]</b>."
+                    <br><br><b>📍 Mẫu 1.3 (Xếp hạng):</b> "<b>[Category A]</b> <b>takes the lead</b>, comprising <b>[Data]</b> of the total."</b>
+                    <br><br><b>📍 Mẫu 1.4 (Rút gọn):</b> "Standing at <b>[Data]</b>, <b>[Category A]</b> is the most popular choice."</b>
                  </div>
              </details>
 
@@ -1243,8 +1244,8 @@ if st.session_state.step == 1:
                     <div style="margin-bottom: 10px;">
                         <b>► Logic cốt lõi:</b> <code>[CAT A DATA] ➔ [MATH COMPARISON] ➔ [CAT B DATA]</code>
                     </div>
-                    <b>📍 Mẫu 1 (Gấp đôi/Ba):</b> "The figure for <b>[Category A]</b> is <b>exactly/nearly double</b> that of <b>[Category B]</b> (Data A vs Data B)." / "<b>[Category A]</b> is <b>three times as high as</b> <b>[Category B]</b>."
-                    <br><br><b>📍 Mẫu 2 (Which clause):</b> "<b>[Category A]</b> stands at <b>[Data]</b>, <b>which is significantly higher than</b> the figure for <b>[Category B]</b>."
+                    <b>📍 Mẫu 2.1 (Gấp đôi/Ba):</b> "The figure for <b>[Category A]</b> is <b>exactly/nearly double</b> that of <b>[Category B]</b> (Data A vs Data B)." / "<b>[Category A]</b> is <b>three times as high as</b> <b>[Category B]</b>."
+                    <br><br><b>📍 Mẫu 2.2 (Which clause):</b> "<b>[Category A]</b> stands at <b>[Data]</b>, <b>which is significantly higher than</b> the figure for <b>[Category B]</b>."
                  </div>
              </details>
 
@@ -1254,8 +1255,8 @@ if st.session_state.step == 1:
                      📍 KHỐI 3 - ĐƯA SỐ LIỆU PHỨC HỢP
                  </summary>
                  <div style="padding: 10px; border: 1px solid #fdf2e9; border-top: none; background-color: white;">
-                    <b>📍 Mẫu 1 (Respective):</b> "<b>[Cat A]</b> and <b>[Cat B]</b> are the top choices, <b>with respective figures being</b> <b>[Data A]</b> and <b>[Data B]</b>."
-                    <br><br><b>📍 Mẫu 2 (Making it):</b> "<b>[Data]</b> of people chose <b>[Cat A]</b>, <b>making it the most common</b> reason cited."
+                    <b>📍 Mẫu 3.1 (Respective):</b> "<b>[Cat A]</b> and <b>[Cat B]</b> are the top choices, <b>with respective figures being</b> <b>[Data A]</b> and <b>[Data B]</b>."
+                    <br><br><b>📍 Mẫu 3.2 (Making it):</b> "<b>[Data]</b> of people chose <b>[Cat A]</b>, <b>making it the most common</b> reason cited."
                  </div>
              </details>
          </div>
@@ -1283,16 +1284,51 @@ if st.session_state.step == 1:
          <br>5. 📝 <b>English Output:</b> <i>[AI xuất 01 câu tiếng Anh hoàn chỉnh]</i>
          
          <br><br><b>✅ GIAI ĐOẠN 2: So sánh với Top 2 (The Runner-up)</b>
-         <br>1. 🔴 Phân tích -> 2. 📥 Mẫu -> 3. 🧩 Biến -> 4. 🧠 Tiếng Việt -> 5. 📝 English.
+         <br>1. 🔴 <b>Phân tích & Chọn ID:</b> <i>[AI chọn mẫu 2.X]</i>
+         <br>2. 📥 <b>Mẫu gốc:</b> <code>[AI in mẫu gốc]</code>
+         <br>3. 🧩 <b>Khai báo biến:</b> [Cat A] = ... ; [Data] = ...
+         <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[AI viết câu tiếng Việt tương ứng]"</code>
+         <br>5. 📝 <b>English Output:</b> <i>[AI xuất 01 câu tiếng Anh hoàn chỉnh]</i>
 
          <br><br><b>✅ GIAI ĐOẠN 3: Gom nhóm (Nếu có Top 3)</b>
-         <br>1. 🔴 Phân tích -> 2. 📥 Mẫu -> 3. 🧩 Biến -> 4. 🧠 Tiếng Việt -> 5. 📝 English.
+         <br>1. 🔴 <b>Phân tích & Chọn ID:</b> <i>[AI chọn mẫu 3.X]</i>
+         <br>2. 📥 <b>Mẫu gốc:</b> <code>[AI in mẫu gốc]</code>
+         <br>3. 🧩 <b>Khai báo biến:</b> [Cat A] = ... ; [Data] = ...
+         <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[AI viết câu tiếng Việt tương ứng]"</code>
+         <br>5. 📝 <b>English Output:</b> <i>[AI xuất 01 câu tiếng Anh hoàn chỉnh]</i>
      </li>
    </ul>
+     <!-- ================================================================================== -->
+     <!-- PHẦN 4: KẾT QUẢ BODY 1 (FINAL OUTPUT) -->
+     <!-- SYSTEM_ALERT: 
+          1. AI thực hiện nối các câu đã viết ở phần thực hành thành đoạn văn hoàn chỉnh.
+          2. Cohesion Check: Sử dụng các từ nối so sánh (While, Whereas, By contrast) để tạo sự liên kết.
+          3. Vocabulary Upgrade: Thay thế ít nhất 02 từ thường bằng từ trong "Bộ công cụ nâng Band".
+          4. Math Audit: Đảm bảo các cụm "double/triple" khớp chính xác với số liệu báo cáo.
+     <!-- ================================================================================== -->
+     <li>
+         <div style="background-color:#fff8e1; padding:20px; border-radius:8px; margin-top:10px; border: 2px solid #ffa502; border-left: 8px solid #ffa502;">
+             <strong style="color:#d35400; font-size: 1.1rem;">📝 KẾT QUẢ BODY 1 (THE POLISHED STATIC PARAGRAPH):</strong>
+             <br><i style="font-size: 0.85rem; color: #7f8c8d;">(Đây là đoạn văn hoàn chỉnh tập trung vào xếp hạng và so sánh tỷ trọng điểm nổi bật)</i>
+             
+             <div style="margin-top:10px; font-family: 'Georgia', serif; line-height: 1.6; color: #2c3e50; background-color: white; padding: 15px; border-radius: 5px; border: 1px inset #eee;">
+             [AI trình bày đoạn văn Body 1 hoàn chỉnh tại đây. 
+              Lưu ý: In đậm các cụm từ so sánh xếp hạng và từ vựng nâng Band.]
+             </div>
 
-<!-- ================================================================================== -->
-<!-- BODY 2 GUIDE -->
-<!-- ================================================================================== -->
+             <!-- EXAMINER'S FINAL CHECKLIST FOR STATIC -->
+             <div style="margin-top:10px; font-size: 0.8rem; color: #27ae60;">
+                 <b>✅ Examiner's Quality Audit (Static Comparison):</b>
+                 <ul style="margin: 0; padding-left: 20px;">
+                     <li>Ưu tiên mô tả hạng mục cao nhất ngay câu đầu: <b>Xác nhận</b></li>
+                     <li>Sử dụng cấu trúc so sánh hơn/gấp lần giữa các đối tượng: <b>Có</b></li>
+                     <li>Xoay vòng chủ ngữ (Category vs Proportion): <b>Đạt chuẩn</b></li>
+                     <li>Sử dụng giới từ Static (stood at/a figure of) chính xác: <b>Có</b></li>
+                 </ul>
+             </div>
+         </div>
+     </li>
+
                     4. **"body2_guide" (Thân bài 2 - Nhóm Nhỏ / Nhóm Còn lại):**
     <ul>
      <li><b>Logic chọn nhóm:</b> AI thực hiện: Gom toàn bộ các hạng mục còn lại (nhỏ/thấp). Tập trung vào sự tương phản so với nhóm Body 1 hoặc gom chung chúng lại.</li>
@@ -1320,8 +1356,8 @@ if st.session_state.step == 1:
                      📍 KHỐI 1 - CÂU CHUYỂN ĐOẠN & ĐỐI LẬP
                  </summary>
                  <div style="padding: 10px; border: 1px solid #eaf2f8; border-top: none; background-color: white;">
-                    <b>📍 Mẫu 1 (Chuyển hướng):</b> "<b>Turning to</b> the remaining categories,..."
-                    <br><br><b>📍 Mẫu 2 (Đối lập):</b> "<b>In contrast / By comparison</b>, the figures for <b>[Category C & D]</b> <b>[V_Tense]</b> significantly lower."
+                    <b>📍 Mẫu 1.1 (Chuyển hướng):</b> "<b>Turning to</b> the remaining categories,..."
+                    <br><br><b>📍 Mẫu 1.2 (Đối lập):</b> "<b>In contrast / By comparison</b>, the figures for <b>[Category C & D]</b> <b>[V_Tense]</b> significantly lower."
                  </div>
              </details>
 
@@ -1331,8 +1367,8 @@ if st.session_state.step == 1:
                      📍 KHỐI 2 - MIÊU TẢ NHÓM SỐ LIỆU NHỎ (GROUPING)
                  </summary>
                  <div style="padding: 10px; border: 1px solid #eaf2f8; border-top: none; background-color: white;">
-                    <b>📍 Mẫu 1 (Collectively):</b> "<b>[Category C]</b> and <b>[Category D]</b> <b>collectively [V_Tense] for</b> only <b>[Total %]</b>."
-                    <br><br><b>📍 Mẫu 2 (Range):</b> "The figures for X and Y <b>[V_Tense]</b> relatively small, <b>ranging from</b> <b>[Data 1]</b> to <b>[Data 2]</b>."
+                    <b>📍 Mẫu 1.1 (Collectively):</b> "<b>[Category C]</b> and <b>[Category D]</b> <b>collectively [V_Tense] for</b> only <b>[Total %]</b>."
+                    <br><br><b>📍 Mẫu 1.2 (Range):</b> "The figures for X and Y <b>[V_Tense]</b> relatively small, <b>ranging from</b> <b>[Data 1]</b> to <b>[Data 2]</b>."
                  </div>
              </details>
 
@@ -1342,8 +1378,8 @@ if st.session_state.step == 1:
                      📍 KHỐI 3 - CẤU TRÚC "NEGLIGIBLE" (SỐ LIỆU RẤT NHỎ)
                  </summary>
                  <div style="padding: 10px; border: 1px solid #eaf2f8; border-top: none; background-color: white;">
-                    <b>📍 Mẫu 1 (Negligible):</b> "The proportion of <b>[Category E]</b> <b>[V_Tense]</b> <b>negligible/insignificant</b>, at only <b>[Data]</b>."
-                    <br><br><b>📍 Mẫu 2 (Minority):</b> "Only a <b>small minority</b> of people (<b>[Data]</b>) <b>[V_Tense]</b> <b>[Category E]</b>."
+                    <b>📍 Mẫu 1.1 (Negligible):</b> "The proportion of <b>[Category E]</b> <b>[V_Tense]</b> <b>negligible/insignificant</b>, at only <b>[Data]</b>."
+                    <br><br><b>📍 Mẫu 1.2 (Minority):</b> "Only a <b>small minority</b> of people (<b>[Data]</b>) <b>[V_Tense]</b> <b>[Category E]</b>."
                  </div>
              </details>
          </div>
@@ -1357,11 +1393,56 @@ if st.session_state.step == 1:
              SYSTEM_COMMAND: 1. Bắt buộc sử dụng 100% mẫu gốc. 2. Không thêm thắt. 3. Output 01 câu duy nhất.
          </div>
          <br><b>✅ GIAI ĐOẠN 1: Câu chuyển đoạn & Đối lập</b>
-         <br>1. 🔴 Phân tích -> 2. 📥 Mẫu -> 3. 🧩 Biến -> 4. 🧠 Tiếng Việt -> 5. 📝 English.
+         <br>1. 🔴 <b>Phân tích & Chọn ID:</b> <i>[AI chọn mẫu 1.X]</i>
+         <br>2. 📥 <b>Mẫu gốc:</b> <code>[AI in mẫu gốc]</code>
+         <br>3. 🧩 <b>Khai báo biến:</b> [Cat A] = ... ; [Data] = ...
+         <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[AI viết câu tiếng Việt tương ứng]"</code>
+         <br>5. 📝 <b>English Output:</b> <i>[AI xuất 01 câu tiếng Anh hoàn chỉnh]</i>
          <br><br><b>✅ GIAI ĐOẠN 2: Miêu tả nhóm tương đồng</b>
+         <br>1. 🔴 <b>Phân tích & Chọn ID:</b> <i>[AI chọn mẫu 1.X]</i>
+         <br>2. 📥 <b>Mẫu gốc:</b> <code>[AI in mẫu gốc]</code>
+         <br>3. 🧩 <b>Khai báo biến:</b> [Cat A] = ... ; [Data] = ...
+         <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[AI viết câu tiếng Việt tương ứng]"</code>
+         <br>5. 📝 <b>English Output:</b> <i>[AI xuất 01 câu tiếng Anh hoàn chỉnh]</i>
          <br><br><b>✅ GIAI ĐOẠN 3: Xử lý phần còn lại (Negligible)</b>
+         <br>1. 🔴 <b>Phân tích & Chọn ID:</b> <i>[AI chọn mẫu 1.X]</i>
+         <br>2. 📥 <b>Mẫu gốc:</b> <code>[AI in mẫu gốc]</code>
+         <br>3. 🧩 <b>Khai báo biến:</b> [Cat A] = ... ; [Data] = ...
+         <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[AI viết câu tiếng Việt tương ứng]"</code>
+         <br>5. 📝 <b>English Output:</b> <i>[AI xuất 01 câu tiếng Anh hoàn chỉnh]</i>
      </li>
    </ul>
+
+     <!-- ================================================================================== -->
+     <!-- PHẦN 4: KẾT QUẢ BODY 2 (FINAL OUTPUT) -->
+     <!-- SYSTEM_ALERT: 
+          1. AI thực hiện nối các câu nháp ở giai đoạn 1, 2, 3 thành đoạn văn hoàn chỉnh.
+          2. Transition Check: Phải có từ nối chuyển đoạn (Turning to, As for) để tách biệt với Body 1.
+          3. Grouping Check: Đảm bảo sử dụng kỹ thuật gom nhóm (collectively / respectively) để tránh liệt kê rời rạc.
+          4. Vocabulary Upgrade: Sử dụng các từ miêu tả mức độ thấp (negligible, minority, insignificant).
+     <!-- ================================================================================== -->
+     <li>
+         <div style="background-color:#e1f5fe; padding:20px; border-radius:8px; margin-top:10px; border: 2px solid #03a9f4; border-left: 8px solid #03a9f4;">
+             <strong style="color:#01579b; font-size: 1.1rem;">📝 KẾT QUẢ BODY 2 (THE POLISHED STATIC PARAGRAPH):</strong>
+             <br><i style="font-size: 0.85rem; color: #7f8c8d;">(Đây là đoạn văn hoàn chỉnh cho các hạng mục thứ yếu, nhấn mạnh vào sự nhỏ bé hoặc tương đồng của dữ liệu)</i>
+             
+             <div style="margin-top:10px; font-family: 'Georgia', serif; line-height: 1.6; color: #2c3e50; background-color: white; padding: 15px; border-radius: 5px; border: 1px inset #eee;">
+             [AI trình bày đoạn văn Body 2 hoàn chỉnh tại đây. 
+              Lưu ý: In đậm các cụm từ chuyển hướng và từ vựng chỉ nhóm thiểu số.]
+             </div>
+
+             <!-- EXAMINER'S FINAL CHECKLIST FOR STATIC BODY 2 -->
+             <div style="margin-top:10px; font-size: 0.8rem; color: #0288d1;">
+                 <b>✅ Examiner's Quality Audit (Grouping & Contrast):</b>
+                 <ul style="margin: 0; padding-left: 20px;">
+                     <li>Có câu chuyển đoạn rõ ràng để dẫn dắt sang nhóm mới: <b>Xác nhận</b></li>
+                     <li>Gom nhóm các hạng mục nhỏ để bài viết súc tích: <b>Có</b></li>
+                     <li>Sử dụng cấu trúc "Small minority" hoặc "Negligible" chính xác: <b>Có</b></li>
+                     <li>Đầy đủ các đối tượng còn lại (không bỏ sót hạng mục nào): <b>Đạt chuẩn</b></li>
+                 </ul>
+             </div>
+         </div>
+     </li>
                     # =================================================================
                     # 🔵 TRƯỜNG HỢP 2: DẠNG "CHANGE OVER TIME" (Line, Bar, Table, Pie nhiểu năm)
                     # (Tư duy cốt lõi: Trend (Xu hướng) & Speed (Tốc độ thay đổi))
