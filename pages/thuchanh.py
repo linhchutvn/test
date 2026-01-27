@@ -1164,9 +1164,13 @@ if st.session_state.step == 1:
     <!-- ================================================================================== -->
     <li>
         <div style="background-color:#e6fffa; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #00b894;">
-            <b>📝 Nội dung mẫu (Sample Intro cho biểu đồ UK 2004):</b><br>
+            <b>📝 Nội dung mẫu (Sample Intro)</b><br>            
             <div style="margin-top:5px; font-style: italic; color: #004d40;">
-            "The bar chart compares the percentage of total spending allocated to three different sectors, namely food and drink, restaurant and hotel, and entertainment, among five age brackets in the UK in 2004."
+            [SYSTEM_PROMPT: AI hãy tổng hợp các biến số đã chọn ở các thành một câu hoàn chỉnh. 
+             YÊU CẦU: 
+             1. Tuyệt đối tuân thủ thứ tự Formula: [Chart Type] + [Verb] + [Subject] + [Topic] + [Detailed Categories] + [Context].
+             2. Sử dụng đúng các từ vựng Paraphrase đã chọn ở Bước 2.
+             3. Đây là bản "đối chiếu" để học sinh kiểm tra xem mình lắp ráp đã chuẩn chưa.]
             </div>
         </div>
     </li>
