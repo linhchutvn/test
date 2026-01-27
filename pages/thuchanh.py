@@ -1278,17 +1278,21 @@ if st.session_state.step == 1:
             2. Tra cứu <b>PHẦN BỔ TRỢ CHUNG: TỪ VỰNG MIÊU TẢ</b> để chọn từ thay cho số.
             3. Câu 1 tập trung vào vị thế (Nhất/Bét). 
             4. Câu 2 tập trung vào tương quan giữa các biểu đồ (Giống/Khác/Chênh lệch).
+            5. Bắt buộc sử dụng 100% từ ngữ trong Mẫu gốc (ID). Chỉ thay thế các biến trong [ ].
+            6. CẤM AI tự ý thêm trạng từ (generally, noticeably) hoặc các vế so sánh khác nếu ID gốc không có.
+            7. PHẦN ĐÁP ÁN (EXPERT VERSION) phải là kết quả ghép nối cơ học của các ID đã chọn ở Bước 3.
         </div>
         <br>1. 👀 <b>Quan sát Ranking:</b> [Ai dẫn đầu? Ai không đáng kể? -> Tra Menu Cột 1]
         <br>2. 🧠 <b>Phân tích Pattern (Đa chiều):</b> 
            <ul style="margin: 5px 0; font-size: 0.9rem; color: #2c3e50;">
-               <li><b>Chiều 1 (Gap):</b> Khoảng cách Nhất-Bét có cực lớn (Massive disparity) không?</li>
-               <li><b>Chiều 2 (Similarity):</b> Hai biểu đồ có "soi gương" (Mirrored pattern) nhau không?</li>
-               <li><b>Chiều 3 (Balance):</b> Các mục có bằng nhau (Evenly distributed) không hay lệch hẳn về 1 phía?</li>
+               <li><b>Chiều 1 (Gap):</b> Khoảng cách Nhất-Bét có cực lớn không? &rarr; <i>(Nếu có: Ưu tiên chọn ID 3.1 hoặc 3.3)</i></li>
+               <li><b>Chiều 2 (Similarity):</b> Các biểu đồ có xu hướng giống nhau không? &rarr; <i>(Nếu có: Ưu tiên chọn ID 3.3 hoặc 2.3)</i></li>
+               <li><b>Chiều 3 (Balance):</b> Các hạng mục có bằng nhau, không ai quá nổi bật? &rarr; <i>(Nếu có: Ưu tiên chọn ID 3.2)</i></li>
            </ul>
         <br>3. 🧩 <b>Chọn ID & Lắp ráp:</b> Câu 1 (ID...) + Câu 2 (ID...)
         <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[Dịch ý tưởng: Nhìn chung, X chiếm ưu thế, nhưng có sự chênh lệch lớn giữa các nhóm về Y...]"</code>
-        <br>5. 📝 <b>English Output (Final Overview):</b> <i>[AI xuất đoạn Overview hoàn chỉnh]</i>
+        <br>5. 📝 <b>English Output (Final Overview):</b> 
+        <br><i>[AI xuất 01 đoạn văn gồm 2 câu. Mỗi câu phải khớp 100% cấu trúc của ID đã chọn ở Bước 3. Chỉ thay thế các biến trong ngoặc vuông [ ].]</i>
     </li>
 
     <!-- ================================================================================== -->
