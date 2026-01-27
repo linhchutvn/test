@@ -1062,17 +1062,15 @@ if st.session_state.step == 1:
         <div style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; margin-top:5px;">             
             <b>► Logic cốt lõi (Visual Flow):</b> 
             <br>             
-            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[1. Chart Type]</code>
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[1. Subject (Chart Type)]</code>
             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
             <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[2. Finite Verb]</code>
             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[3. Subject (Proportion/Share)]</code>
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[3. Object (Topic + namely...)]</code>
             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[4. Paraphrased Topic]</code>
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[4. Place]</code>
             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[5. Categories (namely...)]</code>
-            <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[6. Context (Place & Time)]</code>
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[5. Time]</code>
         </div>
     </li>
 
@@ -1083,53 +1081,50 @@ if st.session_state.step == 1:
             <!-- KHỐI 1: CHỦ NGỮ & ĐỘNG TỪ -->
             <details style="margin-top: 15px;">
                 <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
-                    📍 BƯỚC 1 & 2: CHỦ THỂ & ĐỘNG TỪ
+                    📍 BƯỚC 1 & 2: SUBJECT & FINITE VERB
                 </summary>
                 <div style="padding: 10px; background-color: white; border: 1px solid #fdf2e9;">
-                    <b>● Subject (Bắt buộc dùng từ chỉ tỷ lệ):</b> <i>The proportion of / The percentage of / The share of / The breakdown of...</i>
-                    <br>⚠️ <b>Lỗi cần tránh:</b> Không đưa đơn vị ($, tonnes, %) vào chủ ngữ.
-                    <br><b>● Động từ (Verb):</b> <i>illustrates / compares / gives information about / presents data on...</i>
-                    <br><b>● Hòa hợp:</b> 1 biểu đồ dùng <b>-s</b>, nhiều biểu đồ <b>không -s</b>.
+                    <b>● Subject (Chart Type):</b> <i>The bar chart / The line graph / The pie charts...</i>
+                    <br><b>● Finite Verb:</b> <i>illustrates / compares / gives information about...</i>
+                    <br>⚠️ <b>Hòa hợp:</b> 1 biểu đồ dùng <b>-s</b>, nhiều biểu đồ <b>không -s</b>.
                 </div>
             </details>
 
-            <!-- KHỐI 2: TOPIC PARAPHRASE -->
+            <!-- KHỐI 2: OBJECT/TOPIC -->
             <details style="margin-top: 10px;">
                 <summary style="background-color:#fdf2e9; border-left:4px solid #d35400; padding:10px; cursor: pointer; font-weight: bold;">
-                    📍 BƯỚC 3: PARAPHRASE TOPIC (NỘI DUNG CHÍNH)
+                    📍 BƯỚC 3: OBJECT (PHẦN TRĂM/SỐ LƯỢNG + TOPIC)
                 </summary>
                 <div style="padding: 10px; background-color: white; border: 1px solid #fdf2e9;">
-                    <b>● Cách 1 (Spending focus):</b> ...how much money was allocated to...
-                    <br><b>● Cách 2 (Distribution focus):</b> ...the distribution of expenditure across...
-                    <br><b>● Cách 3 (Comparative focus):</b> ...the differences in the consumption of...
+                    <b>● Bắt đầu bằng:</b> <i>The proportion of / The percentage of / The number of...</i>
+                    <br><b>● Topic Paraphrase:</b> 
+                    <ul style="margin: 5px 0;">
+                        <li>...how much money was allocated to...</li>
+                        <li>...the breakdown of expenditure across...</li>
+                        <li>...the differences in the consumption of...</li>
+                    </ul>
                 </div>
             </details>
 
-            <!-- KHỐI 3: CATEGORY DETAILED -->
+            <!-- KHỐI 3: CHI TIẾT HÓA -->
             <details style="margin-top: 10px;">
                 <summary style="background-color:#e8f5e9; border-left:4px solid #27ae60; padding:10px; cursor: pointer; font-weight: bold; color: #1b5e20;">
-                    📍 BƯỚC 4: CHI TIẾT HÓA ĐỐI TƯỢNG (CATEGORY EXPANSION)
+                    📍 BƯỚC 4: CHI TIẾT HÓA (NAMELY EXPANSION)
                 </summary>
                 <div style="padding: 10px; background-color: white; border: 1px solid #e8f5e9;">
-                    <b>Mẹo của Examiner:</b> Đừng chỉ viết "three categories", hãy liệt kê chúng ra bằng cụm <b>"namely..."</b> hoặc <b>"in terms of..."</b>.
-                    <br><i>Ví dụ: ...expenditure on three distinct areas, namely food and drink, restaurant and hotel, and entertainment.</i>
+                    <b>Mẹo:</b> Liệt kê các đối tượng bằng cụm <b>"namely..."</b> để tăng điểm Lexical.
+                    <br><i>Ví dụ: ..., namely food, drink, and entertainment.</i>
                 </div>
             </details>
 
-            <!-- KHỐI 4: BỔ SUNG - UNIT & PREPOSITION (NEW) -->
+            <!-- KHỐI 4: UNIT & PREPOSITION -->
             <details style="margin-top: 10px;">
                 <summary style="background-color:#e3f2fd; border-left:4px solid #2196f3; padding:10px; cursor: pointer; font-weight: bold; color: #0d47a1;">
                     📍 BƯỚC 5: KIỂM TRA ĐƠN VỊ & GIỚI TỪ (UNIT & PREPOSITIONS)
                 </summary>
                 <div style="padding: 10px; background-color: white; border: 1px solid #e3f2fd;">
-                    <b>● Unit Check (Kiểm tra trục Y):</b> Đơn vị là % của "Cái gì"? (VD: % of total spending vs % of people).
-                    <br><b>● Preposition Pairs (Cặp bài trùng):</b>
-                    <ul style="margin: 5px 0;">
-                        <li>Expenditure + <b>on</b>...</li>
-                        <li>Allocation / Allocated + <b>to</b>...</li>
-                        <li>Spending + <b>on</b>... / <b>for</b>...</li>
-                        <li>Differences + <b>in</b>...</li>
-                    </ul>
+                    <b>● Unit Check:</b> Xác định đơn vị trên trục Y để không dùng sai Subject.
+                    <br><b>● Prepositions:</b> Expenditure <b>on</b> / Allocation <b>to</b> / Differences <b>in</b>.
                 </div>
             </details>
         </div>
@@ -1139,38 +1134,41 @@ if st.session_state.step == 1:
     <!-- PHẦN 2: THỰC HÀNH LẮP RÁP 5 BƯỚC -->
     <!-- ================================================================================== -->
     <li>     
-        <strong style="color: #e67e22;">✍️ THỰC HÀNH LẮP RÁP INTRO (DÂY CHUYỀN 5 BƯỚC):</strong>
+        <strong style="color: #e67e22;">✍️ THỰC HÀNH LẮP RÁP INTRO (QUY TRÌNH CHUẨN):</strong>
         <div style="display:none;">
             SYSTEM_COMMAND: 
-            1. Bắt buộc dùng 100% cấu trúc Formula ở trên.
-            2. PHẢI xác định chính xác đơn vị (Unit) trước khi viết.
-            3. PHẢI thực hiện bước liệt kê cụ thể (namely/including) nếu danh sách dưới 4 hạng mục.
-            4. English Output phải là 01 câu duy nhất, trang trọng.
+            1. Bắt buộc dùng 100% cấu trúc Formula: [Subject] + [Finite Verb] + [Object] + [Place] + [Time].
+            2. Subject là tên biểu đồ, Object chứa "The proportion/number of..." + Topic.
+            3. PHẢI liệt kê cụ thể hạng mục nếu có 2-3 cái.
         </div>
         <br>
-        1. 🔴 <b>Phân tích đề:</b> [Xác định Chart Type, Topic gốc, Place, Time, <b>🚩 Unit Check</b>]
+        1. 🔴 <b>Phân tích đề:</b> [Xác định Chart Type, Topic, Place, Time, 🚩 Unit]
         <br>2. 🔄 <b>Paraphrase Vocabulary:</b> 
            <ul style="margin: 5px 0; font-size: 0.9rem;">
-               <li>Topic: expenditure &rarr; [AI điền từ thay thế]</li>
-               <li>Groups: age groups &rarr; [AI điền từ thay thế]</li>
+               <li>Topic replacement: ...</li>
+               <li>Categories/Groups replacement: ...</li>
            </ul>
-        <br>3. 🧩 <b>Khai báo biến Formula:</b> [Subject] + [Verb] + [Topic] + [Categories] + [Context]
-        <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[AI viết câu tư duy tiếng Việt trước khi dịch]"</code>
-        <br>5. 📝 <b>English Output (Final Intro):</b> <i>[AI xuất 01 câu mở bài hoàn chỉnh]</i>
+        <br>3. 🧩 <b>Khai báo biến Formula:</b> 
+           <ul style="margin: 5px 0; font-size: 0.9rem;">
+               <li>[Subject] = The + [Chart Type]</li>
+               <li>[Finite Verb] = ...</li>
+               <li>[Object] = [Percentage/Number] + [Topic] + [namely...]</li>
+               <li>[Place] = ... ; [Time] = ...</li>
+           </ul>
+        <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[Dịch logic câu theo thứ tự Formula]"</code>
+        <br>5. 📝 <b>English Output (Final Intro):</b> <i>[Lắp ráp thành câu hoàn chỉnh]</i>
     </li>
 
     <!-- ================================================================================== -->
-    <!-- PHẦN 3: NỘI DUNG MẪU (DÀNH CHO ĐỀ BÀI TRÊN) -->
+    <!-- PHẦN 3: BẢN CHỐT MẪU ĐỐI CHIẾU -->
     <!-- ================================================================================== -->
     <li>
-        <div style="background-color:#e6fffa; padding:15px; border-radius:8px; margin-top:10px; border-left: 5px solid #00b894;">
-            <b>📝 Nội dung mẫu (Sample Intro)</b><br>            
+        <div style="background-color:#e6fffa; padding:15px; border-radius:8px; margin-top:10px; border: 2px solid #00b894; border-left: 8px solid #00b894;">
+            <b>📝 Bản chốt mở bài chuẩn (Final Polished Intro):</b><br>
             <div style="margin-top:5px; font-style: italic; color: #004d40;">
-            [SYSTEM_PROMPT: AI hãy tổng hợp các biến số đã chọn ở các thành một câu hoàn chỉnh. 
-             YÊU CẦU: 
-             1. Tuyệt đối tuân thủ thứ tự Formula: [Chart Type] + [Verb] + [Subject] + [Topic] + [Detailed Categories] + [Context].
-             2. Sử dụng đúng các từ vựng Paraphrase đã chọn ở Bước 2.
-             3. Đây là bản "đối chiếu" để học sinh kiểm tra xem mình lắp ráp đã chuẩn chưa.]
+            [SYSTEM_PROMPT: Tổng hợp các biến đã chọn thành 01 câu duy nhất. 
+             YÊU CẦU: Tuân thủ tuyệt đối trật tự: [Subject] + [Finite Verb] + [Object] + [Place] + [Time]. 
+             Dùng đúng từ vựng đã paraphrase ở Bước 2. Đây là bản đáp án chuẩn.]
             </div>
         </div>
     </li>
@@ -1188,7 +1186,7 @@ if st.session_state.step == 1:
             <br>             
             <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[Overall Linker]</code>
             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
-            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[1. Ranking (Ai nhất/Ai bét)]</code>
+            <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[1. Ranking (Cao nhất/thấp nhất)]</code>
             <span style="color:#f57f17; font-weight:bold;"> ➔ </span>
             <code style="font-size: 0.8rem; background-color: white; padding: 5px; border: 1px dashed #f9a825;">[2. Comparison (Sự chênh lệch/Điểm chung)]</code>
         </div>
