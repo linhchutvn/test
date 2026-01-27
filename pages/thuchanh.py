@@ -1245,7 +1245,7 @@ if st.session_state.step == 1:
                <li>Có hạng mục nào cao/thấp đồng đều ở tất cả các biểu đồ không? (Dùng ID 3.2)</li>          
         <br>3. 🧩 <b>Chọn ID & Khai báo biến:</b> Sentence 1 (ID...) + Sentence 2 (ID...)
         <br>4. 🧠 <b>Tư duy Tiếng Việt:</b> <code>"[AI viết câu tư duy tiếng Việt chốt ý]"</code>
-        <br>5. 📝 <b>English Output (Final Overview):</b> <i>[AI xuất đoạn Overview hoàn chỉnh]</i>
+        <br>5. 📝 <b>English Output (Final Overview):</b> <i>[AI áp dụng công thức, chỉ thay các biến [...] để thành câu hoàn chỉnh]</i>
     </li>
 
     <!-- ================================================================================== -->
